@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-ink-950 text-ink-200 font-body antialiased;
+    color-scheme: dark;
+  }
+  body {
+    @apply min-h-screen;
+  }
+  ::selection {
+    @apply bg-band-neutral/30 text-white;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-ink-900 border border-ink-700/60 rounded-lg;
+  }
+  .label {
+    @apply text-[11px] uppercase tracking-[0.14em] text-ink-400 font-medium;
+  }
+}
