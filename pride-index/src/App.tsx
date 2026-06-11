@@ -49,6 +49,11 @@ export default function App() {
               Built with Claude Fable 5, Anthropic's latest model
             </a>
           </div>
+          <img
+            src={`${import.meta.env.BASE_URL}progress-pride-flag.png`}
+            alt="The Progress Pride flag (Quasar variant)"
+            className="hidden md:block h-11 border border-ink-700/60"
+          />
           <nav className="flex items-center gap-1 ml-auto">
             <NavLink to="/" end className={navLink}>
               Index

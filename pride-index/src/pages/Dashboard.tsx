@@ -252,8 +252,7 @@ export default function Dashboard() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 space-y-10">
       {/* Hero */}
-      <section className="flex items-start gap-10">
-        <div className="max-w-3xl">
+      <section className="max-w-3xl">
         <p className="label mb-3">A data-journalism accountability instrument</p>
         <h1 className="font-display text-4xl sm:text-5xl text-white leading-tight">
           Which companies stood by LGBTQ+ people —{' '}
@@ -272,12 +271,6 @@ export default function Dashboard() {
         <div className="mt-5">
           <CompanySearch />
         </div>
-        </div>
-        <img
-          src={`${import.meta.env.BASE_URL}progress-pride-flag.png`}
-          alt="The Progress Pride flag (Quasar variant) — rainbow stripes with a chevron of black, brown, and trans-flag colors, plus the intersex circle"
-          className="hidden lg:block flex-1 max-w-sm mt-10 border border-ink-700/60 shadow-2xl shadow-black/40"
-        />
       </section>
 
       {/* Stats */}
