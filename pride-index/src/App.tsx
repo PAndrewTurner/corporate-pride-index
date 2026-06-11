@@ -7,6 +7,7 @@ const Dashboard = lazy(() => import('./pages/Dashboard'));
 const CompanyPage = lazy(() => import('./pages/CompanyPage'));
 const Compare = lazy(() => import('./pages/Compare'));
 const Methodology = lazy(() => import('./pages/Methodology'));
+const About = lazy(() => import('./pages/About'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -79,6 +80,9 @@ export default function App() {
             <NavLink to="/methodology" className={navLink}>
               Methodology
             </NavLink>
+            <NavLink to="/about" className={navLink}>
+              About
+            </NavLink>
             <ThemeToggle />
           </nav>
         </div>
@@ -98,6 +102,7 @@ export default function App() {
             <Route path="/company/:slug" element={<CompanyPage />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/methodology" element={<Methodology />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </Suspense>
       </main>
