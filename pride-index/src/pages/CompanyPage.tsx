@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BAND_COLORS, companyBySlug, fmtPts, sectors } from '../lib/data';
 import type { ActionRow, Company } from '../lib/types';
@@ -103,11 +104,48 @@ function WhyPanel({ c }: { c: Company }) {
   );
 }
 
+/* ── Sticky mini-header (appears once the hero scrolls out of view) ────── */
+
+function MiniHeader({ c, visible }: { c: Company; visible: boolean }) {
+  return (
+    <div
+      className={`fixed top-0 inset-x-0 z-50 border-b border-ink-700/60 bg-ink-950/95 backdrop-blur transition-transform duration-200 ${
+        visible ? 'translate-y-0' : '-translate-y-full pointer-events-none'
+      }`}
+    >
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 h-12 flex items-center gap-4">
+        <Link to="/" className="text-xs text-ink-400 hover:text-white shrink-0">
+          ← Index
+        </Link>
+        <span className="font-display text-lg text-white truncate">{c.name}</span>
+        <span className="ml-auto flex items-center gap-3 shrink-0">
+          <span className="font-mono text-xl" style={{ color: BAND_COLORS[c.band] }}>
+            {c.score}
+          </span>
+          <BandChip band={c.band} size="sm" />
+        </span>
+      </div>
+    </div>
+  );
+}
+
 /* ── Page ──────────────────────────────────────────────────────────────── */
 
 export default function CompanyPage() {
   const { slug } = useParams();
   const c = slug ? companyBySlug.get(slug) : undefined;
+
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [miniVisible, setMiniVisible] = useState(false);
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    const obs = new IntersectionObserver(([e]) => setMiniVisible(!e.isIntersecting), {
+      rootMargin: '-60px 0px 0px 0px',
+    });
+    obs.observe(hero);
+    return () => obs.disconnect();
+  }, [slug]);
 
   if (!c) {
     return (
@@ -127,12 +165,14 @@ export default function CompanyPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 py-10 space-y-10">
+      <MiniHeader c={c} visible={miniVisible} />
+
       <Link to="/" className="text-xs text-ink-400 hover:text-white">
         ← Index
       </Link>
 
       {/* Hero */}
-      <section className="flex flex-col sm:flex-row sm:items-end gap-6 justify-between">
+      <section ref={heroRef} className="flex flex-col sm:flex-row sm:items-end gap-6 justify-between">
         <div className="min-w-0">
           <p className="label mb-2">
             {c.sector}

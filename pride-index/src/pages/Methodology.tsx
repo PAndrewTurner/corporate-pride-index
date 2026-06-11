@@ -7,10 +7,30 @@ function Prose({ children }: { children: React.ReactNode }) {
   return <div className="space-y-3 text-[15px] leading-relaxed text-ink-200">{children}</div>;
 }
 
-export default function Methodology() {
-  const verizon = companyBySlug.get('verizon');
-  const vz = verizon ? computeScore(verizon.actions) : null;
+const EXAMPLES: { slug: string; lesson: string }[] = [
+  {
+    slug: 'apple',
+    lesson:
+      'Sustained structural commitment — benefits, policy, a long consistent record — pushes far past the cosmetic cap and held publicly through the 2025 backlash. Structure is what the formula rewards most.',
+  },
+  {
+    slug: 'verizon',
+    lesson:
+      'Years of visible support — branding, sponsorships, a funded ERG — erased by a written 2025 reversal under regulatory pressure. Support that evaporates when it carries a cost is scored as what the evaporation reveals.',
+  },
+  {
+    slug: 'salesforce',
+    lesson:
+      'A reversal hurts even an ally: real negative points for sanding the public edges off its commitments. But deep structural investment absorbs the blow — the score drops without collapsing.',
+  },
+  {
+    slug: 'tesla',
+    lesson:
+      'Nothing positive on the record and documented negative actions: the baseline offers no shelter. With no support to lose, negative points fall straight through to the bottom band.',
+  },
+];
 
+export default function Methodology() {
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 py-10 space-y-12">
       <header>
@@ -83,69 +103,75 @@ export default function Methodology() {
       </section>
 
       <section>
-        <SectionHeading kicker="The worked example" title="The Verizon standard" />
+        <SectionHeading kicker="The framework in practice" title="Worked examples" />
         <Prose>
           <p>
-            Verizon is the reference case for the whole index. For years it did what looked like
-            allyship: annual rainbow branding, Pride statements, parade sponsorships, a funded
-            LGBTQ+ employee resource group. Then in May 2025, with a merger pending before the
-            FCC, it told the regulator in writing that it would end its DEI commitments —
-            policies, language, programs.
-          </p>
-          <p>
-            A model that simply averaged its history would call Verizon mildly positive. This
-            model doesn't, and the arithmetic shows why:
+            Four companies, four patterns the formula is built to distinguish. Each breakdown
+            below is computed live from the company's logged actions — the same arithmetic that
+            produces every score on this site.
           </p>
         </Prose>
-        {vz && verizon && (
-          <div className="card p-4 my-4 font-mono text-sm overflow-x-auto">
-            <table className="w-full min-w-[460px]">
-              <tbody className="text-ink-300">
-                <tr>
-                  <td className="py-1">Baseline</td>
-                  <td className="text-right text-white">50</td>
-                </tr>
-                <tr>
-                  <td className="py-1">
-                    Cosmetic + Commercial (raw +{vz.cosmeticCommercialRaw}, cap 20)
-                  </td>
-                  <td className="text-right text-emerald-400">+{vz.cosmeticCommercialCapped}</td>
-                </tr>
-                <tr>
-                  <td className="py-1">Civic (parade sponsorship, ERG)</td>
-                  <td className="text-right text-emerald-400">+{vz.civic}</td>
-                </tr>
-                <tr>
-                  <td className="py-1">Financial / Structural</td>
-                  <td className="text-right text-emerald-400">
-                    +{vz.financial + vz.structural}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="py-1">2025 reversal (DEI removal, Pride retreat, rollbacks)</td>
-                  <td className="text-right text-red-400">{vz.negative}</td>
-                </tr>
-                <tr className="border-t border-ink-700 text-white">
-                  <td className="py-1.5 font-medium">Score</td>
-                  <td className="text-right text-lg" style={{ color: BAND_COLORS[vz.band] }}>
-                    {vz.score} · {vz.band}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        )}
+        <div className="grid sm:grid-cols-2 gap-4 my-4">
+          {EXAMPLES.map(({ slug, lesson }) => {
+            const ex = companyBySlug.get(slug);
+            if (!ex) return null;
+            const b = computeScore(ex.actions);
+            return (
+              <div key={slug} className="card p-4 flex flex-col gap-3">
+                <div className="flex items-center justify-between gap-3">
+                  <Link
+                    to={`/company/${slug}`}
+                    className="font-display text-xl text-white hover:underline"
+                  >
+                    {ex.name}
+                  </Link>
+                  <span className="flex items-center gap-2 shrink-0">
+                    <span className="font-mono text-2xl" style={{ color: BAND_COLORS[b.band] }}>
+                      {b.score}
+                    </span>
+                    <BandChip band={b.band} size="sm" />
+                  </span>
+                </div>
+                <table className="font-mono text-xs w-full">
+                  <tbody className="text-ink-300">
+                    <tr>
+                      <td className="py-0.5">Baseline</td>
+                      <td className="text-right text-white">50</td>
+                    </tr>
+                    <tr>
+                      <td className="py-0.5">
+                        Cosmetic+Commercial
+                        {b.cosmeticCommercialRaw > b.cosmeticCommercialCapped
+                          ? ` (raw +${b.cosmeticCommercialRaw}, capped)`
+                          : ''}
+                      </td>
+                      <td className="text-right text-emerald-400">
+                        +{b.cosmeticCommercialCapped}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-0.5">Civic + Financial + Structural</td>
+                      <td className="text-right text-emerald-400">
+                        +{b.civic + b.financial + b.structural}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="py-0.5">Negative actions</td>
+                      <td className="text-right text-red-400">{b.negative}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className="text-xs leading-relaxed text-ink-300">{lesson}</p>
+              </div>
+            );
+          })}
+        </div>
         <Prose>
-          <p>
-            Years of visible support, and it lands at{' '}
-            <strong style={{ color: vz ? BAND_COLORS[vz.band] : undefined }}>
-              {vz?.score} — {vz?.band}
-            </strong>
-            . That is the Verizon standard: support that evaporates the moment it has a price
-            wasn't support. It was marketing with a long lead time.{' '}
-            <Link to="/company/verizon" className="text-sky-400 hover:underline">
-              See the full evidence trail →
-            </Link>
+          <p className="text-sm text-ink-300">
+            The common thread: the formula doesn't average a company's history — it asks what the
+            record proves. Branding without substance stalls at the cap; structure survives
+            pressure; and support that evaporates the moment it carries a cost is scored as what
+            the evaporation reveals it to have been.
           </p>
         </Prose>
       </section>

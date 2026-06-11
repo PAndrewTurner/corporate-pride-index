@@ -96,7 +96,7 @@ src/components/ui.tsx    band chips, gradient bar, trajectory/confidence badges,
 src/pages/Dashboard.tsx  sortable/filterable index, histogram, sector chart, shame/honor panels
 src/pages/CompanyPage.tsx  hero → "Why" panel → evidence trail → statements → social → CEI
 src/pages/Compare.tsx    2–4 companies side by side with sector benchmark overlay
-src/pages/Methodology.tsx  framework, bands, Verizon worked example, full rubric, sourcing
+src/pages/Methodology.tsx  framework, bands, worked examples, full rubric, sourcing
 ```
 
 A later migration to SQLite/Postgres only requires replacing `src/lib/data.ts` with an async data

@@ -1,149 +1,106 @@
-import { useMemo, useState } from 'react';
+import { Suspense, lazy, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Cell,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts';
 import { BAND_COLORS, BAND_ORDER, FLAG_LABELS, companies, fmtPts, sectors } from '../lib/data';
-import { bandFor } from '../lib/scoring';
 import type { Band, Company } from '../lib/types';
-import { BandChip, FlagChips, GradientBar } from '../components/ui';
+import { BandChip, FlagChips } from '../components/ui';
+
+const Histogram = lazy(() =>
+  import('../components/DashboardCharts').then((m) => ({ default: m.Histogram })),
+);
+const SectorChart = lazy(() =>
+  import('../components/DashboardCharts').then((m) => ({ default: m.SectorChart })),
+);
+
+const sectorAvg = new Map(sectors.map((s) => [s.sector, s.avgScore]));
+
+/* ── Jump-to-company search ────────────────────────────────────────────── */
+
+function CompanySearch() {
+  const navigate = useNavigate();
+  const [q, setQ] = useState('');
+  const matches = useMemo(
+    () =>
+      q
+        ? companies
+            .filter((c) => c.name.toLowerCase().includes(q.toLowerCase()))
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 8)
+        : [],
+    [q],
+  );
+  return (
+    <div className="relative max-w-md">
+      <input
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' && matches.length > 0)
+            navigate(`/company/${matches[0].slug}`);
+        }}
+        placeholder="Look up a company — e.g. Verizon, Target, Apple…"
+        className="w-full bg-ink-900 border border-ink-600 rounded-lg px-4 py-2.5 text-sm placeholder:text-ink-400 focus:outline-none focus:border-ink-400"
+        aria-label="Look up a company"
+      />
+      {matches.length > 0 && (
+        <div className="absolute z-30 mt-1 w-full card shadow-xl max-h-80 overflow-auto">
+          {matches.map((c) => (
+            <button
+              key={c.slug}
+              onClick={() => navigate(`/company/${c.slug}`)}
+              className="flex w-full items-center justify-between px-4 py-2.5 text-sm hover:bg-ink-800 text-left"
+            >
+              <span>
+                <span className="text-white">{c.name}</span>
+                <span className="ml-2 text-xs text-ink-400">{c.sector}</span>
+              </span>
+              <span className="flex items-center gap-2 shrink-0">
+                <span className="font-mono" style={{ color: BAND_COLORS[c.band] }}>
+                  {c.score}
+                </span>
+                <BandChip band={c.band} size="sm" />
+              </span>
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 /* ── Stats strip ───────────────────────────────────────────────────────── */
 
-function Stat({ value, label, accent }: { value: string; label: string; accent?: string }) {
-  return (
-    <div className="card px-4 py-3">
+function Stat({
+  value,
+  label,
+  accent,
+  onClick,
+}: {
+  value: string;
+  label: string;
+  accent?: string;
+  onClick?: () => void;
+}) {
+  const inner = (
+    <>
       <div className="font-mono text-2xl" style={{ color: accent ?? '#fff' }}>
         {value}
       </div>
-      <div className="label mt-1">{label}</div>
-    </div>
-  );
-}
-
-/* ── Histogram ─────────────────────────────────────────────────────────── */
-
-function Histogram() {
-  const bins = useMemo(() => {
-    const out: { range: string; mid: number; count: number }[] = [];
-    for (let lo = 0; lo < 100; lo += 5) {
-      const hi = lo + 4 === 99 ? 100 : lo + 4;
-      out.push({
-        range: `${lo}–${hi}`,
-        mid: lo + 2,
-        count: companies.filter((c) => c.score >= lo && c.score <= hi).length,
-      });
-    }
-    return out;
-  }, []);
-  return (
-    <div className="card p-4">
-      <p className="label mb-3">Score distribution · all {companies.length} companies</p>
-      <ResponsiveContainer width="100%" height={190}>
-        <BarChart data={bins} margin={{ top: 4, right: 4, left: -28, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="2 4" stroke="#252a37" vertical={false} />
-          <XAxis
-            dataKey="range"
-            tick={{ fill: '#6b7387', fontSize: 9, fontFamily: 'IBM Plex Mono' }}
-            interval={3}
-            tickLine={false}
-            axisLine={{ stroke: '#3a4153' }}
-          />
-          <YAxis
-            tick={{ fill: '#6b7387', fontSize: 10, fontFamily: 'IBM Plex Mono' }}
-            tickLine={false}
-            axisLine={false}
-            allowDecimals={false}
-          />
-          <Tooltip
-            cursor={{ fill: '#ffffff0a' }}
-            contentStyle={{
-              background: '#14171f',
-              border: '1px solid #3a4153',
-              borderRadius: 6,
-              fontSize: 12,
-            }}
-            labelStyle={{ color: '#c3c8d4' }}
-            itemStyle={{ color: '#e8eaf0' }}
-            formatter={(v: number) => [`${v} companies`, 'count']}
-          />
-          <Bar dataKey="count" radius={[2, 2, 0, 0]}>
-            {bins.map((b) => (
-              <Cell key={b.range} fill={BAND_COLORS[bandFor(b.mid)]} fillOpacity={0.85} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-      <div className="mt-2">
-        <GradientBar height={4} />
+      <div className="label mt-1">
+        {label}
+        {onClick && <span className="ml-1 normal-case text-ink-600">→ filter</span>}
       </div>
-    </div>
+    </>
   );
-}
-
-/* ── Sector averages ───────────────────────────────────────────────────── */
-
-function SectorChart() {
-  const data = useMemo(
-    () => [...sectors].sort((a, b) => b.avgScore - a.avgScore),
-    [],
-  );
-  return (
-    <div className="card p-4">
-      <p className="label mb-3">Average score by sector</p>
-      <ResponsiveContainer width="100%" height={data.length * 26 + 30}>
-        <BarChart data={data} layout="vertical" margin={{ top: 0, right: 36, left: 8, bottom: 0 }}>
-          <XAxis type="number" domain={[0, 100]} hide />
-          <YAxis
-            type="category"
-            dataKey="sector"
-            width={170}
-            tick={{ fill: '#9aa1b3', fontSize: 11 }}
-            tickLine={false}
-            axisLine={false}
-          />
-          <Tooltip
-            cursor={{ fill: '#ffffff0a' }}
-            contentStyle={{
-              background: '#14171f',
-              border: '1px solid #3a4153',
-              borderRadius: 6,
-              fontSize: 12,
-            }}
-            labelStyle={{ color: '#c3c8d4' }}
-            itemStyle={{ color: '#e8eaf0' }}
-            formatter={(v: number, _n, p) => [
-              `avg ${v} · range ${p.payload.min}–${p.payload.max} · ${p.payload.companies} cos.`,
-              p.payload.sector,
-            ]}
-            labelFormatter={() => ''}
-          />
-          <Bar
-            dataKey="avgScore"
-            barSize={14}
-            radius={[0, 3, 3, 0]}
-            label={{
-              position: 'right',
-              fill: '#c3c8d4',
-              fontSize: 11,
-              fontFamily: 'IBM Plex Mono',
-            }}
-          >
-            {data.map((s) => (
-              <Cell key={s.sector} fill={BAND_COLORS[bandFor(s.avgScore)]} fillOpacity={0.85} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-    </div>
-  );
+  if (onClick)
+    return (
+      <button
+        onClick={onClick}
+        className="card px-4 py-3 text-left hover:border-ink-400 transition-colors cursor-pointer"
+      >
+        {inner}
+      </button>
+    );
+  return <div className="card px-4 py-3">{inner}</div>;
 }
 
 /* ── Hall of Shame & Honor ─────────────────────────────────────────────── */
@@ -160,10 +117,7 @@ function MoverRow({ c, metric }: { c: Company; metric: string }) {
       </div>
       <div className="flex items-center gap-3 shrink-0">
         <span className="font-mono text-xs text-ink-300">{metric}</span>
-        <span
-          className="font-mono text-sm w-8 text-right"
-          style={{ color: BAND_COLORS[c.band] }}
-        >
+        <span className="font-mono text-sm w-8 text-right" style={{ color: BAND_COLORS[c.band] }}>
           {c.score}
         </span>
       </div>
@@ -183,11 +137,7 @@ function Movers() {
   const honor = useMemo(
     () =>
       [...companies]
-        .sort(
-          (a, b) =>
-            b.score - a.score ||
-            b.breakdown.structural - a.breakdown.structural,
-        )
+        .sort((a, b) => b.score - a.score || b.breakdown.structural - a.breakdown.structural)
         .slice(0, 6),
     [],
   );
@@ -217,7 +167,9 @@ function Movers() {
 
 /* ── Master table ──────────────────────────────────────────────────────── */
 
-type SortKey = 'name' | 'sector' | 'score' | 'hrcCei' | 'pos' | 'neg';
+type SortKey = 'name' | 'sector' | 'score' | 'delta' | 'hrcCei' | 'pos' | 'neg';
+
+const deltaVsSector = (c: Company) => c.score - (sectorAvg.get(c.sector) ?? c.score);
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -227,6 +179,11 @@ export default function Dashboard() {
   const [flags, setFlags] = useState<Set<string>>(new Set());
   const [sortKey, setSortKey] = useState<SortKey>('score');
   const [sortDir, setSortDir] = useState<1 | -1>(-1);
+
+  const jumpToTable = (apply: () => void) => {
+    apply();
+    document.getElementById('master-table')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const filtered = useMemo(() => {
     let rows = companies.filter(
@@ -244,6 +201,8 @@ export default function Dashboard() {
           return c.sector;
         case 'score':
           return c.score;
+        case 'delta':
+          return deltaVsSector(c);
         case 'hrcCei':
           return c.hrcCei ?? -1;
         case 'pos':
@@ -268,9 +227,20 @@ export default function Dashboard() {
     }
   };
 
-  const Th = ({ k, children, right }: { k: SortKey; children: React.ReactNode; right?: boolean }) => (
+  const Th = ({
+    k,
+    children,
+    right,
+    title,
+  }: {
+    k: SortKey;
+    children: React.ReactNode;
+    right?: boolean;
+    title?: string;
+  }) => (
     <th
       onClick={() => sort(k)}
+      title={title}
       className={`px-3 py-2 label cursor-pointer select-none hover:text-white whitespace-nowrap ${
         right ? 'text-right' : 'text-left'
       }`}
@@ -282,7 +252,8 @@ export default function Dashboard() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 space-y-10">
       {/* Hero */}
-      <section className="max-w-3xl">
+      <section className="flex items-start gap-10">
+        <div className="max-w-3xl">
         <p className="label mb-3">A data-journalism accountability instrument</p>
         <h1 className="font-display text-4xl sm:text-5xl text-white leading-tight">
           Which companies stood by LGBTQ+ people —{' '}
@@ -293,8 +264,20 @@ export default function Dashboard() {
           100 on the depth and consistency of their LGBTQ+ support. Cosmetic gestures are capped;
           structural commitments are rewarded; reversals — especially the post–January 2025
           retreats — are the most damning signal. Every score is recomputed from sourced evidence
-          at build time. <Link to="/methodology" className="text-sky-400 hover:underline">Read the methodology.</Link>
+          at build time.{' '}
+          <Link to="/methodology" className="text-sky-400 hover:underline">
+            Read the methodology.
+          </Link>
         </p>
+        <div className="mt-5">
+          <CompanySearch />
+        </div>
+        </div>
+        <img
+          src={`${import.meta.env.BASE_URL}progress-pride-flag.png`}
+          alt="The Progress Pride flag (Quasar variant) — rainbow stripes with a chevron of black, brown, and trans-flag colors, plus the intersex circle"
+          className="hidden lg:block flex-1 max-w-sm mt-10 border border-ink-700/60 shadow-2xl shadow-black/40"
+        />
       </section>
 
       {/* Stats */}
@@ -304,11 +287,23 @@ export default function Dashboard() {
           value={String(companies.filter((c) => c.flags.postJan2025Reversal).length)}
           label="post–Jan 2025 reversals"
           accent={BAND_COLORS.Harmful}
+          onClick={() =>
+            jumpToTable(() => {
+              setBand('');
+              setFlags(new Set(['postJan2025Reversal']));
+            })
+          }
         />
         <Stat
           value={String(companies.filter((c) => c.band === 'Champion').length)}
           label="champions (80+)"
           accent={BAND_COLORS.Champion}
+          onClick={() =>
+            jumpToTable(() => {
+              setFlags(new Set());
+              setBand('Champion');
+            })
+          }
         />
         <Stat
           value={(companies.reduce((s, c) => s + c.score, 0) / companies.length).toFixed(1)}
@@ -316,21 +311,25 @@ export default function Dashboard() {
         />
       </section>
 
-      {/* Charts */}
+      {/* Charts (lazy — recharts loads after first paint) */}
       <section className="grid lg:grid-cols-2 gap-4">
-        <Histogram />
-        <SectorChart />
+        <Suspense fallback={<div className="card p-4 h-64 animate-pulse" />}>
+          <Histogram />
+        </Suspense>
+        <Suspense fallback={<div className="card p-4 h-64 animate-pulse" />}>
+          <SectorChart />
+        </Suspense>
       </section>
 
       <Movers />
 
       {/* Filters + table */}
-      <section>
+      <section id="master-table" className="scroll-mt-20">
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search companies…"
+            placeholder="Filter table…"
             className="bg-ink-900 border border-ink-700 rounded px-3 py-1.5 text-sm w-52 placeholder:text-ink-400 focus:outline-none focus:border-ink-400"
           />
           <select
@@ -386,6 +385,9 @@ export default function Dashboard() {
                 <Th k="score" right>
                   Score
                 </Th>
+                <Th k="delta" right title="Score minus this company's sector average">
+                  Δ Sector
+                </Th>
                 <th className="px-3 py-2 label text-left">Band</th>
                 <Th k="hrcCei" right>
                   HRC CEI
@@ -400,56 +402,65 @@ export default function Dashboard() {
               </tr>
             </thead>
             <tbody>
-              {filtered.map((c) => (
-                <tr
-                  key={c.slug}
-                  onClick={() => navigate(`/company/${c.slug}`)}
-                  className="border-b border-ink-800 last:border-0 cursor-pointer hover:bg-ink-800/60 transition-colors"
-                >
-                  <td className="px-3 py-2.5">
-                    <span className="text-white font-medium">{c.name}</span>
-                    {c.ticker && (
-                      <span className="ml-2 font-mono text-[10px] text-ink-400">{c.ticker}</span>
-                    )}
-                  </td>
-                  <td className="px-3 py-2.5 text-ink-300 whitespace-nowrap">{c.sector}</td>
-                  <td className="px-3 py-2.5 text-right">
-                    <span
-                      className="font-mono text-base"
-                      style={{ color: BAND_COLORS[c.band] }}
-                    >
-                      {c.score}
-                    </span>
-                  </td>
-                  <td className="px-3 py-2.5">
-                    <BandChip band={c.band} size="sm" />
-                  </td>
-                  <td className="px-3 py-2.5 text-right font-mono text-xs text-ink-300">
-                    {c.hrcCei ?? '—'}
-                    {c.stillSubmittingCei === false && (
-                      <span className="text-red-400" title="No longer submitting to HRC CEI">
-                        {' '}
-                        ✕
+              {filtered.map((c) => {
+                const delta = Math.round(deltaVsSector(c) * 10) / 10;
+                return (
+                  <tr
+                    key={c.slug}
+                    onClick={() => navigate(`/company/${c.slug}`)}
+                    className="border-b border-ink-800 last:border-0 cursor-pointer hover:bg-ink-800/60 transition-colors"
+                  >
+                    <td className="px-3 py-2.5">
+                      <span className="text-white font-medium">{c.name}</span>
+                      {c.ticker && (
+                        <span className="ml-2 font-mono text-[10px] text-ink-400">{c.ticker}</span>
+                      )}
+                    </td>
+                    <td className="px-3 py-2.5 text-ink-300 whitespace-nowrap">{c.sector}</td>
+                    <td className="px-3 py-2.5 text-right">
+                      <span className="font-mono text-base" style={{ color: BAND_COLORS[c.band] }}>
+                        {c.score}
                       </span>
-                    )}
-                  </td>
-                  <td className="px-3 py-2.5 text-right font-mono text-xs text-emerald-400">
-                    +{c.breakdown.positiveCapped}
-                  </td>
-                  <td className="px-3 py-2.5 text-right font-mono text-xs text-red-400">
-                    {c.breakdown.negative || '0'}
-                  </td>
-                  <td className="px-3 py-2.5">
-                    <FlagChips flags={c.flags} size="sm" />
-                  </td>
-                </tr>
-              ))}
+                    </td>
+                    <td
+                      className={`px-3 py-2.5 text-right font-mono text-xs ${
+                        delta > 0 ? 'text-emerald-400/80' : delta < 0 ? 'text-red-400/80' : 'text-ink-400'
+                      }`}
+                      title={`${c.sector} average: ${sectorAvg.get(c.sector)}`}
+                    >
+                      {delta > 0 ? `+${delta}` : delta}
+                    </td>
+                    <td className="px-3 py-2.5">
+                      <BandChip band={c.band} size="sm" />
+                    </td>
+                    <td className="px-3 py-2.5 text-right font-mono text-xs text-ink-300">
+                      {c.hrcCei ?? '—'}
+                      {c.stillSubmittingCei === false && (
+                        <span className="text-red-400" title="No longer submitting to HRC CEI">
+                          {' '}
+                          ✕
+                        </span>
+                      )}
+                    </td>
+                    <td className="px-3 py-2.5 text-right font-mono text-xs text-emerald-400">
+                      +{c.breakdown.positiveCapped}
+                    </td>
+                    <td className="px-3 py-2.5 text-right font-mono text-xs text-red-400">
+                      {c.breakdown.negative || '0'}
+                    </td>
+                    <td className="px-3 py-2.5">
+                      <FlagChips flags={c.flags} size="sm" />
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
         <p className="mt-2 text-xs text-ink-400">
-          ✕ next to an HRC CEI score = the company stopped submitting to the Corporate Equality
-          Index. Click any row for the full reasoning and evidence.
+          Δ Sector = score relative to the company's sector average. ✕ next to an HRC CEI score =
+          the company stopped submitting to the Corporate Equality Index. Click any row for the
+          full reasoning and evidence.
         </p>
       </section>
     </div>

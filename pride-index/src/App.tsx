@@ -1,10 +1,11 @@
+import { Suspense, lazy, useEffect } from 'react';
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-import Dashboard from './pages/Dashboard';
-import CompanyPage from './pages/CompanyPage';
-import Compare from './pages/Compare';
-import Methodology from './pages/Methodology';
 import { data } from './lib/data';
+
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const CompanyPage = lazy(() => import('./pages/CompanyPage'));
+const Compare = lazy(() => import('./pages/Compare'));
+const Methodology = lazy(() => import('./pages/Methodology'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,13 +22,13 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-40 border-b border-ink-700/60 bg-ink-950/90 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between py-2 min-h-14">
-          <div>
-            <NavLink to="/" className="flex items-baseline gap-3 group">
-              <span className="font-display text-xl text-white tracking-wide">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-2 flex flex-wrap items-center gap-x-6 gap-y-1.5">
+          <div className="min-w-0">
+            <NavLink to="/" className="flex items-baseline gap-3">
+              <span className="font-display text-xl sm:text-2xl text-white tracking-wide whitespace-nowrap">
                 The Corporate Pride Index
               </span>
-              <span className="hidden sm:inline text-[11px] uppercase tracking-[0.18em] text-ink-400">
+              <span className="hidden lg:inline text-[11px] uppercase tracking-[0.18em] text-ink-400 whitespace-nowrap">
                 Accountability, not applause
               </span>
             </NavLink>
@@ -35,11 +36,11 @@ export default function App() {
               href="https://www.anthropic.com/claude"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-0.5 flex items-center gap-1.5 text-[10px] text-ink-400 hover:text-ink-200 transition-colors w-fit"
+              className="mt-1 flex items-center gap-1.5 text-xs text-ink-300 hover:text-white transition-colors w-fit whitespace-nowrap"
             >
               <svg
                 viewBox="0 0 24 24"
-                className="w-2.5 h-2.5 shrink-0 text-[#d97757]"
+                className="w-3.5 h-3.5 shrink-0 text-[#d97757]"
                 fill="currentColor"
                 aria-hidden="true"
               >
@@ -48,7 +49,7 @@ export default function App() {
               Built with Claude Fable 5, Anthropic's latest model
             </a>
           </div>
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-1 ml-auto">
             <NavLink to="/" end className={navLink}>
               Index
             </NavLink>
@@ -64,12 +65,20 @@ export default function App() {
 
       <main className="flex-1">
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/company/:slug" element={<CompanyPage />} />
-          <Route path="/compare" element={<Compare />} />
-          <Route path="/methodology" element={<Methodology />} />
-        </Routes>
+        <Suspense
+          fallback={
+            <div className="mx-auto max-w-7xl px-6 py-24 text-sm text-ink-400 font-mono">
+              loading…
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/company/:slug" element={<CompanyPage />} />
+            <Route path="/compare" element={<Compare />} />
+            <Route path="/methodology" element={<Methodology />} />
+          </Routes>
+        </Suspense>
       </main>
 
       <footer className="border-t border-ink-700/60 mt-16">
