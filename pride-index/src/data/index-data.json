@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-11T21:29:57.480Z",
+ "generatedAt": "2026-06-11T21:59:58.723Z",
  "workbook": "Corporate_Pride_Index_Data.xlsx",
  "companies": [
   {
@@ -7709,6 +7709,5385 @@
    },
    "score": 50,
    "band": "Neutral"
+  },
+  {
+   "name": "Adobe",
+   "slug": "adobe",
+   "ticker": "ADBE",
+   "sector": "Technology",
+   "revenueB": 21.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet holder: long CEI 100 record, inclusive benefits, Pride engagement maintained; absent from rollback lists.",
+   "rationale": {
+    "verdict": "A steady, low-volume tech holder.",
+    "driversUp": "Long CEI 100 record; inclusive partner and gender-affirming benefits; annual Pride engagement; no documented retreat through 2025-26.",
+    "driversDown": "Modest public Pride investment; engagement mostly workplace-level.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride Month posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.adobe.com/diversity.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Intel",
+   "slug": "intel",
+   "ticker": "INTC",
+   "sector": "Technology",
+   "revenueB": 53.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Trimmed DEI language and some diversity targets from its 10-K in early 2025 while keeping its inclusion webpage and ERGs — a hedge under federal-contractor pressure.",
+   "rationale": {
+    "verdict": "A partial trimmer: filings softened, programs largely intact.",
+    "driversUp": "Long CEI 100 record; funded LGBTQ+ ERG (IGLOBE); inclusive benefits; website still states diversity and inclusion drive the company (TechCrunch survey).",
+    "driversDown": "Cut back DEI language and removed some diversity targets in its 2025 10-K (TechCrunch/Portland Business Journal).",
+    "decisiveFactor": "Filing-level retreat while public commitments formally remain.",
+    "trajectory": "Declining",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Cut DEI language and removed some diversity targets from 2025 10-K",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://techcrunch.com/2025/04/17/here-are-all-the-tech-companies-rolling-back-dei-or-still-committed-to-it-so-far/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded IGLOBE LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.intel.com/content/www/us/en/diversity/diversity-at-intel.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.intel.com/content/www/us/en/diversity/diversity-at-intel.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 39,
+    "negative": -32,
+    "score": 57,
+    "band": "Neutral"
+   },
+   "score": 57,
+   "band": "Neutral"
+  },
+  {
+   "name": "Cisco Systems",
+   "slug": "cisco-systems",
+   "ticker": "CSCO",
+   "sector": "Technology",
+   "revenueB": 53.8,
+   "hrcCei": 100,
+   "ceiYear": 2025,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "One of the most explicit tech holders: CEO Chuck Robbins publicly defended DEI after the January 2025 executive orders ('too much business value'). CEI 100 streak and benefits intact.",
+   "rationale": {
+    "verdict": "A vocal holder at CEO level when silence was the norm.",
+    "driversUp": "CEO Chuck Robbins publicly defended Cisco's DEI commitments after the Jan 2025 executive orders, citing business value (Fortune); long CEI 100 streak; inclusive partner and gender-affirming benefits; sustained Pride engagement.",
+    "driversDown": "Engagement is largely workplace-level rather than community sponsorship.",
+    "decisiveFactor": "CEO-level public defense in early 2025.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2025,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_leadership_vocal",
+     "description": "CEO Chuck Robbins publicly defended DEI commitments post-EO: 'too much business value'",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 18,
+     "year": 2025,
+     "sourceUrl": "https://fortune.com/2025/04/04/how-companies-like-delta-and-cisco-are-sticking-up-for-their-dei-policies/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2025,
+     "sourceUrl": "https://web.archive.org/web/2025/https://www.cisco.com/c/en/us/about/inclusive-future.html",
+     "sourceType": "Archive",
+     "postJan2025": true,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 40,
+    "positiveCapped": 42,
+    "negative": 0,
+    "score": 92,
+    "band": "Champion"
+   },
+   "score": 92,
+   "band": "Champion"
+  },
+  {
+   "name": "NVIDIA",
+   "slug": "nvidia",
+   "ticker": "NVDA",
+   "sector": "Technology",
+   "revenueB": 130.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Kept its diversity, inclusion and belonging page and sustainability-report DEI section through the retreat wave (TechCrunch). Quiet, no reversal.",
+   "rationale": {
+    "verdict": "A holder by inertia and conviction alike — nothing was scrubbed.",
+    "driversUp": "Maintained its 'diversity, inclusion and belonging' page and sustainability-report DEI section through 2025 (TechCrunch survey); inclusive benefits; CEI-rated.",
+    "driversDown": "Minimal Pride-specific or community-facing engagement.",
+    "decisiveFactor": "Kept everything public while peers deleted pages.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts; diversity & belonging page maintained",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2025,
+     "sourceUrl": "https://www.nvidia.com/en-us/about-nvidia/careers/diversity-and-inclusion/",
+     "sourceType": "Company",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Qualcomm",
+   "slug": "qualcomm",
+   "ticker": "QCOM",
+   "sector": "Technology",
+   "revenueB": 39,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet record: eQuality ERG and CEI 100 history; no documented reversal, low visibility.",
+   "rationale": {
+    "verdict": "A quiet workplace-level supporter.",
+    "driversUp": "Funded eQuality LGBTQ+ ERG; CEI 100 history; San Diego Pride participation in prior years.",
+    "driversDown": "Low current visibility; no confirmed CEI 2026 participation.",
+    "decisiveFactor": "No retreat documented; thin public record.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded eQuality LGBTQ+ employee network",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.qualcomm.com/company/corporate-responsibility/diversity-and-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.qualcomm.com/company/corporate-responsibility/diversity-and-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "Texas Instruments",
+   "slug": "texas-instruments",
+   "ticker": "TXN",
+   "sector": "Technology",
+   "revenueB": 15.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "CEI 100 history with minimal public Pride engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Policy-solid, publicly silent.",
+    "driversUp": "CEI 100 history; inclusive workplace policies and benefits.",
+    "driversDown": "Essentially no public-facing LGBTQ+ engagement.",
+    "decisiveFactor": "Thin public record either way.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.ti.com/diversity-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "PayPal",
+   "slug": "paypal",
+   "ticker": "PYPL",
+   "sector": "Technology",
+   "revenueB": 31.8,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Set the structural-advocacy benchmark by canceling its 400-job Charlotte expansion over North Carolina's anti-trans HB2 law (2016). CEI 100 record; quieter today but no reversal.",
+   "rationale": {
+    "verdict": "The company that actually walked away from money over an anti-trans law.",
+    "driversUp": "2016: canceled a planned 400-employee Charlotte operations center over North Carolina's HB2 'bathroom bill,' with then-CEO Dan Schulman framing it as a values decision — among the most concrete corporate acts of trans allyship on record; funded Pride ERG; CEI 100 record.",
+    "driversDown": "Much lower visibility since 2023; no confirmed CEI 2026 participation.",
+    "decisiveFactor": "The HB2 withdrawal — costly, public, and trans-specific.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded Pride LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://about.pypl.com/who-we-are/diversity-inclusion-equity-and-belonging",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://about.pypl.com/who-we-are/diversity-inclusion-equity-and-belonging",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_leadership_vocal",
+     "description": "CEO Dan Schulman canceled PayPal's 400-job Charlotte expansion over NC's anti-trans HB2 law",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 18,
+     "year": 2016,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Public_Facilities_Privacy_%26_Security_Act",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 18,
+    "positiveCapped": 35,
+    "negative": 0,
+    "score": 85,
+    "band": "Champion"
+   },
+   "score": 85,
+   "band": "Champion"
+  },
+  {
+   "name": "Block (Square)",
+   "slug": "block-square",
+   "ticker": "XYZ",
+   "sector": "Technology",
+   "revenueB": 24.1,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction; Dorsey-era culture deprioritizes cause marketing.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented beyond standard policy.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, recent CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Uber",
+   "slug": "uber",
+   "ticker": "UBER",
+   "sector": "Technology",
+   "revenueB": 44,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Eliminated its DEI-linked executive pay incentive, dropped board diversity commitments, and removed the entire diversity section from its 10-K in early 2025 (SF Examiner/TechCrunch). Pride at Uber ERG continues.",
+   "rationale": {
+    "verdict": "A comprehensive paper retreat from a once-visible Pride brand.",
+    "driversUp": "Years of Pride branding and SF Pride participation; funded Pride at Uber ERG; CEI 100 record; in-app Pride features historically.",
+    "driversDown": "2025: removed DEI from executive compensation, dropped its pledge to consider diverse board candidates, and deleted the diversity section from its 10-K entirely (TechCrunch/SF Examiner).",
+    "decisiveFactor": "Stripping DEI from pay, board policy and filings in a single season.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Removed DEI exec-pay incentive, diverse-board pledge, and entire 10-K diversity section",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://techcrunch.com/2025/04/17/here-are-all-the-tech-companies-rolling-back-dei-or-still-committed-to-it-so-far/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": "Archived before-state: https://web.archive.org/web/2024/https://www.uber.com/us/en/about/diversity/"
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded Pride at Uber employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.uber.com/us/en/about/diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride branding and in-app Pride features (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.uber.com/us/en/about/diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.uber.com/us/en/about/diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 5,
+    "cosmeticCommercialCapped": 5,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 20,
+    "negative": -32,
+    "score": 38,
+    "band": "Performative"
+   },
+   "score": 38,
+   "band": "Performative"
+  },
+  {
+   "name": "Lyft",
+   "slug": "lyft",
+   "ticker": "LYFT",
+   "sector": "Technology",
+   "revenueB": 5.8,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Historically progressive positioning (rider donation campaigns, Pride rides); quiet through the backlash with no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet progressive that avoided both spotlight and retreat.",
+    "driversUp": "Pride campaigns and community partnership history; funded LGBTQ+ ERG; CEI 100 record.",
+    "driversDown": "Low engagement since 2023; financial constraints limit cause spending.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.lyft.com/careers",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.lyft.com/blog",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "eBay",
+   "slug": "ebay",
+   "ticker": "EBAY",
+   "sector": "Technology",
+   "revenueB": 10.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder with inclusive benefits; no documented reversal.",
+   "rationale": {
+    "verdict": "A steady, quiet holder.",
+    "driversUp": "CEI 100 record; inclusive partner and gender-affirming benefits; United in Pride ERG; annual Pride engagement.",
+    "driversDown": "Modest public investment.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.ebayinc.com/company/diversity-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Intuit",
+   "slug": "intuit",
+   "ticker": "INTU",
+   "sector": "Technology",
+   "revenueB": 16.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder; Pride Network ERG and inclusive benefits maintained; no documented reversal.",
+   "rationale": {
+    "verdict": "A steady workplace-inclusion holder.",
+    "driversUp": "CEI 100 record; Pride Network ERG; inclusive partner and gender-affirming benefits; continued inclusion reporting.",
+    "driversDown": "Limited community-facing engagement.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.intuit.com/careers/diversity-equity-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "ServiceNow",
+   "slug": "servicenow",
+   "ticker": "NOW",
+   "sector": "Technology",
+   "revenueB": 11,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Pride at Now ERG and inclusive policies; quiet, no documented reversal.",
+   "rationale": {
+    "verdict": "Workplace-level support, low public volume.",
+    "driversUp": "Funded Pride at Now ERG; CEI-rated inclusive policies; Pride Month engagement.",
+    "driversDown": "Minimal external engagement.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded Pride at Now employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.servicenow.com/company/diversity-inclusion-belonging.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.servicenow.com/company/diversity-inclusion-belonging.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "Snap Inc.",
+   "slug": "snap-inc",
+   "ticker": "SNAP",
+   "sector": "Technology",
+   "revenueB": 5.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Pride filters/lenses are an annual product feature; corporate DEI posture quiet with no clearly documented reversal.",
+   "rationale": {
+    "verdict": "Product-level Pride visibility with a thin corporate paper trail.",
+    "driversUp": "Annual Pride AR lenses/filters reaching large young audiences; CEI-rated policies.",
+    "driversDown": "Limited corporate disclosure; insufficient evidence to assess 2025-26 DEI posture in either direction.",
+    "decisiveFactor": "Visibility through product, uncertainty everywhere else.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Annual Pride AR lenses, filters and stickers across Snapchat",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://newsroom.snap.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 3,
+    "cosmeticCommercialCapped": 3,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 3,
+    "negative": 0,
+    "score": 53,
+    "band": "Neutral"
+   },
+   "score": 53,
+   "band": "Neutral"
+  },
+  {
+   "name": "Pinterest",
+   "slug": "pinterest",
+   "ticker": "PINS",
+   "sector": "Technology",
+   "revenueB": 3.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Named anti-DEI political attacks as a business risk in its filings — the inverse of the scrubbing trend — and kept its inclusion commitments (TechCrunch, Fortune keeper lists).",
+   "rationale": {
+    "verdict": "Put keeping DEI in writing when peers were deleting it.",
+    "driversUp": "Listed attacks on DEI as a business risk in SEC filings rather than scrubbing diversity language (TechCrunch); named among companies quietly keeping DEI (Fortune); inclusive policies and Pride content programs.",
+    "driversDown": "Modest external Pride investment.",
+    "decisiveFactor": "The filings posture — disclosure running opposite to the retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_dei_explicit",
+     "description": "Maintained DEI commitments; flagged anti-DEI attacks as a business risk in SEC filings",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 20,
+     "year": 2025,
+     "sourceUrl": "https://techcrunch.com/2025/02/07/pinterest-lists-dei-attacks-as-possible-business-risk-latest-filing/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride content hubs and posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2025,
+     "sourceUrl": "https://web.archive.org/web/2025/https://newsroom.pinterest.com/",
+     "sourceType": "Archive",
+     "postJan2025": true,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 20,
+    "positiveCapped": 22,
+    "negative": 0,
+    "score": 72,
+    "band": "Ally"
+   },
+   "score": 72,
+   "band": "Ally"
+  },
+  {
+   "name": "Kroger",
+   "slug": "kroger",
+   "ticker": "KR",
+   "sector": "Retail — Big Box",
+   "revenueB": 147.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Cincinnati Pride participant with CEI 100 history; faced a 2022 lawsuit from workers refusing to wear a rainbow-like apron symbol (settled). Quiet, no reversal.",
+   "rationale": {
+    "verdict": "A grocery holder with modest visible engagement.",
+    "driversUp": "CEI 100 history; Cincinnati Pride participation; funded LGBTQ+ associate resource group.",
+    "driversDown": "Low current visibility; 2022 EEOC apron suit (settled) involved religious-accommodation friction rather than policy retreat.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ associate resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.thekrogerco.com/our-promise/diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and local Pride participation",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.thekrogerco.com/our-promise/diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "Albertsons",
+   "slug": "albertsons",
+   "ticker": "ACI",
+   "sector": "Retail — Big Box",
+   "revenueB": 79.2,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional local Pride engagement; standard inclusive policies.",
+    "driversDown": "No significant sponsorships, donations or advocacy documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts and local engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.albertsonscompanies.com/about-us/diversity-equity-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "TJX Companies",
+   "slug": "tjx-companies",
+   "ticker": "TJX",
+   "sector": "Retail — Big Box",
+   "revenueB": 56.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Publicly reaffirmed inclusion ('strongly committed to continuing to build a more inclusive and diverse workplace') while peers retreated. Low marketing profile by design.",
+   "rationale": {
+    "verdict": "An off-price holder that said so on the record.",
+    "driversUp": "Public statement reaffirming commitment to an inclusive and diverse workplace during the 2025 retreat wave (LiveNOW/Fox tracking); CEI 100 record; inclusive benefits.",
+    "driversDown": "Minimal Pride marketing or community sponsorship — TJX does little brand marketing of any kind.",
+    "decisiveFactor": "The explicit reaffirmation amid the retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_dei_explicit",
+     "description": "Publicly reaffirmed inclusion and diversity commitments during the 2025 corporate retreat",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 20,
+     "year": 2025,
+     "sourceUrl": "https://www.livenowfox.com/news/companies-roll-back-dei-policies",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Inclusion statements and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2025,
+     "sourceUrl": "https://web.archive.org/web/2025/https://www.tjx.com/responsibility/workplace/inclusion-and-diversity",
+     "sourceType": "Archive",
+     "postJan2025": true,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 20,
+    "positiveCapped": 22,
+    "negative": 0,
+    "score": 72,
+    "band": "Ally"
+   },
+   "score": 72,
+   "band": "Ally"
+  },
+  {
+   "name": "Macy's",
+   "slug": "macy-s",
+   "ticker": "M",
+   "sector": "Retail — Big Box",
+   "revenueB": 22.9,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Longtime visible NYC Pride presence (storefronts, Pride merchandise, parade participation) with CEI 100 record; no documented reversal.",
+   "rationale": {
+    "verdict": "A department store that kept showing up.",
+    "driversUp": "NYC Pride participation and Pride-themed storefronts/merchandise across years; CEI 100 record; Pride ERG.",
+    "driversDown": "Financial pressures have trimmed all marketing; no LGBTQ+-specific retreat documented.",
+    "decisiveFactor": "Continuity of visible support.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "NYC Pride participation/sponsorship history",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.macysinc.com/purpose/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_merch_collection",
+     "description": "Pride merchandise collections in stores and online",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.macys.com/shop/featured/pride",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.macysinc.com/purpose/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 8,
+    "cosmeticCommercialCapped": 8,
+    "civic": 12,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 20,
+    "negative": 0,
+    "score": 70,
+    "band": "Ally"
+   },
+   "score": 70,
+   "band": "Ally"
+  },
+  {
+   "name": "Nordstrom",
+   "slug": "nordstrom",
+   "ticker": "JWN",
+   "sector": "Retail — Big Box",
+   "revenueB": 14.7,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Annual Pride merchandise and CEI 100 record; quiet, no documented reversal.",
+   "rationale": {
+    "verdict": "A retail holder with seasonal commercial support.",
+    "driversUp": "Annual Pride merchandise assortments; CEI 100 record; inclusive policies.",
+    "driversDown": "Modest depth beyond merchandising.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_merch_collection",
+     "description": "Annual Pride merchandise assortment",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.nordstrom.com/browse/pride",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.nordstrom.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 8,
+    "cosmeticCommercialCapped": 8,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 8,
+    "negative": 0,
+    "score": 58,
+    "band": "Neutral"
+   },
+   "score": 58,
+   "band": "Neutral"
+  },
+  {
+   "name": "Kohl's",
+   "slug": "kohl-s",
+   "ticker": "KSS",
+   "sector": "Retail — Big Box",
+   "revenueB": 16.2,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Weathered a 2023 boycott over Pride-themed baby clothes without pulling the line — a small but real test passed. Quiet since.",
+   "rationale": {
+    "verdict": "Held its Pride assortment under boycott pressure in 2023 — the opposite of Target's response.",
+    "driversUp": "Kept selling its 2023 Pride collection including family/baby items despite a conservative boycott campaign; CEI 100 record; annual Pride merchandise.",
+    "driversDown": "Low engagement otherwise; no civic or financial commitments documented.",
+    "decisiveFactor": "Not folding in 2023 when folding was the trend.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://corporate.kohls.com/company/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_merch_collection",
+     "description": "Pride merchandise incl. family items, maintained through the 2023 boycott attempt",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2023,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kohl%27s",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 8,
+    "cosmeticCommercialCapped": 8,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 8,
+    "negative": 0,
+    "score": 58,
+    "band": "Neutral"
+   },
+   "score": 58,
+   "band": "Neutral"
+  },
+  {
+   "name": "Dollar General",
+   "slug": "dollar-general",
+   "ticker": "DG",
+   "sector": "Retail — Big Box",
+   "revenueB": 40.6,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Dollar Tree",
+   "slug": "dollar-tree",
+   "ticker": "DLTR",
+   "sector": "Retail — Big Box",
+   "revenueB": 30.6,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Yum! Brands",
+   "slug": "yum-brands",
+   "ticker": "YUM",
+   "sector": "Food & Beverage",
+   "revenueB": 7.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Taco Bell's Drag Brunch tour (2022) was a genuinely bold mainstream activation; corporate posture otherwise quiet with no documented reversal.",
+   "rationale": {
+    "verdict": "One memorable queer-forward activation atop a quiet baseline.",
+    "driversUp": "Taco Bell's 2022 Drag Brunch tour at restaurants nationwide — a high-visibility queer-talent collaboration; CEI-rated inclusive policies.",
+    "driversDown": "Episodic engagement; little since 2023.",
+    "decisiveFactor": "Drag Brunch — real risk-taking for a mass-market brand.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts across brands",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_collab",
+     "description": "Taco Bell Drag Brunch tour with drag performers at locations nationwide",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2022,
+     "sourceUrl": "https://web.archive.org/web/2022/https://www.tacobell.com/dragbrunch",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 10,
+    "cosmeticCommercialCapped": 10,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 10,
+    "negative": 0,
+    "score": 60,
+    "band": "Neutral"
+   },
+   "score": 60,
+   "band": "Neutral"
+  },
+  {
+   "name": "Domino's Pizza",
+   "slug": "domino-s-pizza",
+   "ticker": "DPZ",
+   "sector": "Food & Beverage",
+   "revenueB": 4.7,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Chipotle",
+   "slug": "chipotle",
+   "ticker": "CMG",
+   "sector": "Food & Beverage",
+   "revenueB": 11.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet: occasional Pride engagement, CEI-rated policies, no documented reversal.",
+   "rationale": {
+    "verdict": "Minimal but unblemished.",
+    "driversUp": "Occasional Pride posts and local engagement; CEI-rated inclusive policies.",
+    "driversDown": "No significant sponsorships or donations documented.",
+    "decisiveFactor": "Thin record, no retreat.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.chipotle.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Darden Restaurants",
+   "slug": "darden-restaurants",
+   "ticker": "DRI",
+   "sector": "Food & Beverage",
+   "revenueB": 11.4,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Standard inclusive policies; occasional internal inclusion programming.",
+    "driversDown": "No significant public engagement documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional inclusion posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.darden.com/our-people/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Molson Coors",
+   "slug": "molson-coors",
+   "ticker": "TAP",
+   "sector": "Food & Beverage",
+   "revenueB": 11.6,
+   "hrcCei": 75,
+   "ceiYear": 2025,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Sep 2024 Starbuck-campaign capitulation: ended DEI training and CEI participation — one of seven companies HRC docked -25 — after decades of Coors Light LGBTQ+ marketing dating to the post-boycott reconciliation era.",
+   "rationale": {
+    "verdict": "Decades of courting LGBTQ+ consumers ended in a pressure-campaign retreat.",
+    "driversUp": "Coors Light was among the earliest major LGBTQ+-targeted beer marketers (a legacy of repairing the 1970s-80s Coors boycott); Pride event sponsorships in multiple markets; funded LGBTQ+ ERG; prior CEI 100 scores.",
+    "driversDown": "Sep 2024: ended DEI training, supplier diversity goals and HRC CEI participation after the Robby Starbuck campaign — HRC docked its score 25 points as one of seven companies penalized for abandoning commitments.",
+    "decisiveFactor": "Choosing retreat despite a customer base it spent decades winning back.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.molsoncoors.com/sustainability/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "Pride event sponsorships in multiple markets (ended in rollback)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2024,
+     "sourceUrl": "https://www.hrc.org/press-releases/hrc-foundation-announces-record-participation-in-upcoming-2025-corporate-equality-index-docks-scores-of-seven-companies-in-current-ranking-following-their-pullback-from-workplace-inclusion",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride branding and packaging (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.molsoncoors.com/sustainability/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.molsoncoors.com/sustainability/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_pride_retreat",
+     "description": "Publicly retreated from inclusion commitments and Pride sponsorship posture under activist pressure",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -22,
+     "year": 2024,
+     "sourceUrl": "https://www.hrc.org/press-releases/hrc-foundation-announces-record-participation-in-upcoming-2025-corporate-equality-index-docks-scores-of-seven-companies-in-current-ranking-following-their-pullback-from-workplace-inclusion",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_dei_removal",
+     "description": "Ended DEI training, supplier diversity goals and CEI participation; HRC docked score -25",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2024,
+     "sourceUrl": "https://www.hrc.org/press-releases/hrc-foundation-announces-record-participation-in-upcoming-2025-corporate-equality-index-docks-scores-of-seven-companies-in-current-ranking-following-their-pullback-from-workplace-inclusion",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": "One of 7 docked companies"
+    },
+    {
+     "actionId": "p_merch_collection",
+     "description": "Pride-themed packaging/merchandise (Coors Light LGBTQ+ marketing legacy)",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2023,
+     "sourceUrl": "https://web.archive.org/web/2023/https://www.molsoncoors.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 11,
+    "cosmeticCommercialCapped": 11,
+    "civic": 27,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 38,
+    "negative": -54,
+    "score": 34,
+    "band": "Harmful"
+   },
+   "score": 34,
+   "band": "Harmful"
+  },
+  {
+   "name": "Constellation Brands",
+   "slug": "constellation-brands",
+   "ticker": "STZ",
+   "sector": "Food & Beverage",
+   "revenueB": 10.2,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional Pride engagement via beverage brands; standard inclusive policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts via brands",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.cbrands.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Mondelez International",
+   "slug": "mondelez-international",
+   "ticker": "MDLZ",
+   "sector": "Food & Beverage",
+   "revenueB": 36.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "OREO's Pride campaigns (rainbow cookies 2012, 'Proud Parent' PFLAG partnership 2020-21) are among the most visible mainstream Pride marketing ever; targeted by NLPC shareholder pressure but no rollback documented.",
+   "rationale": {
+    "verdict": "The OREO campaigns made it a lightning rod — and it kept making them.",
+    "driversUp": "OREO rainbow cookie post (2012) and 'Proud Parent' campaign with PFLAG incl. donation support (2020-21); allyship-themed packaging; CEI 100 record; withstood NLPC anti-DEI shareholder proposals (SEC PX14A6G filings).",
+    "driversDown": "Campaigns are brand-led and episodic; quieter since 2023.",
+    "decisiveFactor": "Sustained willingness to put its biggest brand on the line.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts across brands",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.mondelezinternational.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_collab",
+     "description": "OREO 'Proud Parent' campaign with PFLAG and rainbow OREO activations",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2021,
+     "sourceUrl": "https://web.archive.org/web/2021/https://www.oreo.com/proudparent",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_merch_collection",
+     "description": "Pride/allyship-themed OREO packs and giveaways",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2021,
+     "sourceUrl": "https://web.archive.org/web/2021/https://www.oreo.com/proudparent",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 16,
+    "cosmeticCommercialCapped": 16,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 16,
+    "negative": 0,
+    "score": 66,
+    "band": "Ally"
+   },
+   "score": 66,
+   "band": "Ally"
+  },
+  {
+   "name": "Kraft Heinz",
+   "slug": "kraft-heinz",
+   "ticker": "KHC",
+   "sector": "Food & Beverage",
+   "revenueB": 25.8,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional brand-level Pride gestures; standard inclusive policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional brand Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.kraftheinzcompany.com/esg/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Hershey",
+   "slug": "hershey",
+   "ticker": "HSY",
+   "sector": "Food & Beverage",
+   "revenueB": 11.2,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Stood by its 2023 Hershey's Canada campaign featuring a trans woman through a boycott attempt; CEI 100 record; otherwise quiet.",
+   "rationale": {
+    "verdict": "Passed a trans-visibility stress test most brands now avoid.",
+    "driversUp": "Featured trans activist Fae Johnstone in its 2023 International Women's Day campaign (Hershey's Canada) and did not retract it under #BoycottHersheys pressure; CEI 100 record; inclusive benefits.",
+    "driversDown": "Limited Pride-specific engagement otherwise.",
+    "decisiveFactor": "Not backing down in 2023.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.thehersheycompany.com/en_us/home/our-story/diversity-equity-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_collab",
+     "description": "Campaign featuring trans activist Fae Johnstone (Hershey's Canada IWD 2023), maintained through boycott pressure",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2023,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Fae_Johnstone",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 10,
+    "cosmeticCommercialCapped": 10,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 10,
+    "negative": 0,
+    "score": 60,
+    "band": "Neutral"
+   },
+   "score": 60,
+   "band": "Neutral"
+  },
+  {
+   "name": "Morgan Stanley",
+   "slug": "morgan-stanley",
+   "ticker": "MS",
+   "sector": "Financial Services",
+   "revenueB": 61.8,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder; Pride & Allies network maintained; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet banking holder.",
+    "driversUp": "CEI 100 record; funded Pride & Allies employee network; inclusive benefits; no rollback documented while peer banks retreated.",
+    "driversDown": "Low public Pride visibility.",
+    "decisiveFactor": "Continuity while Goldman, BofA and Wells Fargo cut back.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded Pride & Allies employee network",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.morganstanley.com/about-us/diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.morganstanley.com/about-us/diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "BlackRock",
+   "slug": "blackrock",
+   "ticker": "BLK",
+   "sector": "Financial Services",
+   "revenueB": 20.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Dropped its workforce diversity targets and DEI language from filings and Fink's annual letter in early 2025 — the asset manager that once pushed boards on diversity stopped asking.",
+   "rationale": {
+    "verdict": "The diversity enforcer that quietly retired its own standards.",
+    "driversUp": "Funded LGBTQ+ network; CEI 100 record; previously used proxy power to push board diversity industry-wide.",
+    "driversDown": "Early 2025: dropped workforce representation targets and stripped DEI references from its annual report and stewardship language, joining the asset-management retreat (industry DEI-rollback tracking).",
+    "decisiveFactor": "Abandoning the diversity standards it once enforced on others.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Dropped workforce diversity targets and DEI language from filings/stewardship materials",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://www.techtarget.com/whatis/feature/What-companies-are-rolling-back-DEI-policies",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": "Archived before-state: https://web.archive.org/web/2024/https://careers.blackrock.com/life-at-blackrock/inclusion-and-diversity/"
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee network",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.blackrock.com/life-at-blackrock/inclusion-and-diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.blackrock.com/life-at-blackrock/inclusion-and-diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -32,
+    "score": 35,
+    "band": "Performative"
+   },
+   "score": 35,
+   "band": "Performative"
+  },
+  {
+   "name": "U.S. Bancorp",
+   "slug": "u-s-bancorp",
+   "ticker": "USB",
+   "sector": "Financial Services",
+   "revenueB": 27.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder; Twin Cities Pride sponsorship history; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet regional-champion bank.",
+    "driversUp": "CEI 100 record; Twin Cities Pride sponsorship history; funded Proud to Be ERG.",
+    "driversDown": "Low current visibility.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ business resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.usbank.com/about-us-bank/diversity-equity-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and local sponsorship history",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.usbank.com/about-us-bank/diversity-equity-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "PNC Financial Services",
+   "slug": "pnc-financial-services",
+   "ticker": "PNC",
+   "sector": "Financial Services",
+   "revenueB": 21.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public engagement; CEI 100 history; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin but unblemished.",
+    "driversUp": "CEI 100 history; standard inclusive policies and internal programming.",
+    "driversDown": "Little public-facing engagement documented.",
+    "decisiveFactor": "Near-baseline with clean record.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.pnc.com/en/about-pnc/company-profile/diversity-and-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Capital One",
+   "slug": "capital-one",
+   "ticker": "COF",
+   "sector": "Financial Services",
+   "revenueB": 39.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Out Front ERG and CEI 100 record; Pride engagement at HQ markets; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet holder with real internal infrastructure.",
+    "driversUp": "Funded Out Front LGBTQ+ ERG; CEI 100 record; DC-area Pride participation history.",
+    "driversDown": "Modest external commitments.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded Out Front LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.capitalonecareers.com/diversity-inclusion-belonging",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.capitalonecareers.com/diversity-inclusion-belonging",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "Discover Financial Services",
+   "slug": "discover-financial-services",
+   "ticker": "DFS",
+   "sector": "Financial Services",
+   "revenueB": 20.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public engagement; merging into Capital One; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "CEI-rated inclusive policies; occasional internal programming.",
+    "driversDown": "No significant public commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.discover.com/company/diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Progressive Corporation",
+   "slug": "progressive-corporation",
+   "ticker": "PGR",
+   "sector": "Financial Services",
+   "revenueB": 75.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Kept LGBTQ+-inclusive advertising (queer couples and families in mainstream campaigns) through repeated boycott calls; CEI 100 record; no reversal.",
+   "rationale": {
+    "verdict": "An insurer that normalized queer families in primetime ads and didn't blink at the backlash.",
+    "driversUp": "Years of mainstream advertising featuring LGBTQ+ couples and families, maintained despite recurring conservative boycott calls; CEI 100 record; funded Pride network.",
+    "driversDown": "Engagement is advertising- and workplace-led; limited civic sponsorship.",
+    "decisiveFactor": "Advertising continuity through the boycott era.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group (Pride Network)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.progressive.com/about/diversity-and-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_collab",
+     "description": "Mainstream ad campaigns featuring LGBTQ+ couples/families, sustained through boycott calls",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.progressive.com/about/diversity-and-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.progressive.com/about/diversity-and-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 10,
+    "cosmeticCommercialCapped": 10,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 25,
+    "negative": 0,
+    "score": 75,
+    "band": "Ally"
+   },
+   "score": 75,
+   "band": "Ally"
+  },
+  {
+   "name": "Allstate",
+   "slug": "allstate",
+   "ticker": "ALL",
+   "sector": "Financial Services",
+   "revenueB": 64.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "CEI-rated inclusive policies; occasional inclusive advertising.",
+    "driversDown": "No significant public commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.allstate.com/about/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "MetLife",
+   "slug": "metlife",
+   "ticker": "MET",
+   "sector": "Financial Services",
+   "revenueB": 71.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder with inclusive benefits; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet insurance holder.",
+    "driversUp": "CEI 100 record; inclusive partner and gender-affirming benefits; GLAM ERG.",
+    "driversDown": "Low public visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.metlife.com/about-us/corporate-responsibility/diversity-equity-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Prudential Financial",
+   "slug": "prudential-financial",
+   "ticker": "PRU",
+   "sector": "Financial Services",
+   "revenueB": 70.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Published pioneering 'LGBT Financial Experience' research and maintains CEI 100 standing; quiet but substantive.",
+   "rationale": {
+    "verdict": "Brought data to LGBTQ+ financial inclusion before it was fashionable.",
+    "driversUp": "Multi-edition 'LGBT Financial Experience' research series; CEI 100 record; inclusive benefits; EQUAL ERG.",
+    "driversDown": "Lower visibility recently.",
+    "decisiveFactor": "Research-backed engagement plus continuity.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.prudential.com/links/about/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "AIG",
+   "slug": "aig",
+   "ticker": "AIG",
+   "sector": "Financial Services",
+   "revenueB": 27,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "CEI-rated inclusive policies.",
+    "driversDown": "No significant public commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.aig.com/about-us/diversity-equity-and-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Travelers Companies",
+   "slug": "travelers-companies",
+   "ticker": "TRV",
+   "sector": "Financial Services",
+   "revenueB": 46.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "CEI-rated inclusive policies; internal inclusion programming.",
+    "driversDown": "No significant public commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.travelers.com/life-at-travelers/diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Eli Lilly",
+   "slug": "eli-lilly",
+   "ticker": "LLY",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 45,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Joined the corporate fight against Indiana's RFRA in 2015 from its Indianapolis home base; CEI 100 record and inclusive benefits maintained.",
+   "rationale": {
+    "verdict": "A red-state pharma that has repeatedly backed inclusion at home.",
+    "driversUp": "Publicly opposed Indiana's 2015 RFRA from its Indianapolis headquarters; CEI 100 record; inclusive partner and gender-affirming benefits; Indy Pride engagement.",
+    "driversDown": "Quieter since 2024; no confirmed CEI 2026 participation.",
+    "decisiveFactor": "Hometown advocacy when it carried political cost.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and Indy Pride engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.lilly.com/about/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Merck & Co.",
+   "slug": "merck-and-co",
+   "ticker": "MRK",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 64.2,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder with inclusive benefits and HIV-treatment legacy; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet pharma holder.",
+    "driversUp": "CEI 100 record; inclusive benefits; Rainbow Alliance ERG; HIV antiretroviral legacy relevant to the community.",
+    "driversDown": "Low public Pride visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.merck.com/company-overview/culture-and-values/diversity-and-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "AbbVie",
+   "slug": "abbvie",
+   "ticker": "ABBV",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 56.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder; inclusive benefits; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet pharma holder.",
+    "driversUp": "CEI 100 record; inclusive benefits; Pride ERG.",
+    "driversDown": "Low public visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.abbvie.com/who-we-are/diversity-equity-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Bristol Myers Squibb",
+   "slug": "bristol-myers-squibb",
+   "ticker": "BMY",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 48.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder; inclusive benefits; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet pharma holder.",
+    "driversUp": "CEI 100 record; inclusive benefits; PRIDE Alliance ERG.",
+    "driversDown": "Low public visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.bms.com/about-us/responsibility/diversity-equity-and-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Gilead Sciences",
+   "slug": "gilead-sciences",
+   "ticker": "GILD",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 28.8,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "The largest corporate funder in HIV/LGBTQ+ health: the COMPASS Initiative committed $100M+ over 10 years to HIV organizations in the US South, plus sustained grants to LGBTQ+ groups. Substance over branding.",
+   "rationale": {
+    "verdict": "Funds the community's health infrastructure at a scale no rainbow logo approaches.",
+    "driversUp": "COMPASS Initiative: $100M+ over 10 years for HIV organizations in the Southern US (launched 2017, ongoing); sustained multi-million-dollar grant programs to LGBTQ+ and HIV organizations (TransAction trans health grants, Zeroing In); CEI 100 record; deep HIV-treatment and PrEP legacy.",
+    "driversDown": "Drug-pricing criticism (PrEP pricing) complicates its community standing; marketing-level Pride visibility is modest.",
+    "decisiveFactor": "A decade-long nine-figure funding commitment — the largest sustained corporate investment in LGBTQ+ health.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_donation_large",
+     "description": "Sustained multi-million-dollar grants to LGBTQ+/HIV organizations (TransAction trans health grants, Zeroing In program)",
+     "tier": "Financial",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://www.gilead.com/purpose/giving",
+     "sourceType": "Company",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.gilead.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_recurring",
+     "description": "COMPASS Initiative: $100M+/10-year commitment to HIV organizations in the US South (2017-ongoing)",
+     "tier": "Financial",
+     "polarity": "Positive",
+     "points": 25,
+     "year": 2017,
+     "sourceUrl": "https://www.gilead.com/purpose/giving/compass-initiative",
+     "sourceType": "Company",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 47,
+    "structural": 0,
+    "positiveCapped": 49,
+    "negative": 0,
+    "score": 99,
+    "band": "Champion"
+   },
+   "score": 99,
+   "band": "Champion"
+  },
+  {
+   "name": "Amgen",
+   "slug": "amgen",
+   "ticker": "AMGN",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 33.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "CEI-rated inclusive policies; internal ERG programming.",
+    "driversDown": "No significant public commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.amgen.com/about/diversity-inclusion-and-belonging",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Moderna",
+   "slug": "moderna",
+   "ticker": "MRNA",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 3.2,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; young company, no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Standard inclusive policies; occasional posts.",
+    "driversDown": "No significant public commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.modernatx.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "HCA Healthcare",
+   "slug": "hca-healthcare",
+   "ticker": "HCA",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 70,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; Nashville-based hospital giant outside the Pride economy; no documented reversal.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "Standard inclusive policies; some facility-level Healthcare Equality Index participation.",
+    "driversDown": "No significant corporate engagement documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional inclusion posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://hcahealthcare.com/about/our-culture/diversity-equity-and-inclusion.dot",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Elevance Health",
+   "slug": "elevance-health",
+   "ticker": "ELV",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 175.2,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Joined UnitedHealth, Cigna and Humana in tucking DEI strategy changes into 2025 annual-report language (Modern Healthcare). Benefits remain; public commitment language thinned.",
+   "rationale": {
+    "verdict": "Part of the insurer pattern of quiet filings-level retreat.",
+    "driversUp": "CEI 100 record; inclusive benefits; prior DEI reporting.",
+    "driversDown": "2025 annual report quietly revised DEI strategy/risk language alongside UnitedHealth, Cigna and Humana (Modern Healthcare).",
+    "decisiveFactor": "Following the insurer pack into quiet retreat.",
+    "trajectory": "Declining",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Revised/softened DEI strategy language in 2025 annual report (insurer retreat pattern)",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://www.modernhealthcare.com/insurance/unitedhealth-cigna-humana-elevance-dei/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Prior Pride engagement and DEI reporting",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.elevancehealth.com/who-we-are/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": -32,
+    "score": 42,
+    "band": "Performative"
+   },
+   "score": 42,
+   "band": "Performative"
+  },
+  {
+   "name": "ConocoPhillips",
+   "slug": "conocophillips",
+   "ticker": "COP",
+   "sector": "Energy",
+   "revenueB": 56.9,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Phillips 66",
+   "slug": "phillips-66",
+   "ticker": "PSX",
+   "sector": "Energy",
+   "revenueB": 143.2,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Marathon Petroleum",
+   "slug": "marathon-petroleum",
+   "ticker": "MPC",
+   "sector": "Energy",
+   "revenueB": 138.9,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Duke Energy",
+   "slug": "duke-energy",
+   "ticker": "DUK",
+   "sector": "Energy",
+   "revenueB": 30.4,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional local engagement; standard inclusive policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts/local engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.duke-energy.com/our-company/diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Dominion Energy",
+   "slug": "dominion-energy",
+   "ticker": "D",
+   "sector": "Energy",
+   "revenueB": 14.5,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Sponsored Virginia Pride events in prior years; otherwise minimal engagement, no documented reversal.",
+   "rationale": {
+    "verdict": "Light local engagement in its home state.",
+    "driversUp": "Virginia Pride event sponsorship history; standard inclusive policies.",
+    "driversDown": "Minimal broader engagement; sponsorship status post-2024 unconfirmed.",
+    "decisiveFactor": "Local sponsorship history without depth.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "Virginia Pride event sponsorship (prior years)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2023,
+     "sourceUrl": "https://web.archive.org/web/2023/https://vapride.org/sponsors/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 12,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 12,
+    "negative": 0,
+    "score": 62,
+    "band": "Neutral"
+   },
+   "score": 62,
+   "band": "Neutral"
+  },
+  {
+   "name": "Rivian",
+   "slug": "rivian",
+   "ticker": "RIVN",
+   "sector": "Automotive",
+   "revenueB": 5,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction; young company.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Lucid Group",
+   "slug": "lucid-group",
+   "ticker": "LCID",
+   "sector": "Automotive",
+   "revenueB": 0.8,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction; young company majority-owned by Saudi Arabia's PIF.",
+   "rationale": {
+    "verdict": "A non-participant; its majority owner is the sovereign fund of a state that criminalizes homosexuality.",
+    "driversUp": "None documented.",
+    "driversDown": "No corporate anti-LGBTQ+ actions documented; ownership context (Saudi PIF) noted as background, not a scored action.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026. Majority shareholder is Saudi Arabia's Public Investment Fund.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Wyndham Hotels & Resorts",
+   "slug": "wyndham-hotels-and-resorts",
+   "ticker": "WH",
+   "sector": "Hospitality & Travel",
+   "revenueB": 1.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "CEI-rated inclusive policies; occasional LGBTQ+ travel marketing.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts and LGBTQ+ travel content",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://corporate.wyndhamhotels.com/corporate-responsibility/diversity-equity-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Hyatt Hotels",
+   "slug": "hyatt-hotels",
+   "ticker": "H",
+   "sector": "Hospitality & Travel",
+   "revenueB": 6.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "WorldPride 2025 supporter alongside Hilton while peers withdrew; CEI 100 record; longtime LGBTQ+ travel marketer.",
+   "rationale": {
+    "verdict": "A hospitality holder that kept sponsoring in 2025.",
+    "driversUp": "Supported WorldPride 2025 in Washington DC (HR Dive); CEI 100 record; funded LGBTQ+ ERG; LGBTQ+ travel marketing history.",
+    "driversDown": "Standard global-hotelier footprint in hostile jurisdictions.",
+    "decisiveFactor": "Visible 2025 sponsorship amid the corporate exodus.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "WorldPride 2025 (Washington DC) supporter",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2025,
+     "sourceUrl": "https://www.hrdive.com/news/employer-pride-2025/751092/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2025,
+     "sourceUrl": "https://web.archive.org/web/2025/https://www.hyatt.com/",
+     "sourceType": "Archive",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group (HyPride)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://about.hyatt.com/en/hyattdei.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 27,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 29,
+    "negative": 0,
+    "score": 79,
+    "band": "Ally"
+   },
+   "score": 79,
+   "band": "Ally"
+  },
+  {
+   "name": "Southwest Airlines",
+   "slug": "southwest-airlines",
+   "ticker": "LUV",
+   "sector": "Hospitality & Travel",
+   "revenueB": 27.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Board defended diversity commitments in 2025 proxy season; quiet otherwise with CEI 100 record and an active ERG.",
+   "rationale": {
+    "verdict": "A quiet airline holder.",
+    "driversUp": "Among corporations whose boards rejected anti-DEI proposals in 2025 (Uprise RI); CEI 100 record; funded LGBTQ+ ERG; Pride engagement in prior years.",
+    "driversDown": "Activist-investor pressure (Elliott) has muted all non-core spending; low current visibility.",
+    "decisiveFactor": "Board-level defense plus continuity.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.southwestair.com/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.southwestair.com/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "JetBlue Airways",
+   "slug": "jetblue-airways",
+   "ticker": "JBLU",
+   "sector": "Hospitality & Travel",
+   "revenueB": 9.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Longtime NYC Pride participant with Pride-livery flights and JetPride crew network; no documented reversal.",
+   "rationale": {
+    "verdict": "A New York airline that stayed visible at its hometown Pride.",
+    "driversUp": "NYC Pride sponsorship/participation history incl. Pride-themed activations and flights; funded JetPride crewmember resource group; CEI 100 record.",
+    "driversDown": "Financial constraints limit spending; depth beyond events is modest.",
+    "decisiveFactor": "Hometown Pride continuity.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded JetPride crewmember resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.jetblue.com/our-company/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "NYC Pride sponsorship/participation history with Pride activations",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.jetblue.com/our-company/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.jetblue.com/our-company/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 27,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 29,
+    "negative": 0,
+    "score": 79,
+    "band": "Ally"
+   },
+   "score": 79,
+   "band": "Ally"
+  },
+  {
+   "name": "Royal Caribbean Group",
+   "slug": "royal-caribbean-group",
+   "ticker": "RCL",
+   "sector": "Hospitality & Travel",
+   "revenueB": 16.5,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Hosts Pride sailings/events onboard; minimal corporate-level commitments documented.",
+   "rationale": {
+    "verdict": "Commercially friendly, corporately quiet.",
+    "driversUp": "Onboard Pride events and LGBTQ+-welcoming cruise marketing.",
+    "driversDown": "Minimal corporate policy disclosure or community investment documented.",
+    "decisiveFactor": "Commercial hospitality without structural depth.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and onboard Pride events marketing",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.royalcaribbean.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Carnival Corporation",
+   "slug": "carnival-corporation",
+   "ticker": "CCL",
+   "sector": "Hospitality & Travel",
+   "revenueB": 25,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "LGBTQ+-welcoming cruise marketing and onboard Pride events; minimal corporate-level commitments documented.",
+   "rationale": {
+    "verdict": "Commercially friendly, corporately quiet.",
+    "driversUp": "Onboard Pride events; LGBTQ+-welcoming marketing across brands.",
+    "driversDown": "Minimal corporate policy disclosure or community investment documented.",
+    "decisiveFactor": "Commercial hospitality without structural depth.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and onboard Pride events marketing",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.carnivalcorp.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Kimberly-Clark",
+   "slug": "kimberly-clark",
+   "ticker": "KMB",
+   "sector": "Consumer Goods",
+   "revenueB": 20.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder with inclusive benefits; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet consumer-goods holder.",
+    "driversUp": "CEI 100 record; inclusive partner and gender-affirming benefits; Pride ERG.",
+    "driversDown": "Low public visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.kimberly-clark.com/en-us/company/diversity-and-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Estée Lauder",
+   "slug": "est-e-lauder",
+   "ticker": "EL",
+   "sector": "Consumer Goods",
+   "revenueB": 15.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "MAC VIVA GLAM has donated 100% of its selling price to HIV/AIDS and LGBTQ+ causes since 1994 — over $500M raised. The longest-running, largest cosmetics commitment to the community.",
+   "rationale": {
+    "verdict": "Thirty years of VIVA GLAM make this the beauty industry's deepest LGBTQ+ commitment.",
+    "driversUp": "MAC VIVA GLAM lipstick line: 100% of the selling price donated since 1994, raising $500M+ for HIV/AIDS and LGBTQ+ organizations through the MAC VIVA GLAM Fund; drag and queer icons as campaign faces from RuPaul (1994) onward; CEI 100 record; inclusive benefits.",
+    "driversDown": "Corporate-level engagement beyond MAC is quieter; no confirmed CEI 2026 participation.",
+    "decisiveFactor": "An unbroken 30-year, nine-figure giving program woven into a flagship product.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_consistent_history",
+     "description": "30+ years of uninterrupted community investment with queer and drag icons as campaign faces since RuPaul (1994)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 28,
+     "year": 2024,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Viva_Glam",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_recurring",
+     "description": "MAC VIVA GLAM Fund — continuous 30+ year giving program with annual LGBTQ+/HIV grantmaking",
+     "tier": "Financial",
+     "polarity": "Positive",
+     "points": 25,
+     "year": 2024,
+     "sourceUrl": "https://www.maccosmetics.com/viva-glam",
+     "sourceType": "Company",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_merch_proceeds",
+     "description": "MAC VIVA GLAM: 100% of selling price donated to HIV/AIDS and LGBTQ+ causes since 1994 ($500M+ raised)",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 10,
+     "year": 2024,
+     "sourceUrl": "https://www.maccosmetics.com/viva-glam",
+     "sourceType": "Company",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride campaigns across brands (MAC, Too Faced, etc.)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.maccosmetics.com/viva-glam",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 13,
+    "cosmeticCommercialCapped": 13,
+    "civic": 0,
+    "financial": 25,
+    "structural": 28,
+    "positiveCapped": 66,
+    "negative": 0,
+    "score": 100,
+    "band": "Champion"
+   },
+   "score": 100,
+   "band": "Champion"
+  },
+  {
+   "name": "Clorox",
+   "slug": "clorox",
+   "ticker": "CLX",
+   "sector": "Consumer Goods",
+   "revenueB": 7.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder with inclusive benefits; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet consumer-goods holder.",
+    "driversUp": "CEI 100 record; inclusive partner and gender-affirming benefits; continued inclusion reporting.",
+    "driversDown": "Low public visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.thecloroxcompany.com/who-we-are/inclusion-diversity/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Northrop Grumman",
+   "slug": "northrop-grumman",
+   "ticker": "NOC",
+   "sector": "Defense & Gov Contracting",
+   "revenueB": 41,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Removed DEI webpages (now dead links) in the early-2025 defense-sector scrub documented by Breaking Defense; previously CEI 100 with a Pride ERG.",
+   "rationale": {
+    "verdict": "Joined the defense industry's silent webpage purge.",
+    "driversUp": "Previous CEI 100 standing; funded pride@northropgrumman ERG; inclusive benefits.",
+    "driversDown": "Early 2025: DEI webpages removed/redirecting to dead links per Breaking Defense's sector documentation; no public explanation.",
+    "decisiveFactor": "Wordless erasure of public commitments.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Removed DEI webpages (dead links) in early-2025 defense-sector scrub",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://breakingdefense.com/2025/02/dei-doa-how-the-defense-industry-is-racing-to-bury-its-diversity-efforts/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": "Archived before-state: https://web.archive.org/web/2024/https://www.northropgrumman.com/who-we-are/diversity-equity-and-inclusion"
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.northropgrumman.com/who-we-are/diversity-equity-and-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.northropgrumman.com/who-we-are/diversity-equity-and-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -32,
+    "score": 35,
+    "band": "Performative"
+   },
+   "score": 35,
+   "band": "Performative"
+  },
+  {
+   "name": "General Dynamics",
+   "slug": "general-dynamics",
+   "ticker": "GD",
+   "sector": "Defense & Gov Contracting",
+   "revenueB": 47.7,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Removed DEI webpages (now dead links) in the early-2025 defense-sector scrub (Breaking Defense).",
+   "rationale": {
+    "verdict": "Joined the defense industry's silent webpage purge.",
+    "driversUp": "Previous CEI participation; inclusive policies and internal programming.",
+    "driversDown": "Early 2025: DEI webpages removed/redirecting to dead links per Breaking Defense; no public explanation.",
+    "decisiveFactor": "Wordless erasure of public commitments.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Removed DEI webpages (dead links) in early-2025 defense-sector scrub",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://breakingdefense.com/2025/02/dei-doa-how-the-defense-industry-is-racing-to-bury-its-diversity-efforts/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.gd.com/careers/culture",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.gd.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -32,
+    "score": 35,
+    "band": "Performative"
+   },
+   "score": 35,
+   "band": "Performative"
+  },
+  {
+   "name": "L3Harris Technologies",
+   "slug": "l3harris-technologies",
+   "ticker": "LHX",
+   "sector": "Defense & Gov Contracting",
+   "revenueB": 21.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Removed DEI webpages (now dead links) in the early-2025 defense-sector scrub (Breaking Defense).",
+   "rationale": {
+    "verdict": "Joined the defense industry's silent webpage purge.",
+    "driversUp": "Previous CEI participation; inclusive policies; internal ERG programming.",
+    "driversDown": "Early 2025: DEI webpages removed/redirecting to dead links per Breaking Defense; no public explanation.",
+    "decisiveFactor": "Wordless erasure of public commitments.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Removed DEI webpages (dead links) in early-2025 defense-sector scrub",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://breakingdefense.com/2025/02/dei-doa-how-the-defense-industry-is-racing-to-bury-its-diversity-efforts/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.l3harris.com/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.l3harris.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -32,
+    "score": 35,
+    "band": "Performative"
+   },
+   "score": 35,
+   "band": "Performative"
+  },
+  {
+   "name": "3M",
+   "slug": "3m",
+   "ticker": "MMM",
+   "sector": "Industrial & Logistics",
+   "revenueB": 24.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Retired workforce diversity goals and pared DEI language in the 2025 retreat wave after a long CEI 100 history. ERG remains.",
+   "rationale": {
+    "verdict": "A quiet Minnesota retreat from measurable commitments.",
+    "driversUp": "Long CEI 100 record; funded 3M Pride ERG; inclusive benefits; Twin Cities Pride engagement in prior years.",
+    "driversDown": "2025: retired diversity representation goals and softened DEI language in filings and public materials, part of the documented rollback wave (Ongig/industry tracking).",
+    "decisiveFactor": "Dropping measurable goals while keeping soft language.",
+    "trajectory": "Declining",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Retired diversity representation goals; softened DEI language in 2025 materials",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://blog.ongig.com/diversity-and-inclusion/dei-rollbacks/",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded 3M Pride employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.3m.com/3M/en_US/careers-us/working-at-3m/diversity-and-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and Twin Cities engagement (prior years)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.3m.com/3M/en_US/careers-us/working-at-3m/diversity-and-inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -32,
+    "score": 35,
+    "band": "Performative"
+   },
+   "score": 35,
+   "band": "Performative"
+  },
+  {
+   "name": "Honeywell",
+   "slug": "honeywell",
+   "ticker": "HON",
+   "sector": "Industrial & Logistics",
+   "revenueB": 38.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no clearly documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "CEI-rated inclusive policies; internal inclusion programming.",
+    "driversDown": "No significant public commitments documented; DEI visibility reduced industry-wide.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.honeywell.com/us/en/company/inclusion-and-diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "General Electric (GE Aerospace)",
+   "slug": "general-electric-ge-aerospace",
+   "ticker": "GE",
+   "sector": "Industrial & Logistics",
+   "revenueB": 38.7,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement post-breakup; GLBTA ERG legacy; no clearly documented reversal.",
+   "rationale": {
+    "verdict": "Thin current record after corporate restructuring.",
+    "driversUp": "Legacy GE Pride Alliance ERG; CEI participation history; inclusive policies.",
+    "driversDown": "Minimal public engagement since the three-way GE split.",
+    "decisiveFactor": "Near-baseline; legacy infrastructure without current visibility.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts; ERG legacy",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.geaerospace.com/company/inclusion-diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Caterpillar",
+   "slug": "caterpillar",
+   "ticker": "CAT",
+   "sector": "Industrial & Logistics",
+   "revenueB": 64.8,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Sep 2024 Starbuck-campaign pullback: restricted corporate training to business topics and required senior approval for external surveys and awards — effectively exiting the CEI ecosystem.",
+   "rationale": {
+    "verdict": "An early industrial capitulator to the activist pressure campaign.",
+    "driversUp": "Funded LGBTQ+ ERG; prior CEI participation; internal inclusion programming.",
+    "driversDown": "Sep 2024: refocused all training on 'business operations' and required senior-leader approval for external surveys/awards after Robby Starbuck targeted the company (WGLT) — a structural exit from external accountability.",
+    "decisiveFactor": "Choosing retreat at the first sign of pressure, months before any government mandate.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.caterpillar.com/en/careers/culture/diversity-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.caterpillar.com/en/careers/culture/diversity-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_dei_removal",
+     "description": "Restricted DEI training and required senior approval for external surveys/awards after activist pressure",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2024,
+     "sourceUrl": "https://www.wglt.org/illinois/2024-09-20/caterpillar-pulls-back-on-some-dei-policies-after-conservative-activist-sets-sights-on-company",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -32,
+    "score": 35,
+    "band": "Performative"
+   },
+   "score": 35,
+   "band": "Performative"
+  },
+  {
+   "name": "Deere & Company",
+   "slug": "deere-and-company",
+   "ticker": "DE",
+   "sector": "Industrial & Logistics",
+   "revenueB": 51.7,
+   "hrcCei": 75,
+   "ceiYear": 2025,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Jul 2024: ended sponsorship of 'social or cultural awareness' events including Pride and audited training — one of seven companies HRC docked -25. Yet shareholders rejected an anti-DEI proposal 98.7% months later.",
+   "rationale": {
+    "verdict": "Cut Pride sponsorships under pressure even as its own shareholders showed no appetite for retreat.",
+    "driversUp": "Prior CEI participation and scores; funded LGBTQ+ ERG; Pride event sponsorships (ended Jul 2024); shareholders rejected an anti-DEI proposal 98.7% in Feb 2025 (Fortune).",
+    "driversDown": "Jul 2024: announced it would no longer sponsor 'social or cultural awareness' events incl. Pride and would audit training materials after the Starbuck campaign — HRC docked its CEI score 25 points as one of seven penalized companies.",
+    "decisiveFactor": "Explicitly naming cultural-event sponsorships — Pride included — as the cut.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.deere.com/en/our-company/inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "Pride/cultural event sponsorships (ended Jul 2024)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2024,
+     "sourceUrl": "https://www.hrc.org/press-releases/hrc-foundation-announces-record-participation-in-upcoming-2025-corporate-equality-index-docks-scores-of-seven-companies-in-current-ranking-following-their-pullback-from-workplace-inclusion",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.deere.com/en/our-company/inclusion/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_pride_retreat",
+     "description": "Ended sponsorship of 'social or cultural awareness' events including Pride",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -22,
+     "year": 2024,
+     "sourceUrl": "https://fortune.com/2025/02/28/costco-apple-john-deere-anti-dei-shareholder-proposals-voted-down-trend/",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": "Shareholders later rejected anti-DEI proposal 98.7%"
+    },
+    {
+     "actionId": "n_dei_removal",
+     "description": "Audited training, ended external survey participation; HRC docked CEI score -25",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2024,
+     "sourceUrl": "https://www.hrc.org/press-releases/hrc-foundation-announces-record-participation-in-upcoming-2025-corporate-equality-index-docks-scores-of-seven-companies-in-current-ranking-following-their-pullback-from-workplace-inclusion",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": "One of 7 docked companies"
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 27,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 29,
+    "negative": -54,
+    "score": 25,
+    "band": "Harmful"
+   },
+   "score": 25,
+   "band": "Harmful"
+  },
+  {
+   "name": "UPS",
+   "slug": "ups",
+   "ticker": "UPS",
+   "sector": "Industrial & Logistics",
+   "revenueB": 91.1,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Confirmed it has 'not operated a DEI function since April 2024' with no hiring quotas or supplier diversity goals — a complete, pre-election dismantling after years of CEI 100s.",
+   "rationale": {
+    "verdict": "A complete and unusually candid dismantling.",
+    "driversUp": "Years of CEI 100 scores; funded LGBTQ+ BRG; inclusive benefits.",
+    "driversDown": "Company statement: 'we have not operated a DEI function since April 2024, and we do not have a DEI function today. We do not have hiring quotas and we no longer have supplier diversity spend goals' (LiveNOW/Fox tracking).",
+    "decisiveFactor": "The unambiguous on-record confirmation that the entire function is gone.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "n_dei_removal",
+     "description": "Eliminated its DEI function entirely (April 2024), incl. supplier diversity goals — confirmed by company statement",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2024,
+     "sourceUrl": "https://www.livenowfox.com/news/companies-roll-back-dei-policies",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": "Archived before-state: https://web.archive.org/web/2023/https://about.ups.com/us/en/social-impact/diversity-equity-and-inclusion.html"
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ business resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2023,
+     "sourceUrl": "https://web.archive.org/web/2023/https://about.ups.com/us/en/social-impact/diversity-equity-and-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2023)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2023,
+     "sourceUrl": "https://web.archive.org/web/2023/https://about.ups.com/us/en/social-impact/diversity-equity-and-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -32,
+    "score": 35,
+    "band": "Performative"
+   },
+   "score": 35,
+   "band": "Performative"
+  },
+  {
+   "name": "FedEx",
+   "slug": "fedex",
+   "ticker": "FDX",
+   "sector": "Industrial & Logistics",
+   "revenueB": 87.7,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet: CEI 100 history and ERG; no clearly documented reversal, but low visibility.",
+   "rationale": {
+    "verdict": "A quiet logistics holder — notable given rival UPS's full dismantling.",
+    "driversUp": "CEI 100 history; funded LGBTQ+ ERG; inclusive benefits; absent from major rollback lists.",
+    "driversDown": "Minimal public engagement; Memphis-based conservatism keeps the profile low.",
+    "decisiveFactor": "No retreat documented while its direct competitor eliminated DEI entirely.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.fedex.com/fedex/diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careers.fedex.com/fedex/diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "Sirius XM",
+   "slug": "sirius-xm",
+   "ticker": "SIRI",
+   "sector": "Media & Entertainment",
+   "revenueB": 8.7,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Hosts LGBTQ+ programming (Radio Andy etc.) as a commercial matter; minimal corporate-level commitments documented.",
+   "rationale": {
+    "verdict": "Programming-level presence without corporate depth.",
+    "driversUp": "LGBTQ+-hosted channels and programming (Radio Andy, OutQ legacy); inclusive policies.",
+    "driversDown": "Minimal corporate engagement or disclosure documented.",
+    "decisiveFactor": "Content without commitments.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_collab",
+     "description": "LGBTQ+ programming and hosts (Radio Andy; OutQ channel legacy)",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.siriusxm.com/channels/radio-andy",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 8,
+    "cosmeticCommercialCapped": 8,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 8,
+    "negative": 0,
+    "score": 58,
+    "band": "Neutral"
+   },
+   "score": 58,
+   "band": "Neutral"
+  },
+  {
+   "name": "Fox Corporation",
+   "slug": "fox-corporation",
+   "ticker": "FOXA",
+   "sector": "Media & Entertainment",
+   "revenueB": 14,
+   "hrcCei": 90,
+   "ceiYear": 2022,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "The paradox: high HRC CEI scores and an internal Pride ERG while Fox News programming relentlessly targets trans people (GLAAD/Media Matters documented). Internal inclusion, external harm.",
+   "rationale": {
+    "verdict": "Scores well inside the building while its flagship product attacks the community outside it.",
+    "driversUp": "Participated in HRC's CEI with high scores (90, 2022); funded internal LGBTQ+ ERG; inclusive employee benefits.",
+    "driversDown": "Fox News programming is the most-documented source of anti-trans rhetoric in US media (Media Matters tracking of segments targeting trans people); the gap between internal policy and editorial output is the defining feature — inclusion as HR policy, exclusion as product.",
+    "decisiveFactor": "The contradiction itself: corporate inclusion paired with programming that GLAAD and Media Matters document as anti-LGBTQ+.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "n_greenwashing",
+     "description": "Internal inclusion branding/CEI participation while flagship programming attacks the community",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -8,
+     "year": 2024,
+     "sourceUrl": "https://www.mediamatters.org/fox-news",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_selective",
+     "description": "Fox News programming extensively documented targeting transgender people (hundreds of segments tracked)",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -10,
+     "year": 2024,
+     "sourceUrl": "https://www.mediamatters.org/fox-news",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded internal LGBTQ+ employee resource group; high CEI scores historically",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2022,
+     "sourceUrl": "https://web.archive.org/web/2022/https://www.foxcorporation.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 15,
+    "negative": -18,
+    "score": 47,
+    "band": "Performative"
+   },
+   "score": 47,
+   "band": "Performative"
   }
  ],
  "sectors": [
@@ -7723,17 +13102,17 @@
   },
   {
    "sector": "Technology",
-   "companies": 10,
-   "avgScore": 63.1,
+   "companies": 25,
+   "avgScore": 65.1,
    "min": 28,
    "max": 100,
-   "champions": 3,
+   "champions": 5,
    "harmfulPlus": 1
   },
   {
    "sector": "Retail — Big Box",
-   "companies": 6,
-   "avgScore": 53.3,
+   "companies": 14,
+   "avgScore": 56.9,
    "min": 27,
    "max": 92,
    "champions": 2,
@@ -7750,16 +13129,16 @@
   },
   {
    "sector": "Food & Beverage",
-   "companies": 9,
-   "avgScore": 50.7,
+   "companies": 18,
+   "avgScore": 51.9,
    "min": 15,
    "max": 100,
    "champions": 2,
-   "harmfulPlus": 3
+   "harmfulPlus": 4
   },
   {
    "sector": "Financial Services",
-   "companies": 9,
+   "companies": 21,
    "avgScore": 59.9,
    "min": 25,
    "max": 100,
@@ -7768,8 +13147,8 @@
   },
   {
    "sector": "Media & Entertainment",
-   "companies": 7,
-   "avgScore": 56.4,
+   "companies": 9,
+   "avgScore": 55.6,
    "min": 36,
    "max": 72,
    "champions": 0,
@@ -7777,8 +13156,8 @@
   },
   {
    "sector": "Automotive",
-   "companies": 6,
-   "avgScore": 38,
+   "companies": 8,
+   "avgScore": 41,
    "min": 18,
    "max": 67,
    "champions": 0,
@@ -7786,17 +13165,17 @@
   },
   {
    "sector": "Healthcare & Pharma",
-   "companies": 7,
-   "avgScore": 62.4,
+   "companies": 16,
+   "avgScore": 64.4,
    "min": 42,
-   "max": 89,
-   "champions": 1,
+   "max": 99,
+   "champions": 2,
    "harmfulPlus": 0
   },
   {
    "sector": "Energy",
-   "companies": 4,
-   "avgScore": 48,
+   "companies": 9,
+   "avgScore": 50.7,
    "min": 25,
    "max": 67,
    "champions": 0,
@@ -7804,30 +13183,39 @@
   },
   {
    "sector": "Hospitality & Travel",
-   "companies": 7,
-   "avgScore": 85.1,
-   "min": 60,
+   "companies": 13,
+   "avgScore": 75.2,
+   "min": 52,
    "max": 100,
    "champions": 4,
    "harmfulPlus": 0
   },
   {
    "sector": "Consumer Goods",
-   "companies": 5,
-   "avgScore": 78.4,
+   "companies": 8,
+   "avgScore": 80,
    "min": 62,
    "max": 100,
-   "champions": 2,
+   "champions": 3,
    "harmfulPlus": 0
   },
   {
    "sector": "Defense & Gov Contracting",
-   "companies": 4,
-   "avgScore": 38.8,
+   "companies": 7,
+   "avgScore": 37.1,
    "min": 35,
    "max": 50,
    "champions": 0,
    "harmfulPlus": 0
+  },
+  {
+   "sector": "Industrial & Logistics",
+   "companies": 7,
+   "avgScore": 43,
+   "min": 25,
+   "max": 67,
+   "champions": 0,
+   "harmfulPlus": 1
   }
  ],
  "scoringReference": [
@@ -8030,8 +13418,8 @@
  ],
  "validation": {
   "passed": true,
-  "companiesChecked": 88,
-  "actionsChecked": 302,
+  "companiesChecked": 169,
+  "actionsChecked": 454,
   "issues": []
  }
 }
