@@ -45,6 +45,11 @@
     />
   </head>
   <body>
+    <script>
+      // Apply stored theme before first paint to avoid a flash of dark mode.
+      if (localStorage.getItem('cpi-theme') === 'light')
+        document.documentElement.classList.add('light');
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

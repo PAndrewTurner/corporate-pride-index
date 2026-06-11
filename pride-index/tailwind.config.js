@@ -4,17 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
+        // The ink scale and "white" resolve through CSS variables so the
+        // .light class on <html> can flip the whole palette (see index.css).
+        white: 'rgb(var(--c-white) / <alpha-value>)',
         ink: {
-          950: '#0b0c0f',
-          900: '#101218',
-          850: '#14171f',
-          800: '#1a1e28',
-          700: '#252a37',
-          600: '#3a4153',
-          400: '#6b7387',
-          300: '#9aa1b3',
-          200: '#c3c8d4',
-          100: '#e8eaf0'
+          950: 'rgb(var(--ink-950) / <alpha-value>)',
+          900: 'rgb(var(--ink-900) / <alpha-value>)',
+          850: 'rgb(var(--ink-850) / <alpha-value>)',
+          800: 'rgb(var(--ink-800) / <alpha-value>)',
+          700: 'rgb(var(--ink-700) / <alpha-value>)',
+          600: 'rgb(var(--ink-600) / <alpha-value>)',
+          400: 'rgb(var(--ink-400) / <alpha-value>)',
+          300: 'rgb(var(--ink-300) / <alpha-value>)',
+          200: 'rgb(var(--ink-200) / <alpha-value>)',
+          100: 'rgb(var(--ink-100) / <alpha-value>)'
         },
         band: {
           champion: '#10b981',

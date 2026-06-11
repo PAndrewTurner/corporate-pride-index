@@ -3,9 +3,38 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: dark;
+    /* dark (default) palette — RGB triplets for <alpha-value> support */
+    --ink-950: 11 12 15;
+    --ink-900: 16 18 24;
+    --ink-850: 20 23 31;
+    --ink-800: 26 30 40;
+    --ink-700: 37 42 55;
+    --ink-600: 58 65 83;
+    --ink-400: 107 115 135;
+    --ink-300: 154 161 179;
+    --ink-200: 195 200 212;
+    --ink-100: 232 234 240;
+    --c-white: 255 255 255;
+  }
+  .light {
+    color-scheme: light;
+    /* inverted palette: white page, dark text */
+    --ink-950: 255 255 255;
+    --ink-900: 248 249 251;
+    --ink-850: 241 243 246;
+    --ink-800: 232 234 240;
+    --ink-700: 203 208 218;
+    --ink-600: 148 155 170;
+    --ink-400: 100 108 126;
+    --ink-300: 71 79 98;
+    --ink-200: 41 47 62;
+    --ink-100: 23 27 37;
+    --c-white: 16 18 24;
+  }
   html {
     @apply bg-ink-950 text-ink-200 font-body antialiased;
-    color-scheme: dark;
   }
   body {
     @apply min-h-screen;
@@ -21,5 +50,40 @@
   }
   .label {
     @apply text-[11px] uppercase tracking-[0.14em] text-ink-400 font-medium;
+  }
+}
+
+/* Accent text colors tuned per theme: the dark-mode pastels (sky-400,
+   emerald-400, red-400…) lack contrast on white, so light mode swaps in
+   deeper shades of the same hues. */
+@layer utilities {
+  .light .text-sky-400 {
+    color: #0369a1;
+  }
+  .light .hover\:text-sky-300:hover {
+    color: #075985;
+  }
+  .light .text-emerald-400,
+  .light .text-emerald-300 {
+    color: #047857;
+  }
+  .light .text-emerald-400\/80 {
+    color: rgb(4 120 87 / 0.85);
+  }
+  .light .text-emerald-400\/90 {
+    color: rgb(4 120 87 / 0.9);
+  }
+  .light .text-red-400,
+  .light .text-red-300 {
+    color: #b91c1c;
+  }
+  .light .text-red-400\/80 {
+    color: rgb(185 28 28 / 0.85);
+  }
+  .light .text-red-400\/90 {
+    color: rgb(185 28 28 / 0.9);
+  }
+  .light .text-band-neutral {
+    color: #854d0e;
   }
 }

@@ -82,7 +82,7 @@ function Stat({
 }) {
   const inner = (
     <>
-      <div className="font-mono text-2xl" style={{ color: accent ?? '#fff' }}>
+      <div className="font-mono text-2xl text-white" style={accent ? { color: accent } : undefined}>
         {value}
       </div>
       <div className="label mt-1">

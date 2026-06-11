@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { data } from './lib/data';
+import { useTheme } from './lib/theme';
 
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const CompanyPage = lazy(() => import('./pages/CompanyPage'));
@@ -17,6 +18,20 @@ const navLink = ({ isActive }: { isActive: boolean }) =>
   `px-3 py-1.5 rounded text-sm transition-colors ${
     isActive ? 'bg-ink-800 text-white' : 'text-ink-300 hover:text-white'
   }`;
+
+function ThemeToggle() {
+  const { theme, toggle } = useTheme();
+  return (
+    <button
+      onClick={toggle}
+      aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="ml-2 w-8 h-8 rounded-full border border-ink-700 text-ink-300 hover:text-white hover:border-ink-400 transition-colors leading-none"
+    >
+      {theme === 'dark' ? '☀' : '☾'}
+    </button>
+  );
+}
 
 export default function App() {
   return (
@@ -64,6 +79,7 @@ export default function App() {
             <NavLink to="/methodology" className={navLink}>
               Methodology
             </NavLink>
+            <ThemeToggle />
           </nav>
         </div>
       </header>

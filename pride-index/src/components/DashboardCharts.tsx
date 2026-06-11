@@ -11,9 +11,12 @@ import {
 } from 'recharts';
 import { BAND_COLORS, companies, sectors } from '../lib/data';
 import { bandFor } from '../lib/scoring';
+import { chartPalette, useTheme } from '../lib/theme';
 import { GradientBar } from './ui';
 
 export function Histogram() {
+  const { theme } = useTheme();
+  const p = chartPalette(theme);
   const bins = useMemo(() => {
     const out: { range: string; mid: number; count: number }[] = [];
     for (let lo = 0; lo < 100; lo += 10) {
@@ -31,33 +34,33 @@ export function Histogram() {
       <p className="label mb-3">Score distribution · all {companies.length} companies</p>
       <ResponsiveContainer width="100%" height={190}>
         <BarChart data={bins} margin={{ top: 4, right: 4, left: -28, bottom: 0 }}>
-          <CartesianGrid strokeDasharray="2 4" stroke="#252a37" vertical={false} />
+          <CartesianGrid strokeDasharray="2 4" stroke={p.grid} vertical={false} />
           <XAxis
             dataKey="range"
-            tick={{ fill: '#6b7387', fontSize: 10, fontFamily: 'IBM Plex Mono' }}
+            tick={{ fill: p.tick, fontSize: 10, fontFamily: 'IBM Plex Mono' }}
             interval={0}
             tickLine={false}
-            axisLine={{ stroke: '#3a4153' }}
+            axisLine={{ stroke: p.axis }}
           />
           <YAxis
-            tick={{ fill: '#6b7387', fontSize: 10, fontFamily: 'IBM Plex Mono' }}
+            tick={{ fill: p.tick, fontSize: 10, fontFamily: 'IBM Plex Mono' }}
             tickLine={false}
             axisLine={false}
             allowDecimals={false}
           />
           <Tooltip
-            cursor={{ fill: '#ffffff0a' }}
+            cursor={{ fill: p.cursor }}
             contentStyle={{
-              background: '#14171f',
-              border: '1px solid #3a4153',
+              background: p.tooltipBg,
+              border: `1px solid ${p.tooltipBorder}`,
               borderRadius: 6,
               fontSize: 12,
             }}
-            labelStyle={{ color: '#c3c8d4' }}
-            itemStyle={{ color: '#e8eaf0' }}
-            formatter={(v: number, _n, p) => [
-              `${v} companies · ${bandFor(p.payload.mid)}`,
-              `score ${p.payload.range}`,
+            labelStyle={{ color: p.tooltipLabel }}
+            itemStyle={{ color: p.tooltipItem }}
+            formatter={(v: number, _n, pl) => [
+              `${v} companies · ${bandFor(pl.payload.mid)}`,
+              `score ${pl.payload.range}`,
             ]}
           />
           <Bar dataKey="count" radius={[2, 2, 0, 0]}>
@@ -75,6 +78,8 @@ export function Histogram() {
 }
 
 export function SectorChart() {
+  const { theme } = useTheme();
+  const p = chartPalette(theme);
   const data = useMemo(() => [...sectors].sort((a, b) => b.avgScore - a.avgScore), []);
   return (
     <div className="card p-4">
@@ -86,23 +91,23 @@ export function SectorChart() {
             type="category"
             dataKey="sector"
             width={170}
-            tick={{ fill: '#9aa1b3', fontSize: 11 }}
+            tick={{ fill: p.label, fontSize: 11 }}
             tickLine={false}
             axisLine={false}
           />
           <Tooltip
-            cursor={{ fill: '#ffffff0a' }}
+            cursor={{ fill: p.cursor }}
             contentStyle={{
-              background: '#14171f',
-              border: '1px solid #3a4153',
+              background: p.tooltipBg,
+              border: `1px solid ${p.tooltipBorder}`,
               borderRadius: 6,
               fontSize: 12,
             }}
-            labelStyle={{ color: '#c3c8d4' }}
-            itemStyle={{ color: '#e8eaf0' }}
-            formatter={(v: number, _n, p) => [
-              `avg ${v} · range ${p.payload.min}–${p.payload.max} · ${p.payload.companies} cos.`,
-              p.payload.sector,
+            labelStyle={{ color: p.tooltipLabel }}
+            itemStyle={{ color: p.tooltipItem }}
+            formatter={(v: number, _n, pl) => [
+              `avg ${v} · range ${pl.payload.min}–${pl.payload.max} · ${pl.payload.companies} cos.`,
+              pl.payload.sector,
             ]}
             labelFormatter={() => ''}
           />
@@ -112,7 +117,7 @@ export function SectorChart() {
             radius={[0, 3, 3, 0]}
             label={{
               position: 'right',
-              fill: '#c3c8d4',
+              fill: p.label,
               fontSize: 11,
               fontFamily: 'IBM Plex Mono',
             }}

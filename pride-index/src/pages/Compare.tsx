@@ -12,6 +12,7 @@ import {
   YAxis,
 } from 'recharts';
 import { BAND_COLORS, companies, companyBySlug, fmtPts, sectors } from '../lib/data';
+import { chartPalette, useTheme } from '../lib/theme';
 import type { Company } from '../lib/types';
 import { BandChip, FlagChips, GradientBar, TrajectoryBadge } from '../components/ui';
 
@@ -150,6 +151,8 @@ function CompanyCard({ c }: { c: Company }) {
 }
 
 export default function Compare() {
+  const { theme } = useTheme();
+  const p = chartPalette(theme);
   const [params, setParams] = useSearchParams();
   const selected = useMemo(
     () => (params.get('c') ?? '').split(',').filter((s) => companyBySlug.has(s)).slice(0, MAX),
@@ -224,30 +227,30 @@ export default function Compare() {
           <p className="label mb-3">Point composition by tier</p>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={chartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="2 4" stroke="#252a37" vertical={false} />
+              <CartesianGrid strokeDasharray="2 4" stroke={p.grid} vertical={false} />
               <XAxis
                 dataKey="dim"
-                tick={{ fill: '#9aa1b3', fontSize: 11 }}
+                tick={{ fill: p.label, fontSize: 11 }}
                 tickLine={false}
-                axisLine={{ stroke: '#3a4153' }}
+                axisLine={{ stroke: p.axis }}
               />
               <YAxis
-                tick={{ fill: '#6b7387', fontSize: 10, fontFamily: 'IBM Plex Mono' }}
+                tick={{ fill: p.tick, fontSize: 10, fontFamily: 'IBM Plex Mono' }}
                 tickLine={false}
                 axisLine={false}
               />
-              <ReferenceLine y={0} stroke="#6b7387" />
+              <ReferenceLine y={0} stroke={p.zeroLine} />
               <Tooltip
-                cursor={{ fill: '#ffffff0a' }}
+                cursor={{ fill: p.cursor }}
                 contentStyle={{
-                  background: '#14171f',
-                  border: '1px solid #3a4153',
+                  background: p.tooltipBg,
+                  border: `1px solid ${p.tooltipBorder}`,
                   borderRadius: 6,
                   fontSize: 12,
                 }}
-                labelStyle={{ color: '#c3c8d4' }}
+                labelStyle={{ color: p.tooltipLabel }}
               />
-              <Legend wrapperStyle={{ fontSize: 12 }} />
+              <Legend wrapperStyle={{ fontSize: 12, color: p.label }} />
               {picked.map((c, i) => (
                 <Bar
                   key={c.slug}
