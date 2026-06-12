@@ -2,7 +2,7 @@ import { Suspense, lazy, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BAND_COLORS, BAND_ORDER, FLAG_LABELS, companies, fmtPts, sectors } from '../lib/data';
 import type { Band, Company } from '../lib/types';
-import { BandChip, FlagChips } from '../components/ui';
+import { BandChip, FlagChips, WordmarkLogo } from '../components/ui';
 
 const Histogram = lazy(() =>
   import('../components/DashboardCharts').then((m) => ({ default: m.Histogram })),
@@ -12,6 +12,7 @@ const SectorChart = lazy(() =>
 );
 
 const sectorAvg = new Map(sectors.map((s) => [s.sector, s.avgScore]));
+
 
 /* ── Jump-to-company search ────────────────────────────────────────────── */
 
@@ -252,25 +253,28 @@ export default function Dashboard() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 space-y-10">
       {/* Hero */}
-      <section className="max-w-3xl">
-        <p className="label mb-3">A data-journalism accountability instrument</p>
-        <h1 className="font-display text-4xl sm:text-5xl text-white leading-tight">
-          Which companies stood by LGBTQ+ people —{' '}
-          <span className="italic text-ink-300">and which ones folded under pressure?</span>
-        </h1>
-        <p className="mt-4 text-ink-300 leading-relaxed">
-          The Corporate Pride Index scores {companies.length} major American companies from 0 to
-          100 on the depth and consistency of their LGBTQ+ support. Cosmetic gestures are capped;
-          structural commitments are rewarded; reversals — especially the post–January 2025
-          retreats — are the most damning signal. Every score is recomputed from sourced evidence
-          at build time.{' '}
-          <Link to="/methodology" className="text-sky-400 hover:underline">
-            Read the methodology.
-          </Link>
-        </p>
-        <div className="mt-5">
-          <CompanySearch />
+      <section className="flex items-center gap-10">
+        <div className="max-w-3xl min-w-0">
+          <p className="label mb-3">A data-journalism accountability instrument</p>
+          <h1 className="font-display text-4xl sm:text-5xl text-white leading-tight">
+            Which companies stood by LGBTQ+ people —{' '}
+            <span className="italic text-ink-300">and which ones folded under pressure?</span>
+          </h1>
+          <p className="mt-4 text-ink-300 leading-relaxed">
+            The Corporate Pride Index scores {companies.length} major American companies from 0 to
+            100 on the depth and consistency of their LGBTQ+ support. Cosmetic gestures are capped;
+            structural commitments are rewarded; reversals — especially the post–January 2025
+            retreats — are the most damning signal. Every score is recomputed from sourced evidence
+            at build time.{' '}
+            <Link to="/methodology" className="text-sky-400 hover:underline">
+              Read the methodology.
+            </Link>
+          </p>
+          <div className="mt-5">
+            <CompanySearch />
+          </div>
         </div>
+        <WordmarkLogo />
       </section>
 
       {/* Stats */}

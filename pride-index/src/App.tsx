@@ -40,7 +40,13 @@ export default function App() {
       <header className="sticky top-0 z-40 border-b border-ink-700/60 bg-ink-950/90 backdrop-blur">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-2 flex flex-wrap items-center gap-x-6 gap-y-1.5">
           <div className="min-w-0">
-            <NavLink to="/" className="flex items-baseline gap-3">
+            <NavLink to="/" className="flex items-center gap-2.5">
+              <img
+                src={`${import.meta.env.BASE_URL}cpi-mark.png`}
+                alt=""
+                aria-hidden="true"
+                className="h-8 sm:h-9 w-auto shrink-0"
+              />
               <span className="font-display text-xl sm:text-2xl text-white tracking-wide whitespace-nowrap">
                 The Corporate Pride Index
               </span>

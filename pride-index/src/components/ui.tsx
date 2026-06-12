@@ -1,5 +1,6 @@
 import type { Band, Company, Trajectory } from '../lib/types';
 import { BAND_COLORS, FLAG_LABELS } from '../lib/data';
+import { useTheme } from '../lib/theme';
 
 /* ── Band chip ─────────────────────────────────────────────────────────── */
 
@@ -182,6 +183,29 @@ export function SectionHeading({
     <div id={id} className="scroll-mt-20 mb-4">
       <p className="label mb-1">{kicker}</p>
       <h2 className="font-display text-2xl text-white">{title}</h2>
+    </div>
+  );
+}
+
+/* ── Wordmark logo ─────────────────────────────────────────────────────── */
+/* Dark mode puts the logo on a white panel so the navy lettering stays
+   readable; light mode shows it bare. Hidden below lg by default. */
+
+export function WordmarkLogo({ size = 'lg' }: { size?: 'md' | 'lg' }) {
+  const { theme } = useTheme();
+  const h = size === 'lg' ? 'h-44 xl:h-52' : 'h-28 xl:h-32';
+  const pad = size === 'lg' ? 'p-4' : 'p-3';
+  return (
+    <div
+      className={`hidden lg:block shrink-0 ml-auto ${
+        theme === 'dark' ? `bg-white rounded-xl ${pad}` : ''
+      }`}
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}cpi-logo.png`}
+        alt="The Corporate Pride Index — Accountability, not applause"
+        className={`${h} w-auto`}
+      />
     </div>
   );
 }
