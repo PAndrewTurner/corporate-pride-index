@@ -30,9 +30,10 @@ export function Histogram() {
     return out;
   }, []);
   return (
-    <div className="card p-4">
+    <div className="card p-4 flex flex-col">
       <p className="label mb-3">Score distribution · all {companies.length} companies</p>
-      <ResponsiveContainer width="100%" height={190}>
+      <div className="flex-1 min-h-[190px]">
+        <ResponsiveContainer width="100%" height="100%">
         <BarChart data={bins} margin={{ top: 4, right: 4, left: -28, bottom: 0 }}>
           <CartesianGrid strokeDasharray="2 4" stroke={p.grid} vertical={false} />
           <XAxis
@@ -69,7 +70,8 @@ export function Histogram() {
             ))}
           </Bar>
         </BarChart>
-      </ResponsiveContainer>
+        </ResponsiveContainer>
+      </div>
       <div className="mt-2">
         <GradientBar height={4} />
       </div>
