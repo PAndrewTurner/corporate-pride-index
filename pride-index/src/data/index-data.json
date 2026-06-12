@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-12T02:30:05.416Z",
+ "generatedAt": "2026-06-12T02:37:55.969Z",
  "workbook": "Corporate_Pride_Index_Data.xlsx",
  "companies": [
   {
@@ -13088,6 +13088,2088 @@
    },
    "score": 47,
    "band": "Performative"
+  },
+  {
+   "name": "Tractor Supply Co.",
+   "slug": "tractor-supply-co",
+   "ticker": "TSCO",
+   "sector": "Retail — Big Box",
+   "revenueB": 14.6,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "The original 2024 capitulation: in June 2024, after the first Robby Starbuck campaign, eliminated all DEI roles, ended Pride festival sponsorships and voting campaigns, and scrapped carbon goals in a single statement. HRC docked its CEI score. The template every later retreat followed.",
+   "rationale": {
+    "verdict": "Patient zero of the anti-DEI capitulation wave — it wrote the retreat playbook in one June 2024 statement.",
+    "driversUp": "Prior Pride festival sponsorships, DEI roles and team, and Pride-season engagement.",
+    "driversDown": "June 2024: eliminated all DEI roles, ended Pride festival sponsorships and voting campaigns, and withdrew carbon goals after a one-week Starbuck pressure campaign (CNBC, NPR, Retail Dive); HRC docked its CEI score as one of seven penalized companies.",
+    "decisiveFactor": "Capitulating completely in under a week — proving to every activist that pressure works.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "DEI roles/team supporting employee inclusion groups (eliminated June 2024)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://www.hrdive.com/news/tractor-supply-slashes-dei-roles-carbon-emission-goals-pride-support/720210/",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "Pride festival sponsorships (ended June 2024)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2024,
+     "sourceUrl": "https://www.cnbc.com/2024/06/28/tractor-supply-ends-dei-pride-support-carbon-goals.html",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_pride_retreat",
+     "description": "Ended Pride festival sponsorships and LGBTQ+ community support",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -22,
+     "year": 2024,
+     "sourceUrl": "https://www.cnbc.com/2024/06/28/tractor-supply-ends-dei-pride-support-carbon-goals.html",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_dei_removal",
+     "description": "Eliminated all DEI roles and goals after one-week pressure campaign; HRC docked CEI score",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2024,
+     "sourceUrl": "https://www.npr.org/2024/06/28/nx-s1-5022816/tractor-supply-dei-climate-backlash",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": "One of 7 HRC-docked companies"
+    },
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride branding (through 2023)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2023,
+     "sourceUrl": "https://web.archive.org/web/2023/https://corporate.tractorsupply.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2023)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2023,
+     "sourceUrl": "https://web.archive.org/web/2023/https://corporate.tractorsupply.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 5,
+    "cosmeticCommercialCapped": 5,
+    "civic": 27,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 32,
+    "negative": -54,
+    "score": 28,
+    "band": "Harmful"
+   },
+   "score": 28,
+   "band": "Harmful"
+  },
+  {
+   "name": "Dick's Sporting Goods",
+   "slug": "dick-s-sporting-goods",
+   "ticker": "DKS",
+   "sector": "Retail — Big Box",
+   "revenueB": 13,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement either way; known for values-driven stands on other issues (firearms) but quiet here. No documented reversal.",
+   "rationale": {
+    "verdict": "Quiet on LGBTQ+ issues despite a record of values-driven positions elsewhere.",
+    "driversUp": "Occasional Pride posts; inclusive employment policies.",
+    "driversDown": "No significant LGBTQ+ sponsorships, donations or advocacy documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.dickssportinggoods.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "AutoZone",
+   "slug": "autozone",
+   "ticker": "AZO",
+   "sector": "Retail — Automotive",
+   "revenueB": 18.5,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Bath & Body Works",
+   "slug": "bath-and-body-works",
+   "ticker": "BBWI",
+   "sector": "Retail / Consumer Goods",
+   "revenueB": 7.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Ran visible Pride collections (rainbow candles and body care) through 2024 and weathered periodic boycott noise without pulling product. Quiet on policy; no documented reversal.",
+   "rationale": {
+    "verdict": "A commercial supporter that kept its Pride assortment on shelves through the boycott era.",
+    "driversUp": "Annual Pride collections (candles, body care) maintained through periodic conservative backlash; CEI 100 record; Pride campaign branding.",
+    "driversDown": "Engagement is merchandising-led with little civic or financial depth.",
+    "decisiveFactor": "Product continuity under pressure.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_merch_collection",
+     "description": "Annual Pride merchandise collections (rainbow candles, body care), maintained through backlash",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.bathandbodyworks.com/c/pride",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride campaign branding",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.bathandbodyworks.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.bathandbodyworks.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 11,
+    "cosmeticCommercialCapped": 11,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 11,
+    "negative": 0,
+    "score": 61,
+    "band": "Neutral"
+   },
+   "score": 61,
+   "band": "Neutral"
+  },
+  {
+   "name": "Publix",
+   "slug": "publix",
+   "ticker": "Private",
+   "sector": "Retail — Grocery",
+   "revenueB": 59.6,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Refused to cover PrEP HIV prevention for employees until a 2018 national outcry forced reversal; political giving has flowed to Florida sponsors of anti-LGBTQ+ legislation. No Pride support at any point.",
+   "rationale": {
+    "verdict": "A Southeast grocery giant whose documented actions run against the community, never offset by support.",
+    "driversUp": "Reversed its PrEP denial in Feb 2018 after public pressure — the lone positive movement, and it was forced (Advocate).",
+    "driversDown": "2018: refused to cover PrEP HIV-prevention medication in employee health plans until HRC-led national outcry forced reversal (Advocate, TheBody); political contributions documented to Florida legislators sponsoring anti-LGBTQ+ legislation including 'Don't Say Gay' (Wikipedia/Popular Information reporting); no Pride engagement ever; some Florida Pride organizations have cut ties.",
+    "decisiveFactor": "The PrEP denial — a concrete health-coverage exclusion aimed at a community-critical medication, reversed only under public fire.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_anti_lgbtq_donations",
+     "description": "Political contributions to Florida legislators sponsoring anti-LGBTQ+ legislation incl. 'Don't Say Gay' sponsors",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -30,
+     "year": 2022,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Publix",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_selective",
+     "description": "Refused PrEP HIV-prevention coverage in employee health plans until forced reversal by national outcry (Feb 2018)",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -10,
+     "year": 2018,
+     "sourceUrl": "https://www.advocate.com/hiv/2018/2/06/publix-reverses-will-begin-covering-prep",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": "Coverage added only after HRC campaign"
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": -40,
+    "score": 10,
+    "band": "Adversarial"
+   },
+   "score": 10,
+   "band": "Adversarial"
+  },
+  {
+   "name": "Hobby Lobby",
+   "slug": "hobby-lobby",
+   "ticker": "Private",
+   "sector": "Retail — Big Box / Crafts",
+   "revenueB": 8,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": true,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Litigated for years against a trans employee's restroom access (lost, Sommerville v. Hobby Lobby, 2021) and its owners are among the largest funders of anti-LGBTQ+ advocacy through the National Christian Foundation. No support record of any kind.",
+   "rationale": {
+    "verdict": "An adversary by litigation and by funding: it fought a trans employee in court for a decade and its profits flow to anti-LGBTQ+ causes.",
+    "driversUp": "None documented at any point.",
+    "driversDown": "Fought trans employee Meggan Sommerville's restroom access through years of litigation, losing in Illinois appellate court (2021) with damages affirmed; the owning Green family directs substantial giving through the National Christian Foundation, repeatedly documented as the largest funder of anti-LGBTQ+ advocacy organizations; corporate religious-liberty litigation posture (Burwell v. Hobby Lobby) anchors the broader pattern.",
+    "decisiveFactor": "A decade of courtroom resistance to one trans employee's basic workplace access.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "n_anti_lgbtq_orgs",
+     "description": "Owner giving channels substantial Hobby Lobby profits to anti-LGBTQ+ advocacy via the National Christian Foundation",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -35,
+     "year": 2022,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Hobby_Lobby",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": "Corporate profits via owning family's structured giving; confidence Med"
+    },
+    {
+     "actionId": "n_selective",
+     "description": "Litigated against trans employee Meggan Sommerville's restroom access for years; lost on appeal with damages (2021)",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -10,
+     "year": 2021,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Hobby_Lobby",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": -45,
+    "score": 5,
+    "band": "Adversarial"
+   },
+   "score": 5,
+   "band": "Adversarial"
+  },
+  {
+   "name": "Ross Stores / Ross Dress for Less",
+   "slug": "ross-stores-ross-dress-for-less",
+   "ticker": "ROST",
+   "sector": "Retail / Apparel Retail",
+   "revenueB": 21.1,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction; the company does almost no brand marketing of any kind.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Burlington Stores",
+   "slug": "burlington-stores",
+   "ticker": "BURL",
+   "sector": "Retail / Apparel Retail",
+   "revenueB": 10.6,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Ulta Beauty",
+   "slug": "ulta-beauty",
+   "ticker": "ULTA",
+   "sector": "Retail / Beauty",
+   "revenueB": 11.3,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Stood by its 2022 'The Beauty Of' podcast episode featuring trans creator Dylan Mulvaney through boycott calls — a year before Bud Light folded over the same person. Annual Pride assortments continue.",
+   "rationale": {
+    "verdict": "Passed the Mulvaney test that Bud Light later failed.",
+    "driversUp": "Kept its October 2022 podcast episode featuring Dylan Mulvaney live and defended inclusive content amid #BoycottUlta; annual Pride merchandise assortments; CEI 100 record; inclusive marketing across queer and trans creators.",
+    "driversDown": "Engagement is brand/commerce-led; limited civic or financial commitments documented.",
+    "decisiveFactor": "Not retreating in October 2022 — the earliest high-profile refusal of the anti-trans pressure playbook.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_merch_collection",
+     "description": "Annual Pride merchandise assortment",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.ulta.com/discover/pride",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.ulta.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_collab",
+     "description": "'The Beauty Of' episode with trans creator Dylan Mulvaney, kept live and defended amid boycott calls",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2022,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Dylan_Mulvaney",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 16,
+    "cosmeticCommercialCapped": 16,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 16,
+    "negative": 0,
+    "score": 66,
+    "band": "Ally"
+   },
+   "score": 66,
+   "band": "Ally"
+  },
+  {
+   "name": "Wayfair",
+   "slug": "wayfair",
+   "ticker": "W",
+   "sector": "Retail / E-commerce",
+   "revenueB": 11.9,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Sells Pride-themed goods seasonally; minimal corporate-level engagement documented; no reversal.",
+   "rationale": {
+    "verdict": "Commercially adjacent, corporately quiet.",
+    "driversUp": "Seasonal Pride product assortments; occasional posts.",
+    "driversDown": "No significant corporate commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts and seasonal assortments",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.wayfair.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Chewy",
+   "slug": "chewy",
+   "ticker": "CHWY",
+   "sector": "Retail / E-commerce / Pet",
+   "revenueB": 11.9,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "No meaningful public LGBTQ+ record located in either direction.",
+   "rationale": {
+    "verdict": "A non-participant.",
+    "driversUp": "None documented.",
+    "driversDown": "None documented.",
+    "decisiveFactor": "Absence of engagement; baseline.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2026-06",
+     "title": "Research note",
+     "excerpt": "No Pride campaigns, LGBTQ+ donations, sponsorships, CEI participation, or reversals located as of June 2026.",
+     "speaker": "Index research",
+     "sourceUrl": "https://www.hrc.org/resources/corporate-equality-index"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 0,
+    "cosmeticCommercialCapped": 0,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 0,
+    "negative": 0,
+    "score": 50,
+    "band": "Neutral"
+   },
+   "score": 50,
+   "band": "Neutral"
+  },
+  {
+   "name": "Lululemon",
+   "slug": "lululemon",
+   "ticker": "LULU",
+   "sector": "Fashion & Apparel",
+   "revenueB": 10.6,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Pride campaigns and an IDEA (Inclusion, Diversity, Equity, Action) function created in 2020; modest depth, no documented reversal.",
+   "rationale": {
+    "verdict": "Brand-level inclusivity with limited structural depth.",
+    "driversUp": "Annual Pride campaigns and community yoga events; IDEA inclusion function established 2020.",
+    "driversDown": "Limited LGBTQ+-specific commitments; no recent CEI participation confirmed.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride campaign branding",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://shop.lululemon.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and community events",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://corporate.lululemon.com/our-impact/inclusion-diversity-equity-and-action",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 5,
+    "cosmeticCommercialCapped": 5,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 5,
+    "negative": 0,
+    "score": 55,
+    "band": "Neutral"
+   },
+   "score": 55,
+   "band": "Neutral"
+  },
+  {
+   "name": "Under Armour",
+   "slug": "under-armour",
+   "ticker": "UAA",
+   "sector": "Fashion & Apparel",
+   "revenueB": 5.7,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional Pride posts; standard inclusive policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://about.underarmour.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "VF Corp.",
+   "slug": "vf-corp",
+   "ticker": "VFC",
+   "sector": "Fashion & Apparel",
+   "revenueB": 10.5,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "The North Face kept its 'Summer of Pride' campaign with drag environmentalist Pattie Gonia through the 2023 boycott; Vans runs recurring Pride collections. Brand-led but tested allyship.",
+   "rationale": {
+    "verdict": "Held the line in 2023 when The North Face became a boycott target.",
+    "driversUp": "The North Face 'Summer of Pride' campaign with drag environmentalist Pattie Gonia maintained through 2023 boycott calls; recurring Vans and TNF Pride collections; CEI 100 record.",
+    "driversDown": "Financial distress has trimmed marketing broadly; engagement is brand-led.",
+    "decisiveFactor": "Standing by the Pattie Gonia campaign under national attack.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_merch_collection",
+     "description": "Vans and The North Face Pride collections (recurring)",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 6,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.vans.com/en-us/featured/pride",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride campaign branding across brands",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.vfc.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts across brands",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.vfc.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_collab",
+     "description": "The North Face 'Summer of Pride' with Pattie Gonia, maintained through 2023 boycott",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2023,
+     "sourceUrl": "https://en.wikipedia.org/wiki/Pattie_Gonia",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 19,
+    "cosmeticCommercialCapped": 19,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 19,
+    "negative": 0,
+    "score": 69,
+    "band": "Ally"
+   },
+   "score": 69,
+   "band": "Ally"
+  },
+  {
+   "name": "Tapestry",
+   "slug": "tapestry",
+   "ticker": "TPR",
+   "sector": "Fashion & Apparel",
+   "revenueB": 6.7,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Coach and Kate Spade run recurring Pride collections with donations to LGBTQ+ youth organizations (Hetrick-Martin Institute, CenterLink); CEI 100 record; no reversal.",
+   "rationale": {
+    "verdict": "A fashion house whose Pride program carries a real giving mechanism.",
+    "driversUp": "Coach Pride collections with donations supporting LGBTQ+ youth organizations incl. the Hetrick-Martin Institute and CenterLink via the Coach Foundation; Kate Spade Pride capsules; CEI 100 record.",
+    "driversDown": "Engagement is brand- and June-centered.",
+    "decisiveFactor": "Recurring collections-plus-giving without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_merch_proceeds",
+     "description": "Coach Pride collections with donations to LGBTQ+ youth orgs (Hetrick-Martin Institute, CenterLink)",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 10,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.coach.com/shop/pride",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_logo_rainbow",
+     "description": "Pride campaign branding (Coach, Kate Spade)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 3,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.coach.com/shop/pride",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.tapestry.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 15,
+    "cosmeticCommercialCapped": 15,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 15,
+    "negative": 0,
+    "score": 65,
+    "band": "Ally"
+   },
+   "score": 65,
+   "band": "Ally"
+  },
+  {
+   "name": "Wendy's",
+   "slug": "wendy-s",
+   "ticker": "WEN",
+   "sector": "Food & Beverage",
+   "revenueB": 2.2,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional Pride posts; standard inclusive policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.wendys.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "DoorDash",
+   "slug": "doordash",
+   "ticker": "DASH",
+   "sector": "Food & Beverage / Technology",
+   "revenueB": 10.7,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Pride@DoorDash ERG and annual Pride campaigns; quiet on policy; no documented reversal.",
+   "rationale": {
+    "verdict": "Workplace-level support with modest public depth.",
+    "driversUp": "Funded Pride@DoorDash ERG; annual Pride campaigns and merchant spotlights of LGBTQ+-owned restaurants.",
+    "driversDown": "Limited structural or financial commitments documented.",
+    "decisiveFactor": "No retreat documented.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded Pride@DoorDash employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://careersatdoordash.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride posts and LGBTQ+-owned merchant spotlights",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://about.doordash.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": 0,
+    "score": 67,
+    "band": "Ally"
+   },
+   "score": 67,
+   "band": "Ally"
+  },
+  {
+   "name": "Mars, Inc.",
+   "slug": "mars-inc",
+   "ticker": "Private",
+   "sector": "Food & Beverage / Consumer Goods",
+   "revenueB": 50,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Paused its M&M's 'spokescandies' in Jan 2023 after right-wing mockery of inclusive redesigns — a small but telling flinch. Otherwise quiet with CEI participation history.",
+   "rationale": {
+    "verdict": "A private giant that flinched at candy-culture-war pressure but never formally retreated.",
+    "driversUp": "CEI participation history; inclusive policies; brand campaigns with inclusive themes.",
+    "driversDown": "Jan 2023: paused the M&M's spokescandies after Fox News mockery of inclusive character redesigns — replacing them temporarily with Maya Rudolph; read widely as appeasement, though the characters later returned (see Statements).",
+    "decisiveFactor": "The spokescandy pause — minor in substance, revealing in reflex.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and inclusive brand campaigns",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.mars.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [
+    {
+     "recordType": "Press Release",
+     "date": "2023-01-23",
+     "title": "M&M's spokescandies pause",
+     "excerpt": "Mars paused its M&M's spokescandies ('an indefinite pause from the spokescandies') after sustained Fox News mockery of inclusive redesigns — widely read as a capitulation reflex; characters later returned.",
+     "speaker": "M&M's (Mars)",
+     "sourceUrl": "https://en.wikipedia.org/wiki/M%26M%27s"
+    }
+   ],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Panera Bread",
+   "slug": "panera-bread",
+   "ticker": "Private",
+   "sector": "Food & Beverage",
+   "revenueB": 4.9,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional Pride posts; standard inclusive policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.panerabread.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "State Farm",
+   "slug": "state-farm",
+   "ticker": "Private",
+   "sector": "Financial Services / Insurance",
+   "revenueB": 104.2,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Dropped its GenderCool partnership donating LGBTQ+-themed children's books within 48 hours of a conservative pressure campaign (May 2022) — a pre-2024 preview of the capitulation era.",
+   "rationale": {
+    "verdict": "Folded in two days: the GenderCool retreat previewed the playbook later used against Bud Light and Target.",
+    "driversUp": "Partnered with The GenderCool Project to donate LGBTQ+-themed children's books through its agent network; prior Pride engagement and CEI participation.",
+    "driversDown": "May 2022: after activist Will Hild publicized the program and Consumers' Research launched a 'Like a Creepy Neighbor' campaign, State Farm dropped GenderCool within ~48 hours, saying 'conversations about gender and identity should happen at home' (Washington Post, Snopes, Metro Weekly).",
+    "decisiveFactor": "The speed of surrender — a community partnership abandoned in two days of pressure.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_community_events",
+     "description": "GenderCool Project partnership donating LGBTQ+-themed children's books via agents",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2022,
+     "sourceUrl": "https://www.washingtonpost.com/business/2022/05/24/state-farm-lgbtq-childrens-books/",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2022)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2022,
+     "sourceUrl": "https://web.archive.org/web/2022/https://www.statefarm.com/about-us/diversity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_pride_retreat",
+     "description": "Dropped GenderCool partnership within ~48 hours of conservative pressure campaign",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -22,
+     "year": 2022,
+     "sourceUrl": "https://www.washingtonpost.com/business/2022/05/24/state-farm-lgbtq-childrens-books/",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": "Archived program before-state: https://web.archive.org/web/2022/https://gendercool.org/"
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 12,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 14,
+    "negative": -22,
+    "score": 42,
+    "band": "Performative"
+   },
+   "score": 42,
+   "band": "Performative"
+  },
+  {
+   "name": "Geico",
+   "slug": "geico",
+   "ticker": "Private",
+   "sector": "Financial Services / Insurance",
+   "revenueB": 42.9,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal (Berkshire subsidiary, minimal cause marketing).",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional inclusive advertising; standard policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts/inclusive ads",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.geico.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Liberty Mutual",
+   "slug": "liberty-mutual",
+   "ticker": "Private",
+   "sector": "Financial Services / Insurance",
+   "revenueB": 49.4,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder with inclusive benefits and Pride@Liberty ERG; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet insurance holder.",
+    "driversUp": "CEI 100 record; inclusive partner and gender-affirming benefits; Pride@Liberty ERG; Boston Pride sponsorship history.",
+    "driversDown": "Low public visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.libertymutualgroup.com/about-lm/corporate-information/diversity-equity-inclusion",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Farmers Insurance",
+   "slug": "farmers-insurance",
+   "ticker": "Private",
+   "sector": "Financial Services / Insurance",
+   "revenueB": 27,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Occasional Pride posts; standard inclusive policies.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.farmers.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Electronic Arts",
+   "slug": "electronic-arts",
+   "ticker": "EA",
+   "sector": "Media & Entertainment / Gaming",
+   "revenueB": 7.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Decades of inclusive game content (The Sims has allowed same-sex relationships since 2000, customizable pronouns since 2022) plus an active Pride ERG; no documented reversal.",
+   "rationale": {
+    "verdict": "Inclusion shipped in the product, not just the careers page.",
+    "driversUp": "The Sims' same-sex relationships since 2000 and customizable pronouns since 2022 — among the most-played inclusive content in gaming; funded Pride ERG; CEI 100 record; annual Pride campaigns.",
+    "driversDown": "Periodic community criticism over esports event locations in hostile jurisdictions.",
+    "decisiveFactor": "A quarter-century of inclusive product decisions.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded Pride employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.ea.com/commitments/inclusion-and-diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Annual Pride campaigns and posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.ea.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_collab",
+     "description": "Inclusive game content: The Sims same-sex relationships (2000—), customizable pronouns (2022—), queer characters across franchises",
+     "tier": "Commercial",
+     "polarity": "Positive",
+     "points": 8,
+     "year": 2022,
+     "sourceUrl": "https://en.wikipedia.org/wiki/LGBT_themes_in_video_games",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 10,
+    "cosmeticCommercialCapped": 10,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 25,
+    "negative": 0,
+    "score": 75,
+    "band": "Ally"
+   },
+   "score": 75,
+   "band": "Ally"
+  },
+  {
+   "name": "Take-Two Interactive",
+   "slug": "take-two-interactive",
+   "ticker": "TTWO",
+   "sector": "Media & Entertainment / Gaming",
+   "revenueB": 5.4,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal corporate LGBTQ+ engagement; game content mixed historically; no documented reversal.",
+   "rationale": {
+    "verdict": "Quiet corporately; content speaks louder than policy either way.",
+    "driversUp": "Occasional Pride posts; recent franchises include queer characters.",
+    "driversDown": "No significant corporate commitments documented.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.take2games.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "The New York Times Company",
+   "slug": "the-new-york-times-company",
+   "ticker": "NYT",
+   "sector": "Media & Entertainment",
+   "revenueB": 2.6,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Inclusive workplace and Pride-era journalism legacy, but its trans-coverage choices drew a 2023 open letter from GLAAD and 1,000+ contributors; the company defended the coverage.",
+   "rationale": {
+    "verdict": "An inclusive employer whose editorial choices on trans coverage split it from much of the community.",
+    "driversUp": "Inclusive workplace policies and benefits; LGBTQ+ ERG; decades of landmark LGBTQ+ journalism.",
+    "driversDown": "Feb 2023: GLAAD and 1,000+ contributors published an open letter criticizing the Times' coverage of transgender people as biased; leadership rejected the criticism and disciplined-adjacent messaging followed — an editorial posture the community broadly reads as harmful (Wikipedia/open-letter record).",
+    "decisiveFactor": "The 2023 trans-coverage dispute — workplace inclusion paired with contested editorial output.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.nytco.com/careers/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride engagement and inclusive workplace programs",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.nytco.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "n_selective",
+     "description": "Trans coverage criticized in 2023 open letter from GLAAD and 1,000+ contributors; leadership defended the coverage",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -10,
+     "year": 2023,
+     "sourceUrl": "https://en.wikipedia.org/wiki/New_York_Times_contributor_letter",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 17,
+    "negative": -10,
+    "score": 57,
+    "band": "Neutral"
+   },
+   "score": 57,
+   "band": "Neutral"
+  },
+  {
+   "name": "iHeartMedia",
+   "slug": "iheartmedia",
+   "ticker": "IHRT",
+   "sector": "Media & Entertainment",
+   "revenueB": 3.7,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Pride-season programming and LGBTQ+ podcast content; minimal corporate-level commitments documented.",
+   "rationale": {
+    "verdict": "Programming-level presence without corporate depth.",
+    "driversUp": "Pride playlists/programming and LGBTQ+ podcast slate (incl. partnerships with queer creators).",
+    "driversDown": "Minimal corporate engagement documented; heavy debt limits cause spending.",
+    "decisiveFactor": "Content without commitments.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride programming and posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.iheartmedia.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "Kaiser Permanente",
+   "slug": "kaiser-permanente",
+   "ticker": "Private",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 115.8,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "A care-delivery ally: longtime provider of gender-affirming care with dedicated transgender health programs, top Healthcare Equality Index ratings across facilities, and CEI 100 standing. Substance through services.",
+   "rationale": {
+    "verdict": "Supports the community in the most material way available to a health system: providing the care.",
+    "driversUp": "Dedicated transgender health programs and gender-affirming care across its system; consistently top-rated facilities in HRC's Healthcare Equality Index; CEI 100 record; funded LGBTQ+ ERG; Pride sponsorships in multiple regions.",
+    "driversDown": "Faces the same federal pressure on gender-affirming care as all providers; some member disputes over coverage specifics.",
+    "decisiveFactor": "Being the care infrastructure — programs that exist year-round regardless of marketing cycles.",
+    "trajectory": "Stable",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Provider and insurer of gender-affirming care with dedicated transgender health programs; HEI top ratings",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://about.kaiserpermanente.org/health-and-wellness/health-equity/lgbtq-health",
+     "sourceType": "Company",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://about.kaiserpermanente.org/commitments-and-impact/equity-inclusion-and-diversity",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and regional Pride sponsorships",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://about.kaiserpermanente.org/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 15,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 39,
+    "negative": 0,
+    "score": 89,
+    "band": "Champion"
+   },
+   "score": 89,
+   "band": "Champion"
+  },
+  {
+   "name": "Quest Diagnostics",
+   "slug": "quest-diagnostics",
+   "ticker": "DGX",
+   "sector": "Healthcare & Pharma",
+   "revenueB": 9.9,
+   "hrcCei": null,
+   "ceiYear": null,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Minimal public LGBTQ+ engagement; no documented reversal.",
+   "rationale": {
+    "verdict": "Thin record in both directions.",
+    "driversUp": "Standard inclusive policies; occasional posts.",
+    "driversDown": "No significant documented commitments.",
+    "decisiveFactor": "Near-baseline by absence.",
+    "trajectory": "Stable",
+    "confidence": "Low"
+   },
+   "actions": [
+    {
+     "actionId": "p_generic_post",
+     "description": "Occasional Pride posts",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.questdiagnostics.com/",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 2,
+    "negative": 0,
+    "score": 52,
+    "band": "Neutral"
+   },
+   "score": 52,
+   "band": "Neutral"
+  },
+  {
+   "name": "AMD",
+   "slug": "amd",
+   "ticker": "AMD",
+   "sector": "Technology",
+   "revenueB": 25.8,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": true,
+   "flags": {
+    "postJan2025Reversal": false,
+    "pressureDriven": false,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Quiet CEI 100 holder with inclusive benefits; no documented reversal.",
+   "rationale": {
+    "verdict": "A quiet semiconductor holder.",
+    "driversUp": "CEI 100 record; inclusive partner and gender-affirming benefits; Pride ERG.",
+    "driversDown": "Low public visibility.",
+    "decisiveFactor": "Continuity without retreat.",
+    "trajectory": "Stable",
+    "confidence": "Med"
+   },
+   "actions": [
+    {
+     "actionId": "p_benefits",
+     "description": "Inclusive partner and gender-affirming benefits (CEI-verified)",
+     "tier": "Structural",
+     "polarity": "Positive",
+     "points": 22,
+     "year": 2024,
+     "sourceUrl": "https://reports.hrc.org/corporate-equality-index-2025",
+     "sourceType": "HRC",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.amd.com/en/corporate/corporate-responsibility/diversity-belonging.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 0,
+    "financial": 0,
+    "structural": 22,
+    "positiveCapped": 24,
+    "negative": 0,
+    "score": 74,
+    "band": "Ally"
+   },
+   "score": 74,
+   "band": "Ally"
+  },
+  {
+   "name": "Booz Allen Hamilton",
+   "slug": "booz-allen-hamilton",
+   "ticker": "BAH",
+   "sector": "Defense & Gov Contracting",
+   "revenueB": 11,
+   "hrcCei": 100,
+   "ceiYear": 2024,
+   "stillSubmittingCei": false,
+   "flags": {
+    "postJan2025Reversal": true,
+    "pressureDriven": true,
+    "juneOnly": false,
+    "transNbExclusion": false,
+    "geoHypocrisy": false
+   },
+   "analystNotes": "Scrapped DEI programs in Feb 2025 citing federal contract risk, then dropped its WorldPride 2025 sponsorship — the most-cited single Pride withdrawal of the season.",
+   "rationale": {
+    "verdict": "The WorldPride defection: a marquee sponsorship abandoned weeks after DEI was scrapped for contract security.",
+    "driversUp": "Prior WorldPride/Capital Pride sponsorship; funded LGBTQ+ ERG (GLOBE+); CEI 100 record; inclusive benefits.",
+    "driversDown": "Feb 2025: scrapped DEI programs, with its Chief People Officer telling staff that without changes 'we could be ineligible for contracts with the federal government' (Bloomberg); then dropped its WorldPride 2025 sponsorship in Washington DC (Advocate).",
+    "decisiveFactor": "Dropping WorldPride in its hometown — the highest-visibility Pride withdrawal of 2025.",
+    "trajectory": "Sharp Reversal",
+    "confidence": "High"
+   },
+   "actions": [
+    {
+     "actionId": "n_pride_retreat",
+     "description": "Dropped WorldPride 2025 sponsorship in Washington DC after ending DEI",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -22,
+     "year": 2025,
+     "sourceUrl": "https://www.advocate.com/news/booz-allen-hamilton-worldpride-sponsorship",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "n_dei_removal",
+     "description": "Scrapped DEI programs citing federal contract eligibility risk (CPO town hall, Bloomberg)",
+     "tier": "—",
+     "polarity": "Negative",
+     "points": -32,
+     "year": 2025,
+     "sourceUrl": "https://www.bloomberg.com/news/articles/2025-02-07/booz-allen-scraps-dei-programs-in-reaction-to-trump-orders",
+     "sourceType": "News",
+     "postJan2025": true,
+     "notes": null
+    },
+    {
+     "actionId": "p_erg_support",
+     "description": "Funded LGBTQ+ employee resource group",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 15,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.boozallen.com/about/diversity-equity-and-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_parade_sponsor",
+     "description": "WorldPride/Capital Pride sponsorship (dropped 2025)",
+     "tier": "Civic",
+     "polarity": "Positive",
+     "points": 12,
+     "year": 2024,
+     "sourceUrl": "https://www.advocate.com/news/booz-allen-hamilton-worldpride-sponsorship",
+     "sourceType": "News",
+     "postJan2025": false,
+     "notes": null
+    },
+    {
+     "actionId": "p_generic_post",
+     "description": "Pride posts and engagement (through 2024)",
+     "tier": "Cosmetic",
+     "polarity": "Positive",
+     "points": 2,
+     "year": 2024,
+     "sourceUrl": "https://web.archive.org/web/2024/https://www.boozallen.com/about/diversity-equity-and-inclusion.html",
+     "sourceType": "Archive",
+     "postJan2025": false,
+     "notes": null
+    }
+   ],
+   "social": [],
+   "statements": [],
+   "breakdown": {
+    "cosmeticCommercialRaw": 2,
+    "cosmeticCommercialCapped": 2,
+    "civic": 27,
+    "financial": 0,
+    "structural": 0,
+    "positiveCapped": 29,
+    "negative": -54,
+    "score": 25,
+    "band": "Harmful"
+   },
+   "score": 25,
+   "band": "Harmful"
   }
  ],
  "sectors": [
@@ -13102,8 +15184,8 @@
   },
   {
    "sector": "Technology",
-   "companies": 25,
-   "avgScore": 65.1,
+   "companies": 26,
+   "avgScore": 65.4,
    "min": 28,
    "max": 100,
    "champions": 5,
@@ -13111,17 +15193,17 @@
   },
   {
    "sector": "Retail — Big Box",
-   "companies": 14,
-   "avgScore": 56.9,
+   "companies": 16,
+   "avgScore": 54.8,
    "min": 27,
    "max": 92,
    "champions": 2,
-   "harmfulPlus": 3
+   "harmfulPlus": 4
   },
   {
    "sector": "Fashion & Apparel",
-   "companies": 9,
-   "avgScore": 72.8,
+   "companies": 13,
+   "avgScore": 68.9,
    "min": 50,
    "max": 100,
    "champions": 4,
@@ -13129,7 +15211,7 @@
   },
   {
    "sector": "Food & Beverage",
-   "companies": 18,
+   "companies": 20,
    "avgScore": 51.9,
    "min": 15,
    "max": 100,
@@ -13147,8 +15229,8 @@
   },
   {
    "sector": "Media & Entertainment",
-   "companies": 9,
-   "avgScore": 55.6,
+   "companies": 11,
+   "avgScore": 55.4,
    "min": 36,
    "max": 72,
    "champions": 0,
@@ -13165,11 +15247,11 @@
   },
   {
    "sector": "Healthcare & Pharma",
-   "companies": 16,
-   "avgScore": 64.4,
+   "companies": 18,
+   "avgScore": 65.1,
    "min": 42,
    "max": 99,
-   "champions": 2,
+   "champions": 3,
    "harmfulPlus": 0
   },
   {
@@ -13201,12 +15283,12 @@
   },
   {
    "sector": "Defense & Gov Contracting",
-   "companies": 7,
-   "avgScore": 37.1,
-   "min": 35,
+   "companies": 8,
+   "avgScore": 35.6,
+   "min": 25,
    "max": 50,
    "champions": 0,
-   "harmfulPlus": 0
+   "harmfulPlus": 1
   },
   {
    "sector": "Industrial & Logistics",
@@ -13216,6 +15298,114 @@
    "max": 67,
    "champions": 0,
    "harmfulPlus": 1
+  },
+  {
+   "sector": "Retail — Automotive",
+   "companies": 1,
+   "avgScore": 50,
+   "min": 50,
+   "max": 50,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Retail / Consumer Goods",
+   "companies": 1,
+   "avgScore": 61,
+   "min": 61,
+   "max": 61,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Retail — Grocery",
+   "companies": 1,
+   "avgScore": 10,
+   "min": 10,
+   "max": 10,
+   "champions": 0,
+   "harmfulPlus": 1
+  },
+  {
+   "sector": "Retail — Big Box / Crafts",
+   "companies": 1,
+   "avgScore": 5,
+   "min": 5,
+   "max": 5,
+   "champions": 0,
+   "harmfulPlus": 1
+  },
+  {
+   "sector": "Retail / Apparel Retail",
+   "companies": 2,
+   "avgScore": 50,
+   "min": 50,
+   "max": 50,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Retail / Beauty",
+   "companies": 1,
+   "avgScore": 66,
+   "min": 66,
+   "max": 66,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Retail / E-commerce",
+   "companies": 1,
+   "avgScore": 52,
+   "min": 52,
+   "max": 52,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Retail / E-commerce / Pet",
+   "companies": 1,
+   "avgScore": 50,
+   "min": 50,
+   "max": 50,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Food & Beverage / Technology",
+   "companies": 1,
+   "avgScore": 67,
+   "min": 67,
+   "max": 67,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Food & Beverage / Consumer Goods",
+   "companies": 1,
+   "avgScore": 52,
+   "min": 52,
+   "max": 52,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Financial Services / Insurance",
+   "companies": 4,
+   "avgScore": 55,
+   "min": 42,
+   "max": 74,
+   "champions": 0,
+   "harmfulPlus": 0
+  },
+  {
+   "sector": "Media & Entertainment / Gaming",
+   "companies": 2,
+   "avgScore": 63.5,
+   "min": 52,
+   "max": 75,
+   "champions": 0,
+   "harmfulPlus": 0
   }
  ],
  "scoringReference": [
@@ -13418,8 +15608,8 @@
  ],
  "validation": {
   "passed": true,
-  "companiesChecked": 169,
-  "actionsChecked": 454,
+  "companiesChecked": 200,
+  "actionsChecked": 513,
   "issues": []
  }
 }

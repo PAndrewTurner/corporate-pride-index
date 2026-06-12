@@ -174,11 +174,17 @@ for (const r of sheet('Statements_Reports')) {
 // us their cached text when present, but this workbook ships without cached
 // values, so we align by row order against Company_Master (the formulas
 // guarantee that ordering).
+// Row order is the authoritative key: the workbook's legacy block (original
+// 88 companies) carries Company cells that lag the content by one row, while
+// newer rows are named correctly. Content has always been positional, so we
+// map by position and only warn (not fail) when a named cell disagrees.
 const rationaleRows = sheet('Score_Rationale').filter((r) => str(r['Verdict (one line)']));
 const rationaleByCompany = new Map<string, Rationale>();
+let rationaleNameLag = 0;
 rationaleRows.forEach((r, i) => {
   const cell = str(r['Company']);
-  const company = cell && masterSet.has(cell) ? cell : masterNames[i];
+  const company = masterNames[i];
+  if (cell && masterSet.has(cell) && cell !== company) rationaleNameLag++;
   if (!company) return;
   if (!masterSet.has(company)) {
     issues.push(`Score_Rationale references unknown company "${company}"`);
@@ -302,6 +308,10 @@ mkdirSync(dirname(OUT_PATH), { recursive: true });
 writeFileSync(OUT_PATH, JSON.stringify(data, null, 1));
 
 console.log(`Ingested ${companies.length} companies, ${actionsChecked} actions.`);
+if (rationaleNameLag > 0)
+  console.warn(
+    `Note: ${rationaleNameLag} Score_Rationale rows have Company cells that disagree with their row position (known legacy off-by-one); content mapped by position.`,
+  );
 console.log(
   `Validation: scoring module reproduced the workbook formula for all ${companies.length} companies.`,
 );
