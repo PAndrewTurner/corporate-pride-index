@@ -150,8 +150,8 @@ export default function About() {
         </div>
         <div className="card mt-6 px-4 py-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <span className="label">Contact</span>
-          <a href="mailto:PAndrewTurner@outlook.com" className={ext}>
-            PAndrewTurner@outlook.com
+          <a href="mailto:CorpPrideIndex@outlook.com" className={ext}>
+            CorpPrideIndex@outlook.com
           </a>
           <a
             href="https://www.linkedin.com/in/pandrewturner/"

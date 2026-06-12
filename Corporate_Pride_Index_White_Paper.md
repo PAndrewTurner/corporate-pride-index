@@ -231,7 +231,7 @@ The Corporate Pride Index is an independent, non-commercial research project. It
 
 The project was designed, built, and is maintained by **Paul Andrew Turner Jr.**, an Orlando-based data scientist and finance professional. He is an openly gay man and active member of the Orlando LGBTQ+ community.
 
-The project can be reached at [PAndrewTurner@outlook.com](mailto:PAndrewTurner@outlook.com).
+The project can be reached at [CorpPrideIndex@outlook.com](mailto:CorpPrideIndex@outlook.com).
 
 ---
 
