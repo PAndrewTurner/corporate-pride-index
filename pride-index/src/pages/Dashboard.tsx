@@ -277,6 +277,19 @@ export default function Dashboard() {
         <WordmarkLogo />
       </section>
 
+      {/* Future enhancements teaser */}
+      <section className="card px-4 py-3 text-sm leading-relaxed">
+        <span className="label mr-2">Future enhancements:</span>
+        <span className="text-ink-300">
+          public evidence submissions with tiered, AI-assisted verification · company
+          self-submission and score appeals · year-over-year score tracking · legislative mapping
+          of political donations · expanded company universe.{' '}
+          <Link to="/future" className="text-sky-400 hover:underline whitespace-nowrap">
+            See the full roadmap →
+          </Link>
+        </span>
+      </section>
+
       {/* Stats */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Stat value={String(companies.length)} label="companies scored" />

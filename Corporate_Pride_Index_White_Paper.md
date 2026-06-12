@@ -218,7 +218,6 @@ The current index covers 200 companies. Potential expansions include:
 - **Temporal tracking** — year-over-year score history, showing trajectory quantitatively rather than qualitatively
 - **Legislative mapping** — linking negative political donations to specific bills and their outcomes
 - **Sector benchmarking** — peer comparison tools showing where a given company stands relative to its industry
-- **API access** — structured data export for researchers and journalists
 
 The underlying data architecture is designed to support all of these: the JSON schema already includes full action histories with dates, the build-time validation pipeline is extensible, and the scoring module is stateless and testable.
 
