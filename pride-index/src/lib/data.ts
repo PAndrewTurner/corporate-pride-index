@@ -8,6 +8,24 @@ export const scoringReference = data.scoringReference;
 
 export const companyBySlug = new Map(companies.map((c) => [c.slug, c]));
 
+/** Same slug rules the ingest applies to company names. */
+export const slugifySector = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+export const sectorBySlug = new Map(sectors.map((s) => [slugifySector(s.sector), s]));
+
+/** Median of a numeric list (robust to outliers, unlike the mean). */
+export const median = (xs: number[]): number => {
+  if (xs.length === 0) return 0;
+  const s = [...xs].sort((a, b) => a - b);
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 ? s[mid] : Math.round(((s[mid - 1] + s[mid]) / 2) * 10) / 10;
+};
+
 export const BAND_COLORS: Record<Band, string> = {
   Champion: '#10b981',
   Ally: '#84cc16',

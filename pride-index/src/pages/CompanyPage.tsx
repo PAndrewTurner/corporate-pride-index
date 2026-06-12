@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BAND_COLORS, companyBySlug, fmtPts, sectors } from '../lib/data';
 import type { ActionRow, Company } from '../lib/types';
@@ -11,6 +11,8 @@ import {
   SectionHeading,
   TrajectoryBadge,
 } from '../components/ui';
+
+const ScoreTimeline = lazy(() => import('../components/ScoreTimeline'));
 
 /* ── Evidence: a single action row ─────────────────────────────────────── */
 
@@ -207,6 +209,19 @@ export default function CompanyPage() {
 
       {/* THE WHY — before anything else */}
       <WhyPanel c={c} />
+
+      {/* Score timeline */}
+      {c.timeline.length > 0 && (
+        <section id="timeline" className="scroll-mt-20">
+          <SectionHeading
+            kicker="How the score moved, and why"
+            title={`Score timeline ${c.timeline[0].year} → ${c.timeline[c.timeline.length - 1].year}`}
+          />
+          <Suspense fallback={<div className="card h-[220px] animate-pulse" />}>
+            <ScoreTimeline c={c} />
+          </Suspense>
+        </section>
+      )}
 
       {/* Scoring breakdown */}
       <section id="evidence" className="scroll-mt-20">

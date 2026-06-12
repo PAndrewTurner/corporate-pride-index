@@ -29,6 +29,9 @@ import type {
   SocialPost,
   Statement,
   Tier,
+  TimelineEntry,
+  TimelineEvidence,
+  TimelinePoint,
   Polarity,
   Trajectory,
 } from '../src/lib/types';
@@ -200,6 +203,80 @@ rationaleRows.forEach((r, i) => {
   });
 });
 
+// ── Yearly_Scores (score timeline 2015 → now) ────────────────────────────────
+const timelineByCompany = new Map<
+  string,
+  { points: TimelinePoint[]; change: number | null; shape: string | null }
+>();
+for (const r of sheet('Yearly_Scores')) {
+  const company = str(r['Company']);
+  if (!company) continue;
+  if (!masterSet.has(company)) {
+    issues.push(`Yearly_Scores references unknown company "${company}"`);
+    continue;
+  }
+  const points: TimelinePoint[] = Object.keys(r)
+    .filter((k) => /^\d{4}$/.test(k) && num(r[k]) !== null)
+    .map((k) => ({ year: Number(k), score: num(r[k])! }))
+    .sort((a, b) => a.year - b.year);
+  timelineByCompany.set(company, {
+    points,
+    change: num(r['Change 2015→2026']),
+    shape: str(r['Trajectory Shape']),
+  });
+}
+
+// ── Yearly_Rationale (why the score changed, year by year) ───────────────────
+// Evidence cells pack items as "(points) action_id — url" joined by "||".
+function parseTimelineEvidence(cell: string | null): TimelineEvidence[] {
+  if (!cell) return [];
+  return cell
+    .split('||')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((raw) => {
+      // "(points) action_id — url" with an optional trailing "[annotation]"
+      const m = raw.match(/^\(([+-]?\d+)\)\s*([\w-]+)\s*—\s*(https?:\/\/[^\s[]+)(?:\s*\[.*\])?$/);
+      return m
+        ? { points: Number(m[1]), actionId: m[2], url: m[3], raw }
+        : { points: null, actionId: null, url: null, raw };
+    });
+}
+
+const timelineEntriesByCompany = new Map<string, TimelineEntry[]>();
+for (const r of sheet('Yearly_Rationale')) {
+  const company = str(r['Company']);
+  if (!company) continue;
+  if (!masterSet.has(company)) {
+    issues.push(`Yearly_Rationale references unknown company "${company}"`);
+    continue;
+  }
+  const entry: TimelineEntry = {
+    year: num(r['Year']) ?? 0,
+    score: num(r['Score']) ?? 0,
+    delta: num(r['Δ vs prior']),
+    entryType: str(r['Entry Type']) ?? 'Change',
+    rationale:
+      str(r['Rationale — why the score is what it is / why it changed (with score math)']) ?? '',
+    evidence: parseTimelineEvidence(str(r['Evidence (points | action | source URL)'])),
+  };
+  // the rationale's score must agree with the Yearly_Scores grid at that year
+  const tl = timelineByCompany.get(company);
+  const gridScore = tl?.points.find((p) => p.year === entry.year)?.score;
+  if (gridScore !== undefined && gridScore !== entry.score) {
+    issues.push(
+      `Yearly_Rationale: ${company} ${entry.year} says score ${entry.score} but Yearly_Scores grid says ${gridScore}`,
+    );
+  }
+  (
+    timelineEntriesByCompany.get(company) ??
+    timelineEntriesByCompany.set(company, []).get(company)!
+  ).push(entry);
+}
+for (const entries of timelineEntriesByCompany.values()) {
+  entries.sort((a, b) => a.year - b.year);
+}
+
 // ── Independent evaluation of the workbook's formula (validation reference) ──
 function workbookFormulaScore(company: string): number {
   const rows = actionsByCompany.get(company) ?? [];
@@ -234,6 +311,18 @@ const companies: Company[] = masterRows.map((r) => {
   const rationale = rationaleByCompany.get(name) ?? null;
   if (!rationale) issues.push(`No Score_Rationale row for ${name}`);
 
+  const tl = timelineByCompany.get(name);
+  if (!tl) issues.push(`No Yearly_Scores row for ${name}`);
+  const timelineEntries = timelineEntriesByCompany.get(name) ?? [];
+  if (timelineEntries.length === 0) issues.push(`No Yearly_Rationale entries for ${name}`);
+  // the timeline's latest year must agree with the current computed score
+  const lastPoint = tl?.points[tl.points.length - 1];
+  if (lastPoint && lastPoint.score !== breakdown.score) {
+    issues.push(
+      `Yearly_Scores: ${name} ends at ${lastPoint.score} (${lastPoint.year}) but the current computed score is ${breakdown.score}`,
+    );
+  }
+
   return {
     name,
     slug: slugify(name),
@@ -258,6 +347,10 @@ const companies: Company[] = masterRows.map((r) => {
     breakdown,
     score: breakdown.score,
     band: bandFor(breakdown.score),
+    timeline: tl?.points ?? [],
+    timelineEntries,
+    timelineChange: tl?.change ?? null,
+    trajectoryShape: tl?.shape ?? null,
   };
 });
 

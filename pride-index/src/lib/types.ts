@@ -75,6 +75,30 @@ export interface ScoreBreakdown {
   band: Band;
 }
 
+/** One point on the yearly score timeline. */
+export interface TimelinePoint {
+  year: number;
+  score: number;
+}
+
+/** A parsed evidence item from Yearly_Rationale ("(points) action — url"). */
+export interface TimelineEvidence {
+  points: number | null;
+  actionId: string | null;
+  url: string | null;
+  raw: string;
+}
+
+/** A Yearly_Rationale row: why the score is what it is / why it changed. */
+export interface TimelineEntry {
+  year: number;
+  score: number;
+  delta: number | null;
+  entryType: 'Baseline' | 'Change' | string;
+  rationale: string;
+  evidence: TimelineEvidence[];
+}
+
 export interface Company {
   name: string;
   slug: string;
@@ -93,6 +117,14 @@ export interface Company {
   breakdown: ScoreBreakdown;
   score: number;
   band: Band;
+  /** Yearly scores 2015→now from the Yearly_Scores sheet. */
+  timeline: TimelinePoint[];
+  /** Rationale entries explaining the baseline and every change. */
+  timelineEntries: TimelineEntry[];
+  /** Net change over the timeline window (workbook "Change 2015→2026"). */
+  timelineChange: number | null;
+  /** Workbook's one-phrase trajectory shape (e.g. "Fell from peak"). */
+  trajectoryShape: string | null;
 }
 
 export interface ScoringRefRow {
