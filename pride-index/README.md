@@ -1,6 +1,6 @@
 # The Corporate Pride Index
 
-An interactive accountability site scoring 169 major American companies (0–100) on the depth and
+An interactive accountability site scoring 200 major American companies (0–100) on the depth and
 consistency of their LGBTQ+ support. Built with React + TypeScript + Vite + Tailwind + Recharts.
 The data source is a single Excel workbook; the site is a pure presentation layer over it, with
 every score recomputed and validated from raw evidence at build time.
