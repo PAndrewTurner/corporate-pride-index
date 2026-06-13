@@ -6,6 +6,8 @@ import { useTheme } from './lib/theme';
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const CompanyPage = lazy(() => import('./pages/CompanyPage'));
 const Compare = lazy(() => import('./pages/Compare'));
+const Sectors = lazy(() => import('./pages/Sectors'));
+const SectorPage = lazy(() => import('./pages/SectorPage'));
 const Methodology = lazy(() => import('./pages/Methodology'));
 const About = lazy(() => import('./pages/About'));
 const Future = lazy(() => import('./pages/Future'));
@@ -72,14 +74,12 @@ export default function App() {
               Built with Claude Fable 5, Anthropic's latest model
             </a>
           </div>
-          <img
-            src={`${import.meta.env.BASE_URL}progress-pride-flag.png`}
-            alt="The Progress Pride flag (Quasar variant)"
-            className="hidden md:block h-11 border border-ink-700/60"
-          />
           <nav className="flex items-center gap-1 ml-auto">
             <NavLink to="/" end className={navLink}>
               Index
+            </NavLink>
+            <NavLink to="/sectors" className={navLink}>
+              Sectors
             </NavLink>
             <NavLink to="/compare" className={navLink}>
               Compare
@@ -110,6 +110,8 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/company/:slug" element={<CompanyPage />} />
+            <Route path="/sectors" element={<Sectors />} />
+            <Route path="/sectors/:slug" element={<SectorPage />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/methodology" element={<Methodology />} />
             <Route path="/future" element={<Future />} />

@@ -26,6 +26,39 @@ export const median = (xs: number[]): number => {
   return s.length % 2 ? s[mid] : Math.round(((s[mid - 1] + s[mid]) / 2) * 10) / 10;
 };
 
+export interface SectorTimelinePoint {
+  year: number;
+  avg: number;
+  median: number;
+  count: number;
+}
+
+/** Aggregate the per-company yearly timelines into a sector-level series. */
+export function sectorTimeline(sectorName: string): SectorTimelinePoint[] {
+  const cs = companies.filter((c) => c.sector === sectorName);
+  const years = new Set<number>();
+  cs.forEach((c) => c.timeline.forEach((p) => years.add(p.year)));
+  return [...years]
+    .sort((a, b) => a - b)
+    .map((year) => {
+      const scores = cs
+        .map((c) => c.timeline.find((p) => p.year === year)?.score)
+        .filter((s): s is number => s !== undefined);
+      return {
+        year,
+        avg: scores.length
+          ? Math.round((scores.reduce((a, b) => a + b, 0) / scores.length) * 10) / 10
+          : 0,
+        median: median(scores),
+        count: scores.length,
+      };
+    });
+}
+
+/** Companies in a sector, sorted by current score (desc). */
+export const companiesInSector = (sectorName: string) =>
+  companies.filter((c) => c.sector === sectorName).sort((a, b) => b.score - a.score);
+
 export const BAND_COLORS: Record<Band, string> = {
   Champion: '#10b981',
   Ally: '#84cc16',
