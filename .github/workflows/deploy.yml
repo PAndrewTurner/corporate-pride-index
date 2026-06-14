@@ -27,20 +27,17 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: pride-index/package-lock.json
+          cache-dependency-path: pride-index-astro/package-lock.json
 
       - name: Install dependencies
-        working-directory: pride-index
+        working-directory: pride-index-astro
         run: npm ci
 
-      - name: Ingest workbook, validate scores, and build
-        working-directory: pride-index
+      - name: Build the Astro static site
+        working-directory: pride-index-astro
         env:
           BASE_PATH: /corporate-pride-index/
         run: npm run build
-
-      - name: SPA fallback for deep links
-        run: cp pride-index/dist/index.html pride-index/dist/404.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -48,7 +45,7 @@ jobs:
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: pride-index/dist
+          path: pride-index-astro/dist
 
   deploy:
     needs: build

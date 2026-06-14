@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {
+  BAND_COLORS,
+  companiesInSector,
+  fmtPts,
+  median,
+  sectors,
+  sectorTimeline,
+  slugifySector,
+} from '../../lib/data';
+import { bandFor } from '../../lib/scoring';
+import { BandChip, FlagChips, SectionHeading } from '../../components/ui.tsx';
+import SectorTimelineChart from '../../components/SectorTimelineChart.tsx';
+
+export function getStaticPaths() {
+  return sectors.map((s) => ({
+    params: { slug: slugifySector(s.sector) },
+    props: { stat: s },
+  }));
+}
+
+const base = import.meta.env.BASE_URL;
+const stat = Astro.props.stat;
+
+const cs = companiesInSector(stat.sector);
+const series = sectorTimeline(stat.sector);
+const med = median(cs.map((c) => c.score));
+const first = series[0];
+const last = series[series.length - 1];
+const change = last && first ? Math.round((last.median - first.median) * 10) / 10 : 0;
+const changeColor = change < 0 ? 'text-red-400' : change > 0 ? 'text-emerald-400' : 'text-ink-300';
+---
+
+<Layout
+  title={`${stat.sector} — The Corporate Pride Index`}
+  description={`How the ${stat.sector} sector has moved on LGBTQ+ support: median ${med}, average ${stat.avgScore}, across ${stat.companies} companies tracked from 2015 to now.`}
+  path={`sectors/${slugifySector(stat.sector)}`}
+>
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 py-10 space-y-10">
+    <a href={`${base}sectors`} class="text-xs text-ink-400 hover:text-white">← All sectors</a>
+
+    {/* Hero */}
+    <section class="flex flex-col sm:flex-row sm:items-end gap-6 justify-between">
+      <div class="min-w-0">
+        <p class="label mb-2">
+          {stat.companies} {stat.companies === 1 ? 'company' : 'companies'} in the index
+        </p>
+        <h1 class="font-display text-4xl sm:text-5xl text-white leading-tight">{stat.sector}</h1>
+      </div>
+      <div class="shrink-0 flex items-end gap-6">
+        <div class="text-right">
+          <div class="font-mono text-6xl leading-none" style={{ color: BAND_COLORS[bandFor(med)] }}>
+            {med}
+          </div>
+          <p class="label mt-1">median</p>
+        </div>
+        <div class="text-right">
+          <div class="font-mono text-3xl leading-none text-ink-300">{stat.avgScore}</div>
+          <p class="label mt-1">average</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Sector score over time (island — chart) */}
+    {
+      series.length > 0 && (
+        <section>
+          <SectionHeading kicker="The sector over time" title={`Score ${first.year} → ${last.year}`} />
+          <div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+            <span class="text-ink-300">
+              median {first.year} <span class="font-mono text-white">{first.median}</span> →{' '}
+              {last.year}{' '}
+              <span class="font-mono" style={{ color: BAND_COLORS[bandFor(last.median)] }}>
+                {last.median}
+              </span>
+            </span>
+            <span class={`font-mono ${changeColor}`}>{change === 0 ? '±0' : fmtPts(change)}</span>
+            <span class="text-ink-500">·</span>
+            <span class="text-ink-400">
+              best <span class="font-mono">{stat.max}</span> · worst{' '}
+              <span class="font-mono">{stat.min}</span>
+              {stat.harmfulPlus > 0 && <span> · {stat.harmfulPlus} harmful or worse</span>}
+            </span>
+          </div>
+          <SectorTimelineChart client:visible data={series} />
+        </section>
+      )
+    }
+
+    {/* Companies in the sector */}
+    <section>
+      <SectionHeading
+        kicker="Everyone in this sector"
+        title={`${cs.length} ${cs.length === 1 ? 'company' : 'companies'}`}
+      />
+      <div class="space-y-2">
+        {
+          cs.map((c) => (
+            <a
+              href={`${base}company/${c.slug}`}
+              class="card p-3 flex items-center gap-4 hover:border-ink-500 transition-colors"
+            >
+              <div class="font-mono text-2xl w-12 text-right shrink-0" style={{ color: BAND_COLORS[c.band] }}>
+                {c.score}
+              </div>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-white font-medium truncate">{c.name}</span>
+                  {c.ticker && <span class="font-mono text-[11px] text-ink-500">({c.ticker})</span>}
+                  <BandChip band={c.band} size="sm" />
+                </div>
+                {c.timelineChange !== null && c.timelineChange !== 0 && (
+                  <p class="mt-0.5 text-[11px] text-ink-400">
+                    <span class={`font-mono ${c.timelineChange < 0 ? 'text-red-400' : 'text-emerald-400'}`}>
+                      {fmtPts(c.timelineChange)}
+                    </span>{' '}
+                    since {c.timeline[0]?.year}
+                    {c.trajectoryShape && <span> · {c.trajectoryShape.toLowerCase()}</span>}
+                  </p>
+                )}
+              </div>
+              <div class="hidden sm:block shrink-0">
+                <FlagChips flags={c.flags} size="sm" />
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Layout>

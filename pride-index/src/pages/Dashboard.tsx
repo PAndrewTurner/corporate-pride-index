@@ -362,7 +362,9 @@ export default function Dashboard() {
               <option key={b}>{b}</option>
             ))}
           </select>
-          {FLAG_LABELS.map((f) => (
+          {/* June-only and geo-hypocrisy are omitted: no company currently
+              carries either flag, so the filters would always return nothing. */}
+          {FLAG_LABELS.filter((f) => f.key !== 'juneOnly' && f.key !== 'geoHypocrisy').map((f) => (
             <button
               key={f.key}
               onClick={() =>

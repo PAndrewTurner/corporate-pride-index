@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SectionHeading } from '../components/ui.tsx';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  title="Future Enhancements — The Corporate Pride Index"
+  description="The planned roadmap for the Corporate Pride Index: public evidence submissions, tiered AI-assisted verification, company appeals, temporal score tracking, and legislative mapping."
+  path="future"
+>
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 py-10 space-y-12">
+    <header>
+      <p class="label mb-2">Where the index is headed</p>
+      <h1 class="font-display text-4xl sm:text-5xl text-white leading-tight">Future Enhancements</h1>
+      <p class="mt-4 text-ink-300 leading-relaxed">
+        The Corporate Pride Index is an active project. These are the planned additions — listed
+        publicly for the same reason the scoring rubric is published: so the project can be held to
+        its own standards. None of these are live yet; the current index is exactly what the{' '}
+        <a href={`${base}methodology`} class="text-sky-400 hover:underline">methodology</a> describes.
+      </p>
+    </header>
+
+    <section>
+      <SectionHeading kicker="Community accountability" title="Public submissions & evidence reporting" />
+      <div class="space-y-4 mt-4">
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">User-submitted evidence</h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              Anyone will be able to report a documented company action — positive or negative — for
+              inclusion in the index. Every submission requires a source, and submitters classify what
+              kind of source it is. Rate limits (one submission per company per person per day) and
+              per-company caps on pending submissions prevent coordinated flooding during news cycles.
+            </p>
+          </div>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">
+            Tiered evidence verification — the 95% confidence gate
+          </h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              Not all proof is equal, so different types of evidence carry different weight. Public
+              filings such as SEC and FEC records are accepted once verified against the official
+              source. News reporting from established outlets requires corroboration. Social media
+              posts and statements — which can be faked or AI-generated — require the most additional
+              verification.
+            </p>
+            <p>
+              Each submission is evaluated against the evidence already in the index and independently
+              researched. Only submissions that clear a 95% confidence threshold advance. Removing or
+              correcting an existing entry carries an even higher bar than adding a new one, because
+              removal is more gameable than addition.
+            </p>
+          </div>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">AI-assisted review, human-approved</h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              High-reasoning Claude models (extended thinking) perform the initial confidence
+              analysis: fetching sources, cross-referencing the existing action log, checking for
+              contradicting reports, and producing a structured confidence report with full reasoning.
+              Submissions that pass are then queued for human analysis and final approval. Nothing
+              enters the index without a human sign-off, and every approved entry becomes a normal
+              sourced row in the action log — recomputed and validated at build time like everything
+              else.
+            </p>
+          </div>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">Company self-submission & appeals</h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              Companies and brands will be able to submit themselves to the index, submit evidence on
+              their own behalf, or appeal a score they believe is wrong — for example, an action that
+              was reported at the time but later corrected. Self-submissions meet the same 95% bar as
+              everyone else, and the math stays the math: one good deed does not cancel out twenty bad
+              ones. A verified correction doesn't erase the original record; it adds the correction to
+              it, with both sides cited.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <SectionHeading kicker="Deeper data" title="Expanding the instrument" />
+      <div class="space-y-4 mt-4">
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">Expanded company universe</h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              Broader coverage beyond the current major-company set: mid-cap companies, private
+              companies with significant public footprints, and non-U.S. multinationals operating in
+              the American market.
+            </p>
+          </div>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">Temporal score tracking</h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              Year-over-year score history for every company, turning trajectory from a qualitative
+              label (improving, stable, declining, sharp reversal) into a quantitative record you can
+              chart.
+            </p>
+          </div>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">Legislative mapping</h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              Linking negative political donations and lobbying actions to the specific bills they
+              supported and what happened to those bills — connecting corporate money to legislative
+              outcomes.
+            </p>
+          </div>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-xl text-white mb-2">Sector benchmarking tools</h3>
+          <div class="space-y-2 text-sm leading-relaxed text-ink-300">
+            <p>
+              Richer peer-comparison views showing where a company stands relative to its industry,
+              beyond the current sector averages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="space-y-3 text-[15px] leading-relaxed text-ink-200">
+        <p class="text-ink-400 text-sm">
+          Have feedback on what should come first — or evidence the index should already include?
+          Reach out via the <a href={`${base}about`} class="text-sky-400 hover:underline">About page</a>.
+        </p>
+      </div>
+    </section>
+  </div>
+</Layout>
