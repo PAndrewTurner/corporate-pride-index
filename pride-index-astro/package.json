@@ -5,12 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "ingest": "npm --prefix ../pride-index run ingest",
+    "prebuild": "npm run ingest",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "3.2.1",
     "@astrojs/tailwind": "^5.1.2",
     "astro": "^4.16.18",
     "react": "^18.3.1",

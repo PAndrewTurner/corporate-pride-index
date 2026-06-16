@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pandrewturner.github.io/corporate-pride-index/sitemap-index.xml

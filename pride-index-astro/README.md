@@ -22,14 +22,25 @@ Same data, same look, same interactivity — but indexable.
 | Hall of Shame / Honor | Recharts charts (`Histogram`, `SectorChart`, `ScoreTimeline`, `SectorTimelineChart`) |
 | | `CompanyMiniHeader` (scroll observer) |
 
-## Shared with the original (copied, not modified)
+## Shared with the original — single source of truth (no copies)
 
-`src/lib/types.ts`, `src/lib/scoring.ts`, `src/lib/data.ts`, `src/data/index-data.json`, and the
-`public/` images are copied verbatim from `pride-index/`. The scoring logic and data model are
-therefore identical.
+`src/lib/{types,scoring,data}.ts` here are thin re-export shims of the originals in `pride-index/`:
 
-> For production, point Astro at the same `scripts/ingest.ts` output instead of a copied JSON so the
-> two stay in lockstep. For this preview, the JSON is a snapshot.
+```ts
+export * from '../../../pride-index/src/lib/scoring';
+```
+
+So there is exactly one scoring module, one data model, and one generated dataset across both
+frontends — they cannot drift. The data itself is **regenerated and validated from the workbook at
+build time**: this app's `prebuild` script runs `pride-index`'s ingest pipeline
+(`npm run ingest`), which recomputes every score, asserts it matches the workbook formula, enforces
+that every scored action has a source URL, and `exit(1)`s the build on any failure. The Astro app
+then reads `pride-index/src/data/index-data.json` directly — there is no copied snapshot. (Vite's
+`server.fs.allow` is set to permit the sibling-project import in dev; see `astro.config.mjs`.)
+
+> Note: building this app requires `pride-index/`'s dependencies to be installed (for the ingest
+> step). CI installs both. The `pride-index/` SPA is no longer deployed; it remains as the
+> data-authoring/preview tool and the home of the pipeline + scoring tests.
 
 ## Key adaptations (the only behavioral rewrites)
 

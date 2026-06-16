@@ -128,6 +128,23 @@ for (const r of sheet('Action_Log')) {
     postJan2025: yes(r['Post-Jan2025?']),
     notes: str(r['Notes']),
   };
+  // Every scored action must be one click from its evidence (the site's core
+  // claim): require a parseable Source URL on any action that moves the score.
+  if (points !== 0) {
+    if (!row.sourceUrl) {
+      issues.push(
+        `Action_Log: ${company} / ${actionId} (${row.year}) scores ${points} pts but has no Source URL`,
+      );
+    } else {
+      try {
+        new URL(row.sourceUrl);
+      } catch {
+        issues.push(
+          `Action_Log: ${company} / ${actionId} has an unparseable Source URL "${row.sourceUrl}"`,
+        );
+      }
+    }
+  }
   (actionsByCompany.get(company) ?? actionsByCompany.set(company, []).get(company)!).push(row);
 }
 

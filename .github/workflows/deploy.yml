@@ -27,13 +27,23 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: pride-index-astro/package-lock.json
+          cache-dependency-path: |
+            pride-index/package-lock.json
+            pride-index-astro/package-lock.json
 
-      - name: Install dependencies
+      # The Astro build's prebuild step runs the pride-index ingest pipeline
+      # (regenerates + validates the data from the workbook), so the data app's
+      # deps must be installed too — this is what keeps the deployed site's
+      # "recomputed from evidence at build time" guarantee true in CI.
+      - name: Install data-pipeline dependencies
+        working-directory: pride-index
+        run: npm ci
+
+      - name: Install site dependencies
         working-directory: pride-index-astro
         run: npm ci
 
-      - name: Build the Astro static site
+      - name: Ingest + validate workbook, then build the Astro static site
         working-directory: pride-index-astro
         env:
           BASE_PATH: /corporate-pride-index/
