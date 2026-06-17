@@ -2,11 +2,8 @@ import { useMemo, useState } from 'react';
 import { BAND_COLORS, companies } from '../lib/data';
 import { BandChip } from './ui';
 
-/**
- * Hero "jump to a company" search. Island (client:load). The original used
- * react-router's useNavigate; here we navigate with a plain location change to
- * the statically-generated company page.
- */
+/** Hero "jump to a company" search. Island (client:load). Navigates to the
+ *  statically-generated company page. */
 export default function CompanySearch({ base = '/' }: { base?: string }) {
   const [q, setQ] = useState('');
   const matches = useMemo(
@@ -23,7 +20,11 @@ export default function CompanySearch({ base = '/' }: { base?: string }) {
     window.location.href = `${base}company/${slug}`;
   };
   return (
-    <div className="relative max-w-md">
+    <div className="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+        <circle cx="11" cy="11" r="7" />
+        <path d="m21 21-4.3-4.3" />
+      </svg>
       <input
         value={q}
         onChange={(e) => setQ(e.target.value)}
@@ -31,26 +32,35 @@ export default function CompanySearch({ base = '/' }: { base?: string }) {
           if (e.key === 'Enter' && matches.length > 0) go(matches[0].slug);
         }}
         placeholder="Look up a company — e.g. Verizon, Target, Apple…"
-        className="w-full bg-ink-900 border border-ink-600 rounded-lg px-4 py-2.5 text-sm placeholder:text-ink-400 focus:outline-none focus:border-ink-400"
         aria-label="Look up a company"
       />
       {matches.length > 0 && (
-        <div className="absolute z-30 mt-1 w-full card shadow-xl max-h-80 overflow-auto">
+        <div
+          style={{
+            position: 'absolute', zIndex: 30, marginTop: 6, width: '100%',
+            background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 14,
+            boxShadow: '0 30px 60px -28px #000', maxHeight: 320, overflow: 'auto',
+          }}
+        >
           {matches.map((c) => (
             <button
               key={c.slug}
               onClick={() => go(c.slug)}
-              className="flex w-full items-center justify-between px-4 py-2.5 text-sm hover:bg-ink-800 text-left"
+              style={{
+                display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between',
+                gap: 10, padding: '11px 16px', background: 'transparent', border: 0, cursor: 'pointer',
+                textAlign: 'left', fontFamily: 'var(--sans)', fontSize: 14, color: 'var(--txt)',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(var(--tint),0.05)')}
+              onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
             >
               <span>
-                <span className="text-white">{c.name}</span>
-                <span className="ml-2 text-xs text-ink-400">{c.sector}</span>
+                <span style={{ color: 'var(--ink)' }}>{c.name}</span>
+                <span style={{ marginLeft: 8, fontSize: 12, color: 'var(--txt-mut)' }}>{c.sector}</span>
               </span>
-              <span className="flex items-center gap-2 shrink-0">
-                <span className="font-mono" style={{ color: BAND_COLORS[c.band] }}>
-                  {c.score}
-                </span>
-                <BandChip band={c.band} size="sm" />
+              <span style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                <span style={{ fontFamily: 'var(--mono)', color: BAND_COLORS[c.band] }}>{c.score}</span>
+                <BandChip band={c.band} />
               </span>
             </button>
           ))}

@@ -1,130 +1,145 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { companies, fmtPts, BAND_COLORS } from '../lib/data';
-import { WordmarkLogo } from '../components/ui.tsx';
+import { companies, sectors, fmtPts, BAND_COLORS } from '../lib/data';
+import { bandFor } from '../lib/scoring';
 import CompanySearch from '../components/CompanySearch.tsx';
 import DashboardStats from '../components/DashboardStats.tsx';
 import DashboardTable from '../components/DashboardTable.tsx';
-import { Histogram, SectorChart } from '../components/DashboardCharts.tsx';
 
 const base = import.meta.env.BASE_URL;
+const total = companies.length;
+const avg = +(companies.reduce((s, c) => s + c.score, 0) / total).toFixed(1);
 
-// Movers (Hall of Shame / Honor) — computed at build time, rendered as static
-// HTML with plain links.
+// Distribution histogram bins (0–9 … 90–100)
+const bins = Array.from({ length: 10 }, (_, i) =>
+  companies.filter((c) => c.score >= i * 10 && c.score <= (i === 9 ? 100 : i * 10 + 9)).length,
+);
+const maxBin = Math.max(...bins);
+
+const honor = [...companies]
+  .sort((a, b) => b.score - a.score || b.breakdown.structural - a.breakdown.structural)
+  .slice(0, 6);
 const shame = companies
   .filter((c) => c.flags.postJan2025Reversal)
   .sort((a, b) => a.breakdown.negative - b.breakdown.negative)
   .slice(0, 6);
-const honor = [...companies]
-  .sort((a, b) => b.score - a.score || b.breakdown.structural - a.breakdown.structural)
-  .slice(0, 6);
+const sectorsSorted = [...sectors].sort((a, b) => b.avgScore - a.avgScore);
 ---
 
 <Layout>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-10 space-y-10">
-    {/* Hero */}
-    <section class="flex items-center gap-10">
-      <div class="max-w-3xl min-w-0">
-        <p class="label mb-3">A data-journalism accountability instrument</p>
-        <h1 class="font-display text-4xl sm:text-5xl text-white leading-tight">
-          Which companies stood by LGBTQ+ people —{' '}
-          <span class="italic text-ink-300">and which ones folded under pressure?</span>
+  <div class="wrap in">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="kicker">A data-journalism accountability instrument</span>
+        <h1 class="hero-title">
+          <span class="line"><span style="--ld:.15s">Who stood by</span></span>
+          <span class="line"><span style="--ld:.27s">LGBTQ+ people —</span></span>
+          <span class="line"><span style="--ld:.39s"><em>and who folded</em></span></span>
+          <span class="line"><span style="--ld:.51s"><em>under pressure?</em></span></span>
         </h1>
-        <p class="mt-4 text-ink-300 leading-relaxed">
-          The Corporate Pride Index scores {companies.length} major American companies from 0 to 100
-          on the depth and consistency of their LGBTQ+ support. Cosmetic gestures are capped;
-          structural commitments are rewarded; reversals — especially the post–January 2025 retreats
-          — are the most damning signal. Every score is recomputed from sourced evidence at build
-          time.{' '}
-          <a href={`${base}methodology`} class="text-sky-400 hover:underline">Read the methodology.</a>
+        <p class="lede reveal" style="--d:.7s">
+          The Corporate Pride Index scores {total} major American companies from 0 to 100 on the depth
+          and consistency of their LGBTQ+ support. Cosmetic gestures are capped; structure is rewarded;
+          reversals — especially the post–January 2025 retreats — are the most damning signal.
+          <a href={`${base}methodology`}>Read the methodology.</a>
         </p>
-        <div class="mt-5">
+        <div class="reveal" style="--d:.82s">
           <CompanySearch client:load base={base} />
         </div>
       </div>
-      <WordmarkLogo base={base} />
+      <aside class="pulse reveal" style="--d:.55s">
+        <div class="lab">The index, today</div>
+        <div class="big">{avg}</div>
+        <div class="sub">mean score across <b>{total}</b> companies · 2015 → 2026</div>
+        <div class="gauge">
+          <div class="track"><span class="needle" style={`left:${avg}%`}></span></div>
+          <div class="ends"><span>0 · Adversarial</span><span>50 · Neutral</span><span>100 · Champion</span></div>
+        </div>
+      </aside>
     </section>
 
-    {/* Future enhancements teaser */}
-    <section class="card px-4 py-3 text-sm leading-relaxed">
-      <span class="label mr-2">Future enhancements:</span>
-      <span class="text-ink-300">
-        public evidence submissions with tiered, AI-assisted verification · company self-submission
-        and score appeals · year-over-year score tracking · legislative mapping of political
-        donations · expanded company universe.{' '}
-        <a href={`${base}future`} class="text-sky-400 hover:underline whitespace-nowrap">
-          See the full roadmap →
-        </a>
-      </span>
-    </section>
-
-    {/* Stats (island — clickable cards drive the table below) */}
+    <!-- STATS (island) -->
     <DashboardStats client:load />
 
-    {/* Charts (islands — recharts loads when scrolled into view) */}
-    <section class="grid lg:grid-cols-2 gap-4">
-      <Histogram client:visible />
-      <SectorChart client:visible />
+    <!-- DISTRIBUTION (static) -->
+    <section class="block">
+      <div class="head"><div><div class="k">The shape of corporate America</div><h2>Score distribution</h2></div><div class="meta">all {total} companies</div></div>
+      <div class="dist">
+        <div class="bars">
+          {
+            bins.map((n, i) => {
+              const col = BAND_COLORS[bandFor(i * 10 + 5)];
+              return (
+                <div class="barcol">
+                  <div class="bar" style={`height:${Math.round((n / maxBin) * 100)}%;--bd:${0.05 * i}s;background:${col}`}><b>{n}</b></div>
+                </div>
+              );
+            })
+          }
+        </div>
+        <div class="scaleline"></div>
+        <div class="scalelabs"><span>0</span><span>Adversarial → Harmful → Performative → Neutral → Ally → Champion</span><span>100</span></div>
+      </div>
     </section>
 
-    {/* Movers (static) */}
-    <div class="grid md:grid-cols-2 gap-4">
-      <div class="card p-4 border-red-900/50">
-        <p class="label mb-1 text-red-400">Hall of Shame · steepest reversals</p>
-        <p class="text-xs text-ink-400 mb-2">
-          Post–Jan 2025 reversal companies, ranked by negative-point damage
-        </p>
-        {
-          shame.map((c) => (
-            <a
-              href={`${base}company/${c.slug}`}
-              class="flex items-center justify-between gap-3 px-3 py-2 rounded hover:bg-ink-800/70 transition-colors"
-            >
-              <div class="min-w-0">
-                <span class="text-sm text-white">{c.name}</span>
-                <span class="ml-2 text-xs text-ink-400">{c.sector}</span>
-              </div>
-              <div class="flex items-center gap-3 shrink-0">
-                <span class="font-mono text-xs text-ink-300">{fmtPts(c.breakdown.negative)} pts</span>
-                <span class="font-mono text-sm w-8 text-right" style={{ color: BAND_COLORS[c.band] }}>
-                  {c.score}
-                </span>
-              </div>
-            </a>
-          ))
-        }
+    <!-- HONOR & SHAME (static) -->
+    <section class="block">
+      <div class="head"><div><div class="k">The extremes</div><h2>Hall of Honor &amp; Hall of Shame</h2></div></div>
+      <div class="halls">
+        <div class="hall honor">
+          <div class="htag">◆ Hall of Honor · highest sustained scores</div>
+          <div class="desc">Top scores, weighted toward structural commitments that are hardest to fake — and hardest to reverse.</div>
+          {
+            honor.map((c, i) => (
+              <a class="row" href={`${base}company/${c.slug}`}>
+                <span class="rank">{i + 1}</span>
+                <span class="nm">{c.name}<small>{c.sector}</small></span>
+                <span class="chip" style={{ color: BAND_COLORS[c.band] }}>{c.score}</span>
+              </a>
+            ))
+          }
+        </div>
+        <div class="hall shame">
+          <div class="htag">⚑ Hall of Shame · steepest reversals</div>
+          <div class="desc">Post–Jan 2025 reversal companies, ranked by the negative-point damage their retreat inflicted.</div>
+          {
+            shame.map((c, i) => (
+              <a class="row" href={`${base}company/${c.slug}`}>
+                <span class="rank">{i + 1}</span>
+                <span class="nm">{c.name}<small>{c.sector}</small></span>
+                <span class="chip neg">{fmtPts(c.breakdown.negative)}</span>
+                <span class="chip" style={{ color: BAND_COLORS[c.band] }}>{c.score}</span>
+              </a>
+            ))
+          }
+        </div>
       </div>
-      <div class="card p-4 border-emerald-900/50">
-        <p class="label mb-1 text-emerald-400">Hall of Honor · highest sustained scores</p>
-        <p class="text-xs text-ink-400 mb-2">
-          Top scores, weighted toward structural (hard-to-reverse) commitments
-        </p>
-        {
-          honor.map((c) => (
-            <a
-              href={`${base}company/${c.slug}`}
-              class="flex items-center justify-between gap-3 px-3 py-2 rounded hover:bg-ink-800/70 transition-colors"
-            >
-              <div class="min-w-0">
-                <span class="text-sm text-white">{c.name}</span>
-                <span class="ml-2 text-xs text-ink-400">{c.sector}</span>
-              </div>
-              <div class="flex items-center gap-3 shrink-0">
-                <span class="font-mono text-xs text-ink-300">structural +{c.breakdown.structural}</span>
-                <span class="font-mono text-sm w-8 text-right" style={{ color: BAND_COLORS[c.band] }}>
-                  {c.score}
-                </span>
-              </div>
-            </a>
-          ))
-        }
-      </div>
-    </div>
+    </section>
 
-    {/* Filterable master table (island) — extra top padding adds breathing room
-        between the Hall of Shame / Honor section above and the filter row. */}
-    <div class="pt-6">
+    <!-- SECTORS (static) -->
+    <section class="block">
+      <div class="head"><div><div class="k">The index, grouped</div><h2>Where sectors stand</h2></div><div class="meta"><a href={`${base}sectors`} style="color:var(--link);text-decoration:none">all sectors →</a></div></div>
+      <div class="sect">
+        {
+          sectorsSorted.map((s, i) => {
+            const col = BAND_COLORS[bandFor(s.avgScore)];
+            return (
+              <a class="srow" href={`${base}sectors/${s.sector.toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}`} style="text-decoration:none;color:inherit">
+                <span class="sn">{s.sector}</span>
+                <span class="strack"><span class="sfill" style={`width:${s.avgScore}%;--sd:${0.05 * i}s;background:${col};box-shadow:0 0 16px -4px ${col}`}></span></span>
+                <span class="sv">{s.avgScore}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <!-- FULL TABLE (island) -->
+    <section class="block">
+      <div class="head"><div><div class="k">Every company, sourced</div><h2>The full index</h2></div></div>
       <DashboardTable client:load base={base} />
-    </div>
+    </section>
   </div>
 </Layout>

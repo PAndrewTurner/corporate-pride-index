@@ -31,21 +31,13 @@ export default function CompanyMiniHeader({
   }, []);
 
   return (
-    <div
-      className={`fixed top-0 inset-x-0 z-50 border-b border-ink-700/60 bg-ink-950/95 backdrop-blur transition-transform duration-200 ${
-        visible ? 'translate-y-0' : '-translate-y-full pointer-events-none'
-      }`}
-    >
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 h-12 flex items-center gap-4">
-        <a href={base} className="text-xs text-ink-400 hover:text-white shrink-0">
-          ← Index
-        </a>
-        <span className="font-display text-lg text-white truncate">{name}</span>
-        <span className="ml-auto flex items-center gap-3 shrink-0">
-          <span className="font-mono text-xl" style={{ color: BAND_COLORS[band] }}>
-            {score}
-          </span>
-          <BandChip band={band} size="sm" />
+    <div className={`mini-header${visible ? ' show' : ''}`}>
+      <div className="inner">
+        <a href={base}>← Index</a>
+        <span className="mh-name">{name}</span>
+        <span className="mh-score">
+          <span style={{ fontFamily: 'var(--mono)', fontSize: 19, color: BAND_COLORS[band] }}>{score}</span>
+          <BandChip band={band} />
         </span>
       </div>
     </div>

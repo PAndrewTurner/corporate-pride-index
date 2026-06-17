@@ -19,17 +19,13 @@ export default function SectorTimelineChart({ data }: { data: SectorTimelinePoin
   const { theme } = useTheme();
   const p = chartPalette(theme);
   return (
-    <div className="card p-4">
-      <div className="flex items-center gap-4 mb-2 text-[11px] text-ink-400">
-        <span className="flex items-center gap-1.5">
-          <span className="inline-block w-4 h-0.5" style={{ background: p.label }} /> median
+    <div className="tlchart">
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 8, fontSize: 11, color: 'var(--txt-mut)' }}>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ display: 'inline-block', width: 16, height: 2, background: p.label }} /> median
         </span>
-        <span className="flex items-center gap-1.5">
-          <span
-            className="inline-block w-4 h-0.5"
-            style={{ background: p.tick, opacity: 0.8 }}
-          />{' '}
-          average
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ display: 'inline-block', width: 16, height: 2, background: p.tick, opacity: 0.8 }} /> average
         </span>
       </div>
       <ResponsiveContainer width="100%" height={240}>
@@ -83,7 +79,7 @@ export default function SectorTimelineChart({ data }: { data: SectorTimelinePoin
           />
         </LineChart>
       </ResponsiveContainer>
-      <p className="mt-1 text-[11px] text-ink-400">
+      <p className="cap">
         Median is the typical company in the sector — unmoved by a single outlier at either
         extreme. Dashed line: the neutral baseline of 50.
       </p>

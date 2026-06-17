@@ -20,9 +20,9 @@
   --scrim:     rgba(4,5,9,0.72);
   --vignette:  radial-gradient(120% 120% at 50% 0%, transparent 58%, rgba(0,0,0,0.5) 100%);
   --mesh-op:   1;
-  --good:      var(--good);
-  --bad:       var(--bad);
-  --link:      var(--link);
+  --good:      #34d8a6;
+  --bad:       #ff7a7a;
+  --link:      #7fb6e6;
 
   /* Band colors — tuned to stay legible on BOTH dark and white. */
   --champion:    #10b981;

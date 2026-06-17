@@ -10,16 +10,15 @@ const base = import.meta.env.BASE_URL;
   description="Put 2–4 companies side by side: scores, tier-by-tier point composition, and each company's position against its own sector benchmark."
   path="compare"
 >
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 py-10 space-y-6">
-    <div>
-      <p class="label mb-2">Side by side</p>
-      <h1 class="font-display text-4xl text-white">Compare</h1>
-      <p class="mt-2 text-ink-300 text-sm max-w-2xl">
-        Put 2–4 companies next to each other — scores, tier-by-tier point composition, and each
-        company's position against its own sector benchmark.
-      </p>
+  <div class="wrap">
+    <div class="page">
+      <span class="kick">Side by side</span>
+      <h1>Compare</h1>
+      <p class="intro">Put 2–4 companies next to each other — scores, tier-by-tier point composition, and
+        each company's position against its own sector benchmark.</p>
     </div>
-
-    <CompareApp client:load base={base} />
+    <div class="section">
+      <CompareApp client:load base={base} />
+    </div>
   </div>
 </Layout>

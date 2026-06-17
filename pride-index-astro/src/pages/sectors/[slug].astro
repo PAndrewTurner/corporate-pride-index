@@ -37,96 +37,67 @@ const changeColor = change < 0 ? 'text-red-400' : change > 0 ? 'text-emerald-400
   description={`How the ${stat.sector} sector has moved on LGBTQ+ support: median ${med}, average ${stat.avgScore}, across ${stat.companies} companies tracked from 2015 to now.`}
   path={`sectors/${slugifySector(stat.sector)}`}
 >
-  <div class="mx-auto max-w-5xl px-4 sm:px-6 py-10 space-y-10">
-    <a href={`${base}sectors`} class="text-xs text-ink-400 hover:text-white">← All sectors</a>
+  <div class="wrap">
+    <div class="detail">
+      <a href={`${base}sectors`} class="cite" style="font-family:var(--sans);font-size:13px;color:var(--txt-mut)">← All sectors</a>
 
-    {/* Hero */}
-    <section class="flex flex-col sm:flex-row sm:items-end gap-6 justify-between">
-      <div class="min-w-0">
-        <p class="label mb-2">
-          {stat.companies} {stat.companies === 1 ? 'company' : 'companies'} in the index
-        </p>
-        <h1 class="font-display text-4xl sm:text-5xl text-white leading-tight">{stat.sector}</h1>
-      </div>
-      <div class="shrink-0 flex items-end gap-6">
-        <div class="text-right">
-          <div class="font-mono text-6xl leading-none" style={{ color: BAND_COLORS[bandFor(med)] }}>
-            {med}
-          </div>
-          <p class="label mt-1">median</p>
+      <div class="d-top" style="margin-top:18px">
+        <div>
+          <div class="d-kick">{stat.companies} {stat.companies === 1 ? 'company' : 'companies'} in the index</div>
+          <div class="d-name">{stat.sector}</div>
         </div>
-        <div class="text-right">
-          <div class="font-mono text-3xl leading-none text-ink-300">{stat.avgScore}</div>
-          <p class="label mt-1">average</p>
+        <div style="display:flex;align-items:flex-end;gap:24px">
+          <div style="text-align:right">
+            <div style={{ fontFamily: 'var(--serif)', fontSize: '58px', lineHeight: 1, color: BAND_COLORS[bandFor(med)] }}>{med}</div>
+            <div class="d-k" style="margin-top:4px">median</div>
+          </div>
+          <div style="text-align:right">
+            <div style={{ fontFamily: 'var(--serif)', fontSize: '34px', lineHeight: 1, color: 'var(--txt-2)' }}>{stat.avgScore}</div>
+            <div class="d-k" style="margin-top:4px">average</div>
+          </div>
         </div>
       </div>
-    </section>
 
-    {/* Sector score over time (island — chart) */}
-    {
-      series.length > 0 && (
-        <section>
-          <SectionHeading kicker="The sector over time" title={`Score ${first.year} → ${last.year}`} />
-          <div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-            <span class="text-ink-300">
-              median {first.year} <span class="font-mono text-white">{first.median}</span> →{' '}
-              {last.year}{' '}
-              <span class="font-mono" style={{ color: BAND_COLORS[bandFor(last.median)] }}>
-                {last.median}
-              </span>
-            </span>
-            <span class={`font-mono ${changeColor}`}>{change === 0 ? '±0' : fmtPts(change)}</span>
-            <span class="text-ink-500">·</span>
-            <span class="text-ink-400">
-              best <span class="font-mono">{stat.max}</span> · worst{' '}
-              <span class="font-mono">{stat.min}</span>
-              {stat.harmfulPlus > 0 && <span> · {stat.harmfulPlus} harmful or worse</span>}
-            </span>
-          </div>
-          <SectorTimelineChart client:visible data={series} />
-        </section>
-      )
-    }
+      {
+        series.length > 0 && (
+          <>
+            <div class="d-k" style="margin-top:34px">The sector over time</div>
+            <div class="d-h3" style="margin:4px 0 10px">Score {first.year} → {last.year}</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13.5px;color:var(--txt-2);margin-bottom:6px">
+              <span>median {first.year} <span style="font-family:var(--mono);color:var(--ink)">{first.median}</span> → {last.year} <span style={{ fontFamily: 'var(--mono)', color: BAND_COLORS[bandFor(last.median)] }}>{last.median}</span></span>
+              <span style={{ fontFamily: 'var(--mono)', color: change < 0 ? 'var(--bad)' : change > 0 ? 'var(--good)' : 'var(--txt-mut)' }}>{change === 0 ? '±0' : fmtPts(change)}</span>
+              <span style="color:var(--txt-mut)">best <span style="font-family:var(--mono)">{stat.max}</span> · worst <span style="font-family:var(--mono)">{stat.min}</span>{stat.harmfulPlus > 0 ? ` · ${stat.harmfulPlus} harmful or worse` : ''}</span>
+            </div>
+            <SectorTimelineChart client:visible data={series} />
+          </>
+        )
+      }
 
-    {/* Companies in the sector */}
-    <section>
-      <SectionHeading
-        kicker="Everyone in this sector"
-        title={`${cs.length} ${cs.length === 1 ? 'company' : 'companies'}`}
-      />
-      <div class="space-y-2">
+      <div class="d-k" style="margin-top:34px">Everyone in this sector</div>
+      <div class="d-h3" style="margin:4px 0 14px">{cs.length} {cs.length === 1 ? 'company' : 'companies'}</div>
+      <div>
         {
           cs.map((c) => (
-            <a
-              href={`${base}company/${c.slug}`}
-              class="card p-3 flex items-center gap-4 hover:border-ink-500 transition-colors"
-            >
-              <div class="font-mono text-2xl w-12 text-right shrink-0" style={{ color: BAND_COLORS[c.band] }}>
-                {c.score}
-              </div>
-              <div class="min-w-0 flex-1">
-                <div class="flex items-center gap-2 flex-wrap">
-                  <span class="text-white font-medium truncate">{c.name}</span>
-                  {c.ticker && <span class="font-mono text-[11px] text-ink-500">({c.ticker})</span>}
-                  <BandChip band={c.band} size="sm" />
+            <a class="acard" href={`${base}company/${c.slug}`} style="display:flex;align-items:center;gap:16px;text-decoration:none;border-left-color:var(--line)">
+              <div style={{ fontFamily: 'var(--mono)', fontSize: '24px', width: '46px', textAlign: 'right', flexShrink: 0, color: BAND_COLORS[c.band] }}>{c.score}</div>
+              <div style="min-width:0;flex:1">
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                  <span style="color:var(--ink);font-weight:500">{c.name}</span>
+                  {c.ticker && <span class="tkr">{c.ticker}</span>}
+                  <BandChip band={c.band} />
                 </div>
                 {c.timelineChange !== null && c.timelineChange !== 0 && (
-                  <p class="mt-0.5 text-[11px] text-ink-400">
-                    <span class={`font-mono ${c.timelineChange < 0 ? 'text-red-400' : 'text-emerald-400'}`}>
-                      {fmtPts(c.timelineChange)}
-                    </span>{' '}
-                    since {c.timeline[0]?.year}
-                    {c.trajectoryShape && <span> · {c.trajectoryShape.toLowerCase()}</span>}
-                  </p>
+                  <div style="font-size:11.5px;color:var(--txt-mut);margin-top:3px">
+                    <span style={{ fontFamily: 'var(--mono)', color: c.timelineChange < 0 ? 'var(--bad)' : 'var(--good)' }}>{fmtPts(c.timelineChange)}</span>
+                    {' '}since {c.timeline[0]?.year}{c.trajectoryShape ? ` · ${c.trajectoryShape.toLowerCase()}` : ''}
+                  </div>
                 )}
               </div>
-              <div class="hidden sm:block shrink-0">
-                <FlagChips flags={c.flags} size="sm" />
-              </div>
+              <div style="flex-shrink:0"><FlagChips flags={c.flags} size="sm" /></div>
             </a>
           ))
         }
       </div>
-    </section>
+    </div>
   </div>
 </Layout>

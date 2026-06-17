@@ -1,14 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  ReferenceLine,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
+  Bar, BarChart, CartesianGrid, Legend, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis,
 } from 'recharts';
 import { BAND_COLORS, companies, companyBySlug, fmtPts, sectors } from '../lib/data';
 import { chartPalette, useTheme } from '../lib/theme';
@@ -18,74 +10,49 @@ import { BandChip, FlagChips, GradientBar, TrajectoryBadge } from './ui';
 const MAX = 4;
 const SERIES_COLORS = ['#38bdf8', '#a78bfa', '#f472b6', '#fbbf24'];
 
-function Picker({
-  selected,
-  onChange,
-  base,
-}: {
-  selected: string[];
-  onChange: (s: string[]) => void;
-  base: string;
-}) {
+const card: React.CSSProperties = {
+  border: '1px solid var(--line)', borderRadius: 18, padding: '20px 22px',
+  background: 'linear-gradient(180deg, rgba(var(--tint),0.035), rgba(var(--tint),0.008))',
+};
+const inputStyle: React.CSSProperties = {
+  background: 'rgba(var(--tint),0.06)', border: '1px solid rgba(var(--tint),0.2)', borderRadius: 10,
+  padding: '9px 13px', color: 'var(--txt)', fontFamily: 'var(--sans)', fontSize: 14, width: 200,
+};
+
+function Picker({ selected, onChange, base }: { selected: string[]; onChange: (s: string[]) => void; base: string }) {
   const [q, setQ] = useState('');
   const matches = useMemo(
-    () =>
-      q
-        ? companies
-            .filter(
-              (c) => c.name.toLowerCase().includes(q.toLowerCase()) && !selected.includes(c.slug),
-            )
-            .slice(0, 8)
-        : [],
+    () => (q ? companies.filter((c) => c.name.toLowerCase().includes(q.toLowerCase()) && !selected.includes(c.slug)).slice(0, 8) : []),
     [q, selected],
   );
   return (
-    <div className="card p-4">
-      <p className="label mb-2">Compare 2–4 companies</p>
-      <div className="flex flex-wrap items-center gap-2">
+    <div style={card}>
+      <div className="d-k" style={{ marginBottom: 12 }}>Compare 2–4 companies</div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}>
         {selected.map((slug) => {
           const c = companyBySlug.get(slug);
           if (!c) return null;
           return (
-            <span
-              key={slug}
-              className="inline-flex items-center gap-2 rounded-full bg-ink-800 border border-ink-600 pl-3 pr-1.5 py-1 text-sm text-white"
-            >
+            <span key={slug} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 99, background: 'rgba(var(--tint),0.06)', border: '1px solid var(--line)', padding: '5px 6px 5px 13px', fontSize: 14, color: 'var(--ink)' }}>
               {c.name}
-              <button
-                onClick={() => onChange(selected.filter((s) => s !== slug))}
-                className="w-5 h-5 rounded-full hover:bg-ink-600 text-ink-300"
-                aria-label={`Remove ${c.name}`}
-              >
-                ✕
-              </button>
+              <button onClick={() => onChange(selected.filter((s) => s !== slug))} aria-label={`Remove ${c.name}`}
+                style={{ width: 20, height: 20, borderRadius: 99, border: 0, background: 'transparent', color: 'var(--txt-mut)', cursor: 'pointer' }}>✕</button>
             </span>
           );
         })}
         {selected.length < MAX && (
-          <div className="relative">
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Add a company…"
-              className="bg-ink-900 border border-ink-700 rounded px-3 py-1.5 text-sm w-48 placeholder:text-ink-400 focus:outline-none focus:border-ink-400"
-            />
+          <div style={{ position: 'relative' }}>
+            <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Add a company…" style={inputStyle} />
             {matches.length > 0 && (
-              <div className="absolute z-20 mt-1 w-64 card shadow-xl max-h-64 overflow-auto">
+              <div style={{ position: 'absolute', zIndex: 20, marginTop: 6, width: 260, background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 12, boxShadow: '0 30px 60px -28px #000', maxHeight: 260, overflow: 'auto' }}>
                 {matches.map((c) => (
-                  <button
-                    key={c.slug}
-                    onClick={() => {
-                      onChange([...selected, c.slug]);
-                      setQ('');
-                    }}
-                    className="block w-full text-left px-3 py-2 text-sm hover:bg-ink-800"
-                  >
-                    <span className="text-white">{c.name}</span>
-                    <span className="ml-2 font-mono text-xs" style={{ color: BAND_COLORS[c.band] }}>
-                      {c.score}
-                    </span>
-                    <span className="ml-2 text-xs text-ink-400">{c.sector}</span>
+                  <button key={c.slug} onClick={() => { onChange([...selected, c.slug]); setQ(''); }}
+                    style={{ display: 'block', width: '100%', textAlign: 'left', padding: '9px 13px', background: 'transparent', border: 0, cursor: 'pointer', fontSize: 14, color: 'var(--txt)' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(var(--tint),0.05)')}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}>
+                    <span style={{ color: 'var(--ink)' }}>{c.name}</span>
+                    <span style={{ marginLeft: 8, fontFamily: 'var(--mono)', fontSize: 12, color: BAND_COLORS[c.band] }}>{c.score}</span>
+                    <span style={{ marginLeft: 8, fontSize: 12, color: 'var(--txt-mut)' }}>{c.sector}</span>
                   </button>
                 ))}
               </div>
@@ -102,54 +69,32 @@ function CompanyCard({ c, base }: { c: Company; base: string }) {
   const b = c.breakdown;
   const rows: [string, number, boolean][] = [
     ['Cosmetic+Commercial (cap 20)', b.cosmeticCommercialCapped, true],
-    ['Civic', b.civic, true],
-    ['Financial', b.financial, true],
-    ['Structural', b.structural, true],
+    ['Civic', b.civic, true], ['Financial', b.financial, true], ['Structural', b.structural, true],
     ['Negative', b.negative, false],
   ];
   return (
-    <div className="card p-5 flex flex-col gap-4">
+    <div style={{ ...card, display: 'flex', flexDirection: 'column', gap: 16 }}>
       <div>
-        <a
-          href={`${base}company/${c.slug}`}
-          className="font-display text-2xl text-white hover:underline leading-tight"
-        >
-          {c.name}
-        </a>
-        <p className="text-xs text-ink-400 mt-0.5">{c.sector}</p>
+        <a href={`${base}company/${c.slug}`} style={{ fontFamily: 'var(--serif)', fontSize: 24, color: 'var(--ink)', textDecoration: 'none' }}>{c.name}</a>
+        <div style={{ fontSize: 12, color: 'var(--txt-mut)', marginTop: 2 }}>{c.sector}</div>
       </div>
-      <div className="flex items-center justify-between">
-        <span className="font-mono text-5xl" style={{ color: BAND_COLORS[c.band] }}>
-          {c.score}
-        </span>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <span style={{ fontFamily: 'var(--serif)', fontSize: 50, lineHeight: 1, color: BAND_COLORS[c.band] }}>{c.score}</span>
         <BandChip band={c.band} />
       </div>
-      <GradientBar
-        score={c.score}
-        height={6}
-        markers={sectorAvg !== undefined ? [{ score: sectorAvg, label: `${c.sector} avg` }] : []}
-      />
-      {sectorAvg !== undefined && (
-        <p className="text-[11px] text-ink-400 -mt-2">
-          │ sector benchmark: {c.sector} average {sectorAvg}
-        </p>
-      )}
-      <table className="font-mono text-xs w-full">
+      <GradientBar score={c.score} markers={sectorAvg !== undefined ? [{ score: sectorAvg, label: `${c.sector} avg` }] : []} />
+      {sectorAvg !== undefined && <div style={{ fontSize: 11, color: 'var(--txt-mut)', marginTop: -8 }}>│ sector benchmark: {c.sector} average {sectorAvg}</div>}
+      <table className="brk">
         <tbody>
           {rows.map(([label, v, pos]) => (
-            <tr key={label} className="text-ink-300">
-              <td className="py-0.5">{label}</td>
-              <td className={`text-right ${pos ? 'text-emerald-400' : 'text-red-400'}`}>
-                {fmtPts(v)}
-              </td>
-            </tr>
+            <tr key={label}><td>{label}</td><td className="v" style={{ color: pos ? 'var(--good)' : 'var(--bad)' }}>{fmtPts(v)}</td></tr>
           ))}
         </tbody>
       </table>
       {c.rationale && (
         <>
           <TrajectoryBadge trajectory={c.rationale.trajectory} />
-          <p className="text-xs leading-relaxed text-ink-300 italic">“{c.rationale.verdict}”</p>
+          <p style={{ fontSize: 12.5, lineHeight: 1.5, color: 'var(--txt-2)', fontStyle: 'italic' }}>“{c.rationale.verdict}”</p>
         </>
       )}
       <FlagChips flags={c.flags} size="sm" />
@@ -157,18 +102,11 @@ function CompanyCard({ c, base }: { c: Company; base: string }) {
   );
 }
 
-/**
- * Full Compare tool. Island (client:load). Replaces react-router's
- * useSearchParams with direct URLSearchParams + history.replaceState so the
- * shareable ?c=slug,slug URL behaviour is preserved on the static page.
- */
 export default function CompareApp({ base = '/' }: { base?: string }) {
   const { theme } = useTheme();
   const p = chartPalette(theme);
-
   const [selected, setSelectedState] = useState<string[]>([]);
 
-  // Hydrate selection from the URL on mount and on back/forward navigation.
   useEffect(() => {
     const read = () => {
       const c = new URLSearchParams(window.location.search).get('c') ?? '';
@@ -187,17 +125,12 @@ export default function CompareApp({ base = '/' }: { base?: string }) {
     window.history.replaceState({}, '', url);
   };
 
-  const picked = selected
-    .map((s) => companyBySlug.get(s))
-    .filter((c): c is Company => !!c);
+  const picked = selected.map((s) => companyBySlug.get(s)).filter((c): c is Company => !!c);
 
   const chartData = useMemo(() => {
     const dims: { key: keyof Company['breakdown']; label: string }[] = [
-      { key: 'cosmeticCommercialCapped', label: 'Cosmetic+Comm.' },
-      { key: 'civic', label: 'Civic' },
-      { key: 'financial', label: 'Financial' },
-      { key: 'structural', label: 'Structural' },
-      { key: 'negative', label: 'Negative' },
+      { key: 'cosmeticCommercialCapped', label: 'Cosmetic+Comm.' }, { key: 'civic', label: 'Civic' },
+      { key: 'financial', label: 'Financial' }, { key: 'structural', label: 'Structural' }, { key: 'negative', label: 'Negative' },
     ];
     return dims.map((d) => {
       const row: Record<string, string | number> = { dim: d.label };
@@ -207,76 +140,35 @@ export default function CompareApp({ base = '/' }: { base?: string }) {
   }, [picked]);
 
   return (
-    <div className="space-y-6">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
       <Picker selected={selected} onChange={setSelected} base={base} />
 
       {picked.length === 0 && (
-        <div className="card p-8 text-center text-ink-300 text-sm">
+        <div style={{ ...card, textAlign: 'center', color: 'var(--txt-2)', fontSize: 14, padding: '40px 20px' }}>
           Try a telling pair:{' '}
-          <button
-            className="text-sky-400 hover:underline"
-            onClick={() => setSelected(['verizon', 'apple'])}
-          >
-            Verizon vs Apple
-          </button>{' '}
+          <button onClick={() => setSelected(['verizon', 'apple'])} style={{ background: 'transparent', border: 0, color: 'var(--link)', cursor: 'pointer', font: 'inherit' }}>Verizon vs Apple</button>{' '}
           — similar rainbow histories, opposite 2025 choices.
         </div>
       )}
 
       {picked.length > 0 && (
-        <div
-          className={`grid gap-4 ${
-            picked.length === 2
-              ? 'md:grid-cols-2'
-              : picked.length === 3
-                ? 'md:grid-cols-3'
-                : 'md:grid-cols-2 xl:grid-cols-4'
-          }`}
-        >
-          {picked.map((c) => (
-            <CompanyCard key={c.slug} c={c} base={base} />
-          ))}
+        <div style={{ display: 'grid', gap: 16, gridTemplateColumns: `repeat(${Math.min(picked.length, 4)}, minmax(0, 1fr))` }}>
+          {picked.map((c) => <CompanyCard key={c.slug} c={c} base={base} />)}
         </div>
       )}
 
       {picked.length >= 2 && (
-        <div className="card p-4">
-          <p className="label mb-3">Point composition by tier</p>
+        <div style={card}>
+          <div className="d-k" style={{ marginBottom: 14 }}>Point composition by tier</div>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={chartData} margin={{ top: 4, right: 8, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="2 4" stroke={p.grid} vertical={false} />
-              <XAxis
-                dataKey="dim"
-                tick={{ fill: p.label, fontSize: 11 }}
-                tickLine={false}
-                axisLine={{ stroke: p.axis }}
-              />
-              <YAxis
-                tick={{ fill: p.tick, fontSize: 10, fontFamily: 'IBM Plex Mono' }}
-                tickLine={false}
-                axisLine={false}
-              />
+              <XAxis dataKey="dim" tick={{ fill: p.label, fontSize: 11 }} tickLine={false} axisLine={{ stroke: p.axis }} />
+              <YAxis tick={{ fill: p.tick, fontSize: 10, fontFamily: 'JetBrains Mono' }} tickLine={false} axisLine={false} />
               <ReferenceLine y={0} stroke={p.zeroLine} />
-              <Tooltip
-                cursor={{ fill: p.cursor }}
-                contentStyle={{
-                  background: p.tooltipBg,
-                  border: `1px solid ${p.tooltipBorder}`,
-                  borderRadius: 6,
-                  fontSize: 12,
-                }}
-                labelStyle={{ color: p.tooltipLabel }}
-              />
+              <Tooltip cursor={{ fill: p.cursor }} contentStyle={{ background: p.tooltipBg, border: `1px solid ${p.tooltipBorder}`, borderRadius: 6, fontSize: 12 }} labelStyle={{ color: p.tooltipLabel }} />
               <Legend wrapperStyle={{ fontSize: 12, color: p.label }} />
-              {picked.map((c, i) => (
-                <Bar
-                  key={c.slug}
-                  dataKey={c.name}
-                  fill={SERIES_COLORS[i]}
-                  fillOpacity={0.85}
-                  radius={[2, 2, 0, 0]}
-                />
-              ))}
+              {picked.map((c, i) => <Bar key={c.slug} dataKey={c.name} fill={SERIES_COLORS[i]} fillOpacity={0.85} radius={[2, 2, 0, 0]} />)}
             </BarChart>
           </ResponsiveContainer>
         </div>
