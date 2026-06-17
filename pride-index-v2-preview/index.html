@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Corporate Pride Index — v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  /* Apply saved theme before first paint to avoid a flash. */
+  (function(){ try { if (localStorage.getItem('cpi-theme-v2') === 'light')
+    document.documentElement.setAttribute('data-theme','light'); } catch(e){} })();
+</script>
+</head>
+<body>
+  <div class="atmos"></div><div class="grain"></div><div class="vignette"></div>
+
+  <header>
+    <div class="wrap bar">
+      <div class="brand-col">
+        <a class="brand-link" href="#top">
+          <img src="/pride-index-astro/public/cpi-mark.png" alt="The Corporate Pride Index" />
+          <span class="brand"><b>Corporate Pride Index</b><span class="tag">Accountability, Not Applause</span></span>
+        </a>
+        <a class="hcredit" href="https://www.anthropic.com/claude" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5c.6 4.9 1.4 7.2 3.4 9.1 2 1.9 4.3 2.7 7.1 3.4-2.8.7-5.1 1.5-7.1 3.4-2 1.9-2.8 4.2-3.4 9.1-.6-4.9-1.4-7.2-3.4-9.1-2-1.9-4.3-2.7-7.1-3.4 2.8-.7 5.1-1.5 7.1-3.4 2-1.9 2.8-4.2 3.4-9.1Z"/></svg>
+          Built with Claude Fable 5, Anthropic's latest model
+        </a>
+      </div>
+      <nav>
+        <a href="#top" class="active">Index</a>
+        <a href="#s-sectors">Sectors</a>
+        <a href="#s-table">Companies</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="future.html">Future</a>
+        <a href="about.html">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="stage">
+    <span id="top"></span>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="kicker">A data-journalism accountability instrument</span>
+        <h1 class="hero-title">
+          <span class="line"><span style="--ld:.15s">Who stood by</span></span>
+          <span class="line"><span style="--ld:.27s">LGBTQ+ people —</span></span>
+          <span class="line"><span style="--ld:.39s"><em>and who folded</em></span></span>
+          <span class="line"><span style="--ld:.51s"><em>under pressure?</em></span></span>
+        </h1>
+        <p class="lede reveal" style="--d:.7s">
+          <b id="leadN" style="color:var(--ink)">200</b> major American companies, scored 0–100 on the depth and
+          consistency of their LGBTQ+ support. Cosmetic gestures are capped; structure is rewarded;
+          reversals — especially the post–January 2025 retreats — are the most damning signal.
+        </p>
+        <div class="search reveal" style="--d:.82s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="heroSearch" placeholder="Look up a company — Verizon, Target, Apple…" />
+        </div>
+      </div>
+      <aside class="pulse reveal" style="--d:.55s">
+        <div class="lab">The index, today</div>
+        <div class="big"><span data-count="57.8" data-dec="1">0.0</span></div>
+        <div class="sub">mean score across <b id="pulseN">200</b> companies · 2015 → 2026</div>
+        <div class="gauge">
+          <div class="track"><span class="needle" id="needle" style="left:57.8%"></span></div>
+          <div class="ends"><span>0 · Adversarial</span><span>50 · Neutral</span><span>100 · Champion</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="tile reveal" style="--d:.1s"><div class="num"><span data-count="200" id="stTotal">0</span></div><div class="cap">companies scored</div></div>
+      <div class="tile red reveal" style="--d:.18s"><div class="spark"></div><div class="num"><span data-count="40" id="stRev">0</span></div><div class="cap">post–Jan 2025 reversals</div></div>
+      <div class="tile green reveal" style="--d:.26s"><div class="spark"></div><div class="num"><span data-count="31" id="stChamp">0</span></div><div class="cap">champions · 80+</div></div>
+      <div class="tile reveal" style="--d:.34s"><div class="num"><span data-count="57.8" data-dec="1" id="stAvg">0</span></div><div class="cap">index average</div></div>
+    </section>
+
+    <!-- DISTRIBUTION -->
+    <section class="block" id="s-dist" data-io>
+      <div class="head"><div><div class="k">The shape of corporate America</div><h2>Score distribution</h2></div>
+        <div class="meta" id="distMeta">all companies</div></div>
+      <div class="dist">
+        <div class="bars" id="bars"></div>
+        <div class="scaleline"></div>
+        <div class="scalelabs"><span>0</span><span>Adversarial → Harmful → Performative → Neutral → Ally → Champion</span><span>100</span></div>
+      </div>
+    </section>
+
+    <!-- HONOR & SHAME -->
+    <section class="block" id="s-halls" data-io>
+      <div class="head"><div><div class="k">The extremes</div><h2>Hall of Honor &amp; Hall of Shame</h2></div></div>
+      <div class="halls">
+        <div class="hall honor reveal">
+          <div class="htag">◆ Hall of Honor · highest sustained scores</div>
+          <div class="desc">Top scores, weighted toward structural commitments that are hardest to fake — and hardest to reverse.</div>
+          <div id="honor"></div>
+        </div>
+        <div class="hall shame reveal" style="--d:.12s">
+          <div class="htag">⚑ Hall of Shame · steepest reversals</div>
+          <div class="desc">Post–Jan 2025 reversal companies, ranked by the negative-point damage their retreat inflicted.</div>
+          <div id="shame"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTORS -->
+    <section class="block" id="s-sectors" data-io>
+      <div class="head"><div><div class="k">The index, grouped</div><h2>Where sectors stand</h2></div>
+        <div class="meta">average score</div></div>
+      <div class="sect" id="sectors"></div>
+    </section>
+
+    <!-- FULL TABLE -->
+    <section class="block" id="s-table" data-io>
+      <div class="head"><div><div class="k">Every company, sourced</div><h2>The full index</h2></div></div>
+      <div class="toolbar">
+        <input id="filter" placeholder="Filter companies or sectors…" />
+        <select id="fSector" aria-label="Filter by sector"><option value="">All sectors</option></select>
+        <select id="fBand" aria-label="Filter by band">
+          <option value="">All bands</option>
+          <option>Champion</option><option>Ally</option><option>Neutral</option>
+          <option>Performative</option><option>Harmful</option><option>Adversarial</option>
+        </select>
+        <button class="flagbtn" data-flag="postJan2025Reversal">⚑ Reversal</button>
+        <button class="flagbtn" data-flag="pressureDriven">⚑ Pressure-Driven</button>
+        <button class="flagbtn" data-flag="transNbExclusion">⚑ Trans/NB Exclusion</button>
+        <span class="count" id="tcount"></span>
+      </div>
+      <div class="tablecard">
+        <table>
+          <thead><tr>
+            <th data-sort="name">Company</th>
+            <th class="sec-h" data-sort="sector">Sector</th>
+            <th class="r" data-sort="score">Score</th>
+            <th class="r" data-sort="savg" title="Average score across this company's sector">Sector Avg</th>
+            <th class="r" data-sort="delta" title="Score minus this company's sector average">Δ Sector</th>
+            <th data-sort="band">Band</th>
+            <th class="r" data-sort="hrcCei">HRC CEI</th>
+            <th class="r" data-sort="pos">+Pts</th>
+            <th class="r" data-sort="neg">−Pts</th>
+            <th>Flags</th>
+          </tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap f">
+      <span id="footStat">every score recomputed from its evidence at build time — <span class="ok">validation passed.</span></span>
+      <span class="credit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5c.6 4.9 1.4 7.2 3.4 9.1 2 1.9 4.3 2.7 7.1 3.4-2.8.7-5.1 1.5-7.1 3.4-2 1.9-2.8 4.2-3.4 9.1-.6-4.9-1.4-7.2-3.4-9.1-2-1.9-4.3-2.7-7.1-3.4 2.8-.7 5.1-1.5 7.1-3.4 2-1.9 2.8-4.2 3.4-9.1Z"/></svg> Built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Fable 5</a>, Anthropic's latest model</span>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+
+<script>
+  const BAND = { Champion:'#10b981', Ally:'#65a30d', Neutral:'#ca8a04', Performative:'#f97316', Harmful:'#f05252', Adversarial:'#e0444f' };
+  const bandFor = s => s>=80?'Champion':s>=65?'Ally':s>=50?'Neutral':s>=35?'Performative':s>=20?'Harmful':'Adversarial';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const esc = s => String(s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+  const fmtPts = n => n>0?('+'+n):(''+n);
+  const host = u => { try { return new URL(u).hostname.replace(/^www\./,''); } catch { return u; } };
+
+  const FALLBACK = { companies: [
+    {name:"Apple",ticker:"AAPL",sector:"Technology",score:100,band:"Champion",breakdown:{structural:88,negative:0},flags:{postJan2025Reversal:false}},
+    {name:"AT&T",ticker:"T",sector:"Telecommunications",score:0,band:"Adversarial",breakdown:{structural:0,negative:-84},flags:{postJan2025Reversal:true}}
+  ], sectors:[{sector:"Technology",avgScore:64.3}] };
+
+  let COMPANIES = [], SECTORS = [];
+
+  function render() {
+    const C = COMPANIES, total = C.length;
+    const avg = total ? +(C.reduce((s,c)=>s+c.score,0)/total).toFixed(1) : 0;
+    const champions = C.filter(c=>c.band==='Champion').length;
+    const reversals = C.filter(c=>c.flags && c.flags.postJan2025Reversal).length;
+    set('leadN', total); set('pulseN', total);
+    document.querySelector('.pulse .big span').dataset.count = avg;
+    document.getElementById('stTotal').dataset.count = total;
+    document.getElementById('stRev').dataset.count = reversals;
+    document.getElementById('stChamp').dataset.count = champions;
+    document.getElementById('stAvg').dataset.count = avg;
+    document.getElementById('needle').style.left = avg + '%';
+    document.getElementById('distMeta').textContent = 'all ' + total + ' companies';
+    const actions = C.reduce((s,c)=>s+((c.actions&&c.actions.length)||0),0);
+    document.getElementById('footStat').innerHTML =
+      total + ' companies' + (actions?(' · '+actions+' sourced actions'):'') +
+      ' · every score recomputed from its evidence at build time — <span class="ok">validation passed.</span>';
+
+    const bins = Array(10).fill(0);
+    C.forEach(c=>{ bins[Math.min(9, Math.floor(c.score/10))]++; });
+    const maxBin = Math.max(1,...bins);
+    document.getElementById('bars').innerHTML = bins.map((n,i)=>{
+      const mid=i*10+5, c=BAND[bandFor(mid)], h=Math.round((n/maxBin)*100);
+      return `<div class="barcol"><div class="bar" style="height:${h}%;--bd:${0.05*i}s;background:linear-gradient(180deg,${c},${c}cc);"><b>${n}</b></div></div>`;
+    }).join('');
+
+    const honor=[...C].sort((a,b)=>b.score-a.score || (b.breakdown.structural-a.breakdown.structural)).slice(0,6);
+    const shame=C.filter(c=>c.flags&&c.flags.postJan2025Reversal).sort((a,b)=>a.breakdown.negative-b.breakdown.negative).slice(0,6);
+    const col=s=>BAND[bandFor(s)];
+    document.getElementById('honor').innerHTML = honor.map((c,i)=>
+      `<a class="row" data-ci="${COMPANIES.indexOf(c)}"><span class="rank">${i+1}</span><span class="nm">${esc(c.name)}<small>${esc(c.sector)}</small></span><span class="chip" style="color:${col(c.score)}">${c.score}</span></a>`).join('');
+    document.getElementById('shame').innerHTML = shame.map((c,i)=>
+      `<a class="row" data-ci="${COMPANIES.indexOf(c)}"><span class="rank">${i+1}</span><span class="nm">${esc(c.name)}<small>${esc(c.sector)}</small></span><span class="chip neg">${c.breakdown.negative}</span><span class="chip" style="color:${col(c.score)}">${c.score}</span></a>`).join('');
+
+    const secs=[...SECTORS].sort((a,b)=>b.avgScore-a.avgScore);
+    document.getElementById('sectors').innerHTML = secs.map((s,i)=>{
+      const c=BAND[bandFor(s.avgScore)];
+      return `<div class="srow"><span class="sn">${esc(s.sector)}</span><span class="strack"><span class="sfill" style="width:${s.avgScore}%;--sd:${0.05*i}s;background:${c};box-shadow:0 0 16px -4px ${c}"></span></span><span class="sv">${s.avgScore}</span></div>`;
+    }).join('');
+
+    // populate the sector filter dropdown (alphabetical)
+    const fSec=document.getElementById('fSector');
+    if(fSec && fSec.options.length<=1){
+      [...new Set(COMPANIES.map(c=>c.sector).filter(Boolean))].sort().forEach(s=>{
+        const o=document.createElement('option'); o.textContent=s; fSec.appendChild(o);
+      });
+    }
+
+    buildTable();
+    if (window.__io) document.querySelectorAll('[data-io]').forEach(s=>window.__io.observe(s));
+  }
+
+  let sortKey='score', sortDir=-1;
+  function buildTable() {
+    const q = (document.getElementById('filter').value||'').toLowerCase();
+    const sec = document.getElementById('fSector').value;
+    const band = document.getElementById('fBand').value;
+    const activeFlags = [...document.querySelectorAll('.flagbtn.on')].map(b=>b.dataset.flag);
+    let rows = COMPANIES.filter(c=>
+      (!q || c.name.toLowerCase().includes(q) || (c.sector||'').toLowerCase().includes(q)) &&
+      (!sec || c.sector===sec) &&
+      (!band || (c.band||bandFor(c.score))===band) &&
+      activeFlags.every(f=> c.flags && c.flags[f]));
+    const savg = new Map(SECTORS.map(s=>[s.sector, s.avgScore]));
+    const delta = c => Math.round((c.score - (savg.get(c.sector) ?? c.score)) * 10) / 10;
+    const FLAGS = [['postJan2025Reversal','Reversal'],['pressureDriven','Pressure'],['transNbExclusion','Trans/NB']];
+    rows.sort((a,b)=>{
+      let va,vb;
+      if(sortKey==='name'){va=a.name.toLowerCase();vb=b.name.toLowerCase();}
+      else if(sortKey==='sector'){va=(a.sector||'').toLowerCase();vb=(b.sector||'').toLowerCase();}
+      else if(sortKey==='savg'){va=savg.get(a.sector)??-1;vb=savg.get(b.sector)??-1;}
+      else if(sortKey==='delta'){va=delta(a);vb=delta(b);}
+      else if(sortKey==='hrcCei'){va=a.hrcCei??-1;vb=b.hrcCei??-1;}
+      else if(sortKey==='pos'){va=a.breakdown.positiveCapped;vb=b.breakdown.positiveCapped;}
+      else if(sortKey==='neg'){va=a.breakdown.negative;vb=b.breakdown.negative;}
+      else {va=a.score;vb=b.score;}
+      return (va<vb?-1:va>vb?1:0)*sortDir;
+    });
+    document.getElementById('tcount').textContent = rows.length + ' / ' + COMPANIES.length;
+    document.getElementById('tbody').innerHTML = rows.map(c=>{
+      const b=c.band||bandFor(c.score), col=BAND[b];
+      const d=delta(c);
+      const dCol = d>0?'var(--good)':d<0?'var(--bad)':'var(--txt-mut)';
+      const cei = c.hrcCei!=null
+        ? `${c.hrcCei}${c.stillSubmittingCei===false?' <span style="color:var(--bad)" title="No longer submitting to HRC CEI">✕</span>':''}`
+        : '<span style="color:var(--txt-mut)">—</span>';
+      const flags = (c.flags ? FLAGS.filter(f=>c.flags[f[0]]) : [])
+        .map(f=>`<span class="tflag">⚑ ${f[1]}</span>`).join('');
+      return `<tr data-ci="${COMPANIES.indexOf(c)}">`+
+        `<td>${esc(c.name)} ${c.ticker?`<span class="tkr">${esc(c.ticker)}</span>`:''}</td>`+
+        `<td class="sec">${esc(c.sector||'')}</td>`+
+        `<td class="sc" style="color:${col}">${c.score}</td>`+
+        `<td class="r mono" style="color:var(--txt-mut)">${savg.get(c.sector)??'—'}</td>`+
+        `<td class="r mono" style="color:${dCol}">${d>0?'+':''}${d}</td>`+
+        `<td><span class="bandpill" style="color:${col};background:${col}1f"><i style="background:${col}"></i>${b}</span></td>`+
+        `<td class="r mono" style="color:var(--txt-2)">${cei}</td>`+
+        `<td class="r mono" style="color:var(--good)">+${c.breakdown.positiveCapped}</td>`+
+        `<td class="r mono" style="color:var(--bad)">${c.breakdown.negative||0}</td>`+
+        `<td class="flagcell">${flags||'<span style="color:var(--txt-mut)">—</span>'}</td></tr>`;
+    }).join('');
+  }
+
+  function set(id,v){ const e=document.getElementById(id); if(e) e.textContent=v; }
+  function countUp(el){
+    const target=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0);
+    if(reduce||isNaN(target)){ el.textContent=isNaN(target)?el.textContent:target.toFixed(dec); return; }
+    const dur=1500,t0=performance.now();
+    (function tick(t){ const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);
+      el.textContent=(target*e).toFixed(dec); if(p<1)requestAnimationFrame(tick); else el.textContent=target.toFixed(dec); })(t0);
+  }
+
+  // ---- Score line chart (rebuilt from V1) ----
+  function timelineChartSVG(c){
+    const pts=(c.timeline||[]).slice().sort((a,b)=>a.year-b.year);
+    if(pts.length<2) return '';
+    const W=720,H=210,pl=10,pr=14,pt=16,pb=26;
+    const ys=pts.map(p=>p.year), minY=Math.min(...ys), maxY=Math.max(...ys);
+    const X=y=> pl + (maxY===minY?0:(y-minY)/(maxY-minY))*(W-pl-pr);
+    const Y=s=> pt + (1-s/100)*(H-pt-pb);
+    const change=new Set((c.timelineEntries||[]).filter(e=>e.entryType&&e.entryType!=='Baseline').map(e=>e.year));
+    const path=pts.map((p,i)=>`${i?'L':'M'}${X(p.year).toFixed(1)} ${Y(p.score).toFixed(1)}`).join(' ');
+    const grid=[0,50,100].map(s=>`<line x1="${pl}" y1="${Y(s).toFixed(1)}" x2="${W-pr}" y2="${Y(s).toFixed(1)}" stroke="${s===50?'rgba(255,255,255,0.22)':'rgba(255,255,255,0.07)'}" stroke-width="1" ${s===50?'stroke-dasharray="4 4"':''}/><text x="${pl-2}" y="${(Y(s)+3).toFixed(1)}" fill="#9aa0b4" font-size="10" font-family="monospace" text-anchor="start" dy="-4">${s}</text>`).join('');
+    const dots=pts.map(p=>{const ch=change.has(p.year);return `<circle cx="${X(p.year).toFixed(1)}" cy="${Y(p.score).toFixed(1)}" r="${ch?5:3}" fill="${BAND[bandFor(p.score)]}" stroke="#0a0c12" stroke-width="${ch?1.5:0}"/>`;}).join('');
+    const xl=[pts[0],pts[pts.length-1]].map(p=>`<text x="${X(p.year).toFixed(1)}" y="${H-7}" fill="#9aa0b4" font-size="11" font-family="monospace" text-anchor="middle">${p.year}</text>`).join('');
+    return `<div class="tlchart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Score over time">`+
+      grid+`<path d="${path}" fill="none" stroke="#e7e9f2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`+dots+xl+
+      `</svg><div class="cap">Each dot is a year; larger dots mark years the score changed (detailed below). Dashed line: the neutral baseline of 50.</div></div>`;
+  }
+
+  // ---- Company detail modal ----
+  const modal=document.getElementById('modal'), sheet=document.getElementById('sheet');
+  function openModal(html){ sheet.innerHTML='<button class="close" aria-label="Close">✕</button>'+html;
+    sheet.querySelector('.close').onclick=closeModal; modal.classList.add('open'); document.body.style.overflow='hidden'; modal.scrollTop=0; }
+  function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+  modal.addEventListener('click', e=>{ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+  function citeChip(url,type){ return url
+    ? `<a class="cite" href="${url}" target="_blank" rel="noopener">↗ ${esc(host(url))}${type?(' · '+esc(type)):''}</a>`
+    : '<span class="cite" style="color:var(--txt-mut)">no source recorded</span>'; }
+
+  function companyHTML(c){
+    const col=BAND[c.band||bandFor(c.score)];
+    const sec=(SECTORS.find(s=>s.sector===c.sector)||{}).avgScore;
+    const FLAGS=[['postJan2025Reversal','Post-Jan 2025 Reversal'],['pressureDriven','Pressure-Driven'],['juneOnly','June-Only'],['transNbExclusion','Trans/NB Exclusion'],['geoHypocrisy','Geo Hypocrisy']];
+    const flags=c.flags?FLAGS.filter(f=>c.flags[f[0]]):[];
+    const pos=(c.actions||[]).filter(a=>a.polarity==='Positive'), neg=(c.actions||[]).filter(a=>a.polarity==='Negative');
+    const b=c.breakdown||{}, r=c.rationale;
+    const acard=a=>{ const ac=a.polarity==='Positive'?'#10b981':'#f05252';
+      return `<div class="acard" style="border-left-color:${ac}"><span class="pts" style="color:${ac}">${fmtPts(a.points)}</span><div class="desc">${esc(a.description||'')}</div><div class="meta"><span>${a.year||''}</span><span>${esc(a.tier&&a.tier!=='—'?a.tier:'Negative')}</span>${a.postJan2025?'<span style="color:var(--bad)">POST–JAN 2025</span>':''}${citeChip(a.sourceUrl,a.sourceType)}</div>${a.notes?`<div class="meta" style="font-style:italic">${esc(a.notes)}</div>`:''}</div>`; };
+    let h='';
+    h+=`<div class="d-top"><div><div class="d-kick">${esc(c.sector||'')}${c.ticker?(' · '+esc(c.ticker)):''}${c.revenueB?(' · $'+c.revenueB+'B revenue'):''}</div><div class="d-name">${esc(c.name)}</div></div><div><div class="d-score" style="color:${col}">${c.score}</div><div class="d-score"><span class="bandpill" style="color:${col};background:${col}1f"><i style="background:${col}"></i>${c.band||bandFor(c.score)}</span></div></div></div>`;
+    if(flags.length) h+=`<div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:14px">${flags.map(f=>`<span class="bandpill" style="color:var(--bad);background:rgba(240,82,82,0.12)">⚑ ${f[1]}</span>`).join('')}</div>`;
+    h+=`<div class="gradbar"><span class="mk" style="left:${c.score}%"></span>${sec!=null?`<span class="avg" style="left:${sec}%" title="sector avg ${sec}"></span>`:''}</div><div class="gradends"><span>0 · Adversarial</span><span>50 · Neutral</span><span>100 · Champion</span></div>`;
+    if(r) h+=`<div class="why"><div class="verdict">${esc(r.verdict||'')}</div><div class="badges"><span class="badge">Trajectory: ${esc(r.trajectory||'')}</span><span class="badge">Confidence: ${esc(r.confidence||'')}</span></div><div class="cols"><div class="col up"><div class="lab">What raised the score</div><p>${esc(r.driversUp||'')}</p></div><div class="col down"><div class="lab">What lowered it</div><p>${esc(r.driversDown||'')}</p></div></div>${r.decisiveFactor?`<div class="decisive"><div class="lab">What tipped the score</div><p>${esc(r.decisiveFactor)}</p></div>`:''}</div>`;
+    const te=c.timelineEntries||[];
+    if((c.timeline||[]).length>1||te.length){
+      h+=`<div class="d-k">How the score moved, and why</div><div class="d-h3">Score timeline</div>`+timelineChartSVG(c);
+      if(te.length) h+=`<ul class="tl">`+te.map(e=>{
+        const dc=BAND[bandFor(e.score)];
+        const dd=e.delta==null||e.delta===0?'':`<span class="delta" style="color:${e.delta<0?'var(--bad)':'var(--good)'}">${fmtPts(e.delta)}</span>`;
+        const evs=(e.evidence||[]).map(v=>v.url?`<a class="ev" href="${v.url}" target="_blank" rel="noopener">${v.points!=null?fmtPts(v.points)+' ':''}${esc(v.actionId||host(v.url))} ↗</a>`:`<span class="ev">${esc(v.raw||'')}</span>`).join('');
+        return `<li style="--dot:${dc}"><span class="yr" style="color:${dc}">${e.year}</span> <span class="yr">${e.score}</span> ${dd}<div class="rat">${esc(e.rationale||'')}</div>${evs?`<div class="evs">${evs}</div>`:''}</li>`;
+      }).join('')+`</ul>`;
+    }
+    h+=`<div class="d-k">The arithmetic</div><div class="d-h3">Scoring breakdown</div><table class="brk"><tr><td>Baseline</td><td class="v">50</td></tr><tr><td>Cosmetic + Commercial (cap +20)</td><td class="v pos">+${b.cosmeticCommercialCapped||0}${b.cosmeticCommercialRaw>b.cosmeticCommercialCapped?` <span style="color:var(--txt-mut)">(raw +${b.cosmeticCommercialRaw})</span>`:''}</td></tr><tr><td>Civic</td><td class="v pos">+${b.civic||0}</td></tr><tr><td>Financial</td><td class="v pos">+${b.financial||0}</td></tr><tr><td>Structural</td><td class="v pos">+${b.structural||0}</td></tr><tr><td>Negative actions (uncapped)</td><td class="v neg">${b.negative||0}</td></tr><tr class="tot"><td>Final score (clamped 0–100)</td><td class="v" style="color:${col}">${c.score}</td></tr></table>`;
+    if((c.actions||[]).length) h+=`<div class="d-k">The evidence behind the reasoning</div><div class="d-h3">Sourced actions</div><div class="evgrid"><div class="evcol p"><div class="lab">Positive · ${pos.length}</div>${pos.map(acard).join('')||'<div class="note">None on record.</div>'}</div><div class="evcol n"><div class="lab">Negative · ${neg.length}</div>${neg.map(acard).join('')||'<div class="note">None on record.</div>'}</div></div>`;
+    if((c.statements||[]).length) h+=`<div class="d-k">In their own words</div><div class="d-h3">Statements &amp; reports</div>`+c.statements.map(s=>`<div class="stmt"><div class="q">${esc(s.excerpt||'')}</div><div class="cap"><span>${esc(s.recordType||'')}</span>${s.date?`<span>${esc(s.date)}</span>`:''}${s.speaker?`<span>— ${esc(s.speaker)}</span>`:''}${citeChip(s.sourceUrl)}</div></div>`).join('');
+    h+=`<div class="d-k">Cross-reference</div><div class="d-h3">HRC Corporate Equality Index</div><div class="note">`+(c.hrcCei!=null?`HRC CEI score: <b style="color:var(--ink)">${c.hrcCei}/100</b>${c.ceiYear?` (${c.ceiYear})`:''}.${c.stillSubmittingCei===false?` <span style="color:var(--bad)">⚑ ${esc(c.name)} has stopped submitting to the CEI — read its last score as historical.</span>`:''}`:'No HRC CEI score on record.')+`</div>`;
+    if(c.analystNotes) h+=`<div class="d-k">Context</div><div class="d-h3">Analyst notes</div><div class="note">${esc(c.analystNotes)}</div>`;
+    return h;
+  }
+
+  document.addEventListener('click', e=>{
+    const el=e.target.closest('[data-ci]'); if(!el) return;
+    const c=COMPANIES[+el.dataset.ci]; if(c) openModal(companyHTML(c));
+  });
+
+  // interactions
+  document.getElementById('filter').addEventListener('input', buildTable);
+  document.getElementById('fSector').addEventListener('change', buildTable);
+  document.getElementById('fBand').addEventListener('change', buildTable);
+  document.querySelectorAll('.flagbtn').forEach(b=>b.addEventListener('click',()=>{ b.classList.toggle('on'); buildTable(); }));
+  document.querySelectorAll('thead th').forEach(th=>th.addEventListener('click',()=>{
+    const k=th.dataset.sort; if(k===sortKey) sortDir*=-1; else {sortKey=k; sortDir=(k==='name'||k==='sector')?1:-1;} buildTable();
+  }));
+  document.querySelectorAll('nav a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{
+    document.querySelectorAll('nav a').forEach(x=>x.classList.remove('active')); a.classList.add('active');
+  }));
+  document.getElementById('heroSearch').addEventListener('input',e=>{ document.getElementById('filter').value=e.target.value; buildTable(); });
+  document.getElementById('heroSearch').addEventListener('keydown',e=>{ if(e.key==='Enter') document.getElementById('s-table').scrollIntoView({behavior:'smooth'}); });
+
+  requestAnimationFrame(()=>{ document.getElementById('stage').classList.add('in'); document.querySelector('header').classList.add('in'); });
+  window.__io = new IntersectionObserver((es)=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in'); window.__io.unobserve(e.target);} }),{threshold:0.14});
+
+  // theme toggle (persisted; pre-paint script in <head> applies it on load)
+  const themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) themeBtn.addEventListener('click', ()=>{
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) { document.documentElement.removeAttribute('data-theme'); }
+    else { document.documentElement.setAttribute('data-theme','light'); }
+    try { localStorage.setItem('cpi-theme-v2', isLight ? 'dark' : 'light'); } catch(e){}
+  });
+
+  fetch('/pride-index/src/data/index-data.json')
+    .then(r=>{ if(!r.ok) throw 0; return r.json(); })
+    .then(d=>{ COMPANIES=d.companies; SECTORS=d.sectors||[]; render(); setTimeout(()=>document.querySelectorAll('[data-count]').forEach(countUp),300); })
+    .catch(()=>{ COMPANIES=FALLBACK.companies; SECTORS=FALLBACK.sectors; render(); setTimeout(()=>document.querySelectorAll('[data-count]').forEach(countUp),300); });
+</script>
+</body>
+</html>

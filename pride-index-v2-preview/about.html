@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — The Corporate Pride Index</title>
+<meta name="description" content="The Corporate Pride Index tracks whether major American companies actually stand behind the LGBTQ+ community — or simply market to it. About the project and its author." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  (function(){ try { if (localStorage.getItem('cpi-theme-v2') === 'light')
+    document.documentElement.setAttribute('data-theme','light'); } catch(e){} })();
+</script>
+</head>
+<body>
+  <div class="atmos"></div><div class="grain"></div><div class="vignette"></div>
+
+  <header>
+    <div class="wrap bar">
+      <div class="brand-col">
+        <a class="brand-link" href="index.html">
+          <img src="/pride-index-astro/public/cpi-mark.png" alt="The Corporate Pride Index" />
+          <span class="brand"><b>Corporate Pride Index</b><span class="tag">Accountability, Not Applause</span></span>
+        </a>
+        <a class="hcredit" href="https://www.anthropic.com/claude" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5c.6 4.9 1.4 7.2 3.4 9.1 2 1.9 4.3 2.7 7.1 3.4-2.8.7-5.1 1.5-7.1 3.4-2 1.9-2.8 4.2-3.4 9.1-.6-4.9-1.4-7.2-3.4-9.1-2-1.9-4.3-2.7-7.1-3.4 2.8-.7 5.1-1.5 7.1-3.4 2-1.9 2.8-4.2 3.4-9.1Z"/></svg>
+          Built with Claude Fable 5, Anthropic's latest model
+        </a>
+      </div>
+      <nav>
+        <a href="index.html">Index</a>
+        <a href="index.html#s-sectors">Sectors</a>
+        <a href="index.html#s-table">Companies</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="future.html">Future</a>
+        <a href="about.html" class="active">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page">
+      <span class="kick">The project and the person behind it</span>
+      <h1>About</h1>
+    </div>
+
+    <section class="section">
+      <div class="prose">
+        <h2>About the Corporate Pride Index</h2>
+        <p>The Corporate Pride Index tracks whether major American companies actually stand behind the
+          LGBTQ+ community — or simply market to it.</p>
+        <p>Over the past decade, rainbow logos and Pride merchandise became standard corporate fare
+          every June. But commitments made in good times reveal little; what matters is what happens
+          under pressure. Beginning around 2022, and accelerating sharply after the second Trump
+          inauguration on January 20, 2025, organized anti-LGBTQ+ campaigns tested those commitments
+          directly. Some companies held their ground. Many others retreated — quietly pulling Pride
+          merchandise, deleting DEI policies, and scrubbing inclusive language from their own mission
+          statements.</p>
+        <p>This index exists to document that record, company by company, with sources.</p>
+
+        <h3>How it works</h3>
+        <p>Each of <strong id="coN">200</strong> major companies starts from a neutral baseline and is
+          scored using a transparent point system based on documented actions: financial donations to
+          LGBTQ+ organizations, sponsorships, employee resource groups, policy language, political
+          donations, lobbying, and more. Positive actions raise a company's score; negative actions
+          lower it.</p>
+        <p>Critically, <strong>reversals count more than absence</strong>. A company that publicly
+          supported the LGBTQ+ community and then rolled back that support under political or commercial
+          pressure scores worse than a company that never made the commitment in the first place —
+          because the reversal demonstrates the original support was never principled. Tracking these
+          reversals, and the pressure behind them, is the central purpose of this project.</p>
+        <p>Each company's score comes with a written rationale explaining what drove it up, what drove
+          it down, the single decisive factor, and where the company's trajectory appears to be
+          headed — improving, stable, declining, or in sharp reversal.</p>
+
+        <h3>Sourcing</h3>
+        <p>Every claim in the index is tied to a public source: HRC Corporate Equality Index reports,
+          GLAAD corporate accountability reports, company press releases and ESG disclosures, FEC and
+          OpenSecrets campaign-finance records, established news reporting, and — where companies have
+          deleted or altered their own public statements — archived versions captured via the Wayback
+          Machine.</p>
+        <p>This project is independent and non-commercial. Its goal is simple: give people the
+          information to know which companies' support for the LGBTQ+ community is real, and which was
+          only ever a marketing campaign. <a href="methodology.html">Read the full scoring methodology →</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="prose"><h2>About the author</h2></div>
+      <img class="headshot" src="/pride-index-astro/public/headshot.jpg" alt="Portrait of Paul Andrew Turner Jr." />
+      <div class="prose">
+          <p><strong>Paul Andrew Turner Jr.</strong> is an Orlando-based data scientist and finance
+            professional who built the Corporate Pride Index as an independent research project
+            leveraging new advanced AI models for data collection, research, analysis, and production.
+            He is an openly gay man and active member of the Orlando LGBTQ+ community.</p>
+          <p>By day, Andrew works as a corporate financial consultant in FP&amp;A at a Fortune 50
+            company, where he builds forecasting models, machine learning pipelines, and executive
+            reporting, and helps lead the adoption of GenAI tools like Claude and Gemini within his team.</p>
+        <p>His academic background spans law, finance, and data science: a Master of Arts in Economics
+          at the University of Florida, concentrating in econometrics and data analysis; a Juris Master
+          in Financial Regulation &amp; Compliance Law from the Florida State University College of Law;
+          a Master of Science in Financial Technology from the University of Central Florida; and a
+          Bachelor of Science in Statistics (with a minor in Computer Science).</p>
+        <p>The Corporate Pride Index draws on this combination of skills — rigorous sourcing and data
+          structuring, statistical scoring methodology, and an understanding of corporate and regulatory
+          behavior — to build a transparent, evidence-based record of how major American companies have
+          actually treated the LGBTQ+ community, particularly through the political pressures of 2025
+          and beyond.</p>
+        <p>Outside of this project, Andrew writes about finance, data, and regulation on
+          <a href="https://pandrewturner.substack.com" target="_blank" rel="noopener">Substack</a>, and
+          shares more about his work and research on his
+          <a href="https://pandrewturner.github.io/Andrews-Personal-Website/" target="_blank" rel="noopener">personal website</a>.</p>
+      </div>
+      <div class="contact">
+        <span class="d-k">Contact</span>
+        <a class="cite" href="mailto:CorpPrideIndex@outlook.com">CorpPrideIndex@outlook.com</a>
+        <a class="cite" href="https://www.linkedin.com/in/pandrewturner/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap f">
+    <span>Independent · non-commercial · every score recomputed from its evidence at build time.</span>
+    <span class="credit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5c.6 4.9 1.4 7.2 3.4 9.1 2 1.9 4.3 2.7 7.1 3.4-2.8.7-5.1 1.5-7.1 3.4-2 1.9-2.8 4.2-3.4 9.1-.6-4.9-1.4-7.2-3.4-9.1-2-1.9-4.3-2.7-7.1-3.4 2.8-.7 5.1-1.5 7.1-3.4 2-1.9 2.8-4.2 3.4-9.1Z"/></svg> Built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Fable 5</a>, Anthropic's latest model</span>
+  </div></footer>
+
+<script>
+  (function(){ var b=document.getElementById('themeToggle'); if(b) b.addEventListener('click',function(){
+    var l=document.documentElement.getAttribute('data-theme')==='light';
+    if(l) document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme','light');
+    try{ localStorage.setItem('cpi-theme-v2', l?'dark':'light'); }catch(e){} }); })();
+  fetch('/pride-index/src/data/index-data.json').then(r=>r.json())
+    .then(d=>{ document.getElementById('coN').textContent=d.companies.length; }).catch(()=>{});
+</script>
+</body>
+</html>

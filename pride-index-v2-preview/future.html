@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Future Enhancements — The Corporate Pride Index</title>
+<meta name="description" content="The planned roadmap for the Corporate Pride Index: public evidence submissions, tiered AI-assisted verification, company appeals, temporal score tracking, and legislative mapping." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  (function(){ try { if (localStorage.getItem('cpi-theme-v2') === 'light')
+    document.documentElement.setAttribute('data-theme','light'); } catch(e){} })();
+</script>
+</head>
+<body>
+  <div class="atmos"></div><div class="grain"></div><div class="vignette"></div>
+
+  <header>
+    <div class="wrap bar">
+      <div class="brand-col">
+        <a class="brand-link" href="index.html">
+          <img src="/pride-index-astro/public/cpi-mark.png" alt="The Corporate Pride Index" />
+          <span class="brand"><b>Corporate Pride Index</b><span class="tag">Accountability, Not Applause</span></span>
+        </a>
+        <a class="hcredit" href="https://www.anthropic.com/claude" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5c.6 4.9 1.4 7.2 3.4 9.1 2 1.9 4.3 2.7 7.1 3.4-2.8.7-5.1 1.5-7.1 3.4-2 1.9-2.8 4.2-3.4 9.1-.6-4.9-1.4-7.2-3.4-9.1-2-1.9-4.3-2.7-7.1-3.4 2.8-.7 5.1-1.5 7.1-3.4 2-1.9 2.8-4.2 3.4-9.1Z"/></svg>
+          Built with Claude Fable 5, Anthropic's latest model
+        </a>
+      </div>
+      <nav>
+        <a href="index.html">Index</a>
+        <a href="index.html#s-sectors">Sectors</a>
+        <a href="index.html#s-table">Companies</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="future.html" class="active">Future</a>
+        <a href="about.html">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page">
+      <span class="kick">Where the index is headed</span>
+      <h1>Future Enhancements</h1>
+      <p class="intro">The Corporate Pride Index is an active project. These are the planned additions —
+        listed publicly for the same reason the scoring rubric is published: so the project can be held
+        to its own standards. None of these are live yet; the current index is exactly what the
+        <a href="methodology.html">methodology</a> describes.</p>
+    </div>
+
+    <section class="section">
+      <div class="prose"><div class="d-k">Community accountability</div><h2>Public submissions &amp; evidence reporting</h2></div>
+      <div class="froadmap">
+        <div class="fitem">
+          <h3>User-submitted evidence</h3>
+          <p>Anyone will be able to report a documented company action — positive or negative — for
+            inclusion in the index. Every submission requires a source, and submitters classify what kind
+            of source it is. Rate limits (one submission per company per person per day) and per-company
+            caps on pending submissions prevent coordinated flooding during news cycles.</p>
+        </div>
+        <div class="fitem">
+          <h3>Tiered verification — the 95% confidence gate</h3>
+          <p>Not all proof is equal, so different types of evidence carry different weight. Public filings
+            such as SEC and FEC records are accepted once verified against the official source. News
+            reporting from established outlets requires corroboration. Social media posts and statements —
+            which can be faked or AI-generated — require the most additional verification.</p>
+          <p>Each submission is evaluated against the evidence already in the index and independently
+            researched. Only submissions that clear a 95% confidence threshold advance. Removing or
+            correcting an existing entry carries an even higher bar than adding a new one, because removal
+            is more gameable than addition.</p>
+        </div>
+        <div class="fitem">
+          <h3>AI-assisted review, human-approved</h3>
+          <p>High-reasoning Claude models (extended thinking) perform the initial confidence analysis:
+            fetching sources, cross-referencing the existing action log, checking for contradicting
+            reports, and producing a structured confidence report with full reasoning. Submissions that
+            pass are then queued for human analysis and final approval. Nothing enters the index without a
+            human sign-off, and every approved entry becomes a normal sourced row in the action log —
+            recomputed and validated at build time like everything else.</p>
+        </div>
+        <div class="fitem">
+          <h3>Company self-submission &amp; appeals</h3>
+          <p>Companies and brands will be able to submit themselves to the index, submit evidence on their
+            own behalf, or appeal a score they believe is wrong — for example, an action that was reported
+            at the time but later corrected. Self-submissions meet the same 95% bar as everyone else, and
+            the math stays the math: one good deed does not cancel out twenty bad ones. A verified
+            correction doesn't erase the original record; it adds the correction to it, with both sides
+            cited.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="prose"><div class="d-k">Deeper data</div><h2>Expanding the instrument</h2></div>
+      <div class="froadmap">
+        <div class="fitem">
+          <h3>Expanded company universe</h3>
+          <p>Broader coverage beyond the current major-company set: mid-cap companies, private companies
+            with significant public footprints, and non-U.S. multinationals operating in the American
+            market.</p>
+        </div>
+        <div class="fitem">
+          <h3>Temporal score tracking</h3>
+          <p>Year-over-year score history for every company, turning trajectory from a qualitative label
+            (improving, stable, declining, sharp reversal) into a quantitative record you can chart.</p>
+        </div>
+        <div class="fitem">
+          <h3>Legislative mapping</h3>
+          <p>Linking negative political donations and lobbying actions to the specific bills they supported
+            and what happened to those bills — connecting corporate money to legislative outcomes.</p>
+        </div>
+        <div class="fitem">
+          <h3>Sector benchmarking tools</h3>
+          <p>Richer peer-comparison views showing where a company stands relative to its industry, beyond
+            the current sector averages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="prose">
+        <p style="color:var(--txt-mut)">Have feedback on what should come first — or evidence the index
+          should already include? Reach out via the <a href="about.html">About page</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap f">
+    <span>Independent · non-commercial · every score recomputed from its evidence at build time.</span>
+    <span class="credit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.5c.6 4.9 1.4 7.2 3.4 9.1 2 1.9 4.3 2.7 7.1 3.4-2.8.7-5.1 1.5-7.1 3.4-2 1.9-2.8 4.2-3.4 9.1-.6-4.9-1.4-7.2-3.4-9.1-2-1.9-4.3-2.7-7.1-3.4 2.8-.7 5.1-1.5 7.1-3.4 2-1.9 2.8-4.2 3.4-9.1Z"/></svg> Built with <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Fable 5</a>, Anthropic's latest model</span>
+  </div></footer>
+
+<script>
+  (function(){ var b=document.getElementById('themeToggle'); if(b) b.addEventListener('click',function(){
+    var l=document.documentElement.getAttribute('data-theme')==='light';
+    if(l) document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme','light');
+    try{ localStorage.setItem('cpi-theme-v2', l?'dark':'light'); }catch(e){} }); })();
+</script>
+</body>
+</html>
