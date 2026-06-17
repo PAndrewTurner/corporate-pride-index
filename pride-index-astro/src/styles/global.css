@@ -6,6 +6,7 @@
    ============================================================ */
 :root {
   /* ---- DARK (default) ---- */
+  color-scheme: dark;
   --bg:        #07080c;
   --surface:   #14161f;   /* solid card interior (top)    */
   --surface-2: #0b0d15;   /* solid card interior (bottom) */
@@ -47,6 +48,7 @@
 
 html.light {
   /* ---- LIGHT (inverse) — white ground, ink text, same rainbow ---- */
+  color-scheme: light;
   --bg:        #fbfbfd;
   --surface:   #ffffff;
   --surface-2: #f1f2f7;
@@ -65,7 +67,7 @@ html.light {
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--bg); }
 body { background: var(--bg); color: var(--txt); font-family: var(--sans); line-height: 1.55;
   -webkit-font-smoothing: antialiased; overflow-x: hidden; position: relative; min-height: 100vh; }
 
