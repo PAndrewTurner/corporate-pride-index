@@ -66,10 +66,18 @@ export interface ContextFlags {
 export interface ScoreBreakdown {
   cosmeticCommercialRaw: number;
   cosmeticCommercialCapped: number;
+  /** Raw per-tier positive subtotals (pre-diminishing; for composition views). */
   civic: number;
   financial: number;
   structural: number;
+  /** Substantive positives (Civic + Financial + Structural). */
+  substantiveRaw: number;
+  substantiveDiminished: number;
+  /** Stored "Positive Pts (capped)": capped signaling + diminished substance. */
   positiveCapped: number;
+  /** Raw sum of negatives (pre-diminishing). */
+  negativeRaw: number;
+  /** Stored "Negative Pts": diminished negative total. */
   negative: number;
   score: number;
   band: Band;

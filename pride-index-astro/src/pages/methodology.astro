@@ -34,16 +34,16 @@ const examples = EXAMPLES.map((e) => {
   return ex ? { ...e, ex, b: computeScore(ex.actions) } : null;
 }).filter((x): x is NonNullable<typeof x> => x !== null);
 
-const formula = `score = clamp( 50                                  // neutral baseline
-       + min(20, cosmetic + commercial)    // the rainbow-washing cap
-       + civic + financial + structural    // substance, uncapped
-       + negative,                         // harm, uncapped
-       0, 100 )`;
+const formula = `score = clamp( 0, 100,
+         50                                          // neutral baseline
+       + min(20, cosmetic + commercial)              // capped "signaling"
+       + diminish(civic + financial + structural)    // substantive positives
+       + diminish(negatives) )                        // negatives`;
 ---
 
 <Layout
   title="Methodology — The Corporate Pride Index"
-  description="How every score is built: the +20 cosmetic cap, reversal asymmetry, the six bands, worked examples, and the full point-value reference."
+  description="Scoring Methodology v2: the +20 signaling cap, diminishing returns, reversal asymmetry, the six bands, worked examples, and the full point-value reference."
   path="methodology"
 >
   <div class="doc">
@@ -58,24 +58,43 @@ const formula = `score = clamp( 50                                  // neutral b
 
     <section class="section">
       <div class="prose">
-        <div class="d-k">The framework</div>
+        <div class="d-k">The framework · version 2</div>
         <h2>How a score is built</h2>
         <p>Every company starts at <strong>50</strong> — neutral. Nothing is owed; nothing is presumed.
-          From there, documented actions move the score across five positive tiers and one uncapped
-          negative category:</p>
+          From there, documented actions move the score across five positive tiers and a severity-ranked
+          set of negatives. Positive and negative points are summed separately and meet at the baseline:</p>
       </div>
       <div class="formula">{formula}</div>
       <div class="prose">
-        <p><strong>The +20 cosmetic cap.</strong> Rainbow logos, Pride posts, and merchandise collections
-          are real but cheap. No volume of branding can contribute more than 20 points — a company cannot
-          post its way into being an ally. To score above the Neutral band, it must spend, show up, or
-          change policy.</p>
-        <p><strong>Reversal asymmetry.</strong> Negative actions are uncapped and individually heavier
-          than their positive counterparts (lobbying against LGBTQ+ legislation costs −40; an explicit
-          pro-LGBTQ+ DEI policy earns +20). This is deliberate. Adopting a policy under sunny conditions
-          is weak evidence of commitment; abandoning one under pressure is strong evidence of its absence.
-          A reversal doesn't just subtract recent points — it retroactively reveals what the earlier
-          support was made of.</p>
+        <p><strong>The +20 signaling cap.</strong> Rainbow logos, Pride posts, and merchandise collections
+          (the Cosmetic and Commercial tiers) are real but cheap. Their combined value is capped at 20
+          points — a company cannot post its way into being an ally. To clear the Neutral band it must
+          spend, show up, or change policy. This cap is applied before diminishing returns.</p>
+        <p><strong>Reversal asymmetry.</strong> Negatives are individually heavier than their positive
+          counterparts (lobbying against LGBTQ+ legislation costs −40; an explicit pro-LGBTQ+ DEI policy
+          earns +20), and the single largest negative always lands at full weight — so a decisive reversal
+          still pushes a company below the baseline. Adopting a policy in calm weather is weak evidence of
+          commitment; abandoning one under pressure is strong evidence of its absence. A company that built
+          a record and then reversed scores worse than one that never committed at all.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="prose">
+        <div class="d-k">The core of v2</div>
+        <h2>Diminishing returns</h2>
+        <p>Substantive positives (Civic, Financial, Structural) and negatives are each scored with
+          <strong>diminishing returns</strong>: within each pool the actions are sorted largest-first, and
+          every successive action is multiplied by a decreasing weight. The single most significant action
+          on each side carries full weight; additional similar actions count for progressively less.</p>
+        <div class="formula">position   1st    2nd    3rd    4th    5th    6th    7th   8th+
+weight    1.00   0.70   0.50   0.35   0.25   0.15   0.10   0.05</div>
+        <p>v1 capped cheap positive signaling but summed negatives without limit, which compressed both
+          ends of the scale: soft, partial reversers floored at 0 alongside the worst actors, while the
+          most committed companies piled past 100 and flattened to an identical top score. Applying the
+          same diminishing logic to both tails keeps the 0–100 scale resolving at both extremes — doing
+          many good (or bad) things still moves the score, but neither runs away to the clamp on volume
+          alone.</p>
       </div>
     </section>
 
@@ -119,11 +138,12 @@ const formula = `score = clamp( 50                                  // neutral b
                 <tbody>
                   <tr><td>Baseline</td><td class="v">50</td></tr>
                   <tr>
-                    <td>Cosmetic+Commercial{b.cosmeticCommercialRaw > b.cosmeticCommercialCapped ? ` (raw +${b.cosmeticCommercialRaw}, capped)` : ''}</td>
+                    <td>Cosmetic + Commercial (cap 20){b.cosmeticCommercialRaw > b.cosmeticCommercialCapped ? ` · raw +${b.cosmeticCommercialRaw}` : ''}</td>
                     <td class="v pos">+{b.cosmeticCommercialCapped}</td>
                   </tr>
-                  <tr><td>Civic + Financial + Structural</td><td class="v pos">+{b.civic + b.financial + b.structural}</td></tr>
-                  <tr><td>Negative actions</td><td class="v neg">{b.negative}</td></tr>
+                  <tr><td>Substantive — diminished{b.substantiveRaw > b.substantiveDiminished ? ` · raw +${b.substantiveRaw}` : ''}</td><td class="v pos">+{b.substantiveDiminished}</td></tr>
+                  <tr><td>Negatives — diminished{b.negativeRaw < b.negative ? ` · raw ${b.negativeRaw}` : ''}</td><td class="v neg">{b.negative}</td></tr>
+                  <tr class="tot"><td>Score</td><td class="v" style={{ color: BAND_COLORS[b.band] }}>{b.score}</td></tr>
                 </tbody>
               </table>
               <p class="lesson">{lesson}</p>
@@ -168,9 +188,9 @@ const formula = `score = clamp( 50                                  // neutral b
         <p>Each company page also carries a one-line verdict, the drivers in both directions, and the
           decisive factor, written by the analyst — but the prose never moves the number. Only logged
           actions do.</p>
-        <p>At build time the site recomputes every score from raw actions with the formula above and asserts
-          it matches the workbook's own formula, and verifies every action's point value against the fixed
-          scoring reference. This build:{' '}
+        <p>At build time the site recomputes every score from raw actions with the v2 formula above and
+          asserts it matches the workbook's stored aggregates and yearly-series anchors, and verifies every
+          action's point value against the fixed scoring reference. This build:{' '}
           <strong style={{ color: data.validation.passed ? 'var(--good)' : 'var(--bad)' }}>
             {data.validation.passed ? `all ${data.validation.companiesChecked} companies validated ✓` : 'VALIDATION FAILED'}
           </strong>.</p>

@@ -268,46 +268,33 @@ for (const r of sheet('Yearly_Rationale')) {
     issues.push(`Yearly_Rationale references unknown company "${company}"`);
     continue;
   }
+  const year = num(r['Year']) ?? 0;
+  // The Yearly_Scores grid is the authoritative v2 per-year score; the
+  // Yearly_Rationale 'Score' column is a narrative annotation that can lag the
+  // v2 recompute, so we take the score from the grid and keep only the
+  // rationale text + evidence from this sheet.
+  const grid = timelineByCompany.get(company)?.points.find((p) => p.year === year)?.score;
   const entry: TimelineEntry = {
-    year: num(r['Year']) ?? 0,
-    score: num(r['Score']) ?? 0,
+    year,
+    score: grid ?? num(r['Score']) ?? 0,
     delta: num(r['Δ vs prior']),
     entryType: str(r['Entry Type']) ?? 'Change',
     rationale:
       str(r['Rationale — why the score is what it is / why it changed (with score math)']) ?? '',
     evidence: parseTimelineEvidence(str(r['Evidence (points | action | source URL)'])),
   };
-  // the rationale's score must agree with the Yearly_Scores grid at that year
-  const tl = timelineByCompany.get(company);
-  const gridScore = tl?.points.find((p) => p.year === entry.year)?.score;
-  if (gridScore !== undefined && gridScore !== entry.score) {
-    issues.push(
-      `Yearly_Rationale: ${company} ${entry.year} says score ${entry.score} but Yearly_Scores grid says ${gridScore}`,
-    );
-  }
   (
     timelineEntriesByCompany.get(company) ??
     timelineEntriesByCompany.set(company, []).get(company)!
   ).push(entry);
 }
+// Sort by year and recompute each entry's delta from the (v2-grid) scores so the
+// displayed change always matches the chart, regardless of stale 'Δ vs prior' cells.
 for (const entries of timelineEntriesByCompany.values()) {
   entries.sort((a, b) => a.year - b.year);
-}
-
-// ── Independent evaluation of the workbook's formula (validation reference) ──
-function workbookFormulaScore(company: string): number {
-  const rows = actionsByCompany.get(company) ?? [];
-  const sumTier = (tier: string) =>
-    rows.filter((a) => a.tier === tier).reduce((s, a) => s + a.points, 0);
-  const positive =
-    Math.min(20, sumTier('Cosmetic') + sumTier('Commercial')) +
-    sumTier('Civic') +
-    sumTier('Financial') +
-    sumTier('Structural');
-  const negative = rows
-    .filter((a) => a.polarity === 'Negative')
-    .reduce((s, a) => s + a.points, 0);
-  return Math.max(0, Math.min(100, 50 + positive + negative));
+  entries.forEach((e, i) => {
+    e.delta = i === 0 ? null : e.score - entries[i - 1].score;
+  });
 }
 
 // ── Assemble companies ───────────────────────────────────────────────────────
@@ -318,10 +305,20 @@ const companies: Company[] = masterRows.map((r) => {
   );
   const breakdown = computeScore(actions);
 
-  const expected = workbookFormulaScore(name);
-  if (breakdown.score !== expected) {
+  // Validate the v2 scoring module against the workbook's stored aggregates —
+  // "Positive Pts (capped)" / "Negative Pts" (written by recompute_scores.py).
+  // The final score + its round-half-even is separately validated by the
+  // Yearly_Scores anchor check below.
+  const wbPos = num(r['Positive Pts (capped)']);
+  const wbNeg = num(r['Negative Pts']);
+  if (wbPos !== null && Math.abs(breakdown.positiveCapped - wbPos) > 0.15) {
     issues.push(
-      `Scoring module mismatch for ${name}: module=${breakdown.score}, workbook formula=${expected}`,
+      `Positive Pts mismatch for ${name}: module=${breakdown.positiveCapped}, workbook=${wbPos}`,
+    );
+  }
+  if (wbNeg !== null && Math.abs(breakdown.negative - wbNeg) > 0.15) {
+    issues.push(
+      `Negative Pts mismatch for ${name}: module=${breakdown.negative}, workbook=${wbNeg}`,
     );
   }
 

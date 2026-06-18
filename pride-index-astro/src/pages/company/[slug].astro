@@ -89,13 +89,17 @@ const metaDesc = r
         <tbody>
           <tr><td>Baseline</td><td class="v">50</td></tr>
           <tr>
-            <td>Cosmetic + Commercial (capped at +20){b.cosmeticCommercialRaw > b.cosmeticCommercialCapped ? ` (raw +${b.cosmeticCommercialRaw})` : ''}</td>
+            <td>Cosmetic + Commercial — signaling, capped at +20{b.cosmeticCommercialRaw > b.cosmeticCommercialCapped ? ` (raw +${b.cosmeticCommercialRaw})` : ''}</td>
             <td class="v pos">+{b.cosmeticCommercialCapped}</td>
           </tr>
-          <tr><td>Civic</td><td class="v pos">+{b.civic}</td></tr>
-          <tr><td>Financial</td><td class="v pos">+{b.financial}</td></tr>
-          <tr><td>Structural</td><td class="v pos">+{b.structural}</td></tr>
-          <tr><td>Negative actions (uncapped)</td><td class="v neg">{b.negative}</td></tr>
+          <tr>
+            <td>Substantive positives — Civic + Financial + Structural, diminished{b.substantiveRaw > b.substantiveDiminished ? ` (raw +${b.substantiveRaw})` : ''}</td>
+            <td class="v pos">+{b.substantiveDiminished}</td>
+          </tr>
+          <tr>
+            <td>Negative actions — diminished{b.negativeRaw < b.negative ? ` (raw ${b.negativeRaw})` : ''}</td>
+            <td class="v neg">{b.negative}</td>
+          </tr>
           <tr class="tot"><td>Final score (clamped 0–100)</td><td class="v" style={{ color: BAND_COLORS[c.band] }}>{c.score}</td></tr>
         </tbody>
       </table>

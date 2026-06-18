@@ -68,9 +68,9 @@ function CompanyCard({ c, base }: { c: Company; base: string }) {
   const sectorAvg = sectors.find((s) => s.sector === c.sector)?.avgScore;
   const b = c.breakdown;
   const rows: [string, number, boolean][] = [
-    ['Cosmetic+Commercial (cap 20)', b.cosmeticCommercialCapped, true],
-    ['Civic', b.civic, true], ['Financial', b.financial, true], ['Structural', b.structural, true],
-    ['Negative', b.negative, false],
+    ['Cosmetic + Commercial (cap 20)', b.cosmeticCommercialCapped, true],
+    ['Substantive (diminished)', b.substantiveDiminished, true],
+    ['Negative (diminished)', b.negative, false],
   ];
   return (
     <div style={{ ...card, display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -129,8 +129,9 @@ export default function CompareApp({ base = '/' }: { base?: string }) {
 
   const chartData = useMemo(() => {
     const dims: { key: keyof Company['breakdown']; label: string }[] = [
-      { key: 'cosmeticCommercialCapped', label: 'Cosmetic+Comm.' }, { key: 'civic', label: 'Civic' },
-      { key: 'financial', label: 'Financial' }, { key: 'structural', label: 'Structural' }, { key: 'negative', label: 'Negative' },
+      { key: 'cosmeticCommercialCapped', label: 'Cosmetic+Comm.' },
+      { key: 'substantiveDiminished', label: 'Substantive' },
+      { key: 'negative', label: 'Negative' },
     ];
     return dims.map((d) => {
       const row: Record<string, string | number> = { dim: d.label };
