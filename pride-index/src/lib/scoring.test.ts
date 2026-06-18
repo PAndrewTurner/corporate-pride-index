@@ -75,7 +75,40 @@ describe('computeScore (v2)', () => {
   });
 
   it('uses round-half-to-even on the final score', () => {
-    // substantive single 34.5 → 50 + 34.5 = 84.5 → 84 (even)
-    expect(computeScore([pos('Structural', 34.5)]).score).toBe(84);
+    // Civic grants full engagement (1.0); substantive single 34.5 → 50 + 34.5 = 84.5 → 84 (even)
+    expect(computeScore([pos('Civic', 34.5)]).score).toBe(84);
+  });
+});
+
+describe('engagement factor (visibility-adjusted substance, v2.1)', () => {
+  it('applies a 0.85 factor to substance when there is no Commercial or Civic action', () => {
+    // internal-only substance: diminish([20]) = 20 × 0.85 = 17 → 50 + 17 = 67
+    const b = computeScore([pos('Structural', 20)]);
+    expect(b.engagementFactor).toBe(0.85);
+    expect(b.substantiveDiminished).toBe(20); // pre-factor value preserved for composition views
+    expect(b.positiveCapped).toBe(17);
+    expect(b.score).toBe(67);
+    expect(b.band).toBe('Ally');
+  });
+
+  it('grants full factor (1.0) when the company has a Civic action', () => {
+    // diminish([20,10]) = 20 + 7 = 27 × 1.0 → 50 + 27 = 77
+    const b = computeScore([pos('Structural', 20), pos('Civic', 10)]);
+    expect(b.engagementFactor).toBe(1.0);
+    expect(b.score).toBe(77);
+  });
+
+  it('grants full factor (1.0) when the company has a Commercial action', () => {
+    // commercial counts as public engagement; cc cap = min(20,6) = 6; substance 20 × 1.0
+    const b = computeScore([pos('Structural', 20), pos('Commercial', 6)]);
+    expect(b.engagementFactor).toBe(1.0);
+    expect(b.score).toBe(76); // 50 + 6 + 20
+  });
+
+  it('a bare Cosmetic action does NOT grant full factor (stays 0.85)', () => {
+    // a rainbow logo is too cheap to count as engagement; cc cap = 4, substance 20 × 0.85 = 17
+    const b = computeScore([pos('Structural', 20), pos('Cosmetic', 4)]);
+    expect(b.engagementFactor).toBe(0.85);
+    expect(b.score).toBe(71); // 50 + 4 + 17
   });
 });

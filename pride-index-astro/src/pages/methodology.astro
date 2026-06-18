@@ -27,6 +27,11 @@ const EXAMPLES = [
     lesson:
       'Nothing positive on the record and documented negative actions: the baseline offers no shelter. With no support to lose, negative points fall straight through to the bottom band.',
   },
+  {
+    slug: 'southern-company',
+    lesson:
+      'Real internal substance — policy and benefits — but no Commercial or Civic public engagement at all. The engagement factor discounts that quiet substance by 15%, the symmetric counterpart to the pride-washing penalty: it edges below a perfect score where an otherwise-identical company that also showed up publicly would not.',
+  },
 ];
 
 const examples = EXAMPLES.map((e) => {
@@ -35,15 +40,15 @@ const examples = EXAMPLES.map((e) => {
 }).filter((x): x is NonNullable<typeof x> => x !== null);
 
 const formula = `score = clamp( 0, 100,
-         50                                          // neutral baseline
-       + min(20, cosmetic + commercial)              // capped "signaling"
-       + diminish(civic + financial + structural)    // substantive positives
-       + diminish(negatives) )                        // negatives`;
+         50                                                // neutral baseline
+       + min(20, cosmetic + commercial)                    // capped "signaling"
+       + diminish(civic + financial + structural) × engage // substantive positives
+       + diminish(negatives) )                              // negatives`;
 ---
 
 <Layout
   title="Methodology — The Corporate Pride Index"
-  description="Scoring Methodology v2: the +20 signaling cap, diminishing returns, reversal asymmetry, the six bands, worked examples, and the full point-value reference."
+  description="Scoring Methodology v2.1: the +20 signaling cap, diminishing returns, the engagement factor, reversal asymmetry, the six bands, worked examples, and the full point-value reference."
   path="methodology"
 >
   <div class="doc">
@@ -58,7 +63,7 @@ const formula = `score = clamp( 0, 100,
 
     <section class="section">
       <div class="prose">
-        <div class="d-k">The framework · version 2</div>
+        <div class="d-k">The framework · version 2.1</div>
         <h2>How a score is built</h2>
         <p>Every company starts at <strong>50</strong> — neutral. Nothing is owed; nothing is presumed.
           From there, documented actions move the score across five positive tiers and a severity-ranked
@@ -99,6 +104,24 @@ weight    1.00   0.70   0.50   0.35   0.25   0.15   0.10   0.05</div>
     </section>
 
     <section class="section">
+      <div class="prose">
+        <div class="d-k">New in v2.1</div>
+        <h2>The engagement factor</h2>
+        <p>The model penalizes <em>visible signaling without substance</em> — the pride-washing action.
+          The engagement factor is its mirror image: <em>substance without visibility</em>. A company's
+          diminished substantive subtotal is multiplied by <strong>0.85</strong> when it has no
+          public-facing engagement at all — no Commercial action (merch, collaborations) and no Civic
+          action (parades, marching, funded ERGs, community events). Only internal substance, never shown.</p>
+        <p>A bare Cosmetic gesture — a rainbow logo, a generic post, a flag — is too cheap to count as
+          engagement, so it does not lift the factor. The discount lands at roughly the same magnitude as
+          the pride-washing penalty, so the two cases are treated symmetrically: a company that quietly
+          holds policy and benefits scores just below an otherwise-identical company that also shows up
+          publicly. It does not erase a strong record — substantive support still dominates the score — it
+          simply stops "do it quietly" from tying "do it and stand behind it."</p>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="prose"><div class="d-k">Reading the number</div><h2>The six bands</h2></div>
       <div style="margin:18px 0 14px"><GradientBar showLabels /></div>
       <div class="bandcard">
@@ -119,7 +142,7 @@ weight    1.00   0.70   0.50   0.35   0.25   0.15   0.10   0.05</div>
       <div class="prose">
         <div class="d-k">The framework in practice</div>
         <h2>Worked examples</h2>
-        <p>Four companies, four patterns the formula is built to distinguish. Each breakdown below is
+        <p>Five companies, five patterns the formula is built to distinguish. Each breakdown below is
           computed live from the company's logged actions — the same arithmetic that produces every
           score on this site.</p>
       </div>
@@ -141,7 +164,7 @@ weight    1.00   0.70   0.50   0.35   0.25   0.15   0.10   0.05</div>
                     <td>Cosmetic + Commercial (cap 20){b.cosmeticCommercialRaw > b.cosmeticCommercialCapped ? ` · raw +${b.cosmeticCommercialRaw}` : ''}</td>
                     <td class="v pos">+{b.cosmeticCommercialCapped}</td>
                   </tr>
-                  <tr><td>Substantive — diminished{b.substantiveRaw > b.substantiveDiminished ? ` · raw +${b.substantiveRaw}` : ''}</td><td class="v pos">+{b.substantiveDiminished}</td></tr>
+                  <tr><td>Substantive — diminished{b.substantiveRaw > b.substantiveDiminished ? ` · raw +${b.substantiveRaw}` : ''}{b.engagementFactor < 1 ? ` · ×${b.engagementFactor} engagement` : ''}</td><td class="v pos">+{Math.round((b.positiveCapped - b.cosmeticCommercialCapped) * 10) / 10}</td></tr>
                   <tr><td>Negatives — diminished{b.negativeRaw < b.negative ? ` · raw ${b.negativeRaw}` : ''}</td><td class="v neg">{b.negative}</td></tr>
                   <tr class="tot"><td>Score</td><td class="v" style={{ color: BAND_COLORS[b.band] }}>{b.score}</td></tr>
                 </tbody>

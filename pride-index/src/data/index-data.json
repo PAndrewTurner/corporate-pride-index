@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-18T22:40:16.912Z",
+ "generatedAt": "2026-06-18T23:42:09.900Z",
  "workbook": "Corporate_Pride_Index_Data.xlsx",
  "companies": [
   {
@@ -150,6 +150,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 32.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -375,6 +376,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -84,
     "negative": -64,
@@ -588,6 +590,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -788,6 +791,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -84,
     "negative": -64,
@@ -957,13 +961,14 @@
     "structural": 47,
     "substantiveRaw": 47,
     "substantiveDiminished": 40.4,
-    "positiveCapped": 40.4,
+    "engagementFactor": 0.85,
+    "positiveCapped": 34.3,
     "negativeRaw": -30,
     "negative": -30,
-    "score": 60,
+    "score": 54,
     "band": "Neutral"
    },
-   "score": 60,
+   "score": 54,
    "band": "Neutral",
    "timeline": [
     {
@@ -1004,15 +1009,15 @@
     },
     {
      "year": 2024,
-     "score": 60
+     "score": 54
     },
     {
      "year": 2025,
-     "score": 60
+     "score": 54
     },
     {
      "year": 2026,
-     "score": 60
+     "score": 54
     }
    ],
    "timelineEntries": [
@@ -1033,7 +1038,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 10,
+   "timelineChange": 4,
    "trajectoryShape": "Rising"
   },
   {
@@ -1196,6 +1201,7 @@
     "structural": 88,
     "substantiveRaw": 115,
     "substantiveDiminished": 65.3,
+    "engagementFactor": 1,
     "positiveCapped": 74.3,
     "negativeRaw": 0,
     "negative": 0,
@@ -1401,6 +1407,7 @@
     "structural": 22,
     "substantiveRaw": 49,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 41.5,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -1618,6 +1625,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 37.5,
     "negativeRaw": -64,
     "negative": -52.4,
@@ -1843,6 +1851,7 @@
     "structural": 70,
     "substantiveRaw": 85,
     "substantiveDiminished": 58.7,
+    "engagementFactor": 1,
     "positiveCapped": 69.7,
     "negativeRaw": 0,
     "negative": 0,
@@ -2032,6 +2041,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 26,
     "negativeRaw": -62,
     "negative": -53,
@@ -2237,6 +2247,7 @@
     "structural": 40,
     "substantiveRaw": 55,
     "substantiveDiminished": 42.1,
+    "engagementFactor": 1,
     "positiveCapped": 47.1,
     "negativeRaw": -32,
     "negative": -32,
@@ -2422,6 +2433,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -2583,6 +2595,7 @@
     "structural": 25,
     "substantiveRaw": 40,
     "substantiveDiminished": 35.5,
+    "engagementFactor": 1,
     "positiveCapped": 37.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -2748,6 +2761,7 @@
     "structural": 53,
     "substantiveRaw": 68,
     "substantiveDiminished": 53,
+    "engagementFactor": 1,
     "positiveCapped": 55,
     "negativeRaw": 0,
     "negative": 0,
@@ -2900,6 +2914,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -3113,6 +3128,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 34.4,
     "negativeRaw": -84,
     "negative": -64,
@@ -3348,6 +3364,7 @@
     "structural": 0,
     "substantiveRaw": 12,
     "substantiveDiminished": 12,
+    "engagementFactor": 1,
     "positiveCapped": 31,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -3537,7 +3554,8 @@
     "structural": 88,
     "substantiveRaw": 88,
     "substantiveDiminished": 59.7,
-    "positiveCapped": 59.7,
+    "engagementFactor": 0.85,
+    "positiveCapped": 50.7,
     "negativeRaw": 0,
     "negative": 0,
     "score": 100,
@@ -3584,7 +3602,7 @@
     },
     {
      "year": 2024,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2025,
@@ -3686,13 +3704,14 @@
     "structural": 25,
     "substantiveRaw": 25,
     "substantiveDiminished": 25,
-    "positiveCapped": 25,
+    "engagementFactor": 0.85,
+    "positiveCapped": 21.3,
     "negativeRaw": -32,
     "negative": -32,
-    "score": 43,
+    "score": 39,
     "band": "Performative"
    },
-   "score": 43,
+   "score": 39,
    "band": "Performative",
    "timeline": [
     {
@@ -3729,19 +3748,19 @@
     },
     {
      "year": 2023,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2024,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 43
+     "score": 39
     },
     {
      "year": 2026,
-     "score": 43
+     "score": 39
     }
    ],
    "timelineEntries": [
@@ -3754,7 +3773,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": -7,
+   "timelineChange": -11,
    "trajectoryShape": "Late Decline"
   },
   {
@@ -3866,6 +3885,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -4047,6 +4067,7 @@
     "structural": 40,
     "substantiveRaw": 55,
     "substantiveDiminished": 42.1,
+    "engagementFactor": 1,
     "positiveCapped": 44.1,
     "negativeRaw": 0,
     "negative": 0,
@@ -4203,6 +4224,7 @@
     "structural": 28,
     "substantiveRaw": 28,
     "substantiveDiminished": 28,
+    "engagementFactor": 1,
     "positiveCapped": 45,
     "negativeRaw": 0,
     "negative": 0,
@@ -4355,6 +4377,7 @@
     "structural": 0,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
+    "engagementFactor": 1,
     "positiveCapped": 31,
     "negativeRaw": 0,
     "negative": 0,
@@ -4507,6 +4530,7 @@
     "structural": 0,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
+    "engagementFactor": 1,
     "positiveCapped": 35,
     "negativeRaw": 0,
     "negative": 0,
@@ -4667,6 +4691,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 11,
     "negativeRaw": 0,
     "negative": 0,
@@ -4807,6 +4832,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 13,
     "negativeRaw": 0,
     "negative": 0,
@@ -4978,6 +5004,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 15,
     "negativeRaw": 0,
     "negative": 0,
@@ -5122,6 +5149,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 15,
     "negativeRaw": 0,
     "negative": 0,
@@ -5319,6 +5347,7 @@
     "structural": 68,
     "substantiveRaw": 93,
     "substantiveDiminished": 62.8,
+    "engagementFactor": 1,
     "positiveCapped": 75.8,
     "negativeRaw": 0,
     "negative": 0,
@@ -5370,7 +5399,7 @@
     },
     {
      "year": 2025,
-     "score": 100
+     "score": 94
     },
     {
      "year": 2026,
@@ -5475,6 +5504,7 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
+    "engagementFactor": 1,
     "positiveCapped": 33,
     "negativeRaw": 0,
     "negative": 0,
@@ -5672,6 +5702,7 @@
     "structural": 50,
     "substantiveRaw": 65,
     "substantiveDiminished": 50.9,
+    "engagementFactor": 1,
     "positiveCapped": 61.9,
     "negativeRaw": 0,
     "negative": 0,
@@ -5695,27 +5726,27 @@
     },
     {
      "year": 2018,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2019,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2020,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2021,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2022,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2023,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2024,
@@ -5828,6 +5859,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 20,
     "negativeRaw": -32,
     "negative": -32,
@@ -5965,6 +5997,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 0,
     "negativeRaw": -35,
     "negative": -35,
@@ -6107,6 +6140,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": 0,
     "negative": 0,
@@ -6296,6 +6330,7 @@
     "structural": 48,
     "substantiveRaw": 75,
     "substantiveDiminished": 53.7,
+    "engagementFactor": 1,
     "positiveCapped": 58.7,
     "negativeRaw": 0,
     "negative": 0,
@@ -6476,6 +6511,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -6707,6 +6743,7 @@
     "structural": 0,
     "substantiveRaw": 12,
     "substantiveDiminished": 12,
+    "engagementFactor": 1,
     "positiveCapped": 29,
     "negativeRaw": -84,
     "negative": -59.9,
@@ -6875,6 +6912,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 25.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -7047,6 +7085,7 @@
     "structural": 45,
     "substantiveRaw": 60,
     "substantiveDiminished": 46.5,
+    "engagementFactor": 1,
     "positiveCapped": 46.5,
     "negativeRaw": -32,
     "negative": -32,
@@ -7066,19 +7105,19 @@
     },
     {
      "year": 2017,
-     "score": 70
+     "score": 67
     },
     {
      "year": 2018,
-     "score": 70
+     "score": 67
     },
     {
      "year": 2019,
-     "score": 70
+     "score": 67
     },
     {
      "year": 2020,
-     "score": 70
+     "score": 67
     },
     {
      "year": 2021,
@@ -7232,6 +7271,7 @@
     "structural": 40,
     "substantiveRaw": 55,
     "substantiveDiminished": 42.1,
+    "engagementFactor": 1,
     "positiveCapped": 44.1,
     "negativeRaw": -32,
     "negative": -32,
@@ -7396,6 +7436,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": -32,
     "negative": -32,
@@ -7572,6 +7613,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": -62,
     "negative": -53,
@@ -7765,6 +7807,7 @@
     "structural": 42,
     "substantiveRaw": 57,
     "substantiveDiminished": 43.5,
+    "engagementFactor": 1,
     "positiveCapped": 45.5,
     "negativeRaw": -32,
     "negative": -32,
@@ -7929,6 +7972,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": -32,
     "negative": -32,
@@ -8093,6 +8137,7 @@
     "structural": 42,
     "substantiveRaw": 57,
     "substantiveDiminished": 43.5,
+    "engagementFactor": 1,
     "positiveCapped": 45.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -8294,6 +8339,7 @@
     "structural": 0,
     "substantiveRaw": 46,
     "substantiveDiminished": 29.9,
+    "engagementFactor": 1,
     "positiveCapped": 34.9,
     "negativeRaw": -22,
     "negative": -22,
@@ -8495,6 +8541,7 @@
     "structural": 68,
     "substantiveRaw": 83,
     "substantiveDiminished": 57.7,
+    "engagementFactor": 1,
     "positiveCapped": 59.7,
     "negativeRaw": 0,
     "negative": 0,
@@ -8672,6 +8719,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 25.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -8913,6 +8961,7 @@
     "structural": 42,
     "substantiveRaw": 69,
     "substantiveDiminished": 47.7,
+    "engagementFactor": 1,
     "positiveCapped": 56.7,
     "negativeRaw": -72,
     "negative": -58,
@@ -9093,6 +9142,7 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
+    "engagementFactor": 1,
     "positiveCapped": 32,
     "negativeRaw": -10,
     "negative": -10,
@@ -9140,7 +9190,7 @@
     },
     {
      "year": 2024,
-     "score": 62
+     "score": 59
     },
     {
      "year": 2025,
@@ -9262,6 +9312,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 10,
     "negativeRaw": -32,
     "negative": -32,
@@ -9411,6 +9462,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": 0,
     "negative": 0,
@@ -9567,6 +9619,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 25,
     "negativeRaw": -32,
     "negative": -32,
@@ -9739,6 +9792,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 19,
     "negativeRaw": -8,
     "negative": -8,
@@ -9903,6 +9957,7 @@
     "structural": 28,
     "substantiveRaw": 55,
     "substantiveDiminished": 44.5,
+    "engagementFactor": 1,
     "positiveCapped": 46.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -10059,6 +10114,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -62,
     "negative": -53,
@@ -10255,6 +10311,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -10412,6 +10469,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 0,
     "negativeRaw": -64,
     "negative": -54.4,
@@ -10612,6 +10670,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -84,
     "negative": -64,
@@ -10784,6 +10843,7 @@
     "structural": 42,
     "substantiveRaw": 57,
     "substantiveDiminished": 43.5,
+    "engagementFactor": 1,
     "positiveCapped": 45.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -10904,6 +10964,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -11048,13 +11109,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -30,
     "negative": -30,
-    "score": 44,
+    "score": 41,
     "band": "Performative"
    },
-   "score": 44,
+   "score": 41,
    "band": "Performative",
    "timeline": [
     {
@@ -11095,15 +11157,15 @@
     },
     {
      "year": 2024,
-     "score": 44
+     "score": 41
     },
     {
      "year": 2025,
-     "score": 44
+     "score": 41
     },
     {
      "year": 2026,
-     "score": 44
+     "score": 41
     }
    ],
    "timelineEntries": [
@@ -11124,7 +11186,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": -6,
+   "timelineChange": -9,
    "trajectoryShape": "Stable"
   },
   {
@@ -11209,13 +11271,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -32,
     "negative": -32,
-    "score": 42,
+    "score": 39,
     "band": "Performative"
    },
-   "score": 42,
+   "score": 39,
    "band": "Performative",
    "timeline": [
     {
@@ -11256,15 +11319,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 42
+     "score": 39
     },
     {
      "year": 2026,
-     "score": 42
+     "score": 39
     }
    ],
    "timelineEntries": [
@@ -11277,7 +11340,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": -8,
+   "timelineChange": -11,
    "trajectoryShape": "Late Decline"
   },
   {
@@ -11365,6 +11428,7 @@
     "structural": 42,
     "substantiveRaw": 57,
     "substantiveDiminished": 43.5,
+    "engagementFactor": 1,
     "positiveCapped": 45.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -11521,6 +11585,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": -30,
     "negative": -30,
@@ -11685,14 +11750,15 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -62,
     "negative": -53,
-    "score": 21,
-    "band": "Harmful"
+    "score": 18,
+    "band": "Adversarial"
    },
-   "score": 21,
-   "band": "Harmful",
+   "score": 18,
+   "band": "Adversarial",
    "timeline": [
     {
      "year": 2015,
@@ -11732,15 +11798,15 @@
     },
     {
      "year": 2024,
-     "score": 44
+     "score": 41
     },
     {
      "year": 2025,
-     "score": 21
+     "score": 18
     },
     {
      "year": 2026,
-     "score": 21
+     "score": 18
     }
    ],
    "timelineEntries": [
@@ -11762,14 +11828,14 @@
     },
     {
      "year": 2025,
-     "score": 21,
-     "delta": 1,
+     "score": 18,
+     "delta": -2,
      "entryType": "Change",
      "rationale": "",
      "evidence": []
     }
    ],
-   "timelineChange": -29,
+   "timelineChange": -32,
    "trajectoryShape": "Sharp Reversal"
   },
   {
@@ -11857,14 +11923,15 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -62,
     "negative": -53,
-    "score": 21,
-    "band": "Harmful"
+    "score": 18,
+    "band": "Adversarial"
    },
-   "score": 21,
-   "band": "Harmful",
+   "score": 18,
+   "band": "Adversarial",
    "timeline": [
     {
      "year": 2015,
@@ -11908,11 +11975,11 @@
     },
     {
      "year": 2025,
-     "score": 21
+     "score": 18
     },
     {
      "year": 2026,
-     "score": 21
+     "score": 18
     }
    ],
    "timelineEntries": [
@@ -11934,14 +12001,14 @@
     },
     {
      "year": 2025,
-     "score": 21,
-     "delta": 1,
+     "score": 18,
+     "delta": -2,
      "entryType": "Change",
      "rationale": "",
      "evidence": []
     }
    ],
-   "timelineChange": -29,
+   "timelineChange": -32,
    "trajectoryShape": "Sharp Reversal"
   },
   {
@@ -12017,13 +12084,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -32,
     "negative": -32,
-    "score": 42,
+    "score": 39,
     "band": "Performative"
    },
-   "score": 42,
+   "score": 39,
    "band": "Performative",
    "timeline": [
     {
@@ -12064,15 +12132,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 42
+     "score": 39
     },
     {
      "year": 2026,
-     "score": 42
+     "score": 39
     }
    ],
    "timelineEntries": [
@@ -12086,14 +12154,14 @@
     },
     {
      "year": 2025,
-     "score": 42,
-     "delta": -8,
+     "score": 39,
+     "delta": -11,
      "entryType": "Change",
      "rationale": "",
      "evidence": []
     }
    ],
-   "timelineChange": -8,
+   "timelineChange": -11,
    "trajectoryShape": "Late Decline"
   },
   {
@@ -12169,68 +12237,69 @@
     "structural": 25,
     "substantiveRaw": 25,
     "substantiveDiminished": 25,
-    "positiveCapped": 25,
+    "engagementFactor": 0.85,
+    "positiveCapped": 21.3,
     "negativeRaw": -50,
     "negative": -43.4,
-    "score": 32,
+    "score": 28,
     "band": "Harmful"
    },
-   "score": 32,
+   "score": 28,
    "band": "Harmful",
    "timeline": [
     {
      "year": 2015,
-     "score": 47
+     "score": 43
     },
     {
      "year": 2016,
-     "score": 47
+     "score": 43
     },
     {
      "year": 2017,
-     "score": 47
+     "score": 43
     },
     {
      "year": 2018,
-     "score": 47
+     "score": 43
     },
     {
      "year": 2019,
-     "score": 47
+     "score": 43
     },
     {
      "year": 2020,
-     "score": 47
+     "score": 43
     },
     {
      "year": 2021,
-     "score": 47
+     "score": 43
     },
     {
      "year": 2022,
-     "score": 32
+     "score": 28
     },
     {
      "year": 2023,
-     "score": 32
+     "score": 28
     },
     {
      "year": 2024,
-     "score": 32
+     "score": 28
     },
     {
      "year": 2025,
-     "score": 32
+     "score": 28
     },
     {
      "year": 2026,
-     "score": 32
+     "score": 28
     }
    ],
    "timelineEntries": [
     {
      "year": 2015,
-     "score": 47,
+     "score": 43,
      "delta": null,
      "entryType": "Baseline",
      "rationale": "",
@@ -12238,7 +12307,7 @@
     },
     {
      "year": 2022,
-     "score": 32,
+     "score": 28,
      "delta": -15,
      "entryType": "Change",
      "rationale": "",
@@ -12333,6 +12402,7 @@
     "structural": 50,
     "substantiveRaw": 65,
     "substantiveDiminished": 50.9,
+    "engagementFactor": 1,
     "positiveCapped": 52.9,
     "negativeRaw": 0,
     "negative": 0,
@@ -12474,6 +12544,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 15,
     "negativeRaw": -30,
     "negative": -30,
@@ -12626,13 +12697,14 @@
     "structural": 75,
     "substantiveRaw": 75,
     "substantiveDiminished": 56.5,
-    "positiveCapped": 56.5,
+    "engagementFactor": 0.85,
+    "positiveCapped": 48,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 100,
+    "score": 98,
     "band": "Champion"
    },
-   "score": 100,
+   "score": 98,
    "band": "Champion",
    "timeline": [
     {
@@ -12673,15 +12745,15 @@
     },
     {
      "year": 2024,
-     "score": 96
+     "score": 89
     },
     {
      "year": 2025,
-     "score": 100
+     "score": 98
     },
     {
      "year": 2026,
-     "score": 100
+     "score": 98
     }
    ],
    "timelineEntries": [
@@ -12694,7 +12766,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 50,
+   "timelineChange": 48,
    "trajectoryShape": "Rising"
   },
   {
@@ -12827,6 +12899,7 @@
     "structural": 88,
     "substantiveRaw": 103,
     "substantiveDiminished": 63.5,
+    "engagementFactor": 1,
     "positiveCapped": 74.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -13012,6 +13085,7 @@
     "structural": 18,
     "substantiveRaw": 57,
     "substantiveDiminished": 38.7,
+    "engagementFactor": 1,
     "positiveCapped": 40.7,
     "negativeRaw": 0,
     "negative": 0,
@@ -13213,6 +13287,7 @@
     "structural": 60,
     "substantiveRaw": 85,
     "substantiveDiminished": 52.8,
+    "engagementFactor": 1,
     "positiveCapped": 57.8,
     "negativeRaw": 0,
     "negative": 0,
@@ -13389,6 +13464,7 @@
     "structural": 42,
     "substantiveRaw": 69,
     "substantiveDiminished": 47.7,
+    "engagementFactor": 1,
     "positiveCapped": 49.7,
     "negativeRaw": 0,
     "negative": 0,
@@ -13545,6 +13621,7 @@
     "structural": 22,
     "substantiveRaw": 49,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 40.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -13689,6 +13766,7 @@
     "structural": 25,
     "substantiveRaw": 37,
     "substantiveDiminished": 33.4,
+    "engagementFactor": 1,
     "positiveCapped": 35.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -13704,35 +13782,35 @@
     },
     {
      "year": 2016,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2017,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2018,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2019,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2020,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2021,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2022,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2023,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2024,
@@ -13853,6 +13931,7 @@
     "structural": 50,
     "substantiveRaw": 50,
     "substantiveDiminished": 43.4,
+    "engagementFactor": 1,
     "positiveCapped": 53.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -13892,7 +13971,7 @@
     },
     {
      "year": 2022,
-     "score": 93
+     "score": 87
     },
     {
      "year": 2023,
@@ -14038,6 +14117,7 @@
     "structural": 60,
     "substantiveRaw": 60,
     "substantiveDiminished": 45,
+    "engagementFactor": 1,
     "positiveCapped": 55,
     "negativeRaw": 0,
     "negative": 0,
@@ -14190,6 +14270,7 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
+    "engagementFactor": 1,
     "positiveCapped": 32,
     "negativeRaw": 0,
     "negative": 0,
@@ -14330,6 +14411,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 12,
     "negativeRaw": 0,
     "negative": 0,
@@ -14470,13 +14552,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -14517,15 +14600,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -14538,7 +14621,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -14602,13 +14685,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -14649,15 +14733,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -14670,7 +14754,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -14746,6 +14830,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -14898,6 +14983,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -15062,6 +15148,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -62,
     "negative": -53,
@@ -15215,6 +15302,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 0,
     "negativeRaw": -32,
     "negative": -32,
@@ -15368,13 +15456,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -32,
     "negative": -32,
-    "score": 42,
+    "score": 39,
     "band": "Performative"
    },
-   "score": 42,
+   "score": 39,
    "band": "Performative",
    "timeline": [
     {
@@ -15415,15 +15504,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 42
+     "score": 39
     },
     {
      "year": 2026,
-     "score": 42
+     "score": 39
     }
    ],
    "timelineEntries": [
@@ -15436,7 +15525,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": -8,
+   "timelineChange": -11,
    "trajectoryShape": "Late Decline"
   },
   {
@@ -15524,6 +15613,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": -32,
     "negative": -32,
@@ -15697,6 +15787,7 @@
     "structural": 40,
     "substantiveRaw": 55,
     "substantiveDiminished": 42.1,
+    "engagementFactor": 1,
     "positiveCapped": 44.1,
     "negativeRaw": 0,
     "negative": 0,
@@ -15837,13 +15928,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -15884,15 +15976,15 @@
     },
     {
      "year": 2024,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -15905,7 +15997,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -15969,6 +16061,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": 0,
     "negative": 0,
@@ -16089,6 +16182,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -16233,6 +16327,7 @@
     "structural": 18,
     "substantiveRaw": 33,
     "substantiveDiminished": 28.5,
+    "engagementFactor": 1,
     "positiveCapped": 30.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -16248,35 +16343,35 @@
     },
     {
      "year": 2016,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2017,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2018,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2019,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2020,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2021,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2022,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2023,
-     "score": 68
+     "score": 65
     },
     {
      "year": 2024,
@@ -16302,8 +16397,8 @@
     },
     {
      "year": 2016,
-     "score": 68,
-     "delta": 18,
+     "score": 65,
+     "delta": 15,
      "entryType": "Change",
      "rationale": "",
      "evidence": []
@@ -16382,13 +16477,14 @@
     "structural": 20,
     "substantiveRaw": 20,
     "substantiveDiminished": 20,
-    "positiveCapped": 22,
+    "engagementFactor": 0.85,
+    "positiveCapped": 19,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 72,
+    "score": 69,
     "band": "Ally"
    },
-   "score": 72,
+   "score": 69,
    "band": "Ally",
    "timeline": [
     {
@@ -16429,15 +16525,15 @@
     },
     {
      "year": 2024,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2025,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2026,
-     "score": 72
+     "score": 69
     }
    ],
    "timelineEntries": [
@@ -16450,7 +16546,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 22,
+   "timelineChange": 19,
    "trajectoryShape": "Rising"
   },
   {
@@ -16538,6 +16634,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 20,
     "negativeRaw": -32,
     "negative": -32,
@@ -16678,6 +16775,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": 0,
     "negative": 0,
@@ -16810,13 +16908,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -16857,15 +16956,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -16878,7 +16977,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -16942,13 +17041,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -16989,15 +17089,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -17010,7 +17110,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -17074,6 +17174,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": 0,
     "negative": 0,
@@ -17206,13 +17307,14 @@
     "structural": 20,
     "substantiveRaw": 20,
     "substantiveDiminished": 20,
-    "positiveCapped": 23,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 73,
+    "score": 70,
     "band": "Ally"
    },
-   "score": 73,
+   "score": 70,
    "band": "Ally",
    "timeline": [
     {
@@ -17253,15 +17355,15 @@
     },
     {
      "year": 2024,
-     "score": 73
+     "score": 70
     },
     {
      "year": 2025,
-     "score": 73
+     "score": 70
     },
     {
      "year": 2026,
-     "score": 73
+     "score": 70
     }
    ],
    "timelineEntries": [
@@ -17274,7 +17376,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 23,
+   "timelineChange": 20,
    "trajectoryShape": "Rising"
   },
   {
@@ -17338,13 +17440,14 @@
     "structural": 20,
     "substantiveRaw": 20,
     "substantiveDiminished": 20,
-    "positiveCapped": 22,
+    "engagementFactor": 0.85,
+    "positiveCapped": 19,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 72,
+    "score": 69,
     "band": "Ally"
    },
-   "score": 72,
+   "score": 69,
    "band": "Ally",
    "timeline": [
     {
@@ -17389,11 +17492,11 @@
     },
     {
      "year": 2025,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2026,
-     "score": 72
+     "score": 69
     }
    ],
    "timelineEntries": [
@@ -17406,7 +17509,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 22,
+   "timelineChange": 19,
    "trajectoryShape": "Rising"
   },
   {
@@ -17494,6 +17597,7 @@
     "structural": 22,
     "substantiveRaw": 49,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 40.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -17650,6 +17754,7 @@
     "structural": 0,
     "substantiveRaw": 42,
     "substantiveDiminished": 31.5,
+    "engagementFactor": 1,
     "positiveCapped": 33.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -17782,13 +17887,14 @@
     "structural": 20,
     "substantiveRaw": 20,
     "substantiveDiminished": 20,
-    "positiveCapped": 22,
+    "engagementFactor": 0.85,
+    "positiveCapped": 19,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 72,
+    "score": 69,
     "band": "Ally"
    },
-   "score": 72,
+   "score": 69,
    "band": "Ally",
    "timeline": [
     {
@@ -17833,11 +17939,11 @@
     },
     {
      "year": 2025,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2026,
-     "score": 72
+     "score": 69
     }
    ],
    "timelineEntries": [
@@ -17850,7 +17956,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 22,
+   "timelineChange": 19,
    "trajectoryShape": "Rising"
   },
   {
@@ -17926,6 +18032,7 @@
     "structural": 0,
     "substantiveRaw": 12,
     "substantiveDiminished": 12,
+    "engagementFactor": 1,
     "positiveCapped": 20,
     "negativeRaw": 0,
     "negative": 0,
@@ -18058,6 +18165,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 8,
     "negativeRaw": 0,
     "negative": 0,
@@ -18202,6 +18310,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 8,
     "negativeRaw": -32,
     "negative": -32,
@@ -18363,13 +18472,14 @@
     "structural": 45,
     "substantiveRaw": 45,
     "substantiveDiminished": 39,
-    "positiveCapped": 39,
+    "engagementFactor": 0.85,
+    "positiveCapped": 33.2,
     "negativeRaw": -32,
     "negative": -32,
-    "score": 57,
+    "score": 51,
     "band": "Neutral"
    },
-   "score": 57,
+   "score": 51,
    "band": "Neutral",
    "timeline": [
     {
@@ -18402,23 +18512,23 @@
     },
     {
      "year": 2022,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2023,
-     "score": 89
+     "score": 83
     },
     {
      "year": 2024,
-     "score": 89
+     "score": 83
     },
     {
      "year": 2025,
-     "score": 57
+     "score": 51
     },
     {
      "year": 2026,
-     "score": 57
+     "score": 51
     }
    ],
    "timelineEntries": [
@@ -18431,7 +18541,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 7,
+   "timelineChange": 1,
    "trajectoryShape": "Late Decline"
   },
   {
@@ -18519,6 +18629,7 @@
     "structural": 47,
     "substantiveRaw": 62,
     "substantiveDiminished": 47.9,
+    "engagementFactor": 1,
     "positiveCapped": 53.9,
     "negativeRaw": 0,
     "negative": 0,
@@ -18562,7 +18673,7 @@
     },
     {
      "year": 2023,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2024,
@@ -18651,6 +18762,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 10,
     "negativeRaw": 0,
     "negative": 0,
@@ -18815,6 +18927,7 @@
     "structural": 45,
     "substantiveRaw": 72,
     "substantiveDiminished": 50.7,
+    "engagementFactor": 1,
     "positiveCapped": 50.7,
     "negativeRaw": 0,
     "negative": 0,
@@ -18842,23 +18955,23 @@
     },
     {
      "year": 2019,
-     "score": 65
+     "score": 63
     },
     {
      "year": 2020,
-     "score": 65
+     "score": 63
     },
     {
      "year": 2021,
-     "score": 65
+     "score": 63
     },
     {
      "year": 2022,
-     "score": 65
+     "score": 63
     },
     {
      "year": 2023,
-     "score": 65
+     "score": 63
     },
     {
      "year": 2024,
@@ -18884,8 +18997,8 @@
     },
     {
      "year": 2019,
-     "score": 65,
-     "delta": 15,
+     "score": 63,
+     "delta": 13,
      "entryType": "Change",
      "rationale": "",
      "evidence": []
@@ -18979,6 +19092,7 @@
     "structural": 22,
     "substantiveRaw": 56,
     "substantiveDiminished": 43.4,
+    "engagementFactor": 1,
     "positiveCapped": 45.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -19018,11 +19132,11 @@
     },
     {
      "year": 2022,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2023,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2024,
@@ -19111,6 +19225,7 @@
     "structural": 25,
     "substantiveRaw": 40,
     "substantiveDiminished": 35.5,
+    "engagementFactor": 1,
     "positiveCapped": 35.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -19303,6 +19418,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 34.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -19476,13 +19592,14 @@
     "structural": 47,
     "substantiveRaw": 47,
     "substantiveDiminished": 40.4,
-    "positiveCapped": 40.4,
+    "engagementFactor": 0.85,
+    "positiveCapped": 34.3,
     "negativeRaw": -54,
     "negative": -47.4,
-    "score": 43,
+    "score": 37,
     "band": "Performative"
    },
-   "score": 43,
+   "score": 37,
    "band": "Performative",
    "timeline": [
     {
@@ -19503,35 +19620,35 @@
     },
     {
      "year": 2019,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2020,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2021,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2022,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2023,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2024,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2025,
-     "score": 43
+     "score": 37
     },
     {
      "year": 2026,
-     "score": 43
+     "score": 37
     }
    ],
    "timelineEntries": [
@@ -19544,7 +19661,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": -7,
+   "timelineChange": -13,
    "trajectoryShape": "Late Decline"
   },
   {
@@ -19620,6 +19737,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 16,
     "negativeRaw": 0,
     "negative": 0,
@@ -19768,13 +19886,14 @@
     "structural": 25,
     "substantiveRaw": 25,
     "substantiveDiminished": 25,
-    "positiveCapped": 27,
+    "engagementFactor": 0.85,
+    "positiveCapped": 23.3,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 77,
+    "score": 73,
     "band": "Ally"
    },
-   "score": 77,
+   "score": 73,
    "band": "Ally",
    "timeline": [
     {
@@ -19803,27 +19922,27 @@
     },
     {
      "year": 2021,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2022,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2023,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2024,
-     "score": 77
+     "score": 73
     },
     {
      "year": 2025,
-     "score": 77
+     "score": 73
     },
     {
      "year": 2026,
-     "score": 77
+     "score": 73
     }
    ],
    "timelineEntries": [
@@ -19836,7 +19955,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 27,
+   "timelineChange": 23,
    "trajectoryShape": "Rising"
   },
   {
@@ -19900,6 +20019,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 10,
     "negativeRaw": 0,
     "negative": 0,
@@ -20052,6 +20172,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -20196,6 +20317,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -20357,6 +20479,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -20501,6 +20624,7 @@
     "structural": 28,
     "substantiveRaw": 43,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 40.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -20645,6 +20769,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -20789,6 +20914,7 @@
     "structural": 28,
     "substantiveRaw": 43,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 40.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -20933,6 +21059,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 25,
     "negativeRaw": 0,
     "negative": 0,
@@ -21097,6 +21224,7 @@
     "structural": 28,
     "substantiveRaw": 62,
     "substantiveDiminished": 49.4,
+    "engagementFactor": 1,
     "positiveCapped": 51.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -21140,11 +21268,11 @@
     },
     {
      "year": 2023,
-     "score": 72
+     "score": 69
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
@@ -21229,13 +21357,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -21276,15 +21405,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -21297,7 +21426,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -21361,13 +21490,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -21408,15 +21538,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -21429,7 +21559,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -21505,6 +21635,7 @@
     "structural": 28,
     "substantiveRaw": 43,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 40.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -21544,11 +21675,11 @@
     },
     {
      "year": 2022,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2023,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2024,
@@ -21625,6 +21756,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -21769,6 +21901,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -21816,7 +21949,7 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
@@ -21913,13 +22046,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -30,
     "negative": -30,
-    "score": 44,
+    "score": 41,
     "band": "Performative"
    },
-   "score": 44,
+   "score": 41,
    "band": "Performative",
    "timeline": [
     {
@@ -21960,15 +22094,15 @@
     },
     {
      "year": 2024,
-     "score": 44
+     "score": 41
     },
     {
      "year": 2025,
-     "score": 44
+     "score": 41
     },
     {
      "year": 2026,
-     "score": 44
+     "score": 41
     }
    ],
    "timelineEntries": [
@@ -21989,7 +22123,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": -6,
+   "timelineChange": -9,
    "trajectoryShape": "Stable"
   },
   {
@@ -22053,13 +22187,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -22100,15 +22235,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -22121,7 +22256,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -22185,13 +22320,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -22232,15 +22368,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -22253,7 +22389,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -22329,13 +22465,14 @@
     "structural": 0,
     "substantiveRaw": 47,
     "substantiveDiminished": 40.4,
-    "positiveCapped": 42.4,
+    "engagementFactor": 0.85,
+    "positiveCapped": 36.3,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 92,
+    "score": 86,
     "band": "Champion"
    },
-   "score": 92,
+   "score": 86,
    "band": "Champion",
    "timeline": [
     {
@@ -22348,43 +22485,43 @@
     },
     {
      "year": 2017,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2018,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2019,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2020,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2021,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2022,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2023,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2024,
-     "score": 92
+     "score": 86
     },
     {
      "year": 2025,
-     "score": 92
+     "score": 86
     },
     {
      "year": 2026,
-     "score": 92
+     "score": 86
     }
    ],
    "timelineEntries": [
@@ -22398,14 +22535,14 @@
     },
     {
      "year": 2024,
-     "score": 92,
-     "delta": 42,
+     "score": 86,
+     "delta": 36,
      "entryType": "Change",
      "rationale": "",
      "evidence": []
     }
    ],
-   "timelineChange": 42,
+   "timelineChange": 36,
    "trajectoryShape": "Rising"
   },
   {
@@ -22481,6 +22618,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -22601,6 +22739,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -22721,6 +22860,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -22865,13 +23005,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": -32,
     "negative": -32,
-    "score": 42,
+    "score": 39,
     "band": "Performative"
    },
-   "score": 42,
+   "score": 39,
    "band": "Performative",
    "timeline": [
     {
@@ -22912,15 +23053,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 42
+     "score": 39
     },
     {
      "year": 2026,
-     "score": 42
+     "score": 39
     }
    ],
    "timelineEntries": [
@@ -22934,14 +23075,14 @@
     },
     {
      "year": 2025,
-     "score": 42,
-     "delta": -8,
+     "score": 39,
+     "delta": -11,
      "entryType": "Change",
      "rationale": "",
      "evidence": []
     }
    ],
-   "timelineChange": -8,
+   "timelineChange": -11,
    "trajectoryShape": "Late Decline"
   },
   {
@@ -23026,6 +23167,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 19,
     "negativeRaw": -30,
     "negative": -30,
@@ -23199,6 +23341,7 @@
     "structural": 47,
     "substantiveRaw": 62,
     "substantiveDiminished": 47.9,
+    "engagementFactor": 1,
     "positiveCapped": 49.9,
     "negativeRaw": 0,
     "negative": 0,
@@ -23352,6 +23495,7 @@
     "structural": 25,
     "substantiveRaw": 40,
     "substantiveDiminished": 35.5,
+    "engagementFactor": 1,
     "positiveCapped": 35.5,
     "negativeRaw": -30,
     "negative": -30,
@@ -23504,6 +23648,7 @@
     "structural": 28,
     "substantiveRaw": 43,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 40.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -23543,11 +23688,11 @@
     },
     {
      "year": 2022,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2023,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2024,
@@ -23624,6 +23769,7 @@
     "structural": 0,
     "substantiveRaw": 12,
     "substantiveDiminished": 12,
+    "engagementFactor": 1,
     "positiveCapped": 12,
     "negativeRaw": 0,
     "negative": 0,
@@ -23765,13 +23911,14 @@
     "structural": 47,
     "substantiveRaw": 47,
     "substantiveDiminished": 40.4,
-    "positiveCapped": 40.4,
+    "engagementFactor": 0.85,
+    "positiveCapped": 34.3,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 90,
+    "score": 84,
     "band": "Champion"
    },
-   "score": 90,
+   "score": 84,
    "band": "Champion",
    "timeline": [
     {
@@ -23808,19 +23955,19 @@
     },
     {
      "year": 2023,
-     "score": 75
+     "score": 71
     },
     {
      "year": 2024,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2025,
-     "score": 90
+     "score": 84
     },
     {
      "year": 2026,
-     "score": 90
+     "score": 84
     }
    ],
    "timelineEntries": [
@@ -23833,7 +23980,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 40,
+   "timelineChange": 34,
    "trajectoryShape": "Rising"
   },
   {
@@ -23906,6 +24053,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 5,
     "negativeRaw": 0,
     "negative": 0,
@@ -24050,6 +24198,7 @@
     "structural": 28,
     "substantiveRaw": 43,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 40.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -24194,6 +24343,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 25.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -24338,6 +24488,7 @@
     "structural": 20,
     "substantiveRaw": 35,
     "substantiveDiminished": 30.5,
+    "engagementFactor": 1,
     "positiveCapped": 32.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -24482,6 +24633,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 25.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -24626,6 +24778,7 @@
     "structural": 28,
     "substantiveRaw": 40,
     "substantiveDiminished": 36.4,
+    "engagementFactor": 1,
     "positiveCapped": 38.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -24770,6 +24923,7 @@
     "structural": 25,
     "substantiveRaw": 37,
     "substantiveDiminished": 33.4,
+    "engagementFactor": 1,
     "positiveCapped": 35.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -24902,13 +25056,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -24949,15 +25104,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -24970,7 +25125,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -25058,6 +25213,7 @@
     "structural": 28,
     "substantiveRaw": 53,
     "substantiveDiminished": 45.5,
+    "engagementFactor": 1,
     "positiveCapped": 58.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -25190,13 +25346,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -25237,15 +25394,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -25258,7 +25415,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -25334,6 +25491,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -25486,6 +25644,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -25638,6 +25797,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -25790,6 +25950,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -25918,6 +26079,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -26038,6 +26200,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -26182,6 +26345,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -26358,6 +26522,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 25.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -26510,6 +26675,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -32,
     "negative": -32,
@@ -26662,6 +26828,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -30,
     "negative": -30,
@@ -26802,6 +26969,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 23,
     "negativeRaw": 0,
     "negative": 0,
@@ -26954,6 +27122,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 15,
     "negativeRaw": -18,
     "negative": -15.6,
@@ -27142,6 +27311,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 28.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -27270,6 +27440,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -27386,6 +27557,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 0,
     "negativeRaw": 0,
     "negative": 0,
@@ -27530,6 +27702,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 11,
     "negativeRaw": 0,
     "negative": 0,
@@ -27670,6 +27843,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 0,
     "negativeRaw": -40,
     "negative": -37,
@@ -27818,6 +27992,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 0,
     "negativeRaw": -45,
     "negative": -42,
@@ -27959,6 +28134,7 @@
     "structural": 25,
     "substantiveRaw": 40,
     "substantiveDiminished": 35.5,
+    "engagementFactor": 1,
     "positiveCapped": 35.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -28103,6 +28279,7 @@
     "structural": 47,
     "substantiveRaw": 62,
     "substantiveDiminished": 47.9,
+    "engagementFactor": 1,
     "positiveCapped": 47.9,
     "negativeRaw": 0,
     "negative": 0,
@@ -28247,6 +28424,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 16,
     "negativeRaw": 0,
     "negative": 0,
@@ -28407,6 +28585,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -28523,6 +28702,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 0,
     "negativeRaw": 0,
     "negative": 0,
@@ -28655,6 +28835,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 5,
     "negativeRaw": 0,
     "negative": 0,
@@ -28811,6 +28992,7 @@
     "structural": 28,
     "substantiveRaw": 43,
     "substantiveDiminished": 38.5,
+    "engagementFactor": 1,
     "positiveCapped": 46.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -28967,6 +29149,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 19,
     "negativeRaw": 0,
     "negative": 0,
@@ -29127,6 +29310,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 1,
     "positiveCapped": 15,
     "negativeRaw": 0,
     "negative": 0,
@@ -29291,6 +29475,7 @@
     "structural": 28,
     "substantiveRaw": 55,
     "substantiveDiminished": 44.5,
+    "engagementFactor": 1,
     "positiveCapped": 46.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -29322,19 +29507,19 @@
     },
     {
      "year": 2020,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2021,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2022,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2023,
-     "score": 78
+     "score": 74
     },
     {
      "year": 2024,
@@ -29423,6 +29608,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": 0,
     "negative": 0,
@@ -29552,6 +29738,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -29696,6 +29883,7 @@
     "structural": 22,
     "substantiveRaw": 37,
     "substantiveDiminished": 32.5,
+    "engagementFactor": 1,
     "positiveCapped": 34.5,
     "negativeRaw": 0,
     "negative": 0,
@@ -29852,6 +30040,7 @@
     "structural": 0,
     "substantiveRaw": 12,
     "substantiveDiminished": 12,
+    "engagementFactor": 1,
     "positiveCapped": 14,
     "negativeRaw": -52,
     "negative": -45.4,
@@ -29988,6 +30177,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -30120,13 +30310,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -30167,15 +30358,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -30188,7 +30379,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -30252,6 +30443,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": -30,
     "negative": -30,
@@ -30404,6 +30596,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 25,
     "negativeRaw": 0,
     "negative": 0,
@@ -30553,6 +30746,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": -32,
     "negative": -32,
@@ -30697,6 +30891,7 @@
     "structural": 0,
     "substantiveRaw": 15,
     "substantiveDiminished": 15,
+    "engagementFactor": 1,
     "positiveCapped": 17,
     "negativeRaw": -10,
     "negative": -10,
@@ -30849,6 +31044,7 @@
     "structural": 28,
     "substantiveRaw": 40,
     "substantiveDiminished": 36.4,
+    "engagementFactor": 1,
     "positiveCapped": 38.4,
     "negativeRaw": 0,
     "negative": 0,
@@ -31026,6 +31222,7 @@
     "structural": 50,
     "substantiveRaw": 65,
     "substantiveDiminished": 50.9,
+    "engagementFactor": 1,
     "positiveCapped": 52.9,
     "negativeRaw": -10,
     "negative": -10,
@@ -31146,6 +31343,7 @@
     "structural": 0,
     "substantiveRaw": 0,
     "substantiveDiminished": 0,
+    "engagementFactor": 0.85,
     "positiveCapped": 2,
     "negativeRaw": 0,
     "negative": 0,
@@ -31278,13 +31476,14 @@
     "structural": 22,
     "substantiveRaw": 22,
     "substantiveDiminished": 22,
-    "positiveCapped": 24,
+    "engagementFactor": 0.85,
+    "positiveCapped": 20.7,
     "negativeRaw": 0,
     "negative": 0,
-    "score": 74,
+    "score": 71,
     "band": "Ally"
    },
-   "score": 74,
+   "score": 71,
    "band": "Ally",
    "timeline": [
     {
@@ -31325,15 +31524,15 @@
     },
     {
      "year": 2024,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2025,
-     "score": 74
+     "score": 71
     },
     {
      "year": 2026,
-     "score": 74
+     "score": 71
     }
    ],
    "timelineEntries": [
@@ -31346,7 +31545,7 @@
      "evidence": []
     }
    ],
-   "timelineChange": 24,
+   "timelineChange": 21,
    "trajectoryShape": "Rising"
   },
   {
@@ -31446,6 +31645,7 @@
     "structural": 0,
     "substantiveRaw": 27,
     "substantiveDiminished": 23.4,
+    "engagementFactor": 1,
     "positiveCapped": 25.4,
     "negativeRaw": -54,
     "negative": -47.4,
@@ -31530,16 +31730,16 @@
   {
    "sector": "Telecommunications",
    "companies": 5,
-   "avgScore": 30.8,
+   "avgScore": 29.6,
    "min": 14,
-   "max": 60,
+   "max": 54,
    "champions": 0,
    "harmfulPlus": 3
   },
   {
    "sector": "Technology",
    "companies": 26,
-   "avgScore": 67.2,
+   "avgScore": 66.3,
    "min": 23,
    "max": 100,
    "champions": 7,
@@ -31548,7 +31748,7 @@
   {
    "sector": "Retail — Big Box",
    "companies": 16,
-   "avgScore": 60.1,
+   "avgScore": 59.3,
    "min": 20,
    "max": 100,
    "champions": 5,
@@ -31566,7 +31766,7 @@
   {
    "sector": "Food & Beverage",
    "companies": 20,
-   "avgScore": 65.7,
+   "avgScore": 65.2,
    "min": 15,
    "max": 100,
    "champions": 7,
@@ -31575,7 +31775,7 @@
   {
    "sector": "Financial Services",
    "companies": 21,
-   "avgScore": 63.5,
+   "avgScore": 63.2,
    "min": 28,
    "max": 100,
    "champions": 6,
@@ -31593,7 +31793,7 @@
   {
    "sector": "Automotive",
    "companies": 8,
-   "avgScore": 44,
+   "avgScore": 43.3,
    "min": 0,
    "max": 96,
    "champions": 2,
@@ -31602,8 +31802,8 @@
   {
    "sector": "Healthcare & Pharma",
    "companies": 18,
-   "avgScore": 59.1,
-   "min": 21,
+   "avgScore": 57.2,
+   "min": 18,
    "max": 96,
    "champions": 5,
    "harmfulPlus": 2
@@ -31611,8 +31811,8 @@
   {
    "sector": "Energy",
    "companies": 9,
-   "avgScore": 68.2,
-   "min": 32,
+   "avgScore": 67.6,
+   "min": 28,
    "max": 100,
    "champions": 4,
    "harmfulPlus": 1
@@ -31629,7 +31829,7 @@
   {
    "sector": "Consumer Goods",
    "companies": 8,
-   "avgScore": 80,
+   "avgScore": 78.5,
    "min": 62,
    "max": 100,
    "champions": 3,
@@ -31746,9 +31946,9 @@
   {
    "sector": "Financial Services / Insurance",
    "companies": 4,
-   "avgScore": 41.8,
+   "avgScore": 41,
    "min": 19,
-   "max": 74,
+   "max": 71,
    "champions": 0,
    "harmfulPlus": 2
   },

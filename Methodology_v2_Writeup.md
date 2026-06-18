@@ -1,6 +1,6 @@
-# Corporate Pride Index — Scoring Methodology (Version 2)
+# Corporate Pride Index — Scoring Methodology (Version 2.1)
 
-*Adopted June 18, 2026. This document explains how every company in the index is scored, why the model is built the way it is, and how to maintain it. It supersedes the original v1 additive model and matches the live formulas in `Corporate_Pride_Index_Data.xlsx` (Methodology_v2 sheet) and the `recompute_scores.py` / `yearly_recompute.py` scripts.*
+*Adopted June 18, 2026. This document explains how every company in the index is scored, why the model is built the way it is, and how to maintain it. It supersedes the original v1 additive model. Version 2.1 adds the **engagement factor** (Section 4a). The authoritative implementation is the TypeScript scoring module `pride-index/src/lib/scoring.ts`; `pride-index/scripts/sync-workbook.ts` writes its results back into `Corporate_Pride_Index_Data.xlsx` so the workbook's stored aggregates and the build-time ingest cross-check stay in agreement.*
 
 ---
 
@@ -19,13 +19,14 @@ Each company starts from a **neutral baseline of 50** and moves up or down based
 ```
 Final Score = clamp( 0, 100,
                 50 (baseline)
-              + min(20, Cosmetic + Commercial)         ← capped "signaling" points
-              + diminish(Civic + Financial + Structural) ← substantive positives
-              + diminish(Negatives) )                    ← all negative actions
+              + min(20, Cosmetic + Commercial)              ← capped "signaling" points
+              + diminish(Civic + Financial + Structural) × engage ← substantive positives
+              + diminish(Negatives) )                        ← all negative actions
 ```
 
 - **`min(20, …)`** caps the combined value of cheap signaling so a company cannot buy a high score with logos and merchandise alone.
 - **`diminish(…)`** applies *diminishing returns* (Section 4) to substantive positives and to negatives, so the single most significant action on each side carries full weight and additional similar actions count for progressively less.
+- **`× engage`** is the *engagement factor* (Section 4a): the substantive subtotal is multiplied by 0.85 for companies with no public-facing engagement, mirroring the pride-washing penalty in the opposite direction.
 - **`clamp(0, 100, …)`** bounds the result to the published range.
 
 Positive and negative points are summed separately and meet at the baseline, so the same diminishing logic applies symmetrically in both directions.
@@ -97,6 +98,27 @@ v2 resolves both by applying the *same* diminishing logic to both tails. Doing m
 
 ---
 
+## 4a. The engagement factor (new in v2.1)
+
+The model has always penalized **visible signaling without substance** — the pride-washing action (−8). What it lacked, and what v2.1 adds, is the symmetric case: **substance without visibility.**
+
+After diminishing returns, the substantive-positive subtotal is multiplied by an **engagement factor**:
+
+```
+engage = 1.00  if the company has any Commercial OR Civic positive action
+         0.85  otherwise (internal-only substance)
+```
+
+**What counts as engagement.** *Commercial* (Pride merchandise, donated-proceeds collections, collaborations with queer artists) and *Civic* (parade/event sponsorship, organized marching, a funded ERG, hosting community events) are the categories where a company is *doing something public*. A bare *Cosmetic* gesture — a rainbow logo, a generic post, a flag — is deliberately excluded: by the index's own substance-over-signaling logic, a logo is too cheap to immunize a company against the adjustment.
+
+**Why this definition, not "Civic only."** A civic-only test would wrongly flag brands whose public engagement is *commercial* (e.g. an apparel company with a Pride collection and queer-artist collaboration but no parade sponsorship). Commercial-or-Civic correctly spares those visible brands and isolates genuinely quiet actors — companies whose entire record is internal Financial/Structural substance.
+
+**Magnitude and intent.** On a strong record the 0.85 multiplier removes roughly 8 points — the same order as the pride-washing −8 — so the two cases are treated symmetrically. It is a *proportional* adjustment, not a flat penalty: a company with little substance loses little, and the factor never erases a strong record (substantive support still dominates). It simply prevents "do it quietly" from tying an otherwise-identical company that also stood behind its commitments publicly.
+
+**What it does not fix.** Because the factor is proportional and the scale still clamps at 100, a company with very large internal substance and zero public engagement (e.g. Costco) is discounted but can remain at the ceiling. Distinguishing companies *at* 100 is the separate top-end-compression question and is out of scope for v2.1.
+
+---
+
 ## 5. Reversal asymmetry is preserved
 
 The index's central principle — *a reversal scores worse than never having committed* — survives v2 intact, because **the first (largest) negative always carries full weight (1.00).** A single, decisive reversal therefore still pushes a company below the 50 baseline.
@@ -159,19 +181,19 @@ Every Action_Log row requires a working **source URL**. Sourcing priority runs: 
 
 ## 11. Implementation and maintenance
 
-The model is implemented so that the workbook stays partly live:
+The authoritative implementation is the TypeScript scoring module (`pride-index/src/lib/scoring.ts`), exercised by a unit-test suite and re-exported by the Astro app so both frontends, the published methodology, and the build-time validation all use the exact same arithmetic. The workbook stays partly live around it:
 
-- `recompute_scores.py` reads the Action_Log, applies the cap and diminishing logic, and writes the two aggregate inputs — **Positive Pts (capped)** and **Negative Pts** — into Company_Master as values.
-- **Final Score, Band, and Sector_Summary remain live Excel formulas** that read those two inputs, so they update automatically when opened.
-- `yearly_recompute.py` rebuilds the Yearly_Scores time series and verifies the anchor check.
+- `pride-index/scripts/sync-workbook.ts` reads the Action_Log, applies the cap, diminishing logic, and engagement factor via the scoring module, and writes the two aggregate inputs — **Positive Pts (capped)** and **Negative Pts** — into Company_Master, and rebuilds the **Yearly_Scores** time series (each year recomputed cumulatively from the actions dated on or before it).
+- **Final Score, Band, and Sector_Summary remain live Excel formulas** that read those stored inputs, so they update automatically when the workbook is opened.
+- `pride-index/scripts/ingest.ts` then regenerates `index-data.json` from the workbook and asserts the scoring module reproduces the stored aggregates and the Yearly_Scores anchor for all 200 companies; the build fails if they disagree.
 
-**After any edit to the Action_Log, run `python3 recompute_scores.py` then `python3 yearly_recompute.py`.** A built-in integrity audit confirms every logged row matches the Scoring_Reference polarity and points (catching, for example, a negative accidentally entered with a positive sign).
+**After any edit to the Action_Log or to `scoring.ts`, run `npm run sync-workbook` then `npm run ingest` (the latter runs automatically before `npm run dev` / `npm run build`).** The ingest integrity audit confirms every logged row matches the Scoring_Reference polarity and points (catching, for example, a negative accidentally entered with a positive sign).
 
 ---
 
 ## 12. Known limitations and open questions
 
-- **Structural substance vs. public advocacy.** The model rewards documented internal substance (CEI 100, ERGs, benefits, non-discrimination policy) heavily and has no discount for companies that hold that substance while doing little visible community engagement. As a result, some quiet "held-firm" companies score as Champions despite a low public profile. There is a parallel "pride-washing" penalty for the opposite case (visible signaling without substance), but no symmetric "substance without visibility" adjustment. Whether to add one is a deliberate, unresolved design choice.
+- **Structural substance vs. public advocacy (addressed in v2.1).** Earlier versions rewarded documented internal substance (CEI 100, ERGs, benefits, non-discrimination policy) with no discount for companies that held that substance while doing little visible community engagement, so some quiet "held-firm" companies scored as Champions despite a low public profile. The **engagement factor** (Section 4a) now supplies the missing symmetric adjustment: substance with no Commercial or Civic public engagement is multiplied by 0.85. A residual limitation remains — because the factor is proportional and the scale clamps at 100, a company with very large internal substance and zero public engagement can still sit at the ceiling.
 - **Thin records.** A minority of companies rest on very few sourced actions; their scores sit near the neutral baseline and are flagged Low confidence rather than padded with assumed activity.
 - **Political-donation attribution.** Negative donation flags are scored only where a corporate PAC's giving to anti-LGBTQ+ legislators is documented by a credible source; the personal political activity of executives is recorded as context but not scored as a corporate action.
 - **Diminishing-returns weights are a judgment.** The 1.00 / 0.70 / 0.50 / … schedule is a defensible but tunable choice; changing it shifts how aggressively stacked actions are discounted.

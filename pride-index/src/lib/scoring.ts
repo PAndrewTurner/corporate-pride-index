@@ -1,13 +1,13 @@
 /**
  * The standalone scoring module — Corporate Pride Index, Methodology v2.
  *
- * Reproduces the workbook's v2 formula exactly:
+ * Reproduces the workbook's v2.1 formula exactly:
  *
  *   score = clamp(0, 100, roundHalfEven(
- *             50                                        // neutral baseline
- *           + min(20, cosmetic + commercial)            // capped "signaling"
- *           + diminish(civic + financial + structural)  // substantive positives
- *           + diminish(negatives) ))                    // negatives
+ *             50                                                    // neutral baseline
+ *           + min(20, cosmetic + commercial)                        // capped "signaling"
+ *           + diminish(civic + financial + structural) × engage     // substantive positives
+ *           + diminish(negatives) ))                                // negatives
  *
  * v2's defining feature is DIMINISHING RETURNS: within the substantive-positive
  * pool and within the negative pool, actions are sorted by magnitude (largest
@@ -15,6 +15,14 @@
  * single most significant action on each side carries full weight and additional
  * similar actions count for progressively less. The Cosmetic + Commercial
  * "signaling" subtotal is capped at +20 and is NOT diminished.
+ *
+ * v2.1 adds the ENGAGEMENT FACTOR (visibility-adjusted substance): the diminished
+ * substantive subtotal is scaled by 0.85 for companies that have no public-facing
+ * engagement at all — i.e. no Commercial (merch/collab) and no Civic (parade/ERG/
+ * community) action — so that internal-only substance scores below otherwise-equal
+ * "do AND show" companies. This is the symmetric counterpart to the pride-washing
+ * penalty (visible signaling without substance): substance without visibility. A
+ * bare Cosmetic action (logo/post/flag) is too cheap to count as engagement.
  *
  * Aggregates match the workbook's stored "Positive Pts (capped)" / "Negative
  * Pts" values (rounded to 1 decimal), and the final score matches the Yearly
@@ -29,6 +37,12 @@ import type { Band, ScoreBreakdown } from './types';
 
 export const COSMETIC_COMMERCIAL_CAP = 20;
 export const BASELINE = 50;
+
+/** v2.1 engagement factor: substance multiplier when a company has no public engagement. */
+export const ENGAGEMENT_FACTOR = 0.85;
+
+/** Tiers that count as genuine public engagement (doing something public, not just a logo). */
+const PUBLIC_ENGAGEMENT = ['Commercial', 'Civic'];
 
 /** Diminishing-returns weights by position (largest action first); 8th+ = 0.05. */
 export const DIMINISH_WEIGHTS = [1.0, 0.7, 0.5, 0.35, 0.25, 0.15, 0.1] as const;
@@ -80,6 +94,18 @@ const sumTier = (actions: ScorableAction[], tier: string): number =>
 
 const SUBSTANTIVE = ['Civic', 'Financial', 'Structural'];
 
+/**
+ * 1.0 if the company has any public-facing (Commercial or Civic) positive action, else 0.85.
+ * Companies with only internal substance (Financial/Structural) — or only cheap Cosmetic
+ * signaling — score their substance at a discount.
+ */
+export function engagementFactorFor(actions: ScorableAction[]): number {
+  const hasPublic = actions.some(
+    (a) => a.polarity === 'Positive' && PUBLIC_ENGAGEMENT.includes(a.tier),
+  );
+  return hasPublic ? 1.0 : ENGAGEMENT_FACTOR;
+}
+
 export function computeScore(actions: ScorableAction[]): ScoreBreakdown {
   const cosmetic = sumTier(actions, 'Cosmetic');
   const commercial = sumTier(actions, 'Commercial');
@@ -97,13 +123,16 @@ export function computeScore(actions: ScorableAction[]): ScoreBreakdown {
   const substantiveRaw = civic + financial + structural;
   const substantiveDiminished = round1(diminish(substPoints));
 
+  // Engagement factor (v2.1): discount internal-only substance (no Commercial/Civic action).
+  const engagementFactor = engagementFactorFor(actions);
+
   // Negatives — diminishing returns across the negative pool (never capped).
   const negPoints = actions.filter((a) => a.polarity === 'Negative').map((a) => a.points);
   const negativeRaw = negPoints.reduce((s, p) => s + p, 0);
   const negative = round1(diminish(negPoints));
 
-  // "Positive Pts (capped)" stored aggregate: capped signaling + diminished substance.
-  const positiveCapped = round1(cosmeticCommercialCapped + diminish(substPoints));
+  // "Positive Pts (capped)" stored aggregate: capped signaling + engagement-adjusted substance.
+  const positiveCapped = round1(cosmeticCommercialCapped + diminish(substPoints) * engagementFactor);
 
   const score = Math.max(0, Math.min(100, roundHalfEven(BASELINE + positiveCapped + negative)));
 
@@ -115,6 +144,7 @@ export function computeScore(actions: ScorableAction[]): ScoreBreakdown {
     structural,
     substantiveRaw,
     substantiveDiminished,
+    engagementFactor,
     positiveCapped,
     negativeRaw,
     negative,

@@ -72,7 +72,14 @@ export interface ScoreBreakdown {
   structural: number;
   /** Substantive positives (Civic + Financial + Structural). */
   substantiveRaw: number;
+  /** Diminished substantive subtotal BEFORE the engagement factor (composition views). */
   substantiveDiminished: number;
+  /**
+   * Visibility-adjusted substance (v2.1): 1.0 if the company has any Commercial or Civic
+   * (public-facing) action, else 0.85. Scales the diminished substantive subtotal so that
+   * "do AND show" outscores quiet, internal-only substance.
+   */
+  engagementFactor: number;
   /** Stored "Positive Pts (capped)": capped signaling + diminished substance. */
   positiveCapped: number;
   /** Raw sum of negatives (pre-diminishing). */

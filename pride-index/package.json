@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "sync-workbook": "tsx scripts/sync-workbook.ts",
     "ingest": "tsx scripts/ingest.ts",
     "dev": "npm run ingest && vite",
     "build": "npm run ingest && tsc -b && vite build",
