@@ -426,6 +426,8 @@ a.fitem { transition: border-color 0.25s, background 0.25s; }
 a.fitem:hover { border-color: rgba(var(--tint),0.22); }
 .secrow { display: flex; align-items: center; justify-content: space-between; gap: 16px; text-decoration: none; }
 .detail { max-width: 880px; margin: 0 auto; padding: 40px 0 64px; }
+/* Centered reading column for the prose pages (methodology / about / future) */
+.doc { max-width: 720px; margin: 0 auto; padding: 0 28px; }
 .mini-header { position: fixed; top: 0; left: 0; right: 0; z-index: 60; border-bottom: 1px solid var(--line-soft);
   background: var(--header-bg); backdrop-filter: blur(16px) saturate(120%); transform: translateY(-100%);
   transition: transform 0.22s var(--ease); pointer-events: none; }
