@@ -411,11 +411,14 @@ footer .ok { color: var(--good); }
 .wcard .lesson { font-size:12.5px; color:var(--txt-2); line-height:1.55; margin-top:10px; }
 .refwrap { border:1px solid var(--line); border-radius:16px; overflow:hidden;
   background:linear-gradient(180deg, rgba(var(--tint),0.03), rgba(var(--tint),0.006)); }
-.headshot { float:left; width:clamp(150px,32vw,210px); aspect-ratio:1; border-radius:50%; object-fit:cover;
-  object-position:50% 20%; border:1px solid var(--line); margin:6px 26px 12px 0;
+/* Explicit width AND height (not aspect-ratio): Safari drops aspect-ratio on
+   <img> across relayouts — theme toggle, bfcache restore — collapsing the box
+   and breaking shape-outside. A fixed square box is stable across recalcs. */
+.headshot { --hs:clamp(150px,32vw,210px); float:left; width:var(--hs); height:var(--hs); border-radius:50%;
+  object-fit:cover; object-position:50% 20%; border:1px solid var(--line); margin:6px 26px 12px 0;
   shape-outside:circle(50%); shape-margin:14px; }
 @media (max-width:560px){
-  .headshot { float:none; display:block; width:150px; height:150px; margin:0 0 18px; shape-outside:none; }
+  .headshot { --hs:150px; float:none; display:block; margin:0 0 18px; shape-outside:none; }
 }
 .contact { display:flex; flex-wrap:wrap; gap:10px 26px; align-items:center; border:1px solid var(--line);
   border-radius:12px; padding:14px 18px; margin-top:18px; font-size:14px; }
