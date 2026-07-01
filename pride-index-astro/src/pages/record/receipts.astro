@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RecordNav from '../../components/RecordNav.astro';
+import { BAND_COLORS, companies, fmtPts } from '../../lib/data';
+
+const base = import.meta.env.BASE_URL;
+
+const RETREAT_IDS = new Set(['n_dei_removal', 'n_pride_retreat', 'n_benefits_rollback']);
+
+interface Receipt {
+  name: string;
+  slug: string;
+  band: (typeof companies)[number]['band'];
+  score: number;
+  year: number;
+  kind: string;
+  points: number | null;
+  description: string;
+  sourceUrl: string | null;
+  deletedPost: boolean;
+}
+
+const KIND_LABEL: Record<string, string> = {
+  n_dei_removal: 'DEI removal',
+  n_pride_retreat: 'Pride retreat',
+  n_benefits_rollback: 'Benefits rollback',
+};
+
+const receipts: Receipt[] = [
+  ...companies.flatMap((c) =>
+    c.actions
+      .filter((a) => RETREAT_IDS.has(a.actionId))
+      .map((a) => ({
+        name: c.name,
+        slug: c.slug,
+        band: c.band,
+        score: c.score,
+        year: a.year,
+        kind: KIND_LABEL[a.actionId] ?? a.actionId,
+        points: a.points,
+        description: a.description,
+        sourceUrl: a.sourceUrl,
+        deletedPost: false,
+      })),
+  ),
+  ...companies.flatMap((c) =>
+    c.social
+      .filter((p) => p.deleted)
+      .map((p) => ({
+        name: c.name,
+        slug: c.slug,
+        band: c.band,
+        score: c.score,
+        year: p.date ? Number(p.date.slice(0, 4)) : 0,
+        kind: 'Deleted post',
+        points: null,
+        description: `${p.platform ? p.platform + ': ' : ''}${p.description}`,
+        sourceUrl: p.url,
+        deletedPost: true,
+      })),
+  ),
+];
+
+const years = [...new Set(receipts.map((r) => r.year))].sort((a, b) => b - a);
+const byYear = years.map((y) => ({
+  year: y,
+  items: receipts
+    .filter((r) => r.year === y)
+    .sort((a, b) => (a.points ?? 0) - (b.points ?? 0) || a.name.localeCompare(b.name)),
+}));
+---
+
+<Layout
+  title="Receipts — The Record — The Corporate Pride Index"
+  description={`${receipts.length} documented retreats: DEI removals, Pride retreats, benefits rollbacks, and deleted posts — grouped by year, every one cited.`}
+  path="record/receipts"
+>
+  <div class="wrap">
+    <div class="page">
+      <span class="kick">The Record · Receipts</span>
+      <h1>The retreat record</h1>
+      <p class="intro">
+        <b style="color:var(--ink)">{receipts.length} documented retreats</b> — every DEI policy
+        removal, Pride retreat, benefits rollback, and deleted post the index has on file,
+        grouped by year. Deletions don&apos;t erase the record; they join it. Each entry carries
+        its citation, and where a company scrubbed its own content, the archive is the source.
+      </p>
+      <RecordNav active="receipts" />
+    </div>
+
+    {byYear.map(({ year, items }) => (
+      <section class="section" id={`y${year}`}>
+        <div class="prose">
+          <div class="d-k">{items.length} {items.length === 1 ? 'entry' : 'entries'}</div>
+          <h2>{year || 'Undated'}</h2>
+        </div>
+        <div class="rgrid">
+          {items.map((r) => (
+            <div class="acard" style="border-left-color:#f05252">
+              {r.points !== null && <span class="pts" style="color:#f05252">{fmtPts(r.points)}</span>}
+              <div class="meta" style="margin-top:0;margin-bottom:6px">
+                <a href={`${base}company/${r.slug}`} style={`color:var(--ink);font-weight:700;text-decoration:none;font-size:12px`}>{r.name}</a>
+                <span style={`color:${BAND_COLORS[r.band]}`}>{r.score}</span>
+                <span style="color:var(--bad)">{r.kind.toUpperCase()}</span>
+              </div>
+              <div class="desc" style={r.deletedPost ? 'text-decoration:line-through' : ''}>{r.description}</div>
+              <div class="meta">
+                {r.sourceUrl ? (
+                  <a class="cite" href={r.sourceUrl} target="_blank" rel="noopener noreferrer">source ↗</a>
+                ) : (
+                  <span>no public link</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .rgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  @media (max-width: 860px) {
+    .rgrid { grid-template-columns: 1fr; }
+  }
+  .rgrid :global(.acard) { margin-bottom: 0; }
+</style>

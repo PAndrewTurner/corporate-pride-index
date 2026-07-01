@@ -190,6 +190,32 @@ const metaDesc = r
         )
       }
 
+      {/* Political & legislative record */}
+      {
+        c.donations.length > 0 && (
+          <>
+            <div class="d-k" style="margin-top:34px">Follow the money</div>
+            <div class="d-h3" style="margin:4px 0 0">Political &amp; legislative record</div>
+            {c.donations.map((d) => (
+              <div class="acard" style="border-left-color:#f05252;margin-top:10px">
+                <span class="pts" style="color:#f05252">{d.amount}</span>
+                <div class="desc">{d.recipientsScope}</div>
+                <div class="meta">
+                  {d.period && <span>{d.period}</span>}
+                  {d.scoredNote && <span>{d.scoredNote}</span>}
+                  <Citation url={d.sourceUrl} />
+                </div>
+                {d.notes && <div class="meta" style="font-style:italic">{d.notes}</div>}
+              </div>
+            ))}
+            <div class="meta" style="margin-top:8px;font-family:var(--mono);font-size:10.5px;color:var(--txt-mut)">
+              From the index's <a class="cite" href={`${base}record/money`}>Money Trail</a> — documented
+              anti-LGBTQ+ political giving, cited to campaign-finance records and reporting.
+            </div>
+          </>
+        )
+      }
+
       {/* HRC CEI */}
       <div class="d-k" style="margin-top:34px">Cross-reference</div>
       <div class="d-h3" style="margin:4px 0 0">HRC Corporate Equality Index</div>

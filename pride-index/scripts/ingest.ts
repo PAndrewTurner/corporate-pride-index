@@ -23,6 +23,8 @@ import type {
   ActionRow,
   Company,
   IndexData,
+  LedgerEntry,
+  PoliticalDonation,
   Rationale,
   ScoringRefRow,
   SectorStats,
@@ -297,6 +299,46 @@ for (const entries of timelineEntriesByCompany.values()) {
   });
 }
 
+// ── Political_Donations (documented anti-LGBTQ+ political giving) ────────────
+// Rows attach to their Company_Master company; rows naming an aggregate that is
+// not a master company (e.g. the NYC Pride sponsor-shortfall context row) go to
+// the site-wide context ledger with a warning, never to a company.
+const donationsByCompany = new Map<string, PoliticalDonation[]>();
+const donationLedgerContext: LedgerEntry[] = [];
+let donationContextRows = 0;
+for (const r of sheet('Political_Donations')) {
+  const company = str(r['Company']);
+  const amount = str(r['Amount (documented)']);
+  if (!company && !amount) continue;
+  const sourceUrl = str(r['Source URL']);
+  if (!company || !amount || !sourceUrl) {
+    issues.push(
+      `Political_Donations: row for "${company ?? '?'}" is missing company, amount, or source URL`,
+    );
+    continue;
+  }
+  // Parse a clean USD value; leave approximations ("~$750K shortfall") unparsed.
+  const clean = amount.replace(/[,\s]/g, '');
+  const m = clean.match(/^\$(\d+(?:\.\d+)?)$/);
+  const donation: PoliticalDonation = {
+    amount,
+    amountUsd: m ? Number(m[1]) : null,
+    period: str(r['Period']),
+    recipientsScope: str(r['Recipients / Scope']) ?? '',
+    scoredNote: str(r['Scored in Action_Log?']),
+    sourceUrl,
+    notes: str(r['Notes']),
+  };
+  if (masterSet.has(company)) {
+    (donationsByCompany.get(company) ?? donationsByCompany.set(company, []).get(company)!).push(
+      donation,
+    );
+  } else {
+    donationContextRows++;
+    donationLedgerContext.push({ company, ...donation });
+  }
+}
+
 // ── Assemble companies ───────────────────────────────────────────────────────
 const companies: Company[] = masterRows.map((r) => {
   const name = str(r['Company'])!;
@@ -365,6 +407,7 @@ const companies: Company[] = masterRows.map((r) => {
     timelineEntries,
     timelineChange: tl?.change ?? null,
     trajectoryShape: tl?.shape ?? null,
+    donations: donationsByCompany.get(name) ?? [],
   };
 });
 
@@ -403,6 +446,7 @@ const data: IndexData = {
   companies,
   sectors,
   scoringReference,
+  donationLedgerContext,
   validation: {
     passed: issues.length === 0,
     companiesChecked: companies.length,
@@ -415,6 +459,10 @@ mkdirSync(dirname(OUT_PATH), { recursive: true });
 writeFileSync(OUT_PATH, JSON.stringify(data, null, 1));
 
 console.log(`Ingested ${companies.length} companies, ${actionsChecked} actions.`);
+if (donationContextRows > 0)
+  console.warn(
+    `Note: ${donationContextRows} Political_Donations row(s) name aggregates outside Company_Master; kept as site-wide context, not attached to a company.`,
+  );
 if (rationaleNameLag > 0)
   console.warn(
     `Note: ${rationaleNameLag} Score_Rationale rows have Company cells that disagree with their row position (known legacy off-by-one); content mapped by position.`,

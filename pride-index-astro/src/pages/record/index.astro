@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RecordNav from '../../components/RecordNav.astro';
+import { companies, data } from '../../lib/data';
+
+const base = import.meta.env.BASE_URL;
+
+// Money headline
+const donors = companies.filter((c) => c.donations.length > 0);
+const totalUsd = companies
+  .flatMap((c) => c.donations)
+  .reduce((s, d) => s + (d.amountUsd ?? 0), 0);
+const totalM = (totalUsd / 1e6).toFixed(1);
+
+// Movers headline — biggest post-2024 faller
+const windowDelta = (c: (typeof companies)[number]) => {
+  const at2024 = c.timeline.find((p) => p.year === 2024)?.score;
+  return at2024 === undefined ? 0 : c.score - at2024;
+};
+const faller = [...companies].sort((a, b) => windowDelta(a) - windowDelta(b))[0];
+
+// Receipts headline
+const RETREAT_IDS = new Set(['n_dei_removal', 'n_pride_retreat', 'n_benefits_rollback']);
+const retreatCount =
+  companies.reduce((s, c) => s + c.actions.filter((a) => RETREAT_IDS.has(a.actionId)).length, 0) +
+  companies.reduce((s, c) => s + c.social.filter((p) => p.deleted).length, 0);
+
+const cards = [
+  {
+    href: `${base}record/money`,
+    kick: 'Money trail',
+    stat: `$${totalM}M+`,
+    sub: `documented anti-LGBTQ+ political giving across ${donors.length} companies`,
+    body: 'The Political_Donations ledger: who gave, how much, to whom, over what period — every row cited to campaign-finance records and reporting.',
+  },
+  {
+    href: `${base}record/movers`,
+    kick: 'Movers',
+    stat: `${faller.timeline.find((p) => p.year === 2024)?.score ?? '—'} → ${faller.score}`,
+    sub: `${faller.name}, the steepest fall since Jan 2025`,
+    body: 'The decade’s biggest risers and fallers, and the post–January 2025 window in particular — every move traced through the yearly score timelines.',
+  },
+  {
+    href: `${base}record/receipts`,
+    kick: 'Receipts',
+    stat: String(retreatCount),
+    sub: 'documented retreats, rollbacks & deletions',
+    body: 'Every DEI removal, Pride retreat, benefits rollback, and deleted post on the record — grouped by year, each with its citation.',
+  },
+];
+---
+
+<Layout
+  title="The Record — The Corporate Pride Index"
+  description="The accountability record behind the scores: documented anti-LGBTQ+ political giving, the decade's biggest score movers, and every retreat and deletion on file."
+  path="record"
+>
+  <div class="wrap">
+    <div class="page">
+      <span class="kick">Accountability, itemized</span>
+      <h1>The Record</h1>
+      <p class="intro">
+        The scores summarize; this is the ledger behind them. Three views of the index&apos;s
+        hardest evidence: the money trail of documented anti-LGBTQ+ political giving, the
+        companies that moved most over the decade, and the receipts — every documented retreat,
+        rollback, and deletion.
+      </p>
+      <RecordNav active="overview" />
+    </div>
+
+    <section class="section">
+      <div class="froadmap" style="margin-top:6px">
+        {cards.map((c) => (
+          <a class="fitem reccard" href={c.href}>
+            <div class="d-k">{c.kick}</div>
+            <div class="stat">{c.stat}</div>
+            <div class="sub">{c.sub}</div>
+            <p>{c.body}</p>
+            <span class="cite" style="font-family:var(--sans);font-size:13px">Open →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .reccard { display: block; text-decoration: none; }
+  .reccard .stat {
+    font-family: var(--serif);
+    font-size: 44px;
+    line-height: 1.05;
+    color: var(--ink);
+    margin: 12px 0 2px;
+    font-variation-settings: 'opsz' 144;
+  }
+  .reccard .sub {
+    color: var(--txt-2);
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+</style>

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-18T23:42:09.900Z",
+ "generatedAt": "2026-07-01T20:42:09.799Z",
  "workbook": "Corporate_Pride_Index_Data.xlsx",
  "companies": [
   {
@@ -228,7 +228,18 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$15,000",
+     "amountUsd": 15000,
+     "period": "2019-2022",
+     "recipientsScope": "6 sponsors, 3 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "AT&T",
@@ -462,7 +473,18 @@
     }
    ],
    "timelineChange": -36,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$307,138",
+     "amountUsd": 307138,
+     "period": "2019-2024 (see desc.)",
+     "recipientsScope": "Documented $307,138 to 67 anti-LGBTQ+ bill sponsors across 6 states (2019-2022, Data for Progress); plus $1,269,650 to anti-LGBTQ+ federal/state politicians, RGA, RSLC and RAGA since Nov 2022 (Popular Information)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://popular.info/p/these-25-rainbow-flag-waving-companies",
+     "notes": "DFP dataset: https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf"
+    }
+   ]
   },
   {
    "name": "T-Mobile",
@@ -668,7 +690,8 @@
     }
    ],
    "timelineChange": -19,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Comcast / Xfinity",
@@ -877,7 +900,18 @@
     }
    ],
    "timelineChange": -36,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$121,350",
+     "amountUsd": 121350,
+     "period": "2019-2024 (see desc.)",
+     "recipientsScope": "Documented $121,350 to 40 anti-LGBTQ+ bill sponsors across 4 states (2019-2022, DFP); plus $1,224,000 to anti-LGBTQ+ politicians and RGA/RSLC/RAGA since Nov 2022 (Popular Information)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://popular.info/p/these-25-rainbow-flag-waving-companies",
+     "notes": "DFP dataset: https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf"
+    }
+   ]
   },
   {
    "name": "Charter / Spectrum",
@@ -1039,7 +1073,18 @@
     }
    ],
    "timelineChange": 4,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$168,077",
+     "amountUsd": 168077,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $168,077 to 34 anti-LGBTQ+ bill sponsors across 5 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Apple",
@@ -1287,7 +1332,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Google / Alphabet",
@@ -1485,7 +1531,8 @@
     }
    ],
    "timelineChange": -6,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Meta",
@@ -1703,7 +1750,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Microsoft",
@@ -1921,7 +1969,18 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$2,000",
+     "amountUsd": 2000,
+     "period": "2019-2022",
+     "recipientsScope": "2 sponsors, 1 state",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Amazon",
@@ -2127,7 +2186,18 @@
     }
    ],
    "timelineChange": -27,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$87,900",
+     "amountUsd": 87900,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $87,900 to 17 anti-LGBTQ+ bill sponsors, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Salesforce",
@@ -2325,7 +2395,8 @@
     }
    ],
    "timelineChange": 15,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "IBM",
@@ -2511,7 +2582,8 @@
     }
    ],
    "timelineChange": -13,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Oracle",
@@ -2665,7 +2737,8 @@
     }
    ],
    "timelineChange": 38,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Dell",
@@ -2839,7 +2912,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "HP",
@@ -2984,7 +3058,8 @@
     }
    ],
    "timelineChange": 34,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Walmart",
@@ -3222,7 +3297,18 @@
     }
    ],
    "timelineChange": -30,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$965,000",
+     "amountUsd": 965000,
+     "period": "Nov 2022-Jun 2024",
+     "recipientsScope": "Documented $965,000 since Nov 2022 to anti-LGBTQ+ politicians: $280,500 to 79 zero-HRC-rated members of Congress, $535,000 to RGA, $135,000 to RSLC, plus state sponsors of anti-trans laws (Popular Information)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://popular.info/p/these-25-rainbow-flag-waving-companies",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Target",
@@ -3450,7 +3536,18 @@
     }
    ],
    "timelineChange": -16,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$500",
+     "amountUsd": 500,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Costco",
@@ -3624,7 +3721,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Home Depot",
@@ -3774,7 +3872,18 @@
     }
    ],
    "timelineChange": -11,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$15,000",
+     "amountUsd": 15000,
+     "period": "2019-2022",
+     "recipientsScope": "6 sponsors, 3 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Lowe's",
@@ -3971,7 +4080,18 @@
     }
    ],
    "timelineChange": -19,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$2,000",
+     "amountUsd": 2000,
+     "period": "2019-2022",
+     "recipientsScope": "2 sponsors, 1 state",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Best Buy",
@@ -4137,7 +4257,8 @@
     }
    ],
    "timelineChange": 44,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Nike",
@@ -4302,7 +4423,8 @@
     }
    ],
    "timelineChange": 45,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Abercrombie & Fitch",
@@ -4455,7 +4577,8 @@
     }
    ],
    "timelineChange": 31,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "American Eagle",
@@ -4616,7 +4739,8 @@
     }
    ],
    "timelineChange": 35,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Gap Inc.",
@@ -4769,7 +4893,8 @@
     }
    ],
    "timelineChange": 11,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "H&M",
@@ -4910,7 +5035,8 @@
     }
    ],
    "timelineChange": 13,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Vineyard Vines",
@@ -5074,7 +5200,8 @@
     }
    ],
    "timelineChange": 15,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Ralph Lauren",
@@ -5219,7 +5346,8 @@
     }
    ],
    "timelineChange": 15,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Levi Strauss & Co.",
@@ -5417,7 +5545,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "PVH Corp.",
@@ -5574,7 +5703,8 @@
     }
    ],
    "timelineChange": 33,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Starbucks",
@@ -5772,7 +5902,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "McDonald's",
@@ -5937,7 +6068,18 @@
     }
    ],
    "timelineChange": -12,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$5,000",
+     "amountUsd": 5000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Chick-fil-A",
@@ -6067,7 +6209,18 @@
     }
    ],
    "timelineChange": -35,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$5M+ (cumulative)",
+     "amountUsd": null,
+     "period": "2003-2012",
+     "recipientsScope": "WinShape Foundation grants to Family Research Council, Georgia Family Council, Exodus International (conversion therapy), Fellowship of Christian Athletes, Salvation Army",
+     "scoredNote": "Yes (n_anti_lgbtq_orgs, 2019)",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Chick-fil-A_and_LGBTQ_people",
+     "notes": "Ceased donations to FCA and Salvation Army in 2019; tax filings show no subsequent anti-LGBTQ org funding. Never made explicit pledge to avoid such partners. No year-round Pride presence."
+    }
+   ]
   },
   {
    "name": "Subway",
@@ -6210,7 +6363,8 @@
     }
    ],
    "timelineChange": 17,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Coca-Cola",
@@ -6400,7 +6554,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "PepsiCo",
@@ -6589,7 +6744,18 @@
     }
    ],
    "timelineChange": -19,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$6,250",
+     "amountUsd": 6250,
+     "period": "2019-2022",
+     "recipientsScope": "7 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Anheuser-Busch InBev",
@@ -6837,7 +7003,18 @@
     }
    ],
    "timelineChange": -31,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$45,250",
+     "amountUsd": 45250,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $45,250 (as Budweiser) to 24 anti-LGBTQ+ bill sponsors across 4 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Whole Foods",
@@ -6998,7 +7175,8 @@
     }
    ],
    "timelineChange": 25,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Tyson Foods",
@@ -7155,7 +7333,18 @@
     }
    ],
    "timelineChange": 14,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$5,000",
+     "amountUsd": 5000,
+     "period": "2019-2022",
+     "recipientsScope": "5 sponsors, 1 state",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "JPMorgan Chase",
@@ -7349,7 +7538,18 @@
     }
    ],
    "timelineChange": 12,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$11,500",
+     "amountUsd": 11500,
+     "period": "2019-2022",
+     "recipientsScope": "3 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Bank of America",
@@ -7514,7 +7714,18 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$10,000",
+     "amountUsd": 10000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Wells Fargo",
@@ -7699,7 +7910,18 @@
     }
    ],
    "timelineChange": -18,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$40,500",
+     "amountUsd": 40500,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $40,500 to anti-LGBTQ+ bill sponsors across 2 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Goldman Sachs",
@@ -7885,7 +8107,8 @@
     }
    ],
    "timelineChange": 14,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "American Express",
@@ -8050,7 +8273,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Visa",
@@ -8207,7 +8431,18 @@
     }
    ],
    "timelineChange": 46,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$1,000",
+     "amountUsd": 1000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Mastercard",
@@ -8433,7 +8668,18 @@
     }
    ],
    "timelineChange": 13,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$100,000+",
+     "amountUsd": null,
+     "period": "2024 cycle",
+     "recipientsScope": "PAC giving to Republican candidates incl. opponents of LGBTQ+ rights legislation",
+     "scoredNote": "No — characterization broader than bill sponsorship",
+     "sourceUrl": "https://www.opensecrets.org/news/2024/07/corporate-sponsors-of-pride-events-also-contribute-to-politicians-with-anti-lgbtq-leanings/",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Charles Schwab",
@@ -8611,7 +8857,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Citigroup",
@@ -8797,7 +9044,18 @@
     }
    ],
    "timelineChange": -22,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$3,000",
+     "amountUsd": 3000,
+     "period": "2019-2022",
+     "recipientsScope": "2 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Walt Disney Co.",
@@ -9055,7 +9313,18 @@
     }
    ],
    "timelineChange": -1,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$32,000",
+     "amountUsd": 32000,
+     "period": "2019-2022",
+     "recipientsScope": "9 anti-LGBTQ+ bill sponsors, 1 state",
+     "scoredNote": "Yes — scored via 2022 'Don't Say Gay' sponsor donations row",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Netflix",
@@ -9228,7 +9497,8 @@
     }
    ],
    "timelineChange": 22,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Warner Bros. Discovery",
@@ -9390,7 +9660,8 @@
     }
    ],
    "timelineChange": -22,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "NBCUniversal",
@@ -9532,7 +9803,18 @@
     }
    ],
    "timelineChange": 17,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$11,000",
+     "amountUsd": 11000,
+     "period": "2019-2022",
+     "recipientsScope": "7 sponsors, 1 state (as NBC)",
+     "scoredNote": "No — below threshold; parent Comcast scored",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Paramount Global",
@@ -9705,7 +9987,8 @@
     }
    ],
    "timelineChange": -7,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Spotify",
@@ -9870,7 +10153,8 @@
     }
    ],
    "timelineChange": 11,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Live Nation",
@@ -10027,7 +10311,8 @@
     }
    ],
    "timelineChange": 46,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "General Motors",
@@ -10200,7 +10485,18 @@
     }
    ],
    "timelineChange": -36,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$48,500",
+     "amountUsd": 48500,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $48,500 to 10 anti-LGBTQ+ bill sponsors across 4 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Ford",
@@ -10389,7 +10685,18 @@
     }
    ],
    "timelineChange": -19,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$10,250",
+     "amountUsd": 10250,
+     "period": "2019-2022",
+     "recipientsScope": "2 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Tesla",
@@ -10547,7 +10854,8 @@
     }
    ],
    "timelineChange": -50,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Toyota USA",
@@ -10756,7 +11064,18 @@
     }
    ],
    "timelineChange": -36,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$601,500",
+     "amountUsd": 601500,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $601,500 to 7 anti-LGBTQ+ bill sponsors across 3 states, 2019-2022 — the largest corporate total in the Data for Progress analysis",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Honda USA",
@@ -10913,7 +11232,8 @@
     }
    ],
    "timelineChange": 46,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Stellantis",
@@ -11034,7 +11354,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "CVS Health",
@@ -11187,7 +11508,18 @@
     }
    ],
    "timelineChange": -9,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$1,079,485",
+     "amountUsd": 1079485,
+     "period": "Nov 2022-Jun 2024",
+     "recipientsScope": "Documented $1,079,485 since Nov 2022: $127,000 to 23 zero-HRC-rated members of Congress, $550,000 to RGA, $260,000 to RSLC, $125,325 to RAGA, plus state sponsors (Popular Information)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://popular.info/p/these-25-rainbow-flag-waving-companies",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Walgreens",
@@ -11341,7 +11673,18 @@
     }
    ],
    "timelineChange": -11,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$4,500",
+     "amountUsd": 4500,
+     "period": "2019-2022",
+     "recipientsScope": "6 sponsors, 3 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Johnson & Johnson",
@@ -11498,7 +11841,18 @@
     }
    ],
    "timelineChange": 46,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$1,750",
+     "amountUsd": 1750,
+     "period": "2019-2022",
+     "recipientsScope": "3 sponsors, 3 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Pfizer",
@@ -11663,7 +12017,18 @@
     }
    ],
    "timelineChange": 4,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$41,450",
+     "amountUsd": 41450,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $41,450 to 20 anti-LGBTQ+ bill sponsors across 5 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "UnitedHealth Group",
@@ -11836,7 +12201,18 @@
     }
    ],
    "timelineChange": -32,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$1,028,750",
+     "amountUsd": 1028750,
+     "period": "Nov 2022-Jun 2024",
+     "recipientsScope": "Documented $1,028,750 since Nov 2022: $188,000 to 35 zero-HRC-rated members of Congress, $650,000 to RGA, $150,000 to RSLC, $40,750 to state sponsors of anti-LGBTQ+ laws incl. Idaho gender-affirming-care funding ban (Popular Information)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://popular.info/p/these-25-rainbow-flag-waving-companies",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Cigna",
@@ -12009,7 +12385,18 @@
     }
    ],
    "timelineChange": -32,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": [
+    {
+     "amount": "$40,000",
+     "amountUsd": 40000,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $40,000 to 21 anti-LGBTQ+ bill sponsors across 3 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Humana",
@@ -12162,7 +12549,18 @@
     }
    ],
    "timelineChange": -11,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$10,750",
+     "amountUsd": 10750,
+     "period": "2019-2022",
+     "recipientsScope": "11 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "ExxonMobil",
@@ -12315,7 +12713,18 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$22,500",
+     "amountUsd": 22500,
+     "period": "2019-2022",
+     "recipientsScope": "7 anti-LGBTQ+ bill sponsors, 3 states",
+     "scoredNote": "No — below $25K scoring threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Chevron",
@@ -12472,7 +12881,18 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$21,000",
+     "amountUsd": 21000,
+     "period": "2019-2022",
+     "recipientsScope": "6 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "NextEra Energy",
@@ -12622,7 +13042,18 @@
     }
    ],
    "timelineChange": -30,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$27,500",
+     "amountUsd": 27500,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $27,500 to 9 anti-LGBTQ+ bill sponsors across 3 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Southern Company",
@@ -12767,7 +13198,18 @@
     }
    ],
    "timelineChange": 48,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$1,000",
+     "amountUsd": 1000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Marriott",
@@ -12977,7 +13419,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Hilton",
@@ -13155,7 +13598,8 @@
     }
    ],
    "timelineChange": 41,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Delta Air Lines",
@@ -13365,7 +13809,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "American Airlines",
@@ -13534,7 +13979,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "United Airlines",
@@ -13691,7 +14137,18 @@
     }
    ],
    "timelineChange": 40,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$5,000",
+     "amountUsd": 5000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Airbnb",
@@ -13844,7 +14301,8 @@
     }
    ],
    "timelineChange": 35,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Expedia",
@@ -14009,7 +14467,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Procter & Gamble",
@@ -14195,7 +14654,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Unilever",
@@ -14348,7 +14808,8 @@
     }
    ],
    "timelineChange": 32,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Kellanova",
@@ -14489,7 +14950,8 @@
     }
    ],
    "timelineChange": 12,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "General Mills",
@@ -14622,7 +15084,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Colgate-Palmolive",
@@ -14755,7 +15218,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Lockheed Martin",
@@ -14908,7 +15372,18 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$6,500",
+     "amountUsd": 6500,
+     "period": "2019-2022",
+     "recipientsScope": "2 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "RTX (Raytheon)",
@@ -15061,7 +15536,18 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$17,250",
+     "amountUsd": 17250,
+     "period": "2019-2022",
+     "recipientsScope": "8 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Boeing",
@@ -15234,7 +15720,18 @@
     }
    ],
    "timelineChange": -36,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$31,000",
+     "amountUsd": 31000,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $31,000 to 9 anti-LGBTQ+ bill sponsors across 4 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Palantir Technologies",
@@ -15372,7 +15869,8 @@
     }
    ],
    "timelineChange": -32,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Adobe",
@@ -15526,7 +16024,8 @@
     }
    ],
    "timelineChange": -11,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Intel",
@@ -15691,7 +16190,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Cisco Systems",
@@ -15865,7 +16365,8 @@
     }
    ],
    "timelineChange": 44,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "NVIDIA",
@@ -15998,7 +16499,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Qualcomm",
@@ -16131,7 +16633,8 @@
     }
    ],
    "timelineChange": 17,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Texas Instruments",
@@ -16252,7 +16755,18 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$7,500",
+     "amountUsd": 7500,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "PayPal",
@@ -16405,7 +16919,8 @@
     }
    ],
    "timelineChange": 30,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Block (Square)",
@@ -16547,7 +17062,8 @@
     }
    ],
    "timelineChange": 19,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Uber",
@@ -16712,7 +17228,8 @@
     }
    ],
    "timelineChange": -12,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Lyft",
@@ -16845,7 +17362,8 @@
     }
    ],
    "timelineChange": 17,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "eBay",
@@ -16978,7 +17496,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Intuit",
@@ -17111,7 +17630,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "ServiceNow",
@@ -17244,7 +17764,8 @@
     }
    ],
    "timelineChange": 17,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Snap Inc.",
@@ -17377,7 +17898,8 @@
     }
    ],
    "timelineChange": 20,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Pinterest",
@@ -17510,7 +18032,8 @@
     }
    ],
    "timelineChange": 19,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Kroger",
@@ -17667,7 +18190,8 @@
     }
    ],
    "timelineChange": 40,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Albertsons",
@@ -17824,7 +18348,8 @@
     }
    ],
    "timelineChange": 34,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "TJX Companies",
@@ -17957,7 +18482,8 @@
     }
    ],
    "timelineChange": 19,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Macy's",
@@ -18102,7 +18628,8 @@
     }
    ],
    "timelineChange": 20,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Nordstrom",
@@ -18235,7 +18762,8 @@
     }
    ],
    "timelineChange": 8,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Kohl's",
@@ -18388,7 +18916,8 @@
     }
    ],
    "timelineChange": -24,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Dollar General",
@@ -18542,7 +19071,8 @@
     }
    ],
    "timelineChange": 1,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Dollar Tree",
@@ -18699,7 +19229,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Yum! Brands",
@@ -18840,7 +19371,8 @@
     }
    ],
    "timelineChange": 10,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Domino's Pizza",
@@ -19005,7 +19537,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Chipotle",
@@ -19162,7 +19695,8 @@
     }
    ],
    "timelineChange": 45,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Darden Restaurants",
@@ -19295,7 +19829,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Molson Coors",
@@ -19496,7 +20031,8 @@
     }
    ],
    "timelineChange": -13,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Constellation Brands",
@@ -19662,7 +20198,18 @@
     }
    ],
    "timelineChange": -13,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$5,000",
+     "amountUsd": 5000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Mondelez International",
@@ -19823,7 +20370,8 @@
     }
    ],
    "timelineChange": 16,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Kraft Heinz",
@@ -19956,7 +20504,8 @@
     }
    ],
    "timelineChange": 23,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Hershey",
@@ -20097,7 +20646,8 @@
     }
    ],
    "timelineChange": 10,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Morgan Stanley",
@@ -20242,7 +20792,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "BlackRock",
@@ -20395,7 +20946,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "U.S. Bancorp",
@@ -20549,7 +21101,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "PNC Financial Services",
@@ -20694,7 +21247,18 @@
     }
    ],
    "timelineChange": 40,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$10,000",
+     "amountUsd": 10000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Capital One",
@@ -20839,7 +21403,18 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$2,500",
+     "amountUsd": 2500,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Discover Financial Services",
@@ -20984,7 +21559,8 @@
     }
    ],
    "timelineChange": 40,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Progressive Corporation",
@@ -21137,7 +21713,8 @@
     }
    ],
    "timelineChange": 25,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Allstate",
@@ -21294,7 +21871,18 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$19,700",
+     "amountUsd": 19700,
+     "period": "2019-2022",
+     "recipientsScope": "10 sponsors, 5 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "MetLife",
@@ -21427,7 +22015,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Prudential Financial",
@@ -21560,7 +22149,18 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$1,250",
+     "amountUsd": 1250,
+     "period": "2019-2022",
+     "recipientsScope": "2 sponsors, 1 state",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "AIG",
@@ -21705,7 +22305,8 @@
     }
    ],
    "timelineChange": 40,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Travelers Companies",
@@ -21826,7 +22427,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Eli Lilly",
@@ -21971,7 +22573,18 @@
     }
    ],
    "timelineChange": 34,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$19,450",
+     "amountUsd": 19450,
+     "period": "2019-2022",
+     "recipientsScope": "12 sponsors, 4 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Merck & Co.",
@@ -22124,7 +22737,18 @@
     }
    ],
    "timelineChange": -9,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$26,300",
+     "amountUsd": 26300,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $26,300 to 22 anti-LGBTQ+ bill sponsors across 3 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "AbbVie",
@@ -22257,7 +22881,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Bristol Myers Squibb",
@@ -22390,7 +23015,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Gilead Sciences",
@@ -22543,7 +23169,18 @@
     }
    ],
    "timelineChange": 36,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$1,000",
+     "amountUsd": 1000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Amgen",
@@ -22688,7 +23325,8 @@
     }
    ],
    "timelineChange": 34,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Moderna",
@@ -22809,7 +23447,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "HCA Healthcare",
@@ -22930,7 +23569,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Elevance Health",
@@ -23083,7 +23723,8 @@
     }
    ],
    "timelineChange": -11,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "ConocoPhillips",
@@ -23245,7 +23886,18 @@
     }
    ],
    "timelineChange": -11,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$27,503",
+     "amountUsd": 27503,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $27,503 to anti-LGBTQ+ bill sponsors, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Phillips 66",
@@ -23411,7 +24063,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Marathon Petroleum",
@@ -23573,7 +24226,18 @@
     }
    ],
    "timelineChange": 6,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$42,000",
+     "amountUsd": 42000,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $42,000 to 7 anti-LGBTQ+ bill sponsors across 3 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Duke Energy",
@@ -23718,7 +24382,18 @@
     }
    ],
    "timelineChange": 40,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$16,000",
+     "amountUsd": 16000,
+     "period": "2019-2022",
+     "recipientsScope": "8 sponsors, 1 state",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Dominion Energy",
@@ -23839,7 +24514,8 @@
     }
    ],
    "timelineChange": 12,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Rivian",
@@ -23981,7 +24657,8 @@
     }
    ],
    "timelineChange": 34,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Lucid Group",
@@ -24123,7 +24800,8 @@
     }
    ],
    "timelineChange": 5,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Wyndham Hotels & Resorts",
@@ -24268,7 +24946,8 @@
     }
    ],
    "timelineChange": 40,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Hyatt Hotels",
@@ -24413,7 +25092,8 @@
     }
    ],
    "timelineChange": 25,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Southwest Airlines",
@@ -24558,7 +25238,18 @@
     }
    ],
    "timelineChange": 32,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": [
+    {
+     "amount": "$12,750",
+     "amountUsd": 12750,
+     "period": "2019-2022",
+     "recipientsScope": "8 sponsors, 2 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "JetBlue Airways",
@@ -24703,7 +25394,8 @@
     }
    ],
    "timelineChange": 25,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Royal Caribbean Group",
@@ -24848,7 +25540,8 @@
     }
    ],
    "timelineChange": 38,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Carnival Corporation",
@@ -24993,7 +25686,8 @@
     }
    ],
    "timelineChange": 35,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Kimberly-Clark",
@@ -25126,7 +25820,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Estée Lauder",
@@ -25283,7 +25978,8 @@
     }
    ],
    "timelineChange": 50,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Clorox",
@@ -25416,7 +26112,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Northrop Grumman",
@@ -25569,7 +26266,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "General Dynamics",
@@ -25722,7 +26420,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "L3Harris Technologies",
@@ -25875,7 +26574,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "3M",
@@ -26028,7 +26728,18 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$1,000",
+     "amountUsd": 1000,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Honeywell",
@@ -26149,7 +26860,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "General Electric (GE Aerospace)",
@@ -26270,7 +26982,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Caterpillar",
@@ -26423,7 +27136,18 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$9,500",
+     "amountUsd": 9500,
+     "period": "2019-2022",
+     "recipientsScope": "6 sponsors, 4 states",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Deere & Company",
@@ -26600,7 +27324,8 @@
     }
    ],
    "timelineChange": -22,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "UPS",
@@ -26753,7 +27478,8 @@
     }
    ],
    "timelineChange": -15,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "FedEx",
@@ -26906,7 +27632,18 @@
     }
    ],
    "timelineChange": -13,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$79,700",
+     "amountUsd": 79700,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $79,700 to 24 anti-LGBTQ+ bill sponsors across 2 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Sirius XM",
@@ -27047,7 +27784,8 @@
     }
    ],
    "timelineChange": 23,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Fox Corporation",
@@ -27200,7 +27938,8 @@
     }
    ],
    "timelineChange": -1,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Tractor Supply Co.",
@@ -27389,7 +28128,8 @@
     }
    ],
    "timelineChange": -19,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Dick's Sporting Goods",
@@ -27510,7 +28250,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "AutoZone",
@@ -27627,7 +28368,18 @@
     }
    ],
    "timelineChange": 0,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$7,200",
+     "amountUsd": 7200,
+     "period": "2019-2022",
+     "recipientsScope": "2 sponsors, 1 state",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Bath & Body Works",
@@ -27780,7 +28532,8 @@
     }
    ],
    "timelineChange": 11,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Publix",
@@ -27929,7 +28682,18 @@
     }
    ],
    "timelineChange": -37,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$29,500",
+     "amountUsd": 29500,
+     "period": "2019-2022",
+     "recipientsScope": "22 anti-LGBTQ+ bill sponsors, 3 states",
+     "scoredNote": "Yes — scored via existing donations row",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Hobby Lobby",
@@ -28062,7 +28826,8 @@
     }
    ],
    "timelineChange": -42,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   },
   {
    "name": "Ross Stores / Ross Dress for Less",
@@ -28204,7 +28969,8 @@
     }
    ],
    "timelineChange": 36,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Burlington Stores",
@@ -28349,7 +29115,8 @@
     }
    ],
    "timelineChange": 48,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Ulta Beauty",
@@ -28510,7 +29277,8 @@
     }
    ],
    "timelineChange": 16,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Wayfair",
@@ -28655,7 +29423,8 @@
     }
    ],
    "timelineChange": 34,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Chewy",
@@ -28772,7 +29541,8 @@
     }
    ],
    "timelineChange": 0,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Lululemon",
@@ -28905,7 +29675,8 @@
     }
    ],
    "timelineChange": 5,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Under Armour",
@@ -29062,7 +29833,8 @@
     }
    ],
    "timelineChange": 46,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "VF Corp.",
@@ -29235,7 +30007,8 @@
     }
    ],
    "timelineChange": 19,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Tapestry",
@@ -29388,7 +30161,8 @@
     }
    ],
    "timelineChange": 15,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Wendy's",
@@ -29545,7 +30319,8 @@
     }
    ],
    "timelineChange": 46,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "DoorDash",
@@ -29678,7 +30453,8 @@
     }
    ],
    "timelineChange": 17,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Mars, Inc.",
@@ -29808,7 +30584,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Panera Bread",
@@ -29953,7 +30730,8 @@
     }
    ],
    "timelineChange": 34,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "State Farm",
@@ -30126,7 +30904,18 @@
     }
    ],
    "timelineChange": -31,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$79,550",
+     "amountUsd": 79550,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $79,550 to 32 anti-LGBTQ+ bill sponsors across 3 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Geico",
@@ -30247,7 +31036,8 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "Liberty Mutual",
@@ -30380,7 +31170,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Farmers Insurance",
@@ -30521,7 +31312,18 @@
     }
    ],
    "timelineChange": -28,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": [
+    {
+     "amount": "$47,100",
+     "amountUsd": 47100,
+     "period": "2019-2022",
+     "recipientsScope": "Documented $47,100 to 16 anti-LGBTQ+ bill sponsors across 3 states, 2019-2022 (Data for Progress)",
+     "scoredNote": "Yes — n_anti_lgbtq_donations (-30)",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "Electronic Arts",
@@ -30674,7 +31476,8 @@
     }
    ],
    "timelineChange": 25,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Take-Two Interactive",
@@ -30816,7 +31619,8 @@
     }
    ],
    "timelineChange": -30,
-   "trajectoryShape": "Sharp Reversal"
+   "trajectoryShape": "Sharp Reversal",
+   "donations": []
   },
   {
    "name": "The New York Times Company",
@@ -30969,7 +31773,8 @@
     }
    ],
    "timelineChange": 7,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": []
   },
   {
    "name": "iHeartMedia",
@@ -31114,7 +31919,8 @@
     }
    ],
    "timelineChange": 38,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Kaiser Permanente",
@@ -31292,7 +32098,8 @@
     }
    ],
    "timelineChange": 43,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Quest Diagnostics",
@@ -31413,7 +32220,18 @@
     }
    ],
    "timelineChange": 2,
-   "trajectoryShape": "Stable"
+   "trajectoryShape": "Stable",
+   "donations": [
+    {
+     "amount": "$500",
+     "amountUsd": 500,
+     "period": "2019-2022",
+     "recipientsScope": "1 sponsor",
+     "scoredNote": "No — below threshold",
+     "sourceUrl": "https://www.filesforprogress.org/datasets/2022/5/AccountableAllies-Data.pdf",
+     "notes": null
+    }
+   ]
   },
   {
    "name": "AMD",
@@ -31546,7 +32364,8 @@
     }
    ],
    "timelineChange": 21,
-   "trajectoryShape": "Rising"
+   "trajectoryShape": "Rising",
+   "donations": []
   },
   {
    "name": "Booz Allen Hamilton",
@@ -31723,7 +32542,8 @@
     }
    ],
    "timelineChange": -22,
-   "trajectoryShape": "Late Decline"
+   "trajectoryShape": "Late Decline",
+   "donations": []
   }
  ],
  "sectors": [
@@ -32158,6 +32978,18 @@
    "polarity": "Negative",
    "points": -10,
    "description": "Selective inclusion (excludes trans/NB)"
+  }
+ ],
+ "donationLedgerContext": [
+  {
+   "company": "NYC Pride sponsors (Citi, Mastercard)",
+   "amount": "~$750K shortfall",
+   "amountUsd": null,
+   "period": "2025",
+   "recipientsScope": "Withdrawal/scale-back of NYC Pride sponsorships caused ~25% (~$750K) drop in Heritage of Pride budget",
+   "scoredNote": "Yes (n_pride_retreat where applicable)",
+   "sourceUrl": "https://www.lgbtqnation.com/2025/05/nyc-pride-sees-750k-shortfall-due-to-pullback-from-big-corporate-sponsors/",
+   "notes": "Context: ~20% of sponsors pulled/scaled back"
   }
  ],
  "validation": {

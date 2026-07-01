@@ -1,0 +1,115 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RecordNav from '../../components/RecordNav.astro';
+import { BAND_COLORS, companies, data } from '../../lib/data';
+import { BandChip } from '../../components/ui.tsx';
+
+const base = import.meta.env.BASE_URL;
+
+interface Row {
+  name: string;
+  slug: string;
+  band: (typeof companies)[number]['band'];
+  score: number;
+  amount: string;
+  amountUsd: number | null;
+  period: string | null;
+  recipientsScope: string;
+  scoredNote: string | null;
+  sourceUrl: string;
+}
+
+const rows: Row[] = companies
+  .flatMap((c) =>
+    c.donations.map((d) => ({
+      name: c.name,
+      slug: c.slug,
+      band: c.band,
+      score: c.score,
+      ...d,
+    })),
+  )
+  .sort((a, b) => (b.amountUsd ?? 0) - (a.amountUsd ?? 0));
+
+const totalUsd = rows.reduce((s, r) => s + (r.amountUsd ?? 0), 0);
+const totalM = (totalUsd / 1e6).toFixed(1);
+const donorCount = new Set(rows.map((r) => r.name)).size;
+const scoredCount = rows.filter((r) => (r.scoredNote ?? '').toLowerCase().startsWith('yes')).length;
+const context = data.donationLedgerContext;
+---
+
+<Layout
+  title="Money Trail — The Record — The Corporate Pride Index"
+  description={`At least $${totalM}M in documented anti-LGBTQ+ political giving across ${donorCount} major American companies — recipients, periods, and sources, row by row.`}
+  path="record/money"
+>
+  <div class="wrap">
+    <div class="page">
+      <span class="kick">The Record · Money trail</span>
+      <h1>Follow the money</h1>
+      <p class="intro">
+        Documented anti-LGBTQ+ political giving from the index&apos;s Political_Donations ledger —
+        at least <b style="color:var(--ink)">${totalM} million</b> across
+        <b style="color:var(--ink)"> {donorCount} companies</b>, each row cited to
+        campaign-finance records or published investigations. Where the giving crosses the
+        scoring threshold it is already reflected in the company&apos;s score
+        ({scoredCount} of {rows.length} rows); smaller amounts are documented here even when
+        they don&apos;t move the number.
+      </p>
+      <RecordNav active="money" />
+    </div>
+
+    <section class="section">
+      <div class="tablecard" style="margin-top:6px">
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left">Company</th>
+              <th style="text-align:right">Documented</th>
+              <th style="text-align:left">Period</th>
+              <th style="text-align:left">Recipients / scope</th>
+              <th style="text-align:left">Scored?</th>
+              <th style="text-align:left">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr>
+                <td style="white-space:nowrap">
+                  <a href={`${base}company/${r.slug}`} style="color:var(--ink);text-decoration:none;font-weight:600">{r.name}</a>
+                  <span style={`font-family:var(--mono);font-size:11px;margin-left:8px;color:${BAND_COLORS[r.band]}`}>{r.score}</span>
+                </td>
+                <td style="text-align:right;font-family:var(--mono);font-weight:700;white-space:nowrap;color:var(--bad)">{r.amount}</td>
+                <td style="font-family:var(--mono);font-size:11px;white-space:nowrap">{r.period ?? '—'}</td>
+                <td style="font-size:12.5px;line-height:1.5;min-width:280px">{r.recipientsScope}</td>
+                <td style="font-size:11.5px;line-height:1.45;min-width:130px;color:var(--txt-mut)">{r.scoredNote ?? '—'}</td>
+                <td><a class="cite" href={r.sourceUrl} target="_blank" rel="noopener noreferrer">source ↗</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {context.length > 0 && (
+        <>
+          <div class="d-k" style="margin-top:30px">Context</div>
+          {context.map((e) => (
+            <div class="note">
+              <b style="color:var(--ink)">{e.company}</b> — {e.recipientsScope}
+              {e.period && <span style="font-family:var(--mono);font-size:11px"> ({e.period})</span>}.
+              <a class="cite" style="margin-left:8px" href={e.sourceUrl} target="_blank" rel="noopener noreferrer">source ↗</a>
+            </div>
+          ))}
+        </>
+      )}
+
+      <div class="note" style="margin-top:30px">
+        Amounts are the documented figures from the cited sources, not estimates; several
+        sources describe additional giving beyond the tabulated amount. “Scored?” shows whether
+        the giving already contributes to the company&apos;s index score via
+        <span style="font-family:var(--mono)"> n_anti_lgbtq_donations</span> or related actions —
+        rows below the scoring threshold are recorded without moving the score.
+      </div>
+    </section>
+  </div>
+</Layout>

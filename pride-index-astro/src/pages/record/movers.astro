@@ -1,0 +1,191 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RecordNav from '../../components/RecordNav.astro';
+import { BAND_COLORS, companies, fmtPts } from '../../lib/data';
+import { bandFor } from '../../lib/scoring';
+import type { Company } from '../../lib/types';
+
+const base = import.meta.env.BASE_URL;
+
+interface Mover {
+  c: Company;
+  from: number;
+  to: number;
+  delta: number;
+}
+
+/** Score change across a window of the yearly timeline. */
+function moversFor(fromYear: number): { fallers: Mover[]; risers: Mover[] } {
+  const ms: Mover[] = companies
+    .map((c) => {
+      const from = c.timeline.find((p) => p.year === fromYear)?.score;
+      if (from === undefined || c.timeline.length === 0) return null;
+      const to = c.score;
+      return { c, from, to, delta: to - from };
+    })
+    .filter((m): m is Mover => m !== null && Math.abs(m.delta) >= 5);
+  return {
+    fallers: [...ms].filter((m) => m.delta < 0).sort((a, b) => a.delta - b.delta).slice(0, 15),
+    risers: [...ms].filter((m) => m.delta > 0).sort((a, b) => b.delta - a.delta).slice(0, 15),
+  };
+}
+
+const decade = moversFor(2015);
+const purge = moversFor(2024);
+
+/** Hand-rolled sparkline path for a company's yearly timeline. */
+function sparkPath(c: Company, w = 120, h = 30): string {
+  const pts = c.timeline;
+  if (pts.length < 2) return '';
+  const x0 = pts[0].year;
+  const x1 = pts[pts.length - 1].year;
+  return pts
+    .map((p, i) => {
+      const x = ((p.year - x0) / (x1 - x0)) * (w - 4) + 2;
+      const y = h - 3 - (p.score / 100) * (h - 6);
+      return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(' ');
+}
+
+const sections = [
+  {
+    id: 'purge',
+    kick: 'Since January 2025',
+    title: 'The purge window',
+    intro:
+      'Score changes from the end of 2024 to now — the window in which regulatory pressure and boycott campaigns tested a decade of public commitments.',
+    data: purge,
+  },
+  {
+    id: 'decade',
+    kick: '2015 → now',
+    title: 'The decade',
+    intro:
+      'The full arc: who built durable support over ten years, and whose support proved contingent when the climate turned.',
+    data: decade,
+  },
+];
+---
+
+<Layout
+  title="Movers — The Record — The Corporate Pride Index"
+  description="The biggest risers and fallers on the Corporate Pride Index — over the past decade and specifically since January 2025, traced through yearly score timelines."
+  path="record/movers"
+>
+  <div class="wrap">
+    <div class="page">
+      <span class="kick">The Record · Movers</span>
+      <h1>Risers &amp; fallers</h1>
+      <p class="intro">
+        Every company&apos;s score is reconstructed yearly from 2015 to now, so movement is
+        measurable, not anecdotal. Below: the steepest falls and climbs, first in the
+        post–January 2025 window, then across the whole decade. Only moves of five points or
+        more are listed.
+      </p>
+      <RecordNav active="movers" />
+    </div>
+
+    {sections.map((s) => (
+      <section class="section" id={s.id}>
+        <div class="prose"><div class="d-k">{s.kick}</div><h2>{s.title}</h2></div>
+        <p class="intro" style="margin-top:8px;font-size:13.5px">{s.intro}</p>
+        <div class="movegrid">
+          <div>
+            <div class="collab" style="color:var(--bad)">Fallers · {s.data.fallers.length}</div>
+            {s.data.fallers.map((m) => (
+              <a class="mrow" href={`${base}company/${m.c.slug}`}>
+                <svg width="120" height="30" viewBox="0 0 120 30" aria-hidden="true">
+                  <path d={sparkPath(m.c)} fill="none" stroke={BAND_COLORS[m.c.band]} stroke-width="1.6" />
+                </svg>
+                <span class="mname">{m.c.name}</span>
+                <span class="mmove">
+                  <span style={`color:${BAND_COLORS[bandFor(m.from)]}`}>{m.from}</span>
+                  <span class="arr">→</span>
+                  <span style={`color:${BAND_COLORS[m.c.band]}`}>{m.to}</span>
+                </span>
+                <span class="mdelta" style="color:var(--bad)">{fmtPts(m.delta)}</span>
+              </a>
+            ))}
+            {s.data.fallers.length === 0 && <div class="note">No falls of 5+ points in this window.</div>}
+          </div>
+          <div>
+            <div class="collab" style="color:var(--good, #10b981)">Risers · {s.data.risers.length}</div>
+            {s.data.risers.map((m) => (
+              <a class="mrow" href={`${base}company/${m.c.slug}`}>
+                <svg width="120" height="30" viewBox="0 0 120 30" aria-hidden="true">
+                  <path d={sparkPath(m.c)} fill="none" stroke={BAND_COLORS[m.c.band]} stroke-width="1.6" />
+                </svg>
+                <span class="mname">{m.c.name}</span>
+                <span class="mmove">
+                  <span style={`color:${BAND_COLORS[bandFor(m.from)]}`}>{m.from}</span>
+                  <span class="arr">→</span>
+                  <span style={`color:${BAND_COLORS[m.c.band]}`}>{m.to}</span>
+                </span>
+                <span class="mdelta" style="color:#10b981">{fmtPts(m.delta)}</span>
+              </a>
+            ))}
+            {s.data.risers.length === 0 && <div class="note">No rises of 5+ points in this window.</div>}
+          </div>
+        </div>
+      </section>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .movegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-top: 18px;
+  }
+  @media (max-width: 860px) {
+    .movegrid { grid-template-columns: 1fr; }
+  }
+  .collab {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .mrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 9px 14px;
+    margin-bottom: 8px;
+    background: rgba(var(--tint), 0.018);
+    transition: border-color 0.2s;
+  }
+  .mrow:hover { border-color: rgba(var(--tint), 0.25); }
+  .mrow svg { flex-shrink: 0; opacity: 0.9; }
+  .mname {
+    color: var(--ink);
+    font-size: 13.5px;
+    font-weight: 600;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mmove {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .mmove .arr { color: var(--txt-mut); margin: 0 4px; font-weight: 400; }
+  .mdelta {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    min-width: 40px;
+    text-align: right;
+  }
+</style>

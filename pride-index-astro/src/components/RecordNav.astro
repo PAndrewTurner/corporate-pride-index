@@ -1,0 +1,50 @@
+---
+/** Sub-navigation strip shared by the Record pages. */
+interface Props {
+  active: 'overview' | 'money' | 'movers' | 'receipts';
+}
+const { active } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const items = [
+  { key: 'overview', href: `${base}record`, label: 'Overview' },
+  { key: 'money', href: `${base}record/money`, label: 'Money Trail' },
+  { key: 'movers', href: `${base}record/movers`, label: 'Movers' },
+  { key: 'receipts', href: `${base}record/receipts`, label: 'Receipts' },
+];
+---
+
+<nav class="recnav" aria-label="The Record sections">
+  {items.map((i) => (
+    <a href={i.href} class={i.key === active ? 'on' : ''} aria-current={i.key === active ? 'page' : undefined}>{i.label}</a>
+  ))}
+</nav>
+
+<style>
+  .recnav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 18px 0 0;
+  }
+  .recnav a {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--txt-mut);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 14px;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .recnav a:hover {
+    color: var(--ink);
+    border-color: rgba(var(--tint), 0.25);
+  }
+  .recnav a.on {
+    color: var(--ink);
+    background: rgba(var(--tint), 0.06);
+    border-color: rgba(var(--tint), 0.3);
+  }
+</style>

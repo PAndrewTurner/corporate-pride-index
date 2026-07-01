@@ -114,6 +114,25 @@ export interface TimelineEntry {
   evidence: TimelineEvidence[];
 }
 
+/** A Political_Donations ledger row — documented anti-LGBTQ+ political giving. */
+export interface PoliticalDonation {
+  /** Display amount exactly as documented (e.g. "$307,138", "~$750K shortfall"). */
+  amount: string;
+  /** Parsed USD value where the amount is cleanly numeric; null for approximations. */
+  amountUsd: number | null;
+  period: string | null;
+  recipientsScope: string;
+  /** Whether/how this giving is already scored in the Action_Log. */
+  scoredNote: string | null;
+  sourceUrl: string;
+  notes: string | null;
+}
+
+/** A ledger row not attached to a Company_Master company (context aggregates). */
+export interface LedgerEntry extends PoliticalDonation {
+  company: string;
+}
+
 export interface Company {
   name: string;
   slug: string;
@@ -140,6 +159,8 @@ export interface Company {
   timelineChange: number | null;
   /** Workbook's one-phrase trajectory shape (e.g. "Fell from peak"). */
   trajectoryShape: string | null;
+  /** Documented anti-LGBTQ+ political giving from the Political_Donations ledger. */
+  donations: PoliticalDonation[];
 }
 
 export interface ScoringRefRow {
@@ -166,6 +187,8 @@ export interface IndexData {
   companies: Company[];
   sectors: SectorStats[];
   scoringReference: ScoringRefRow[];
+  /** Political_Donations rows not attached to a master company (context aggregates). */
+  donationLedgerContext: LedgerEntry[];
   validation: {
     passed: boolean;
     companiesChecked: number;
