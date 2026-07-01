@@ -124,6 +124,20 @@ nav a::after { content:""; position:absolute; left:13px; right:13px; bottom:3px;
 nav a:hover { color: var(--ink); } nav a:hover::after { transform: scaleX(1); }
 nav a.active { color: var(--ink); } nav a.active::after { transform: scaleX(1); }
 
+/* ---- Mobile header: brand row on top, nav as a scrollable row below ---- */
+@media (max-width: 880px) {
+  .bar { position: relative; height: auto; flex-direction: column; align-items: stretch; gap: 0; padding-top: 10px; }
+  .brand-col { padding-right: 44px; } /* room for the theme toggle */
+  .brand-link img { height: 28px; }
+  .brand b { font-size: 17px; }
+  .brand .tag { display: none; }
+  .hcredit { display: none; }
+  nav { margin-left: 0; width: 100%; overflow-x: auto; scrollbar-width: none; gap: 0; padding: 6px 0 8px; }
+  nav::-webkit-scrollbar { display: none; }
+  nav a { white-space: nowrap; font-size: 12.5px; padding: 6px 10px; flex-shrink: 0; }
+  .theme-toggle { position: absolute; top: 8px; right: 0; margin-left: 0; width: 30px; height: 30px; }
+}
+
 /* ---- Reveal ---- */
 .reveal { opacity: 0; transform: translateY(22px); }
 .in .reveal, .reveal.show { opacity: 1; transform: none;
